@@ -1,0 +1,29 @@
+#main_div{
+    background-color: gray;
+    padding: 10px;
+}
+
+#div2{
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+#bar{
+    background-color: gray;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#bar li{
+    display: inline;
+}
+
+p{
+    font-size: 20px;
+}

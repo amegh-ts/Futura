@@ -1,0 +1,24 @@
+#main_div{
+    background-color: bisque;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#main_div img{
+    width: 100%;
+    
+}
+#button{
+    background-color: gray;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+
+#img_div{
+    background-image: url('https://t3.ftcdn.net/jpg/05/56/07/92/360_F_556079290_wh8wWsRZRwyM8UfDKPQkQB1nkfoiXCWF.jpg');
+}

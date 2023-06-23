@@ -1,0 +1,15 @@
+#head1{
+    background-color: brown;
+}
+
+.para1{
+    color: red;
+}
+
+h2,h3{
+    color: aqua;
+}
+
+*{
+    font-family: 'Times New Roman';
+}
