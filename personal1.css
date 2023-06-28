@@ -1,0 +1,103 @@
+html, body {
+    margin:0;
+    height:100%;
+  }
+
+#main{
+    background-image: url(/Images/img.jpg);
+    width:100%;
+    height:100%; 
+    border:0px;
+    background-size: contain;
+    box-sizing:border-box;
+    /* background-repeat: ; */
+}
+
+
+
+#name{
+    font-size: large;
+    /* padding-left: 100px; */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+li {
+    float: right;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    word-spacing: 20px;
+  }
+
+li a:hover{
+    background-color: #333;    
+}
+
+#content{
+    color: white;
+    padding: 70px 0;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-size: x-large;
+}
+
+/* .buttons {
+    display: flex;
+  } */
+
+.button1{
+    background-color: #333;
+    color: #f2f2f2;
+    margin-right: 10px;
+}
+
+.button1:hover{
+    background-color: #929483;
+    color: #f2f2f2;
+}
+
+.button2{
+    transition-duration: 0.4s;
+    color: black;
+    margin-left: 10px;
+}
+ .button2:hover{
+    background-color: #D54343;
+ }
+
+
+  
+.button1,.button2 {
+    flex: 1;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+.watch-more-btn {
+    
+  }
+  
+.subscribe-btn {
+    
+  }
