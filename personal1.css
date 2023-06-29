@@ -1,16 +1,16 @@
 html, body {
     margin:0;
     height:100%;
+    width:100%;
+    border:0px;
+    background-size: cover;
+    background-image: url(/Images/img.jpg);
   }
 
 #main{
-    background-image: url(/Images/img.jpg);
-    width:100%;
-    height:100%; 
-    border:0px;
-    background-size: contain;
+    
     box-sizing:border-box;
-    /* background-repeat: ; */
+
 }
 
 
