@@ -1,0 +1,55 @@
+body{
+    background-color: #f5e8c1;
+    
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 50px #2e2b24;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ;
+    background-color: #333;
+    border-radius: 30px;
+  }
+  
+  .gallery:hover .overlay {
+    opacity: 0.8;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
