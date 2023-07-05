@@ -142,9 +142,10 @@ header img{
 .banner{
     background-color: #fd7e14;
     width: 1150px;
-    height: 250px;
+    height: 240px;
     margin: 100px 80px;
     border-radius: 8px;
+    display: flex;
 }
 
 .ban_image{
@@ -152,8 +153,44 @@ header img{
     
 }
 .ban_image img{
-    height: 200px;
-    width: 110px;
+    height: 190px;
+    width: 115px;
     margin-top: 50px;
     border-radius: 8px;
+}
+
+.mocha_content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+
+}
+
+.para1 {
+    padding: 10px 0px;
+    font-size: 14px;
+}
+.para12 {
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.para2{
+    margin: 50px 0px;
+}
+
+.mocha_button{
+    display: flex;
+    margin: 0px 0px 20px 220px;
+}
+.mocha_button button{
+    align-self: flex-end;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 30px;
+    background-color: #00754a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
 }
