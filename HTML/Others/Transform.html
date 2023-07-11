@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .maindiv{
+            display: flex;
+            margin: 30px;
+            justify-content: center;
+        }
+        .div1{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div1:hover{
+            transform: translate(50px, 30px);
+        }
+        .div2{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div2:hover{
+            transform: rotate(180deg);
+        }
+        .div3{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div3:hover{
+            transform: scale(1.5,1.5);
+        }
+        .div4{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div4:hover{
+            transform: scale(.5,.5);
+        }
+        .div5{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div5:hover{
+            transform: skew(50deg,30deg);
+        }
+        .div6{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition: 1s;
+        }
+        .div6:hover{
+            transform: skewX(30deg);
+        }
+        
+        .div7{
+            height: 100px;
+            width: 100px;
+            background: red;
+            text-align: center;
+            margin: 30px;
+            transition-property: width,background-color;
+            /* transition-delay: 5s; */
+            /* transition: 1s; */
+            transition-duration: 1s;
+        }
+        .div7:hover{
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="div1">
+            <p>DIV 1</p>
+        </div>
+        <div class="div2">
+            <p>DIV 2</p>
+        </div>
+        <div class="div3">
+            <p>DIV 3</p>
+        </div>
+        <div class="div4">
+            <p>DIV 4</p>
+        </div>
+        <div class="div5">
+            <p>DIV 5</p>
+        </div>
+        <div class="div6">
+            <p>DIV 6</p>
+        </div>
+        <div class="div7">
+            <p>DIV 7</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/********************************HEADER****************************/
+
+header{
+    background-image: url(Assets/strip.jpg);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textdiv h3{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+.linkdiv{
+    /* float: right; */
+    margin-left: 340px;
+    
+}
+.linkdiv li{
+    display: inline;
+    font-size: 16px;
+    padding-right: 15px;
+}
+
+.linkdiv li:hover {
+    color: #bb15a5;
+}
+
+/*******************************HEADER 2**************************/
+
+.header2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 67px;
+    /* background-color: yellow; */
+    justify-content: center;
+    align-items: center;
+    border-bottom: .001px solid #d3d6da;
+}
+.nykaaimg img{
+    height: 80px;  
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: white;
+    border: none;
+    color: #212529;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: none;
+    height: 35px;
+    font-weight: bold;
+}
+.btns:hover{
+    color: #f35ddf;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+    min-width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+    margin-left: 100px;
+}
+.search i{
+    color: #898b8d;
+}
+.search input{
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(230, 230, 230);
+}
+.signin{
+
+}
+.signin button{
+    background-color: #E80071;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+.signin button:hover{
+    background-color: #ee3990;
+}
+.baket{
+    margin-left: 30px;
+}
+
+/*******************************HEADER 3**************************/
+
+.header3{
+    box-shadow: 1px 5px 10px #898b8d;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #bb15a5; */
+    justify-content: center;
+    align-items: center;
+}
+.nav li{
+    display: inline;
+    color: rgba(3, 2, 26, 0.6);
+    padding: 0px 16px;
+    font-size: 14px;
+}
+
+.nav li:hover{
+    color: #bb157b;
+}
+.offers{
+    margin-left: 45px;
+}
+.offers img{
+    margin-top: 10px;
+    height: 30px;
+}
