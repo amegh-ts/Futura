@@ -7,6 +7,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 header{
     height: 80px;
@@ -36,6 +39,10 @@ header img{
     margin: none;
     height: 35px;
     width: 90px;
+}
+
+.btns:hover{
+    border-bottom: 1px solid #0e382c;
 }
 
 .search{
@@ -180,7 +187,7 @@ header img{
 }
 
 .para2{
-    margin: 50px 0px;
+    margin: 45px 0px;
 }
 
 .mocha_button{
@@ -260,6 +267,7 @@ header img{
     height: 80px;
     width: 80px;
     border-radius: 10px;
+    object-fit: cover;
 }
 .imagesss h4{
     margin-top: 20px;
