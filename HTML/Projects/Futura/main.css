@@ -139,7 +139,7 @@ header{
 .card_col{
     display: flex;
     margin-top: 80px;
-
+    
 }
 .card{
     float: left;
