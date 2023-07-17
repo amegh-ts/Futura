@@ -1,0 +1,36 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,poppins;
+}
+.navbar-brand{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    padding-left: 15px;
+    color: #000;
+    font-weight: 500;
+}
+.logo-main img{
+    width: 40px;
+}
+.navbar-nav{
+    margin-left: auto;
+    width: 100%;
+}
+.body_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 200px 0px;
+
+}
+
+/***********************************body 1*******************************/
+
+.body1{
+    display: flex;
+    justify-content: center;
+
+}
+.body1 img{
+    width: 500px;
+}

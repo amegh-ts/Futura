@@ -40,6 +40,10 @@ header{
     font-weight: bold; 
     padding-right: 20px;
 }
+.nav li:hover{
+    color: #ffaa3f;
+    cursor: pointer;
+}
 .getintouch button{
     color: white;
     border: none;
