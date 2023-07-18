@@ -23,14 +23,129 @@
     padding: 200px 0px;
 
 }
+h1{
+    font-size: 80px;
+    line-height: 48px;
+    text-align: left;
+}
+h2{
+    font-size: 44px;
+    line-height: 62px;
+    font-weight: 500;
+}
+p{
+    font-size: 24px;
+}
 
 /***********************************body 1*******************************/
 
 .body1{
     display: flex;
     justify-content: center;
-
+    
 }
 .body1 img{
     width: 500px;
+    border-radius: 50%;
+}
+.body1_content{
+    max-width: 600px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body1_content h1{
+    margin-bottom: 30px;
+}
+
+
+/***********************************body 2*******************************/
+
+.body2{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.body2_left{
+    max-width: 600px;
+}
+.body2_left p,h2{
+    text-align: center;
+}
+.body2_right{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 30px;
+    align-items: center;
+}
+.btn{
+    padding: 15px;
+    margin: 8px;
+}
+
+/***********************************body 3*******************************/
+
+.body3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.body3 h2{
+    text-align: left;
+    margin-left: -80px;
+}
+.body3_cnt{
+    display: flex;
+
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.logo p{
+    font-size: 18px;
+}
+.logo img{
+    width: 150px;
+}
+.logo_desc{
+    margin-top: 40px;
+    margin-left: 60px;
+    max-width: 800px;
+}
+
+/***********************************body 4*******************************/
+
+.body4{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    align-items: center;
+    
+
+}
+.b4_main{
+    display: flex;
+    max-width: 1400px;
+    border: 1px solid black;
+    padding: 40px;
+    border-radius: 30px;
+}
+.b4_main h1{
+    line-height: 100px;
+}
+.b4_form{
+    max-width: 600px;
+}
+.abc button{
+    padding: 10px 30px;
 }
