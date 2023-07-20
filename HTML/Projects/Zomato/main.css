@@ -1,0 +1,110 @@
+*{
+    font-family: Okra, Helvetica, sans-serif;
+}
+header{
+    background-image: url(assets/bann.png);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    
+}
+.navbar-expand-lg{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0px auto;
+}
+.navbar-nav .nav-link{
+    color: white;
+}
+
+.zomato_head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.zomato_head img{
+    margin-top: 100px;
+    width: 300px;
+    height: 60px;
+}
+.zomato_head h2{
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+    font-size: 3.6rem;
+}
+.search{
+    display: flex;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px;
+    width: 777px;
+    height: 52px;
+    align-items: center;
+    border-radius: 10px;
+}
+.search i{
+    margin-right: 10px;
+}
+.search input{
+    border: none;
+    width: 100%;
+}
+.search input:focus{
+    border: 1px solid white;
+    outline: none;
+}
+.btn{
+    margin-right: 20px;
+}
+.btn-secondary{
+    background-color: white !important;
+    color: black !important;
+    border: none !important;
+    
+}
+
+.space{
+    margin-left: 80px;
+}
+.dropdown-menu{
+    margin-left: 20px;
+}
+
+/*********************************Cards***************************/
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 260px !important;
+    margin-top: 40px;
+    
+}
+.card {  
+    margin-right: 20px;
+    border-radius: 10px !important;
+
+  }
+  
+.card img{
+    object-fit: cover;
+    max-height: 200px;
+    width: 640px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+/*********************** collections ***********************/
+
+.collections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.collections_container{
+    max-width: 1200px;
+}
