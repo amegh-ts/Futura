@@ -271,10 +271,11 @@ footer{
     justify-content: center;
 }
 .ft_1{
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 .ft_1 img{
     height: 28px;
@@ -282,7 +283,9 @@ footer{
 }
 .ft_1_btn{
     display: flex;
+    float: right;
     margin: 20px;
+    margin-left: 100px;
 }
 .btn-danger {
     background-color: white !important;
@@ -313,4 +316,9 @@ footer{
 }
 .ft_2_child p{
     color: rgb(105, 105, 105);
+}
+
+
+.form-check-input{
+    background-color: red !important;
 }
