@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1" class="header1">THIS IS HEADING 1</h1>
+    <h1 class="header2">THIS IS HEADING 2</h1>
+    <h1 class="header2">THIS IS HEADING 3</h1>
+    <p class="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, aut.</p>
+    <p class="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, aut.</p>
+    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, aut.</p>
+    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, aut.</p>
+    <p class="para3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, aut.</p>
+
+    <script>
+        var a=document.getElementById('head1');
+        a.innerHTML="Lets Start";
+        a.style.color="blue";
+
+        document.getElementsByClassName('header2')[0].innerHTML="hiiiiiiiiiii"
+        document.getElementsByClassName('header2')[1].style.color="red"
+
+        document.getElementsByTagName('p')[0].style.color="blue"
+        document.getElementsByTagName('p')[1].style.color="red"
+        document.getElementsByTagName('p')[2].style.color="green"
+        document.getElementsByTagName('p')[3].style.color="cyan"
+    </script>
+</body>
+</html>
