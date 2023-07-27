@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function scope()
+        {
+            var x=2;
+            let y=4;
+            document.write(x + " var <br>");
+            document.write(y + " let <br>");
+
+            if(true){
+                var x=8;
+                let y=10;
+                document.write(x + " var <br>");
+                document.write(y + " let <br>");
+            }
+            document.write(x + " var <br>");
+            document.write(y + " let <br>");
+        }
+        scope()
+    </script>
+</body>
+</html>
