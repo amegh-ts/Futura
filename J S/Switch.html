@@ -8,10 +8,30 @@
 <body>
     <input type="text" id="inp" placeholder="Enter A fruit name">
     <button onclick="f1()">Click</button>
-    <p id="para"></p>\
-    
-    <script>
+    <p id="para"></p>
 
+    <script>
+        function f1(){
+            var fruits = document.getElementById('inp').value;
+            var a;
+            switch(fruits) {
+                case "mango":
+                    a = "good fruit";
+                    break;
+                case "orange":
+                    a = "good fruit";
+                    break;
+                case "grape":
+                    a = "good fruit";
+                    break;
+                case "apple":
+                    a = "good fruit";
+                    break;
+                default:
+                    a = "Error 404$#";
+            }
+            document.getElementById('para').innerHTML = a;
+        }
     </script>
 </body>
 </html>
