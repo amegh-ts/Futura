@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const og=[1,2,3];
+        const copy=[...og];
+        document.write(copy + "<br>")
+
+        const arr1=[1,2,3]
+        const arr2=[4,5,6]
+        const comi=[...arr1,...arr2]
+        document.write(comi + "<br>")
+
+        const arr3=[{name:"kavya",place:"kannur",age:25},{name:"KP",place:"PKV",age:20}]
+        const ob={name:"helloo",place:"apk"}
+        const comin=[arr3,ob]
+        const comin2=[...arr3,ob]
+        console.log(comin)
+        console.log(comin2)
+    </script>
+</body>
+</html>
