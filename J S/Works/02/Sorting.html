@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=[1,4,3,6,2,5]
+        document.write("Original Array: " + x + "<br>");
+        for (i=0;i<x.length;i++){
+            for(j=0;j<x.length;j++){
+                if (x[j] > x[j + 1]) {
+                    // Swap elements if they are in the wrong order
+                    var temp = x[j];
+                    x[j] = x[j + 1];
+                    x[j + 1] = temp;
+                }
+            }
+        }
+        document.write("Sorted Array: " + x);
+    </script>
+</body>
+</html>
+<!-- 
+
+1. The HTML document is created with the usual `<html>`, `<head>`, and `<body>` structure.
+
+2. Inside the `<body>`, we have a `<script>` tag where the JavaScript code resides.
+
+3. `var x = [1, 4, 3, 6, 2, 5];`: An array `x` is declared and initialized with six elements `[1, 4, 3, 6, 2, 5]`. This is the array we want to sort.
+
+4. `document.write("Original Array: " + x + "<br>");`: This line writes the original unsorted array to the document. The `document.write()` method is used to output content to the webpage. Here, we display the original array `x` along with a line break (`<br>`).
+
+5. The sorting algorithm used here is Bubble Sort. It is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+6. The outer loop is controlled by the variable `i`, which iterates from `0` to `x.length - 1`. The loop goes from the beginning of the array to the second-to-last element (since the last element will be in its correct position after the first iteration).
+
+7. The inner loop is controlled by the variable `j`, which iterates from `0` to `x.length - i - 1`. Since the largest element will "bubble up" to the end of the array after each iteration of the outer loop, there is no need to compare it again, so we reduce the number of comparisons in each subsequent iteration of the outer loop.
+
+8. Inside the inner loop, we compare adjacent elements `x[j]` and `x[j + 1]`. If `x[j]` is greater than `x[j + 1]`, we swap the elements to put them in ascending order.
+
+9. After both loops complete their iterations, the array will be sorted in ascending order.
+
+10. Finally, `document.write("Sorted Array: " + x);` writes the sorted array `x` to the document, along with a message indicating that it is the sorted array.
+
+So, when you run this code, you will see the original array and the sorted array displayed on the webpage. The sorted array will have the elements sorted in ascending order using the Bubble Sort algorithm. -->
