@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import './Home.css';
 import { BsSearch } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
