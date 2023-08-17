@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes anim {
+            0% {
+                background-color: aliceblue;
+                transform: rotate(0deg) scale(1, 1) translate(0, 0);
+            }
+            50% {
+                background-color: purple;
+                transform: rotate(180deg) scale(5, 5) translate(0, 0);
+            }
+            100% {
+                background-color: lightseagreen;
+                transform: rotate(360deg) scale(1, 1) translate(0, 0);
+            }
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            margin-top: 300px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: anim;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Helloooo</div>
+</body>
+</html>
