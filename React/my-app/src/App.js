@@ -1,5 +1,5 @@
 import InternalStyling from "./Pages/InternalStyling";
-import Sample from "./Sample";
+import Sample from "./Pages/Sample";
 
 
 function App() {
