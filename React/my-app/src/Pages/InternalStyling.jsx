@@ -6,7 +6,7 @@ function InternalStyling() {
     }
   return (
     <div>
-        <div style={headerStyle}>jefkjdgkjskjfwksjfkwjbegkjbkegjbwkjbgkwej</div>
+        <div style={headerStyle}>jefkjdgkjsk</div>
     </div>
   )
 }
