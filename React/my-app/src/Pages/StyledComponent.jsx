@@ -9,6 +9,7 @@ function StyledComponent() {
   return (
     <Main style={{color:'white',}}>
         ABCSSS
+        
     </Main>
   )
 }
