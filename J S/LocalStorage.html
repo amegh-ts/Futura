@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <script>
-        const SayHello=()=>{console.log("Hello!");}
-        SayHello()
-
-        const multiply=(a,b)=>{return a*b}
-        console.log(multiply(3,4));
+        localStorage.setItem('Anydata','Mernstack developer there hellooo')
+        const a=localStorage.getItem('Anydata')
+        console.log("********",a);
     </script>
-    <script src="LocalStorage.js"></script>
 </body>
 </html>
