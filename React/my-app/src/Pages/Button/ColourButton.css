@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+}

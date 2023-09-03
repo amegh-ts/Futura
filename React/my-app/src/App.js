@@ -2,9 +2,10 @@
 // import InternalStyling from "./Pages/InternalStyling";
 // import Sample from "./Pages/Sample";
 // import StyledComponent from "./Pages/StyledComponent";
-import { HookUseContext } from "./Pages/HookUseContext";
-import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
-import UseRef from "./Pages/UseRef";
+import ColourButtons from "./Pages/Button/ColourButtons";
+// import { HookUseContext } from "./Pages/HookUseContext";
+// import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
+// import UseRef from "./Pages/UseRef";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
       <HookUseContextDisplay/>
       </HookUseContext.Provider> */}
 
-      <UseRef/>
-      
+      {/* <UseRef/> */}
+      <ColourButtons/>
 
     </div>
   );
