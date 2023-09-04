@@ -2,6 +2,8 @@
 // import InternalStyling from "./Pages/InternalStyling";
 // import Sample from "./Pages/Sample";
 // import StyledComponent from "./Pages/StyledComponent";
+import ColourButton2 from "./Pages/Button/ColourButton2";
+import ColourButton3 from "./Pages/Button/ColourButton3";
 import ColourButtons from "./Pages/Button/ColourButtons";
 // import { HookUseContext } from "./Pages/HookUseContext";
 // import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
@@ -23,8 +25,10 @@ function App() {
       </HookUseContext.Provider> */}
 
       {/* <UseRef/> */}
-      <ColourButtons/>
 
+      <ColourButtons/><br/><br/><br/><br/>
+      <ColourButton2/><br/><br/><br/><br/>
+      <ColourButton3/>
     </div>
   );
 }
