@@ -32,12 +32,12 @@ function App() {
       {/* <UseEffect/> */}
     
 
-      {/* <ColourButtons/><br/><br/><br/><br/>
+      <ColourButtons/><br/><br/><br/><br/>
       <ColourButton2/><br/><br/><br/><br/>
       <ColourButton3/><br/><br/><br/><br/>
-      <ColourButton4/> */}
+      <ColourButton4/>
 
-      <Api/>
+      {/* <Api/> */}
     </div>
   );
 }
