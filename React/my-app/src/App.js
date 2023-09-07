@@ -2,14 +2,15 @@
 // import InternalStyling from "./Pages/InternalStyling";
 // import Sample from "./Pages/Sample";
 // import StyledComponent from "./Pages/StyledComponent";
-// import ColourButton2 from "./Pages/Button/ColourButton2";
-// import ColourButton3 from "./Pages/Button/ColourButton3";
-// import ColourButtons from "./Pages/Button/ColourButtons";
+import ColourButton2 from "./Pages/Button/ColourButton2";
+import ColourButton3 from "./Pages/Button/ColourButton3";
+import ColourButton4 from "./Pages/Button/ColourButton4";
+import ColourButtons from "./Pages/Button/ColourButtons";
 // import { HookUseContext } from "./Pages/HookUseContext";
 // import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
-import UseRef from "./Pages/UseRef";
+// import UseRef from "./Pages/UseRef";
 
-import UseEffect from "./Pages/UseEffect";
+// import UseEffect from "./Pages/UseEffect";
 
 function App() {
   return (
@@ -26,13 +27,14 @@ function App() {
       <HookUseContextDisplay/>
       </HookUseContext.Provider> */}
 
-      <UseRef/>
+      {/* <UseRef/> */}
       {/* <UseEffect/> */}
     
 
-      {/* <ColourButtons/><br/><br/><br/><br/>
+      <ColourButtons/><br/><br/><br/><br/>
       <ColourButton2/><br/><br/><br/><br/>
-      <ColourButton3/> */}
+      <ColourButton3/><br/><br/><br/><br/>
+      <ColourButton4/>
     </div>
   );
 }
