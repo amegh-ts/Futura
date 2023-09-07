@@ -2,6 +2,7 @@
 // import InternalStyling from "./Pages/InternalStyling";
 // import Sample from "./Pages/Sample";
 // import StyledComponent from "./Pages/StyledComponent";
+import Api from "./Pages/Api";
 import ColourButton2 from "./Pages/Button/ColourButton2";
 import ColourButton3 from "./Pages/Button/ColourButton3";
 import ColourButton4 from "./Pages/Button/ColourButton4";
@@ -31,10 +32,12 @@ function App() {
       {/* <UseEffect/> */}
     
 
-      <ColourButtons/><br/><br/><br/><br/>
+      {/* <ColourButtons/><br/><br/><br/><br/>
       <ColourButton2/><br/><br/><br/><br/>
       <ColourButton3/><br/><br/><br/><br/>
-      <ColourButton4/>
+      <ColourButton4/> */}
+
+      <Api/>
     </div>
   );
 }
