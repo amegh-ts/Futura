@@ -1,0 +1,70 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+.body{
+    background-color: #7D7ED7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.allcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 80px;
+    max-width: 100%;
+    /* background-color: aliceblue; */
+}
+
+.cards{
+    background-color: #918CCE;
+    color: #000000;
+    border-radius: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+.image{
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.headerr{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+button{
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    width: 150px;
+    background: #645ADF;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+button:hover{
+    background: #7D7ED7;
+    color: black;
+    cursor: pointer;
+}

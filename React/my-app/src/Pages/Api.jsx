@@ -8,7 +8,7 @@ function Api() {
         async function display() {
             const res=await axios.get('https://jsonplaceholder.typicode.com/users')
             console.log(res.data);
-           setstate(res.data) 
+            setstate(res.data) 
         }
         display()
     },[])
