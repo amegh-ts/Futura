@@ -35,6 +35,12 @@
     margin: 20px;
     padding: 20px;
 }
+img{
+    border-radius: 10px;
+}
+img:hover{
+    scale: 1.1;
+}
 .image{
     display: flex;
     width: 100%;
@@ -67,4 +73,5 @@ button:hover{
     background: #7D7ED7;
     color: black;
     cursor: pointer;
+    border: 1px solid #645ADF;
 }
