@@ -7,9 +7,7 @@ function Main() {
     // const limit=20;
     useEffect(() => {
         async function display() {
-            const res = await axios.get(
-                "https://jsonplaceholder.typicode.com/photos"
-            );
+            const res = await axios.get("https://jsonplaceholder.typicode.com/photos?albumId=1");
             console.log(res.data);
             setstate(res.data);
         }
@@ -20,7 +18,7 @@ function Main() {
         <div className="body">
             <div className="allcards">
                 {state.map((user) => (
-                    <div className="cards" key={user.albumId}>
+                    <div className="cards" key={user.Id}>
                         <h4>{user.id}</h4>
                         <div className="image">
                             <div><a href={user.url}><img src={user.thumbnailUrl} alt="" /></a></div>

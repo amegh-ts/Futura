@@ -52,6 +52,7 @@ img:hover{
     width: 100%;
     text-align: center;
     text-transform: capitalize;
+    height: 120px;
 }
 .button{
     width: 100%;
@@ -74,4 +75,15 @@ button:hover{
     color: black;
     cursor: pointer;
     border: 1px solid #645ADF;
+}
+
+
+
+
+
+/* *************************************** */
+
+
+tr:nth-child(odd){
+    background-color: #c4b7b7;
 }
