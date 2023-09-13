@@ -1,6 +1,6 @@
 import './App.css';
 import Main from './Components/Main';
-import Table from './Components/Table';
+// import Table from './Components/Table';
 
 function App() {
   return (

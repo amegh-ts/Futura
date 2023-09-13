@@ -7,17 +7,25 @@ function Main() {
     // const limit=20;
     useEffect(() => {
         async function display() {
-            const res = await axios.get("https://jsonplaceholder.typicode.com/photos?albumId=1");
+            const res = await axios.get("https://jsonplaceholder.typicode.com/photos");
             console.log(res.data);
             setstate(res.data);
         }
         display();
     }, []);
+
+
+    const datas=state.filter((li)=>{
+return li.id<=10
+    })
+
+    console.log('*******',datas);
+
     console.log("state data", state);
     return (
         <div className="body">
             <div className="allcards">
-                {state.map((user) => (
+                {datas.map((user) => (
                     <div className="cards" key={user.Id}>
                         <h4>{user.id}</h4>
                         <div className="image">
