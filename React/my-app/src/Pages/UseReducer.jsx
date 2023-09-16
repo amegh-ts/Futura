@@ -48,7 +48,7 @@ function UseReducer() {
             <button onClick={() => dispatch({ type: 'increment2' })}>increment2</button>
             <button onClick={() => dispatch({ type: 'decrement2' })}>decrement2</button>
             <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
-            <Link to={'Sample'}><h1>heeeeee</h1></Link>
+            {/* <Link to={'Sample'}><h1>heeeeee</h1></Link> */}
         </div>
     )
 }

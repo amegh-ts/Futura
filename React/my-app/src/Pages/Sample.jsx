@@ -5,7 +5,7 @@ function Sample() {
   return (
     <div>
         <h1>Lorem ipsum dolor sit.</h1>
-        <Sample2/>
+        <Sample2/>  
     </div>
   )
 }

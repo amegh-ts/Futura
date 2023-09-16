@@ -15,7 +15,7 @@ import img4 from './Assets/img4.jpg';
 import img5 from './Assets/img5.jpg';
 import img6 from './Assets/img6.jpg';
 
-function Home() {
+function    Home() {
   return (
     <div className='main'>
         <div class="navbar">
