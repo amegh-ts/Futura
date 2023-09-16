@@ -24,15 +24,15 @@ function Table() {
                         <th>username</th>
                         <th>Email</th>
                     </tr>
-                        {state.map((user)=>(
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.username}</td>
-                                <td>{user.email}</td>
-                            </tr>
-                        ))}
-                    
+                    {state.map((user) => (
+                        <tr key={user.id}>
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.username}</td>
+                            <td>{user.email}</td>
+                        </tr>
+                    ))}
+
                 </table>
             </div>
         </div>

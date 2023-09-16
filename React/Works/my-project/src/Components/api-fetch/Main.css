@@ -1,8 +1,9 @@
-*{
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
 }
-.body{
+
+.body {
     background-color: #7D7ED7;
     width: 100%;
     display: flex;
@@ -13,7 +14,7 @@
     overflow: hidden;
 }
 
-.allcards{
+.allcards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,7 +24,7 @@
     /* background-color: aliceblue; */
 }
 
-.cards{
+.cards {
     background-color: #918CCE;
     color: #000000;
     border-radius: 50px 0 50px 0;
@@ -35,32 +36,38 @@
     margin: 20px;
     padding: 20px;
 }
-img{
+
+img {
     border-radius: 10px;
 }
-img:hover{
+
+img:hover {
     scale: 1.1;
 }
-.image{
+
+.image {
     display: flex;
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 10px 0px;
 }
-.headerr{
+
+.headerr {
     width: 100%;
     text-align: center;
     text-transform: capitalize;
     height: 120px;
 }
-.button{
+
+.button {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-button{
+
+button {
     border: none;
     padding: 15px;
     border-radius: 40px;
@@ -70,7 +77,8 @@ button{
     font-weight: bolder;
     font-size: large;
 }
-button:hover{
+
+button:hover {
     background: #7D7ED7;
     color: black;
     cursor: pointer;
@@ -84,6 +92,6 @@ button:hover{
 /* *************************************** */
 
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
     background-color: #c4b7b7;
 }

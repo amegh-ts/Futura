@@ -15,11 +15,11 @@ function Main() {
     }, []);
 
 
-    const datas=state.filter((li)=>{
-return li.id<=10
+    const datas = state.filter((li) => {
+        return li.id <= 10
     })
 
-    console.log('*******',datas);
+    console.log('*******', datas);
 
     console.log("state data", state);
     return (
@@ -35,7 +35,7 @@ return li.id<=10
                             <h2>{user.title}</h2>
                         </div>
                         <div className="button">
-                            <button onClick={()=>window.open(user.url)}>click</button>
+                            <button onClick={() => window.open(user.url)}>click</button>
                         </div>
                     </div>
                 ))}
