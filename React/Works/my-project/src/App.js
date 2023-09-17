@@ -5,6 +5,7 @@ import Main from './Components/api-fetch/Main';
 import Table from './Components/api-fetch/Table';
 import Home from './Components/Hospital-Management/Home';
 import Login from './Components/login-register/Login';
+import Portfolio from './Components/Portfolio/Portfolio';
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
       path: 'login',
       element: <Login />
     },
+    {
+      path:'portfolio',
+      element:<Portfolio/>
+    }
   ])
   return (
     <RouterProvider router={router}></RouterProvider>
