@@ -1,0 +1,1059 @@
+.main_body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(242, 245, 249, 1);
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .main_body {
+        /* background-color: lightblue; */
+    }
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    /* min-height: 100vh; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-header {
+    gap: 745px;
+    /* width: 1240px; */
+    height: auto;
+    display: flex;
+    padding: 44px 0;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+
+.header-logo {
+    gap: 10px;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.header-phmoon {
+    width: 56px;
+    height: 56px;
+}
+
+.content_body {
+    display: flex;
+}
+
+.b_left {
+    display: flex;
+    flex-direction: column;
+    /* width: 400px; */
+    margin-top: 30px;
+}
+
+.profiledetails-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profiledetails-profiledetails {
+    width: 400px;
+    height: 800px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.profiledetails-profilecard {
+    top: 100px;
+    left: 0px;
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.profiledetails-contactcard {
+    top: 384px;
+    left: 25px;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.profiledetails-profilepicture {
+    top: 0px;
+    left: 92px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.profiledetails-name {
+    top: 214px;
+    left: 150px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.profiledetails-text {
+
+    color: rgba(11, 9, 9, 1);
+    height: auto;
+    font-size: 28.41971778869629px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Raleway;
+    font-weight: 700;
+    line-height: 35.5246467590332px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-careerdetails {
+    top: 254px;
+    left: 107px;
+    width: 153px;
+    display: flex;
+    padding: 0 5px;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.profiledetails-text02 {
+    color: rgba(10, 9, 8, 0.5);
+    height: auto;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-socialmediaicons {
+    gap: 9.095404624938965px;
+    top: 300px;
+    left: 58px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+}
+
+.profiledetails-facebook {
+    gap: 8.268548965454102px;
+    display: flex;
+    padding: 20.67137336730957px 24.805648803710938px;
+    align-items: flex-start;
+    border-radius: 8.268548965454102px;
+    background-color: rgba(242, 247, 252, 1);
+    color: #1877F2;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profiledetails-facebook:hover {
+    scale: 1.2;
+}
+
+.profiledetails-linkedin {
+    gap: 8.268548965454102px;
+    display: flex;
+    padding: 20.67137336730957px 24.805648803710938px;
+    align-items: flex-start;
+    border-radius: 8.268548965454102px;
+    background-color: rgba(242, 247, 252, 1);
+    color: #0077B5;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profiledetails-linkedin:hover {
+    scale: 1.2;
+}
+
+.profiledetails-twitter {
+    gap: 8.268548965454102px;
+    display: flex;
+    padding: 20.67137336730957px 24.805648803710938px;
+    align-items: flex-start;
+    border-radius: 8.268548965454102px;
+    background-color: rgba(242, 247, 252, 1);
+    color: #1DA1F2;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profiledetails-twitter:hover {
+    scale: 1.2;
+}
+
+.profiledetails-github {
+    gap: 8.268548965454102px;
+    display: flex;
+    padding: 20.67137336730957px 24.805648803710938px;
+    align-items: flex-start;
+    border-radius: 8.268548965454102px;
+    flex-direction: column;
+    background-color: rgba(242, 247, 252, 1);
+    color: #0B0909;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profiledetails-github:hover {
+    scale: 1.2;
+}
+
+.profiledetails-phone-group {
+    top: 417px;
+    left: 61px;
+    width: 256px;
+    height: 63px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.profiledetails-line1 {
+    top: 63px;
+    left: 0px;
+    width: 256px;
+    height: 1px;
+    position: absolute;
+}
+
+.profiledetails-phone {
+    gap: 10px;
+    top: 0px;
+    left: 2px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
+.profiledetails-phone1 {
+    gap: 5px;
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: rgba(242, 247, 252, 1);
+}
+
+.profiledetails-gridiconsphone {
+    width: 24px;
+    height: 24px;
+}
+
+.profiledetails-phonedetails {
+    display: flex;
+    padding: 5px 0;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.profiledetails-phone2 {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.profiledetails-text04 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-text06 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-email-group {
+    top: 496px;
+    left: 58px;
+    width: 302px;
+    height: 63px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.profiledetails-line3 {
+    top: 63px;
+    left: 0px;
+    width: 256px;
+    height: 1px;
+    position: absolute;
+}
+
+.profiledetails-email-details {
+    gap: 12px;
+    top: 0px;
+    left: 1px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+}
+
+.profiledetails-email {
+    gap: 5px;
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: rgba(242, 247, 252, 1);
+}
+
+.profiledetails-mdiemailopenoutline {
+    width: 24px;
+    height: 21px;
+}
+
+.profiledetails-email-details1 {
+    display: flex;
+    padding: 5px 0;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.profiledetails-email1 {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.profiledetails-text08 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-text10 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-location {
+    top: 575px;
+    left: 59px;
+    width: 256px;
+    height: 66px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.profiledetails-location1 {
+    gap: 10px;
+    top: 0px;
+    left: 1.5px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+}
+
+.profiledetails-location2 {
+    gap: 5px;
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: rgba(242, 247, 252, 1);
+}
+
+.profiledetails-ionlocationoutline {
+    width: 23px;
+    height: 23px;
+}
+
+.profiledetails-locationdetails {
+    display: flex;
+    padding: 5px 0;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.profiledetails-location3 {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.profiledetails-text12 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-text14 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.profiledetails-line4 {
+    top: 66px;
+    left: 0px;
+    width: 256px;
+    height: 1px;
+    position: absolute;
+}
+
+.profiledetails-download-details {
+    gap: 10px;
+    top: 657px;
+    left: 107px;
+    display: flex;
+    padding: 10px 20px;
+    position: absolute;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    background-image: linear-gradient(150deg, rgba(255, 156, 26, 1) 0%, rgba(232, 5, 5, 1) 100%);
+    cursor: pointer;
+}
+
+.profiledetails-materialsymbolsdownload {
+    width: 24px;
+    height: 24px;
+}
+
+.profiledetails-text16 {
+    color: rgba(242, 247, 252, 1);
+    height: auto;
+    font-size: 12px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.b_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar-container {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-left: 300px;
+}
+
+.nav-bar-nav-bar {
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+
+.nav-bar-navcard {
+    width: 503px;
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    position: relative;
+    align-self: center;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    justify-content: space-between;
+}
+
+    .nav-bar-rectangle10 {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        flex-direction: column;
+        background-size: cover;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        /* background: linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%); */
+        background-color: #E1E8EF;
+        color: #7E7C79;
+        font-size: 12px;
+        font-style: SemiBold;
+        text-align: left;
+        font-family: Raleway;
+        font-weight: 600;
+        line-height: 20px;
+        font-stretch: normal;
+        text-decoration: none;
+    }
+
+    .nav-bar-icon {
+        width: 24px;
+        height: 24px;
+        
+    }
+
+    /* .nav-bar-text {
+        color: rgba(255, 255, 255, 1);
+        color: #0B0909;
+        height: auto; 
+    } */
+    .selected-button {
+        background: linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%);
+        color: #E1E8EF;
+    }
+      
+
+/*********************** About me *******************************/
+.about-me-section-container {
+    width: 100%;
+    display: flex;
+    /* overflow: auto; */
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-me-section-about-me-section {
+    /* gap: 10px; */
+    width: 840px;
+    height: 720px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-section-about-me-card {
+    top: 10px;
+    left: 10px;
+    width: 850px;
+    height: 700px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.about-me-section-about-meheading {
+    gap: 32px;
+    top: 28px;
+    left: 82px;
+    width: 496px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
+.about-me-section-frame3 {
+    gap: 10px;
+    width: 280px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+    justify-content: flex-start;
+}
+
+.about-me-section-text {
+    color: rgb(11, 9, 9);
+    height: auto;
+    font-size: 40px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-line5 {
+    width: 252px;
+    height: 2px;
+}
+
+.about-me-section-about-medetails {
+    top: 102px;
+    left: 81px;
+    width: 694px;
+    display: flex;
+    padding: 0 10px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-section-text01 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-about-subheading {
+    /* gap: 10px; */
+    top: 238px;
+    left: 89px;
+    display: flex;
+    padding: 10px 0px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-section-text10 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 32px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-web-development {
+    gap: 10px;
+    top: 316px;
+    left: 83px;
+    width: 333px;
+    display: flex;
+    position: absolute;
+    box-sizing: content-box;
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.about-me-section-web-development-card {
+    width: 333px;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    justify-content: center;
+    /* background-image: url("Assets/webdevelopmentcard.png"); */
+    background-color: #FFEBD1;
+    background-position: center;
+}
+
+.about-me-section-web-development-details {
+    display: flex;
+    padding: 10px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-web-developmentheading {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-me-section-codeicon {
+    width: 24px;
+    height: 24px;
+}
+
+.about-me-section-text12 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 24px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-text14 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-app-development-section {
+    gap: 10px;
+    top: 316px;
+    left: 443px;
+    width: 333px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-app-development-card {
+    width: 333px;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+    /* background-image: url("public/external/appdevelopmentcard3880-2dzo.svg"); */
+    background-position: center;
+    background-color: #F2F7FC;
+    border-radius: 20px;
+}
+
+.about-me-section-appdetails {
+    display: flex;
+    padding: 10px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-app-development-heading {
+    gap: 11px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-me-section-app {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.about-me-section-group {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.about-me-section-vector {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+}
+
+.about-me-section-vector1 {
+    top: 3px;
+    left: 2px;
+    width: 20px;
+    height: 18px;
+    position: absolute;
+}
+
+.about-me-section-text27 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 24px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-text29 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-uiux-section {
+    gap: 10px;
+    top: 509px;
+    left: 83px;
+    width: 333px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-uiux-design-card {
+    width: 333px;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    justify-content: center;
+    /* background-image: url("public/external/uiuxdesigncard3882-iktd-400w.png"); */
+    background-position: center;
+    background-color: #F2F7FC;
+}
+
+.about-me-section-uiux-details {
+    display: flex;
+    padding: 10px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-uiu-xheading {
+    gap: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.about-me-section-uxicon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.about-me-section-group1 {
+    top: 2.999999761581421px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.about-me-section-vector2 {
+    top: 0px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+}
+
+.about-me-section-vector3 {
+    top: 7px;
+    left: 4px;
+    width: 10px;
+    height: 4px;
+    position: absolute;
+}
+
+.about-me-section-text42 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 24px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-text44 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-mentorship {
+    gap: 10px;
+    top: 509px;
+    left: 443px;
+    width: 333px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-tech-mentorship-card {
+    width: 333px;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    justify-content: center;
+    /* background-image: url("public/external/techmentorshipcard3883-rrph-400w.png"); */
+    background-position: center;
+    background-color: #FFEBD1;
+}
+
+.about-me-section-mentorshipdetails {
+    display: flex;
+    padding: 10px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.about-me-section-mentorshipheading {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.about-me-section-mentoricon {
+    width: 30px;
+    height: 24px;
+}
+
+.about-me-section-text53 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 24px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.about-me-section-text55 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 20px;
+    font-stretch: normal;
+    text-decoration: none;
+}
