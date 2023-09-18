@@ -27,7 +27,8 @@
     /* width: 1240px; */
     height: auto;
     display: flex;
-    padding: 44px 0;
+    /* padding: 44px 0; */
+    padding-bottom: 20px;
     align-items: center;
     flex-shrink: 0;
     justify-content: space-between;
@@ -1057,3 +1058,538 @@
     font-stretch: normal;
     text-decoration: none;
 }
+
+
+/******************** Resume.jsx css ********************/
+
+.resume-section-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .resume-section-resume-section {
+    gap: 10px;
+    width: 840px;
+    height: 720px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume-section-resume-card {
+    top: 10px;
+    left: 10px;
+    width: 820px;
+    height: 700px;
+    position: absolute;
+    border-radius: 20px;
+  }
+  .resume-section-resumeheading {
+    gap: 32px;
+    top: 28px;
+    left: 82px;
+    width: 453px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .resume-section-resume {
+    gap: 10px;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume-section-text {
+    color: rgba(11, 9, 9, 1);
+    height: auto;
+    font-size: 40px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-line5 {
+    width: 252px;
+    height: 2px;
+  }
+  .resume-section-education-experience-details {
+    top: 101px;
+    left: 82px;
+    width: 636.928955078125px;
+    height: 323.14385986328125px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .resume-section-education-experience-heading {
+    gap: 160px;
+    top: 0px;
+    left: 0px;
+    width: 563.9894409179688px;
+    height: 46.2286376953125px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .resume-section-educationheading {
+    gap: 9.2457275390625px;
+    display: flex;
+    align-items: center;
+  }
+  .resume-section-iconparkoutlinedegreehat {
+    width: 27.7371826171875px;
+    height: 27.7371826171875px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .resume-section-group {
+    top: 5.198183059692383px;
+    left: 1.1550583839416504px;
+    width: 24.295461654663086px;
+    height: 17.336883544921875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .resume-section-vector {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 10px;
+    position: absolute;
+  }
+  .resume-section-vector1 {
+    top: 4.918715476989746px;
+    left: 5.520730495452881px;
+    width: 19px;
+    height: 12px;
+    position: absolute;
+  }
+  .resume-section-text02 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 27.7371826171875px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 46.2286376953125px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-experience-heading {
+    margin-left: 35px;
+    gap: 9.2457275390625px;
+    display: flex;
+    align-items: center;
+  }
+  .resume-section-humbleiconsbriefcase {
+    width: 27.7371826171875px;
+    height: 27.7371826171875px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .resume-section-group1 {
+    top: 4.626443862915039px;
+    left: 4.622901916503906px;
+    width: 18.491455078125px;
+    height: 18.491138458251953px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .resume-section-vector2 {
+    top: 0px;
+    left: 0px;
+    width: 18px;
+    height: 13px;
+    position: absolute;
+  }
+  .resume-section-vector3 {
+    top: 4.622547149658203px;
+    left: 0px;
+    width: 18px;
+    height: 14px;
+    position: absolute;
+  }
+  .resume-section-vector4 {
+    top: 8.08752155303955px;
+    left: 8.08752155303955px;
+    width: 2px;
+    height: 2px;
+    position: absolute;
+  }
+  .resume-section-text04 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 27.7371826171875px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 46.2286376953125px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-moringa-card {
+    gap: 8px;
+    top: 68px;
+    left: 0px;
+    width: 288.9289855957031px;
+    height: 115.57160186767578px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .resume-section-rectangle25 {
+    width: 289px;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    border-radius: 9.2457275390625px;
+    background-size: cover;
+    justify-content: flex-start;
+    /* background-image: url("public/external/rectangle251576-gtwt-200h.png"); */
+    background: #FFE3BF;
+    background-position: center;
+  }
+  .resume-section-moringadetails {
+    gap: 9.2457275390625px;
+    display: flex;
+    padding: 9.2457275390625px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-section-text06 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text08 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text10 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-masinde-card {
+    gap: 8px;
+    top: 207.572265625px;
+    left: 0px;
+    width: 288.9289855957031px;
+    height: 115.57160186767578px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .resume-section-rectangle251 {
+    width: 289px;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    border-radius: 9.2457275390625px;
+    background-size: cover;
+    justify-content: flex-start;
+    /* background-image: url("public/external/rectangle251576-0fx-200h.png"); */
+    background: #FFE3BF;
+    background-position: center;
+  }
+  .resume-section-university-details {
+    gap: 9.2457275390625px;
+    display: flex;
+    padding: 9.2457275390625px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-section-text12 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text14 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text16 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-technical-mentor {
+    gap: 8px;
+    top: 68px;
+    left: 348px;
+    width: 288.9289855957031px;
+    height: 115.57160186767578px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .resume-section-rectangle252 {
+    width: 289px;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    border-radius: 9.2457275390625px;
+    background-size: cover;
+    justify-content: flex-start;
+    /* background-image: url("public/external/rectangle251576-udm-200h.png"); */
+    background: #FFE3BF;
+    background-position: center;
+  }
+  .resume-section-technicalmentordetails {
+    gap: 9.2457275390625px;
+    display: flex;
+    padding: 9.2457275390625px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-section-text18 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text20 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text22 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-village2nation {
+    gap: 8px;
+    top: 207.572265625px;
+    left: 348px;
+    width: 288.9289855957031px;
+    height: 115.57160186767578px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .resume-section-rectangle253 {
+    width: 289px;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    border-radius: 9.2457275390625px;
+    background-size: cover;
+    justify-content: flex-start;
+    /* background-image: url("public/external/rectangle251576-0pkh-200h.png"); */
+    background: #FFE3BF;
+    background-position: center;
+  }
+  .resume-section-moringadetails1 {
+    gap: 9.2457275390625px;
+    display: flex;
+    padding: 9.2457275390625px;
+    z-index: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-section-text24 {
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text26 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-text28 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 13.86859130859375px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .resume-section-skillssection {
+    gap: 10px;
+    left: 10px;
+    width: 820px;
+    /* bottom: -191px; */
+    margin-top: 460px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-section-workskills-card {
+    width: 820px;
+    height: 250px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    justify-content: space-between;
+    border-radius: 0 0 8px 8px;
+    background: #F8FBFB;
+  }
+  .resume-section-workskills-card-sub1{
+    margin-left: 70px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .resume-section-workskills-card-sub2{
+   margin-right: 100px;
+   display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 300px;
+
+  }
+
+
+  .resume-section-text30 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 27.7371826171875px;
+    align-self: flex-start;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 46.2286376953125px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .skill-button-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.skill-button{
+    color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    font-style: Regular;
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 24px;
+    /* font-stretch: normal; */
+    text-decoration: none;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+  
