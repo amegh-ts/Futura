@@ -8,8 +8,8 @@ import ColourButton2 from "./Pages/Button/ColourButton2";
 import ColourButton3 from "./Pages/Button/ColourButton3";
 import ColourButton4 from "./Pages/Button/ColourButton4";
 import ColourButtons from "./Pages/Button/ColourButtons";
-import { HookUseContext } from "./Pages/HookUseContext";
-import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
+// import { HookUseContext } from "./Pages/HookUseContext";
+// import HookUseContextDisplay from "./Pages/HookUseContextDisplay";
 import UseRef from "./Pages/UseRef";
 
 import TryCatch from "./Pages/TryCatch";
@@ -19,6 +19,9 @@ import UseEffect from "./Pages/UseEffect";
 import Home from './Pages/Home';
 import UseMemo from './Pages/UseMemo';
 import ReactMemo from './Pages/ReactMemo';
+import { UseCallback } from './Pages/UseCallback';
+import Form from './Pages/Form';
+import FormUseRef from './Pages/FormUseRef';
 
 function App() {
     const router = createBrowserRouter([
@@ -76,6 +79,15 @@ function App() {
         }, {
             path: 'reactmemo',
             element: <ReactMemo />
+        },{
+            path:'usecallback',
+            element:<UseCallback/>
+        },{
+            path:'form',
+            element:<Form/>
+        },{
+            path:'formuseref',
+            element:<FormUseRef/>
         }
     ])
     return (
