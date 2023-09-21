@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react'
 import { Link } from 'react-router-dom';
+import Child from './Child';
 
 function UseReducer() {
 
@@ -49,6 +50,7 @@ function UseReducer() {
             <button onClick={() => dispatch({ type: 'decrement2' })}>decrement2</button>
             <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
             {/* <Link to={'Sample'}><h1>heeeeee</h1></Link> */}
+            <Child valuer={state}/>
         </div>
     )
 }
