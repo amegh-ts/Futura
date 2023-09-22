@@ -29,7 +29,7 @@ import ContactContent from './ContactContent'
 
 function Portfolio() {
     
-    const [activeTab, setActiveTab] = useState(0);  // 0 for Home, 1 for Resume, 2 for Work, 3 for Contact
+    const [activeTab, setActiveTab] = useState(0);  
 
     const handleTabClick = (index) => {
         setActiveTab(index);
