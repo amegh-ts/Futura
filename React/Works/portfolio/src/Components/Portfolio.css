@@ -1592,4 +1592,622 @@
     margin: 5px 10px;
 }
 
+  /********************** Work page *****************/
+
+  .work-section-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .work-section-work-section {
+    gap: 10px;
+    width: 840px;
+    height: 720px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-section-portfolio-card {
+    top: 10px;
+    left: 10px;
+    width: 820px;
+    height: 700px;
+    position: absolute;
+    border-radius: 20px;
+  }
+  .work-section-workheading {
+    gap: 32px;
+    top: 28px;
+    left: 82px;
+    width: 413px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .work-section-frame3 {
+    gap: 10px;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-section-text {
+    color: rgba(11, 9, 9, 1);
+    height: auto;
+    font-size: 40px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-line5 {
+    width: 252px;
+    height: 2px;
+  }
+  .work-section-porfolio-cards {
+    top: 130px;
+    left: 58px;
+    width: 724px;
+    height: 514px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .work-section-uiux-card {
+    gap: 10px;
+    top: 182px;
+    left: 0px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+    
+  }
+  .work-section-rectangle17 {
+    width: 350px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  .work-section-rectangle20 {
+    top: 8px;
+    left: 8px;
+    width: 334px;
+    height: 100px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 8px;
+  }
+  .work-section-text02 {
+    top: 126px;
+    left: 8px;
+    color: rgba(26, 16, 3, 1);
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-text04 {
+    top: 113px;
+    left: 8px;
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-web-development-card {
+    gap: 10px;
+    top: 364px;
+    left: 0px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .work-section-rectangle16 {
+    width: 350px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  .work-section-text06 {
+    top: 126px;
+    left: 8px;
+    color: rgba(26, 16, 3, 1);
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-text08 {
+    top: 113px;
+    left: 8px;
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-rectangle21 {
+    top: 8px;
+    left: 8px;
+    width: 334px;
+    height: 100px;
+    z-index: 3;
+    position: absolute;
+    border-radius: 8px;
+  }
+  .work-section-blog-card {
+    gap: 10px;
+    top: 0px;
+    left: 374px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .work-section-rectangle18 {
+    width: 350px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .work-section-rectangle22 {
+    top: 8px;
+    left: 8px;
+    width: 334px;
+    height: 150px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 8px;
+  }
+  .work-section-text10 {
+    top: 178px;
+    left: 8px;
+    color: rgba(26, 16, 3, 1);
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-text12 {
+    top: 162px;
+    left: 8px;
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-mentorship-card {
+    gap: 10px;
+    top: 232px;
+    left: 374px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .work-section-rectangle19 {
+    width: 350px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .work-section-rectangle24 {
+    top: 8px;
+    left: 8px;
+    width: 334px;
+    height: 150px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 8px;
+  }
+  .work-section-text14 {
+    top: 176px;
+    left: 8px;
+    color: rgba(26, 16, 3, 1);
+    width: 109px;
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-text16 {
+    top: 160px;
+    left: 8px;
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-app-development-card {
+    gap: 10px;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .work-section-rectangle15 {
+    width: 350px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  .work-section-text18 {
+    top: 126px;
+    left: 8px;
+    color: rgba(26, 16, 3, 1);
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-text20 {
+    top: 110px;
+    left: 8px;
+    color: rgba(26, 16, 3, 0.5);
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .work-section-rectangle201 {
+    top: 8px;
+    left: 8px;
+    width: 334px;
+    height: 100px;
+    z-index: 3;
+    position: absolute;
+    border-radius: 8px;
+  }
   
+  /********************* contact *****************/
+
+  .contact-section-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-section-contact-section {
+    gap: 10px;
+    width: 840px;
+    height: 720px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-section-about-me-card {
+    top: 10px;
+    left: 10px;
+    width: 820px;
+    height: 700px;
+    position: absolute;
+    border-radius: 20px;
+  }
+  .contact-section-contact-heading {
+    gap: 32px;
+    top: 28px;
+    left: 82px;
+    width: 455px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .contact-section-contact {
+    gap: 10px;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-section-text {
+    color: rgba(11, 9, 9, 1);
+    height: auto;
+    font-size: 40px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-line5 {
+    width: 252px;
+    height: 2px;
+  }
+  .contact-section-phonecard {
+    top: 98px;
+    left: 83px;
+    width: 333px;
+    height: 150px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 238, 217, 1);
+    border-radius: 20px;
+  }
+  .contact-section-phone {
+    top: 30px;
+    left: 26px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .contact-section-group {
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .contact-section-vector {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .contact-section-vector1 {
+    top: 4px;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+  }
+  .contact-section-text02 {
+    top: 22px;
+    left: 60px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-text04 {
+    top: 55px;
+    left: 60px;
+    color: rgba(0, 0, 0, 0.8500000238418579);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-text06 {
+    top: 75px;
+    left: 60px;
+    color: rgba(0, 0, 0, 0.8500000238418579);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-email-card {
+    top: 98px;
+    left: 443px;
+    width: 333px;
+    height: 150px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-radius: 20px;
+    flex-shrink: 1;
+    background-color: rgba(242, 247, 252, 1);
+  }
+  .contact-section-fluentemojihighcontrastemail {
+    top: 27px;
+    left: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .contact-section-group1 {
+    top: 3.75px;
+    left: 0.7499983310699463px;
+    width: 22.500001907348633px;
+    height: 16.500001907348633px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .contact-section-vector2 {
+    top: 6.944999694824219px;
+    left: 9.757501602172852px;
+    width: 2px;
+    height: 2px;
+    position: absolute;
+  }
+  .contact-section-vector3 {
+    top: 3px;
+    left: 6.000001907348633px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  }
+  .contact-section-vector4 {
+    top: 0px;
+    left: 0px;
+    width: 23px;
+    height: 17px;
+    position: absolute;
+  }
+  .contact-section-text08 {
+    top: 18px;
+    left: 48px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-text10 {
+    top: 50px;
+    left: 48px;
+    color: rgba(0, 0, 0, 1);
+    width: 279px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 40px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .contact-section-contactform {
+    top: 280px;
+    left: 82px;
+    width: 694px;
+    height: 392px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-radius: 20px;
+    flex-shrink: 1;
+    background-color: rgba(248, 251, 251, 1);
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section-description{
+    padding: 20px 20px 0px 20px;
+    font-weight: bold;
+  }
+  .contact-section-form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-input{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Raleway;
+    width: 500px;
+  }
+  textarea {
+    resize: none;
+  }
