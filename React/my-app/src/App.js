@@ -24,6 +24,7 @@ import { UseCallback } from './Pages/UseCallback';
 import Form from './Pages/Form';
 import FormUseRef from './Pages/FormUseRef';
 import ReactBootsrap from './Pages/ReactBootsrap';
+import UseRedux from './Pages/UseRedux';
 
 function App() {
     const router = createBrowserRouter([
@@ -93,6 +94,9 @@ function App() {
         },{
             path:'bootsrap',
             element:<ReactBootsrap/>
+        },{
+            path:'useredux',
+            element:<UseRedux/>
         }
     ])
     return (
