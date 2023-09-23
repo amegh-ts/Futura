@@ -4,6 +4,7 @@ import InternalStyling from "./Pages/InternalStyling";
 import Sample from "./Pages/Sample";
 import StyledComponent from "./Pages/StyledComponent";
 import Api from "./Pages/Api";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ColourButton2 from "./Pages/Button/ColourButton2";
 import ColourButton3 from "./Pages/Button/ColourButton3";
 import ColourButton4 from "./Pages/Button/ColourButton4";
@@ -22,6 +23,7 @@ import ReactMemo from './Pages/ReactMemo';
 import { UseCallback } from './Pages/UseCallback';
 import Form from './Pages/Form';
 import FormUseRef from './Pages/FormUseRef';
+import ReactBootsrap from './Pages/ReactBootsrap';
 
 function App() {
     const router = createBrowserRouter([
@@ -88,6 +90,9 @@ function App() {
         },{
             path:'formuseref',
             element:<FormUseRef/>
+        },{
+            path:'bootsrap',
+            element:<ReactBootsrap/>
         }
     ])
     return (
