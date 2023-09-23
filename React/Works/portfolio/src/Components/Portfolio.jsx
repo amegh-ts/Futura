@@ -10,10 +10,10 @@ import location from './Assets/location.svg'
 import download from './Assets/download.svg'
 import phmoon from './Assets/phmoon.svg'
 
-import {IoHome} from 'react-icons/io5'
-import {IoIosPaper} from 'react-icons/io'
-import {BiSolidBriefcase} from 'react-icons/bi'
-import {BiSolidContact} from 'react-icons/bi'
+import { IoHome } from 'react-icons/io5'
+import { IoIosPaper } from 'react-icons/io'
+import { BiSolidBriefcase } from 'react-icons/bi'
+import { BiSolidContact } from 'react-icons/bi'
 
 import { FaFacebookF } from 'react-icons/fa'
 import { BiLogoLinkedin } from 'react-icons/bi'
@@ -28,14 +28,25 @@ import ContactContent from './ContactContent'
 
 
 function Portfolio() {
-    
-    const [activeTab, setActiveTab] = useState(0);  
+
+    const [activeTab, setActiveTab] = useState(0);
 
     const handleTabClick = (index) => {
         setActiveTab(index);
     };
 
-
+    const handleDownload = () => {
+        const pdfPath = process.env.PUBLIC_URL + '/resume.pdf';
+        const link = document.createElement('a');
+        link.href = pdfPath;
+        link.target = '_blank';  // Open in a new tab
+        link.download = 'MyResume.pdf'; // Specify the desired filename here
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+      
+      
     return (
         <div className='main_body'>
             <header className='header-container'>
@@ -170,7 +181,7 @@ function Portfolio() {
                                 />
                             </div>
                             <div >
-                                <button className='profiledetails-download-details'>
+                                <button className='profiledetails-download-details' onClick={handleDownload}>
                                     <img
                                         src={download}
                                         alt="materialsymbolsdownload2934"
@@ -190,19 +201,19 @@ function Portfolio() {
                         <div class="nav-bar-nav-bar">
                             <div class="nav-bar-navcard">
                                 <button onClick={() => handleTabClick(0)} className={`nav-bar-rectangle10 ${activeTab === 0 ? 'selected-button' : ''}`}>
-                                    <IoHome className='nav-bar-icon'/>
+                                    <IoHome className='nav-bar-icon' />
                                     <span class="nav-bar-text">Home</span>
                                 </button>
                                 <button onClick={() => handleTabClick(1)} className={`nav-bar-rectangle10 ${activeTab === 1 ? 'selected-button' : ''}`}>
-                                    <IoIosPaper className='nav-bar-icon'/>
+                                    <IoIosPaper className='nav-bar-icon' />
                                     <span class="nav-bar-text"><span>Resume</span></span>
                                 </button>
                                 <button onClick={() => handleTabClick(2)} className={`nav-bar-rectangle10 ${activeTab === 2 ? 'selected-button' : ''}`}>
-                                    <BiSolidBriefcase className='nav-bar-icon'/>
+                                    <BiSolidBriefcase className='nav-bar-icon' />
                                     <span class="nav-bar-text"><span>Work</span></span>
                                 </button>
                                 <button onClick={() => handleTabClick(3)} className={`nav-bar-rectangle10 ${activeTab === 3 ? 'selected-button' : ''}`}>
-                                    <BiSolidContact className='nav-bar-icon'/>
+                                    <BiSolidContact className='nav-bar-icon' />
                                     <span class="nav-bar-text"><span>Contact</span></span>
                                 </button>
                             </div>
@@ -210,12 +221,12 @@ function Portfolio() {
                     </div>
 
                     <div className="content">
-                    {activeTab === 0 && <div><HomeContent/></div>}
-                {activeTab === 1 && <div><ResumeContent/></div>}
-                {activeTab === 2 && <div><WorkContent/></div>}
-                {activeTab === 3 && <div><ContactContent/></div>}
+                        {activeTab === 0 && <div><HomeContent /></div>}
+                        {activeTab === 1 && <div><ResumeContent /></div>}
+                        {activeTab === 2 && <div><WorkContent /></div>}
+                        {activeTab === 3 && <div><ContactContent /></div>}
                     </div>
-                    
+
                 </div>
             </div>
         </div>
