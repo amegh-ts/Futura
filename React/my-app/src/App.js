@@ -25,13 +25,14 @@ import Form from './Pages/Form';
 import FormUseRef from './Pages/FormUseRef';
 import ReactBootsrap from './Pages/ReactBootsrap';
 import UseRedux from './Pages/UseRedux';
+import UseReduxChild from './Pages/UseReduxChild';
 
 function App() {
     const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <Home />
-        },
+        // {
+        //     path: '/',
+        //     element: <Home />
+        // },
         {
             path: 'UseReducer',
             element: <UseReducer />
@@ -94,18 +95,27 @@ function App() {
         },{
             path:'bootsrap',
             element:<ReactBootsrap/>
-        },{
-            path:'useredux',
-            element:<UseRedux/>
-        }
+        },
+        // {
+        //     path:'useredux',
+        //     element:<UseRedux/>
+        // },{
+        //     path:'usereduxchild',
+        //     element:<UseReduxChild/>
+        // }
+        
     ])
     return (
-        <RouterProvider router={router}></RouterProvider>
+        // <RouterProvider router={router}></RouterProvider>
 
         // <HookUseContext.Provider value={'Index'}>
         //     <HookUseContextDisplay/>
 
         // </HookUseContext.Provider>
+        <div>
+            <UseRedux />
+            <UseReduxChild />
+        </div>
 
     );
 }
