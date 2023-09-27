@@ -7,98 +7,98 @@ import cardimg2 from './Assets/card-img-2.png'
 
 const Home = () => {
     return (
-        <div>
-            <div class='main-div'>
+        <div className='main'>
+            <div className='main-div'>
 
                 {/******************* navbar ******************/}
-                <div class="navbar-container">
-                    <div class="navbar-navbar">
+                <div className="navbar-container">
+                    <div className="navbar-navbar">
                         <img
                             src={navimg1}
                             alt="flipkart095e08113"
-                            class="navbar-flipkart095e081"
+                            className="navbar-flipkart095e081"
                         />
                         <img
                             src={navimg2}
                             alt="headercarteed150115"
-                            class="navbar-headercarteed1501"
+                            className="navbar-headercarteed1501"
                         />
-                        <span class="navbar-text"><span>Items :</span></span>
-                        <span class="navbar-text2">0</span>
+                        <span className="navbar-text"><span>Items :</span></span>
+                        <span className="navbar-text2">0</span>
                     </div>
                 </div>
 
                 {/*************************** cards body *****************************/}
 
-                <div class="card-container">
-                    <div class="card-card">
-                        <span class="card-text">1</span>
+                <div className="card-container">
+                    <div className="card-card">
+                        <span className="card-text">1</span>
                         <img
                             src={cardimg1}
                             alt="grocerygettyf1122"
-                            class="card-grocerygettyf1"
+                            className="card-grocerygettyf1"
                         />
-                        <span class="card-text1"><span>vegies</span></span>
-                        <span class="card-text3"><span>Price : $20</span></span>
-                        <button class='card-add-to-cart-button'>
-                            <span class="card-text5">Add To Cart</span>
+                        <span className="card-text1"><span>vegies</span></span>
+                        <span className="card-text3"><span>Price : $20</span></span>
+                        <button className='card-add-to-cart-button'>
+                            <span className="card-text5">Add To Cart</span>
                         </button>
 
                     </div>
 
-                    <div class="card-card">
-                        <span class="card-text">2</span>
+                    <div className="card-card">
+                        <span className="card-text">2</span>
                         <img
                             src={cardimg1}
                             alt="grocerygettyf1122"
-                            class="card-grocerygettyf1"
+                            className="card-grocerygettyf1"
                         />
-                        <span class="card-text1"><span>vegies</span></span>
-                        <span class="card-text3"><span>Price : $20</span></span>
-                        <button class='card-add-to-cart-button'>
-                            <span class="card-text5">Add To Cart</span>
+                        <span className="card-text1"><span>vegies</span></span>
+                        <span className="card-text3"><span>Price : $20</span></span>
+                        <button className='card-add-to-cart-button'>
+                            <span className="card-text5">Add To Cart</span>
                         </button>
                     </div>
 
-                    <div class="card-card">
-                        <span class="card-text">3</span>
+                    <div className="card-card">
+                        <span className="card-text">3</span>
                         <img
                             src={cardimg1}
                             alt="grocerygettyf1122"
-                            class="card-grocerygettyf1"
+                            className="card-grocerygettyf1"
                         />
-                        <span class="card-text1"><span>vegies</span></span>
-                        <span class="card-text3"><span>Price : $20</span></span>
-                        <button class='card-add-to-cart-button'>
-                            <span class="card-text5">Add To Cart</span>
+                        <span className="card-text1"><span>vegies</span></span>
+                        <span className="card-text3"><span>Price : $20</span></span>
+                        <button className='card-add-to-cart-button'>
+                            <span className="card-text5">Add To Cart</span>
                         </button>
                     </div>
 
-                    <div class="card-card">
-                        <span class="card-text">4</span>
+                    <div className="card-card">
+                        <span className="card-text">4</span>
                         <img
                             src={cardimg1}
                             alt="grocerygettyf1122"
-                            class="card-grocerygettyf1"
+                            className="card-grocerygettyf1"
                         />
-                        <span class="card-text1"><span>vegies</span></span>
-                        <span class="card-text3"><span>Price : $20</span></span>
-                        <button class='card-add-to-cart-button'>
-                            <span class="card-text5">Add To Cart</span>
+                        <span className="card-text1"><span>vegies</span></span>
+                        <span className="card-text3"><span>Price : $20</span></span>
+                        <button className='card-add-to-cart-button'>
+                            <span className="card-text5">Add To Cart</span>
                         </button>
                     </div>
 
-                    <div class="card-card">
-                        <span class="card-text">5</span>
+                    <div className="card-card">
+                        <span className="card-text">5</span>
                         <img
                             src={cardimg1}
                             alt="grocerygettyf1122"
-                            class="card-grocerygettyf1"
+                            className="card-grocerygettyf1"
                         />
-                        <span class="card-text1"><span>vegies</span></span>
-                        <span class="card-text3"><span>Price : $20</span></span>
-                        <button class='card-add-to-cart-button'>
-                            <span class="card-text5">Add To Cart</span>
+                        <span className="card-text1"><span>vegies</span></span>
+                        <span className="card-text3"><span>Price : $20</span></span>
+                        <button className='card-add-to-cart-button'>
+                            <span className="card-text5">Add To Cart</span>
                         </button>
                     </div>
                 </div>
