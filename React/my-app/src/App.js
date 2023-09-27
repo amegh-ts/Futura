@@ -29,10 +29,10 @@ import UseReduxChild from './Pages/UseReduxChild';
 
 function App() {
     const router = createBrowserRouter([
-        // {
-        //     path: '/',
-        //     element: <Home />
-        // },
+        {
+            path: '/',
+            element: <Home />
+        },
         {
             path: 'UseReducer',
             element: <UseReducer />
