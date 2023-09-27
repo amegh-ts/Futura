@@ -208,9 +208,10 @@
 
   .cart-main{
     background-color: black;
-    width: 100%;
-    padding: 10pxx;
+    padding: 10px;
   }
   .cart-main-sub{
     background-color: white;
+    display: flex;
+    justify-content: center;
   }

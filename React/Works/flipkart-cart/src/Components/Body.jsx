@@ -29,7 +29,7 @@ const Body = ({ CartCount }) => {
                         <button
                             className="card-add-to-cart-button"
                             onClick={() => {
-                                CartCount(product.id);
+                                CartCount(product);
                             }}
                         >
                             <span className="card-text5">Add To Cart</span>

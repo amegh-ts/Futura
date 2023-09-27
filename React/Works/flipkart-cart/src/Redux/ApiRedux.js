@@ -6,9 +6,9 @@ const CartApi=createSlice({
         productInfo:[],
         
     },
-    reducers:{
-        cartProducts:(state,action)=>{
-            state.productInfo.push(action.payload)
+    reducers: {
+        cartProducts: (state, action) => {
+            state.productInfo.push(action.payload); // Push the entire product information
             console.log(action.payload);
         }
     }
