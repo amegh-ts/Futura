@@ -19,6 +19,11 @@ function Main() {
         return li.id <= 10
     })
 
+    // const a=state.filter((data)=>{
+    //     return data.id<=4
+    //   })
+
+
     console.log('*******', datas);
 
     console.log("state data", state);

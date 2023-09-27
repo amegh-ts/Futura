@@ -1,36 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import cardimg1 from './Assets/card-img-1.png'
-import cardimg2 from './Assets/card-img-2.png'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const Body = () => {
-    const[state, setState]=useState([]);
-    useEffect(()=>{
-        async function name(params) {
-            
+const Body = ({ CartCount }) => {
+    const [state, setState] = useState([]);
+
+    useEffect(() => {
+        async function api() {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/photos');
+            setState(res.data);
         }
-    })
-  return (
-    <div>
-        <div className="card-container">
-                    <div className="card-card">
-                        <span className="card-text">1</span>
+        api();
+    }, []);
+
+    const datas = state.filter((li) => li.id <= 10);
+
+    return (
+        <div>
+            <div className="card-container">
+                {datas.map((product) => (
+                    <div className="card-card" key={product.id}>
+                        <span className="card-text">{product.id}</span>
                         <img
-                            src={cardimg1}
+                            src={product.thumbnailUrl}
                             alt="grocerygettyf1122"
                             className="card-grocerygettyf1"
                         />
-                        <span className="card-text1"><span>vegies</span></span>
-                        <span className="card-text3"><span>Price : $20</span></span>
-                        <button className='card-add-to-cart-button'>
+                        <span className="card-text1">{product.title}</span>
+                        <button
+                            className="card-add-to-cart-button"
+                            onClick={() => {
+                                CartCount(product.id);
+                            }}
+                        >
                             <span className="card-text5">Add To Cart</span>
                         </button>
-
                     </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
-                    
-                </div>
-    </div>
-  )
-}
-
-export default Body
+export default Body;

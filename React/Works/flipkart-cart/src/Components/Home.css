@@ -14,14 +14,10 @@
 /************************ nav bar ***********************/
 
 .navbar-container {
-    width: 100%;
     display: flex;
-    overflow: auto;
-    /* min-height: 100vh; */
+    /* overflow: auto; */
     align-items: center;
-    flex-direction: column;
-  }
-  .navbar-navbar {
+    /* flex-direction: column; */
     width: 1356px;
     height: 74px;
     display: flex;
@@ -30,12 +26,15 @@
     flex-shrink: 1;
     background-color: rgba(217, 217, 217, 1);
   }
+  .navbar-navbar {
+    
+  }
   .navbar-flipkart095e081 {
     top: 24px;
     left: 7px;
     width: 159px;
     height: 26px;
-    position: absolute;
+    position: absolute; 
   }
   .navbar-headercarteed1501 {
     top: 23px;
@@ -76,6 +75,28 @@
     font-stretch: normal;
     text-decoration: none;
   }
+
+  @media (max-width: 768px) {
+    .navbar-flipkart095e081 {
+      top: 10px;
+      left: 10px;
+    }
+    .navbar-headercarteed1501 {
+      top: 10px;
+      left: auto;
+      right: 10px;
+    }
+    .navbar-text {
+      top: 10px;
+      left: auto;
+      right: 45px;
+    }
+    .navbar-text2 {
+      top: 10px;
+      left: auto;
+      right: 10px;
+    }
+  }
   
   /********************** body ***************************/
 
@@ -90,7 +111,7 @@
   }
   .card-card {
     width: 264px;
-    height: 389px;
+    height: 489px;
     display: flex;
     position: relative;
     align-items: flex-start;
@@ -154,7 +175,7 @@
     text-decoration: none;
   }
   .card-add-to-cart-button {
-    top: 315px;
+    top: 415px;
     left: 104px;
     width: 155px;
     height: 51px;
@@ -182,3 +203,13 @@
     text-decoration: none;
   }
   
+
+  /********************  */
+
+  .cart-main{
+    background-color: black;
+    width: 100%;
+  }
+  .cart-main-sub{
+    background-color: white;
+  }
