@@ -6,10 +6,9 @@ import Body from './Body';
 import { useDispatch } from 'react-redux';
 import { cartProducts } from '../Redux/ApiRedux';
 import { Link } from 'react-router-dom';
-import CartPage from './CartPage';
 
 const Home = () => {
-    const dispatch = useDispatch()
+    const dispatch=useDispatch()
     const [count, setCartCount] = useState(0);
 
     const CartCount = (product) => {
@@ -18,29 +17,20 @@ const Home = () => {
         dispatch(cartProducts((product)))
     };
 
-    const [activeTab, setActiveTab] = useState(Home);
-
-    const handleTabClick = view => {
-        setActiveTab(view);
-    };
-
     return (
         <div className="main">
             <div className="main-div">
                 <div className='navbar-navbar'>
                     <div className="navbar-container">
-                        <span onClick={() => handleTabClick('home')}>
-                            <img src={navimg1} alt="flipkart095e08113" className="navbar-flipkart095e081" />
-                            {/* <Link to={'/cartpage'}> */}
-                            <span>
-                                <BsCart3 className="navbar-headercarteed1501" />
-                            </span>
-                            {/* </Link> */}
+                        <img src={navimg1} alt="flipkart095e08113" className="navbar-flipkart095e081" />
+                        <Link to={'/cartpage'}>
+                        <span>
+                            <BsCart3 className="navbar-headercarteed1501" />
                         </span>
-
-
-
-                        <span className="navbar-text" onClick={() => handleTabClick('cart')}>
+                        </Link>
+                        
+                        
+                        <span className="navbar-text">
                             <span>Items :</span>
                         </span>
                         <span className="navbar-text2">{count}</span>
@@ -48,9 +38,7 @@ const Home = () => {
                 </div>
 
                 <div className="main-body">
-                {activeTab === 'home' && <Body CartCount={CartCount} />}
-                {activeTab === 'cart' && <CartPage/>}
-                    
+                    <Body CartCount={CartCount} />
                 </div>
             </div>
         </div>

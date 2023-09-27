@@ -5,24 +5,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 function App() {
-  // const router=createBrowserRouter([
-  //   {
-  //     path:'/',
-  //     element:<Home/>
-  //   },
-  //   {
-  //     path:'cartpage',
-  //     element:<CartPage/>
-  //   },
-  // ])
+  const router=createBrowserRouter([
+    {
+      path:'/',
+      element:<Home/>
+    },
+    {
+      path:'cartpage',
+      element:<CartPage/>
+    },
+  ])
   return (
-    // <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
 
 
-    <div className="App">
-      <Home/>
-      {/* <CartPage/> */}
-    </div>
+    // <div className="App">
+    //   {/* <Home/> */}
+    //   {/* <CartPage/> */}
+    // </div>
 
     
   );
