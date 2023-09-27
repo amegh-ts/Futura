@@ -4,6 +4,7 @@ const CartApi=createSlice({
     name:'products',
     initialState:{
         productInfo:[],
+        
     },
     reducers:{
         cartProducts:(state,action)=>{

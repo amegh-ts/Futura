@@ -209,6 +209,7 @@
   .cart-main{
     background-color: black;
     width: 100%;
+    padding: 10pxx;
   }
   .cart-main-sub{
     background-color: white;
