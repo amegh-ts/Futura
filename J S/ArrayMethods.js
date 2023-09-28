@@ -11,13 +11,11 @@ a.forEach((abc)=>{
 })
 
 //fill()
-
 const fruits=["banana","mango","kiwi"]
 fruits.fill("kiwi",1,2);
  console.log(fruits);
 
 //filter()
-
 const b=[10,20,30,40,50,60]
 const c=b.filter((li)=>{
     return li>20
@@ -25,19 +23,16 @@ const c=b.filter((li)=>{
 console.log(c)
 
 //slice()
-
 const d=[1,2,3,4,5,6]
 const e=d.slice(2,4)
 console.log(e);
 
 //splice()
-
 const f=[1,2,3,4,5,6]
 const g=f.splice(2,5)
 console.log(g)
 
 //sort()
-
 const h=[1,5,2,4,8,6]
 const i=h.sort((h,i)=>{
     return h-i
@@ -45,25 +40,21 @@ const i=h.sort((h,i)=>{
 console.log(i)
 
 //push()
-
 const j=[2,3,4,5,7]
 j.push(9)
 console.log(j)
 
 //pop()
-
 const k=[2,3,4,5,7]
 k.pop()
 console.log(k)
 
 //shift()
-
 const l=[2,3,4,5,7]
 l.shift()
 console.log(l)
 
 //unshift()
-
 const m=[2,3,4,5,7]
 m.unshift(9)
 console.log(m)
@@ -85,13 +76,11 @@ function Checkaa(){
 console.log(y);
 
 //includes()
-
 const num=[32,43,54,13,35]
 const num2=num.includes(54)
 console.log(num2);
 
 //join()
-
 const num3=[3,4,5,7]
 const add=num3.join(4)
 console.log(add);
@@ -102,7 +91,22 @@ const rev=num4.reverse()
 console.log(rev);
 
 //flat()
-
 const flat1=[1, 2, [3, [4, 5, 6], 7], 8]
 const flat2=flat1.flat(2)
 console.log(flat2);
+
+// find()
+const users=[
+    {id:1,name:'alice',domain:'mern'},
+    {id:2,name:'kanan',domain:'c'},
+    {id:3,name:'vasu',domain:'flutter'},
+    {id:4,name:'babu',domain:'react'},
+];
+const findUser=1;
+const userFound=users.find(user=>user.id===findUser);
+if (userFound) {
+    console.log(`User found:${userFound.name} domain:${userFound.domain}`);
+}
+else{
+    console.log('user not found');
+}
