@@ -26,6 +26,7 @@ import FormUseRef from './Pages/FormUseRef';
 import ReactBootsrap from './Pages/ReactBootsrap';
 import UseRedux from './Pages/UseRedux';
 import UseReduxChild from './Pages/UseReduxChild';
+import Selectorchild from './Pages/Selectorchild';
 
 function App() {
     const router = createBrowserRouter([
@@ -96,26 +97,30 @@ function App() {
             path:'bootsrap',
             element:<ReactBootsrap/>
         },
-        // {
-        //     path:'useredux',
-        //     element:<UseRedux/>
-        // },{
-        //     path:'usereduxchild',
-        //     element:<UseReduxChild/>
-        // }
+        {
+            path:'useredux',
+            element:<UseRedux/>
+        },{
+            path:'usereduxchild',
+            element:<UseReduxChild/>
+        },
+        {
+            path:'selector',
+            element:<Selectorchild/>
+        }
         
     ])
     return (
-        // <RouterProvider router={router}></RouterProvider>
+        <RouterProvider router={router}></RouterProvider>
 
         // <HookUseContext.Provider value={'Index'}>
         //     <HookUseContextDisplay/>
 
         // </HookUseContext.Provider>
-        <div>
-            <UseRedux />
-            <UseReduxChild />
-        </div>
+        // <div>
+        //     <UseRedux />
+        //     <UseReduxChild />
+        // </div>
 
     );
 }

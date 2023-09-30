@@ -1,22 +1,22 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
-const user=createSlice({
-    name:'users',
-    initialState:{
-        userInfo:[],
+const user = createSlice({
+    name: 'users',
+    initialState: {
+        userInfo: [],
+        // productinfo:[]
     },
-    reducers:{
-        // loginStart:(state)=>{
-        //     state.loading=true
-        //     state.error=false
-        // },
-        loginUser:(state,action)=>{
+    reducers: {
+        loginUser: (state, action) => {
             state.userInfo.push(action.payload)
             console.log(action.payload);
-        }
-        
+        },
+        // addproduct:(state,action)=>{
+        //     state.productinfo.push()
+        // }
+
     }
-    
+
 })
-export const{loginUser}=user.actions
+export const { loginUser } = user.actions
 export default user.reducer

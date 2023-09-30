@@ -11,7 +11,7 @@ function UseMemo() {
         let i=0
         while(i<200000000)
         i++
-    return state%2==0
+    return state%2===0
     },[state]);
 
     console.log('is even value',isEven);
