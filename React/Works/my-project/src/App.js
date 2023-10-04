@@ -5,7 +5,7 @@ import Main from './Components/api-fetch/Main';
 import Table from './Components/api-fetch/Table';
 import Home from './Components/Hospital-Management/Home';
 import Login from './Components/login-register/Login';
-import Portfolio from './Components/Portfolio/Portfolio';
+import Signup from './Components/localstorage/Signup';
 
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
       path: 'login',
       element: <Login />
     },
-    {
-      path:'portfolio',
-      element:<Portfolio/>
+  {
+      path:'localstore',
+      element:<Signup/>
     }
   ])
   return (
