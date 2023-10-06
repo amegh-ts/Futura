@@ -27,12 +27,13 @@ import ReactBootsrap from './Pages/ReactBootsrap';
 import UseRedux from './Pages/UseRedux';
 import UseReduxChild from './Pages/UseReduxChild';
 import Selectorchild from './Pages/Selectorchild';
+import UseNavigate1 from './Pages/UseNavigate1';
 
 function App() {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <Home />
+            element: <Home/>
         },
         {
             path: 'UseReducer',
@@ -107,6 +108,10 @@ function App() {
         {
             path:'selector',
             element:<Selectorchild/>
+        },
+        {
+            path:'navigate',
+            element:<UseNavigate1/>
         }
         
     ])

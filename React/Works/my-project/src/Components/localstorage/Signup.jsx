@@ -23,6 +23,8 @@ const Signup = () => {
 
         console.log('Form data submitted:', formData);
     };
+
+    //  to clear local storage
     const handleClearLocalStorage = () => {
         localStorage.clear();
         console.log('Local storage cleared.');
@@ -61,10 +63,11 @@ const Signup = () => {
                         <div className="link-group">
                             <a href="login.html">Already have an account? Log in</a>
                         </div>
-                        <div className='button-group'>
+                        
+                    </form>
+                    <div className='button-group'>
                         <button onClick={handleClearLocalStorage}>Clear Local Storage</button>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>
