@@ -14,9 +14,14 @@ const user = createSlice({
         // addproduct:(state,action)=>{
         //     state.productinfo.push()
         // }
+        
 
+        // remove data from local storage
+        removeData:(state)=>{
+            state.userInfo=[]
+        }
     }
 
 })
-export const { loginUser } = user.actions
+export const { loginUser,removeData } = user.actions
 export default user.reducer

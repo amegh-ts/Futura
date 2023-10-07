@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from "react-redux";
-import { loginUser } from '../Redux/UserRedux';
+import { loginUser, removeData } from '../Redux/UserRedux';
 
 const UseRedux = () => {
     const dispatch = useDispatch()
@@ -12,9 +12,14 @@ const UseRedux = () => {
         setState(res.data)
         dispatch(loginUser(res.data))
     }
+
+    const remove=()=>{
+        dispatch(removeData())
+    }
     return (
         <div>
             <button onClick={display}>click me</button>
+            <button onClick={remove}>clear</button>
         </div>
     )
 }
