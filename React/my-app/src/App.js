@@ -28,7 +28,7 @@ import UseRedux from './Pages/UseRedux';
 import UseReduxChild from './Pages/UseReduxChild';
 import Selectorchild from './Pages/Selectorchild';
 import UseNavigate1 from './Pages/UseNavigate1';
-import ApiFetch from './Pages/LocalStoreContext/ApiFetch';
+
 
 function App() {
     const router = createBrowserRouter([
@@ -114,10 +114,8 @@ function App() {
             path:'navigate',
             element:<UseNavigate1/>
         },
-        {
-            path:'apicontext',
-            element:<ApiFetch/>
-        }
+        
+   
         
     ])
     return (
