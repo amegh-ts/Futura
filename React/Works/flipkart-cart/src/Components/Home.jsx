@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import navimg1 from './Assets/navimg2.svg';
 import { BsCart3 } from 'react-icons/bs';
@@ -11,10 +11,23 @@ const Home = () => {
     const dispatch=useDispatch()
     const [count, setCartCount] = useState(0);
 
+   
+
     const CartCount = (product) => {
         setCartCount(count + 1);
         console.log(`Product added to cart with ID: ${product.id}`);
         dispatch(cartProducts((product)))
+
+        localStorage.setItem('cartCount', count + 1);  //save the cart count to local
+    };
+
+    useEffect(()=>{
+        const savedCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        setCartCount(savedCount);
+    },[])
+
+    window.onbeforeunload = () => {
+        localStorage.clear();
     };
 
     return (

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const Body = ({ CartCount }) => {
     const [state, setState] = useState([]);
@@ -12,7 +14,7 @@ const Body = ({ CartCount }) => {
         api();
     }, []);
 
-    const datas = state.filter((li) => li.id <= 10);
+    const datas = state.filter((li) => li.id <= 9);
 
     return (
         <div>
@@ -26,6 +28,7 @@ const Body = ({ CartCount }) => {
                             className="card-grocerygettyf1"
                         />
                         <span className="card-text1">{product.title}</span>
+                        <Link to={'/cartpage'}>
                         <button
                             className="card-add-to-cart-button"
                             onClick={() => {
@@ -34,6 +37,7 @@ const Body = ({ CartCount }) => {
                         >
                             <span className="card-text5">Add To Cart</span>
                         </button>
+                        </Link>
                     </div>
                 ))}
             </div>
