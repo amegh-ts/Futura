@@ -16,6 +16,8 @@ const UserReducer=(state,action)=>{   //UserReducer userdefind
     switch (action.type) {
         case 'Loginsuccess':
             return{user:action.payload}
+        case 'Remove':
+            return{user:null}
 
         default:
             return state
