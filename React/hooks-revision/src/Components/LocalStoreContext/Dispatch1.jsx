@@ -19,12 +19,15 @@ const Dispatch1 = () => {
                 console.error('Error fetching data:', error);
             }
         }
-        display();
+        setTimeout(display,3000)
         console.log('state data', state);
     }, []);
     const Clear=()=>{
         dispatch({type:'Remove'})
     }
+    setTimeout(Clear, 6000); 
+
+
 
     // const Clear = () => {
     //     // localStorage.setItem('user','')
@@ -35,7 +38,7 @@ const Dispatch1 = () => {
         <div>
             Dispatch1
             <div>
-                <button onClick={Clear}>clear</button>
+                {/* <button onClick={Clear}>clear</button> */}
             </div>
         </div>
     );
