@@ -1,50 +1,22 @@
 import './App.css';
+import Loading from './Components/Loading';
 import Main from './Components/Main';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 
 function App() {
+  const router=createBrowserRouter([
+    {
+      path:'/',
+      element:<Loading/>
+    },{
+      path:'home',
+      element:<Main/>
+    }
+])
   return (
-    <div className="App">
-      <Main />
+    <RouterProvider router={router}></RouterProvider>
 
-
-
-
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap"
-        data-tag="font"
-      />
-    </div>
   );
 }
 
