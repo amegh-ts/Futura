@@ -40,27 +40,22 @@ const Main = () => {
                     </div>
                 </div>
                 <div className='nav-end'>
-                    <div className='nav-cart'>
-                        <div className='nav-cart-child'>
-                            <BsCart3 />
-                            <span className='nav-cart-label'>Cart</span>
-                        </div>
-                        <span>|</span>
-                        <div className='nav-cart-child'>
-                            <span>10</span>
-                        </div>
+                <div className='nav-cart'>
+                    <div className='nav-cart-child'>
+                        <BsCart3 />
+                        <span className='nav-cart-label'>Cart</span>
                     </div>
-                    <div className='nav-cart2'>
-                        <div className='nav-cart-child'>
-                            <BsPerson />
-                            <span className='nav-cart-label'>Profile</span>
-                            <ul class="dropdown">
-                                <li><a href="#">Laptops</a></li>
-                                <li><a href="#">Monitors</a></li>
-                                <li><a href="#">Printers</a></li>
-                            </ul>
-                        </div>
+                    <span>|</span>
+                    <div className='nav-cart-child'>
+                        <span>10</span>
                     </div>
+                </div>
+                <div className='nav-cart'>
+                    <div className='nav-cart-child'>
+                        <BsPerson />
+                        <span className='nav-cart-label'>Profile</span>
+                    </div>
+                </div>
                 </div>
             </header>
             <div>
@@ -79,7 +74,7 @@ const Main = () => {
                 </div>
             </div>
             <div>
-                <Body />
+                <Body/>
             </div>
 
 
