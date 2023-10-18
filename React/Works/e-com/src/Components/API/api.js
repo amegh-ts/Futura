@@ -143,32 +143,32 @@ export const apiData = [
 
   }, {
     id: 18,
-    category: 'kids',
-    type: 'Frock',
+    category: 'dress',
+    type: 'kids',
     title: 'MUSKAN BEAUTY COLLECTION ',
     description: 'Baby Girls Midi/Knee Length Party Dress  (White, Sleeveless)',
     price: 999,
     thumbnail: 'https://rukminim2.flixcart.com/image/612/612/kxp0mfk0/kids-dress/z/n/q/1-2-years-princess-yellow-green-party-frocks-dresses-muskan-original-imaga2pyar8txzh4.jpeg?q=70'
   }, {
     id: 19,
-    category: 'kids',
-    type: 'Frock',
+    category: 'dress',
+    type: 'kids',
     title: 'FLORA ',
     description: 'Baby Girls Midi/Knee Length Festive/Wedding Dress  (Dark Green, Full Sleeve)',
     price: 699,
     thumbnail: 'https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/8/y/2/2-3-years-d-w-59-flora-original-imagm5vghy4ddnhb.jpeg?q=70'
   }, {
     id: 20,
-    category: 'kids',
-    type: 'Frock',
+    category: 'dress',
+    type: 'kids',
     title: 'MUSKAN BEAUTY COLLECTION  ',
     description: 'Baby Girls Midi/Knee Length Party Dress  (Red, Fashion Sleeve)',
     price: 699,
     thumbnail: 'https://rukminim2.flixcart.com/image/612/612/kvy58y80/kids-dress/s/8/f/18-24-months-princess-classy-girls-frocks-dresses-muskan-beauty-original-imag8puhns8qgtnr.jpeg?q=70'
   }, {
     id: 21,
-    category: 'kids',
-    type:'Jacket Pant',
+    category: 'dress',
+    type:'kids',
     title: 'OOKSGAL ',
     description: 'Baby Boys Party(Festive) Jacket Pant  (Red) ',
     price: 489,
@@ -176,8 +176,8 @@ export const apiData = [
 
   }, {
     id: 22,
-    category: 'kids',
-    type: 'Jacket Pant',
+    category: 'dress',
+    type: 'kids',
     title: 'OOKSGAL ',
     description: 'Baby Boys Party(Festive) Jacket Pant  (Grey)',
     price: 491,
@@ -185,8 +185,8 @@ export const apiData = [
 
   }, {
     id: 23,
-    category: 'kids',
-    type: ' Shirt Shorts',
+    category: 'dress',
+    type: ' kids',
     title: 'KIKANI ENTERPRISE ',
     description: 'Baby Boys & Baby Girls Party(Festive) Shirt Shorts  (Multicolor)',
     price: 543,
@@ -194,8 +194,8 @@ export const apiData = [
 
   }, {
     id: 24,
-    category: 'kids',
-    type: ' T-shirt Dungaree ',
+    category: 'dress',
+    type: ' kids ',
     title: 'RUKMINI',
     description: 'Baby Boys & Baby Girls Party(Festive) T-shirt Dungaree  (Pink) ',
     price: 750,
@@ -203,8 +203,8 @@ export const apiData = [
 
   }, {
     id: 25,
-    category: 'kids',
-    type: ' T-shirt Pyjama ',
+    category: 'dress',
+    type: ' kids',
     title: 'CuteHug',
     description: 'Baby Boys & Baby Girls Party(Festive) Dress T-shirt, Pyjama  (Black)        ',
     price: 599,
@@ -212,8 +212,8 @@ export const apiData = [
 
   }, {
     id: 26,
-    category: 'makeup  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'makeup',
     title: 'Foundation',
     description: 'L.A GIRL HD Pro. Liquid Matte Foundation | Matte & Poreless Ultra Blendable Liquid With Natural Full Coverage Long Lasting, Natural Finish Sweatproof Infallible 28 ml    ',
     price: 1059,
@@ -221,8 +221,8 @@ export const apiData = [
 
   }, {
     id: 27,
-    category: 'makeup ',
-    type:'face',
+    category: 'beauty&health ',
+    type:'makeup',
     title: 'Blender',
     description: 'MACPLUS Makeup Sponge Set Beauty Blender with Egg Case, Soft Sponge For Liquid Foundation, Creams, and Powders Latex Free Wet and Dry Makeup (Multicolor 4 Big + 3 Mini -7 Pcs set)',
     price: 184,
@@ -230,8 +230,8 @@ export const apiData = [
 
   }, {
     id: 28,
-    category: ' makeup ',
-    type:'face',
+    category: ' beauty&health ',
+    type:'makeup',
     title: 'Lipstick',
     description: 'Maybelline New York Matte Lipstick, Intense Colour, Moisturised Lips, Color Sensational Creamy Matte, 507 Almond Pink, 3.9g',
     price: 200,
@@ -239,8 +239,8 @@ export const apiData = [
 
   }, {
     id: 29,
-    category: 'makeup  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'makeup',
     title: 'Brightening Gel',
     description: 'Lotus Herbals WhiteGlow Skin Whitening And Brightening Gel, Face Cream with SPF-25, for all skin types, 40g',
     price: 192,
@@ -248,8 +248,8 @@ export const apiData = [
 
   }, {
     id: 30,
-    category: 'makeup  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'makeup',
     title: 'Glow Face Serum',
     description: 'Mamaearth Vitamin C Daily Glow Face Serum for Men & Women - Vitamin C Serum for Glowing Skin, Oily Skin & Dark Spots, With 50x Vitamin C -10ml        ',
     price: 225,
@@ -257,8 +257,8 @@ export const apiData = [
 
   }, {
     id: 31,
-    category: 'skincare  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'skincare',
     title: 'Facial Wash ',
     description: 'Simple Kind To Skin Refreshing Facial Wash 150 ml        ',
     price: 196,
@@ -266,8 +266,8 @@ export const apiData = [
 
   }, {
     id: 32,
-    category: 'skincare  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'skincare',
     title: 'Body Lotion ',
     description: 'Dove Body Love Supple Bounce Body Lotion for Dry Skin 48Hrs Moisturisation, Paraben Free, with Plant based Moisturiser, For Supple Healthy Skin 400ml        ',
     price: 374,
@@ -275,8 +275,8 @@ export const apiData = [
 
   }, {
     id: 33,
-    category: 'skincare  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'skincare',
     title: 'Moisturizer',
     description: 'Neutrogena Hydro Boost Hyaluronic Acid Hydrating Water Gel Daily Face Moisturizer For All Skin Types, 50g',
     price: 788,
@@ -284,8 +284,8 @@ export const apiData = [
 
   }, {
     id: 34,
-    category: 'skincare  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'skincare',
     title: 'Face Pack',
     description: 'Mamaearth Multani Mitti Face Pack with Multani Mitti and Bulgarian Rose for Oil Control & Acne - 100 g| Suits All Skin Types | Hydrating & Glowing | Paraben-Free | No Silicones | No Sulphates        ',
     price: 292,
@@ -293,8 +293,8 @@ export const apiData = [
 
   }, {
     id: 35,
-    category: 'skincare  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'skincare',
     title: 'Facial Kit',
     description: 'Mamaearth Vitamin C Facial Kit with Vitamin C & Turmeric for Skin Illumination - 60 g        ',
     price: 334,
@@ -302,8 +302,8 @@ export const apiData = [
 
   }, {
     id: 36,
-    category: 'wellness  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'wellness',
     title: 'Himalaya Ashvagandha',
     description: 'Himalaya Ashvagandha - 60 Tablets | Stress Relief | Rejuvenates Mind & Body | Improves Strength & Energy | General Wellness        ',
     price: 187,
@@ -311,8 +311,8 @@ export const apiData = [
 
   }, {
     id: 37,
-    category: 'wellness  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'wellness',
     title: 'ORGANIC GLYCERINE',
     description: 'WELLNESS BEAT ORGANIC GLYCERINE 100 ML',
     price: 225,
@@ -320,8 +320,8 @@ export const apiData = [
 
   }, {
     id: 38,
-    category: 'wellness  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'wellness',
     title: ' Skin Firming Nutrition Drink',
     description: 'Mul Secrets Wellness 120 gm Rejuvenate Skin Firming Nutrition Drink | For All Skin type, Promotes Collagen Levels | Helps Maintaining Skin Health| Improves Respiratory & Digestive Disorders | Boosts Immunity (30 Sachets)',
     price: 999,
@@ -329,8 +329,8 @@ export const apiData = [
 
   }, {
     id: 39,
-    category: 'wellness  ',
-    type:'face',
+    category: 'beauty&health  ',
+    type:'wellness',
     title: 'Bold Care Himalayan Shilajit Resin ',
     description: 'Bold Care Himalayan Shilajit Resin - The Essence of Wellness - 20 gm        ',
     price: 499,
@@ -338,8 +338,8 @@ export const apiData = [
 
   }, {
     id: 40,
-    category: ' wellness ',
-    type:'face',
+    category: ' beauty&health ',
+    type:'wellness',
     title: 'Bikini Wax',
     description: 'The Wellness Shop - Best Bikini Wax - 10 Minutes Herbal Wax Powder for Women and Girls (100g)        ',
     price: 440,
