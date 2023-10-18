@@ -347,8 +347,8 @@ export const apiData = [
 
   }, {
     id: 41,
-    category: ' mobile ',
-    type:'android',
+    category: ' electronics ',
+    type:'mobile',
     title: 'OPPO',
     description: 'OPPO A17k (Blue, 64 GB)  (3 GB RAM)',
     price: 8999,
@@ -356,8 +356,8 @@ export const apiData = [
 
   }, {
     id: 42,
-    category: 'mobile  ',
-    type:'IOS',
+    category: 'electronics  ',
+    type:'mobile',
     title: 'iPhone 14 ',
     description: 'APPLE iPhone 14 (Blue, 128 GB)',
     price: 61999,
@@ -365,8 +365,8 @@ export const apiData = [
 
   }, {
     id: 43,
-    category: 'mobile  ',
-    type:'android',
+    category: 'electronics  ',
+    type:'mobile',
     title: 'SAMSUNG Galaxy A72',
     description: 'SAMSUNG Galaxy A72 (Awesome White, 128 GB)  (8 GB RAM)',
     price: 26990,
@@ -374,8 +374,8 @@ export const apiData = [
 
   }, {
     id: 44,
-    category: 'mobile  ',
-    type:'IOS',
+    category: 'electronics  ',
+    type:'mobile',
     title: 'iPhone 14 Plus',
     description: 'APPLE iPhone 14 Plus (Purple, 128 GB)',
     price: 71999,
@@ -383,8 +383,8 @@ export const apiData = [
 
   }, {
     id: 45,
-    category: ' mobile ',
-    type:'android',
+    category: ' electronics ',
+    type:'mobile',
     title: 'MOTOROLA',
     description: 'MOTOROLA G8 Power Lite (Arctic Blue, 64 GB)  (4 GB RAM)        ',
     price: 9999,
@@ -392,8 +392,8 @@ export const apiData = [
 
   }, {
     id: 46,
-    category: ' camera ',
-    type:'DSLR',
+    category: ' electronics ',
+    type:'camera',
     title: ' DSLR Camera Body',
     description: ' Canon EOS 1500D DSLR Camera Body+ 18-55 mm IS II Lens  (Black)        ',
     price: 40999,
@@ -401,8 +401,8 @@ export const apiData = [
 
   }, {
     id: 47,
-    category: ' camera ',
-    type:'DSLR',
+    category: ' electronics ',
+    type:'camera',
     title: 'SONY Alpha ILCE-7M3K',
     description: 'SONY Alpha ILCE-7M3K Full Frame Mirrorless Camera with 28-70 mm Zoom LensFeaturing Eye AF and 4K movie recording  (Black)       ',
     price: 141489,
@@ -410,8 +410,8 @@ export const apiData = [
 
   }, {
     id: 48,
-    category: ' camera ',
-    type:'DSLR',
+    category: ' electronics ',
+    type:'camera',
     title: ' DSLR Camera',
     description: 'Canon EOS 200D II DSLR Camera EF-S18-55mm IS STM  (Black)        ',
     price: 58598,
@@ -419,8 +419,8 @@ export const apiData = [
 
   }, {
     id: 49,
-    category: ' camera ',
-    type:'DSLR',
+    category: ' electronics ',
+    type:'camera',
     title: ' DSLR Camera ',
     description: 'Canon EOS 3000D DSLR Camera 1 Camera Body, 18 - 55 mm Lens  (Black)#JustHere        ',
     price: 5800,
@@ -428,8 +428,8 @@ export const apiData = [
 
   }, {
     id: 50,
-    category: ' camera ',
-    type:'DSLR',
+    category: ' electronics ',
+    type:'camera',
     title: ' Sports and Action Camera ',
     description: 'GoPro Hero9 Sports and Action Camera  (Black, 20 MP)',
     price: 2599,
@@ -438,7 +438,7 @@ export const apiData = [
   },
   {
     id:51,
-    category:'computer',
+    category:'electronics',
     type:'laptop accessories',
     title:'HyperX',
     description:'Cloud Stinger 2 Greatness Refined, Lightweight Wired Over Ear Headset with mic',
@@ -447,7 +447,7 @@ export const apiData = [
 },
 {
     id:52,
-    category:'computer',
+    category:'electronics',
     type:'laptop accessories',
     title:'Zebronics',
     description:'Zeb-Transformer Gaming Keyboard and Mouse Combo (USB, Braided Cable)',
@@ -456,7 +456,7 @@ export const apiData = [
 },
 {
     id:53,
-    category:'computer',
+    category:'electronics',
     type:'laptop accessories',
     title:'Logitech',
     description:'MX Master 2S Wireless Mouse, Multi-Device, Bluetooth or 2.4GHz Wireless with USB Unifying Receiver, 4000 DPI Any Surface Tracking, 7 Buttons, Fast Rechargeable, Laptop/PC/Mac/iPad OS - Black',
@@ -465,7 +465,7 @@ export const apiData = [
 },
 {
     id:54,
-    category:'computer',
+    category:'electronics',
     type:'laptop accessories',
     title:'Logitech',
     description:'G29 Driving Force Racing Wheel and Floor Pedals, Real Force Feedback, Stainless Steel Paddle Shifters, Leather Steering Wheel Cover for PS5, PS4, PC, Mac - Black',
@@ -474,7 +474,7 @@ export const apiData = [
 },
 {
     id:55,
-    category:'computer',
+    category:'electronics',
     type:'laptop accessories',
     title:'Corsair',
     description:'HS80 RGB Wireless Premium Gaming On Ear Headset with Dolby Atmos Audio (Low-Latency, Omni-Directional Microphone, 60ft Range, Up to 20 Hours Battery Life, PS5/PS4 Wireless Compatibility) White',
@@ -482,8 +482,8 @@ export const apiData = [
     thumbnail:'https://m.media-amazon.com/images/I/61-gjW2jQCL._SY679_.jpg',
     },{
   id:56,
-  category:'women',
-  type:'western',
+  category:'dress',
+  type:'women',
   title:'GRECIILOOKS',
   description:'Western Dress for Women || Stretchable Lycra Solid Mini Dress...',
   price:299,
@@ -491,7 +491,7 @@ export const apiData = [
 },
 {
   id:57,
-  category:'women',
+  category:'dress',
   type:'western',
   title:'J B Fashion',
   description:'Dresses for Women || Western Dresses for Women || Dress for...',
@@ -500,8 +500,8 @@ export const apiData = [
 },
 {
   id:58,
-  category:'women',
-  type:'western',
+  category:'dress',
+  type:'women',
   title:'Lymio',
   description:'Dresses for Women || Western Dresses for Women || Dress for...',
   price:599,
@@ -509,8 +509,8 @@ export const apiData = [
 },
 {
   id:59,
-  category:'women',
-  type:'western',
+  category:'dress',
+  type:'women',
   title:'AASK',
   description:'Women A-line..',
   price:591,
@@ -518,8 +518,8 @@ export const apiData = [
 },
 {
   id:60,
-  category:'women',
-  type:'western',
+  category:'dress',
+  type:'women',
   title:'GRECIILOOKS',
   description:'Women Co Ord Set| Printed Shirt & Bottom Set for Women|...',
   price:399,
@@ -527,8 +527,8 @@ export const apiData = [
 },
 {
   id:61,
-  category:'women',
-  type:'indian clothing',
+  category:'dress',
+  type:'women',
   title:'Miss Ethnik',
   description:'womens Faux Georgette Semi Stitched Top With Stitched Faux..',
   price:1599,
@@ -536,8 +536,8 @@ export const apiData = [
 },
 {
   id:62,
-  category:'women',
-  type:'indian clothing',
+  category:'dress',
+  type:'women',
   title:'Amayra',
   description:'Womens Rayon Nayra Cut Embroidered Kurta with Pant and',
   price:799,
@@ -545,8 +545,8 @@ export const apiData = [
 },
 {
   id:63,
-  category:'women',
-  type:'indian clothing',
+  category:'dress',
+  type:'women',
   title:'Khushal K',
   description:'Womens Rayon Flared Kurta And Palazzo With Dupatta Set',
   price:1325,
@@ -554,8 +554,8 @@ export const apiData = [
 },
 {
   id:64,
-  category:'women',
-  type:'indian clothing',
+  category:'dress',
+  type:'women',
   title:'RAJMANDIRFABRICS',
   description:'Women Cotton Kurta Pant With Dupatta Set',
   price:1545,
@@ -563,8 +563,8 @@ export const apiData = [
 },
 {
   id:65,
-  category:'women',
-  type:'indian clothing',
+  category:'dress',
+  type:'women',
   title:'ANNI DESIGNER',
   description:'Womens Georgette Chikankari Embroidered Anarkali Kurti',
   price:539,
