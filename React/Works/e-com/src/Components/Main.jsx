@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Main.css'
 import { BsSearch } from 'react-icons/bs';
 import { BsCart3 } from 'react-icons/bs';
@@ -6,13 +6,44 @@ import { BsPerson } from 'react-icons/bs';
 import navlogo from './Assets/logo.png'
 import womanincart from './Assets/woman-in-cart.png'
 import Body from './Body';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 const Main = () => {
+    const [icon, setIcon] = useState('fa-smile-o');
+
+    const smile = () => {
+        setTimeout(() => {
+            setIcon('fa-meh-o');
+        }, 1000);
+        setTimeout(() => {
+            setIcon('fa-frown-o');
+        }, 2000);
+        setTimeout(() => {
+            setIcon('fa-smile-o');
+        }, 3000);
+    };
+
+    useEffect(() => {
+        smile();
+        const intervalId = setInterval(() => {
+            smile();
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
+
     return (
         <div className='main-div'>
             <header className='nav-bar'>
+
                 <div className='nav-logo'>
+                <i id="div1" className={`fa ${icon}`} />
+
                     <img src={navlogo} alt="" />
+
                 </div>
                 <div className='nav-navigation'>
                     <ul className="list">
@@ -47,14 +78,14 @@ const Main = () => {
                         </div>
                     </button>
 
-                
+
 
                     <div className="dropdown">
                         <button className="dropbtn">
                             <div className='nav-cart-child'>
-                            <BsPerson />
-                            <span className='nav-cart-label'>Profile</span>
-                        </div>
+                                <BsPerson />
+                                <span className='nav-cart-label'>Profile</span>
+                            </div>
                         </button>
                         <div className="dropdown-content">
                             <a href="#">Link 1</a>

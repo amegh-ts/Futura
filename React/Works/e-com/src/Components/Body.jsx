@@ -23,12 +23,12 @@ const Body = () => {
         console.log(state);
     }, [])
 
-    const handleClick=(filter)=>{
+    const handleClick = (filter) => {
         setActiveFilter(filter);
-        if (filter==='All') {
+        if (filter === 'All') {
             setFilteredState(state);
-        } else{
-            const filtered=state.filter(item=>item.category.toLowerCase()===filter.toLowerCase());
+        } else {
+            const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
             setFilteredState(filtered);
         }
     }
@@ -40,11 +40,43 @@ const Body = () => {
                     <h2>Our Top Collection</h2>
                 </div>
                 <div className='collection-filter'>
-                <button onClick={() => handleClick('All')} className={`collection-button ${activeFilter === 'All' ? 'active' : ''}`}>All Collection</button>
-                    <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
-                    <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
-                    <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
-                    <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</button>
+                    <button onClick={() => handleClick('All')} className={`collection-button ${activeFilter === 'All' ? 'active' : ''}`}>All Collection</button>
+
+                    <div className='b-dropdown'>
+                        <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
+                        <div className="b-dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div className='b-dropdown'>
+                        <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
+                        <div className="b-dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div className='b-dropdown' >
+                        <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
+                        <div className="b-dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div className='b-dropdown'>
+                        <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</button>
+                        <div className="b-dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -54,7 +86,7 @@ const Body = () => {
                 <div className='b-card-container'>
                     {filteredState.map(item => (
                         <div key={item.id} className="card-items">
-                            <img src={item.thumbnail} alt={item.name} className='card-image'/>
+                            <img src={item.thumbnail} alt={item.name} className='card-image' />
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
                                 <span className='card-item-description'>{item.description} </span>
