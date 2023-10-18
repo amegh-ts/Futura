@@ -41,9 +41,9 @@ const Body = () => {
                 </div>
                 <div className='collection-filter'>
                 <button onClick={() => handleClick('All')} className={`collection-button ${activeFilter === 'All' ? 'active' : ''}`}>All Collection</button>
-                    <button onClick={() => handleClick('Men')} className={`collection-button ${activeFilter === 'Men' ? 'active' : ''}`}>Men</button>
-                    <button onClick={() => handleClick('Women')} className={`collection-button ${activeFilter === 'Women' ? 'active' : ''}`}>Women</button>
-                    <button onClick={() => handleClick('Kids')} className={`collection-button ${activeFilter === 'Kids' ? 'active' : ''}`}>Kids</button>
+                    <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
+                    <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
+                    <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
                 </div>
             </section>
 
@@ -55,8 +55,8 @@ const Body = () => {
                         <div key={item.id} className="card-items">
                             <img src={item.thumbnail} alt={item.name} className='card-image'/>
                             <div className="card-item-details">
-                                <span>{item.title}</span>
-                                <span>{item.description}</span>
+                                <span className='card-item-title'>{item.title}</span>
+                                <span className='card-item-description'>{item.description}</span>
                                 <span>{item.price}</span>
                             </div>
                         </div>

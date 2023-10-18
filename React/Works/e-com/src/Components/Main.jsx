@@ -10,11 +10,6 @@ import Body from './Body';
 const Main = () => {
     return (
         <div className='main-div'>
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap"
-                data-tag="font"
-            />
             <header className='nav-bar'>
                 <div className='nav-logo'>
                     <img src={navlogo} alt="" />
