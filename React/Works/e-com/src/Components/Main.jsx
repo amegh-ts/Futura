@@ -20,16 +20,16 @@ const Main = () => {
                     <img src={navlogo} alt="" />
                 </div>
                 <div className='nav-navigation'>
-                    <ul class="list">
-                        <li><a href="#" class="link">
+                    <ul className="list">
+                        <li><a href="#" className="link">
                             Home</a></li>
-                        <li><a href="#" class="link  ">
+                        <li><a href="#" className="link  ">
                             Shop</a></li>
-                        <li><a href="#" class="link">
+                        <li><a href="#" className="link">
                             Pages</a></li>
-                        <li><a href="#" class="link ">
+                        <li><a href="#" className="link ">
                             About Us</a></li>
-                        <li><a href="#" class="link">
+                        <li><a href="#" className="link">
                             Lookups</a></li>
                     </ul>
                 </div>
@@ -40,41 +40,52 @@ const Main = () => {
                     </div>
                 </div>
                 <div className='nav-end'>
-                <div className='nav-cart'>
-                    <div className='nav-cart-child'>
-                        <BsCart3 />
-                        <span className='nav-cart-label'>Cart</span>
+
+                    <button className='nav-cart'>
+                        <div className='nav-cart-child'>
+                            <BsCart3 />
+                            <span className='nav-cart-label'>Cart</span>
+                        </div>
+                        <span>|</span>
+                        <div className='nav-cart-child'>
+                            <span>10</span>
+                        </div>
+                    </button>
+
+                
+
+                    <div className="dropdown">
+                        <button className="dropbtn">
+                            <div className='nav-cart-child'>
+                            <BsPerson />
+                            <span className='nav-cart-label'>Profile</span>
+                        </div>
+                        </button>
+                        <div className="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </div>
-                    <span>|</span>
-                    <div className='nav-cart-child'>
-                        <span>10</span>
-                    </div>
-                </div>
-                <div className='nav-cart'>
-                    <div className='nav-cart-child'>
-                        <BsPerson />
-                        <span className='nav-cart-label'>Profile</span>
-                    </div>
-                </div>
+
+
                 </div>
             </header>
             <div>
                 <div className="banner">
-                    <div className="row">
+                    <div className='banner-content'>
+                        <h1>fash<span className="i">i</span>on</h1>
                         <div>
-                            <img src={womanincart} alt="" />
+                            <button className='banner-button'>Explore Now!</button>
                         </div>
-                        <div className='banner-content'>
-                            <h1>fash<span className="i">i</span>on</h1>
-                            <div>
-                                <button className='banner-button'>Explore Now!</button>
-                            </div>
-                        </div>
+                    </div>
+                    <div className='banner-image'>
+                        <img src={womanincart} alt="" />
                     </div>
                 </div>
             </div>
             <div>
-                <Body/>
+                <Body />
             </div>
 
 

@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 
 
-@media (max-width: 900px) {
-  .nav-navigation {
-    display: none;
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
-
+*{
+  margin: 0;
+}
 .main-div {
   margin: 0px 20px;
   box-sizing: border-box;
@@ -16,7 +25,6 @@
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  /* Change to space-between to evenly distribute items */
   align-items: center;
   height: 60px;
   padding: 10px;
@@ -25,14 +33,12 @@
 .nav-navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 
 .list {
   list-style: none;
   display: flex;
-  margin-top: 15px;
   gap: 40px;
 }
 
@@ -119,6 +125,7 @@
 .nav-cart {
   background-color: #F0F5FF;
   color: #F86F14;
+  border: none;
   border-radius: 20px;
   margin: 5px;
   padding: 0px 10px;
@@ -129,7 +136,74 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
 }
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  border-radius: 20px;
+
+}
+
+.dropbtn {
+  font-size: 17px;    
+  background-color: #F0F5FF;
+  color: #F86F14;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 0px 10px;
+  font-size: x-large;
+  /* width: 40px; */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  /* float: none; */
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #f38f4d;
+  color: white;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 10px;
+  background-color: #f38f4d;
+  padding: 3px;
+
+}
+
+
 
 .nav-cart-child {
   display: flex;
@@ -154,19 +228,16 @@
   height: 80vh;
   margin-top: 20px;
   padding: 20px;
+  display: flex;
+  
 }
 
-.banner .row {
+.banner {
   height: 100%;
   background: url("Assets/bg.svg") center/cover no-repeat fixed;
   border-radius: 2rem;
-  position: relative;
-}
-
-.banner .row img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .banner-content {
@@ -177,10 +248,11 @@
   justify-content: center;
 }
 
-h1 {
+.banner-content h1 {
   font-family: "Aclonica", sans-serif;
   font-size: 10rem;
   line-height: 1;
+  margin: 0;
 }
 
 .i {
@@ -202,6 +274,11 @@ h1 {
   padding: 10px 20px;
   opacity: .7;
   font-size: large;
+}
+
+.banner-image img{
+  width: 400px;
+  position: relative;
 }
 
 
@@ -248,4 +325,31 @@ h1 {
 }
 .collection-button:hover{
   background: #F86F14;
+}
+
+
+
+/******************* Body Part *********************/
+.b-card-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 cards per row */
+  gap: 20px; /* Adjust gap as needed */
+  border: solid 1px #e0e0e0;
+  justify-content: space-evenly;
+}
+.card-items{
+  max-width: 300px;
+}
+.card-items:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.card-image{
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
+}
+.card-item-details{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
 }
