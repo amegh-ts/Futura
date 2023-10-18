@@ -29,7 +29,7 @@ const Body = () => {
             setFilteredState(state);
         } else{
             const filtered=state.filter(item=>item.category.toLowerCase()===filter.toLowerCase());
-            setFilteredState(filtered)
+            setFilteredState(filtered);
         }
     }
     return (
@@ -44,6 +44,7 @@ const Body = () => {
                     <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
                     <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
                     <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
+                    <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</button>
                 </div>
             </section>
 
@@ -56,7 +57,7 @@ const Body = () => {
                             <img src={item.thumbnail} alt={item.name} className='card-image'/>
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
-                                <span className='card-item-description'>{item.description}</span>
+                                <span className='card-item-description'>{item.description} </span>
                                 <span>{item.price}</span>
                             </div>
                         </div>
