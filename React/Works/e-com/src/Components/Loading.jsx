@@ -3,17 +3,17 @@ import './Loading.css'
 import { useNavigate } from 'react-router-dom';
 
 const Loading = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    const redirectToMain = () => {
-      setTimeout(() => {
-        navigate('/home');
-      }, 4000);
-    };
+    useEffect(() => {
+      const redirectToMain = () => {
+        setTimeout(() => {
+          navigate('/home');
+        }, 4000);
+      };
 
-    redirectToMain();
-  }, [navigate]);
+      redirectToMain();
+    }, [navigate]);
 
   return (
     <div className='body'>

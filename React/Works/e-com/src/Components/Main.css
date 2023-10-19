@@ -481,11 +481,21 @@
 .cart-item-details{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 2px;
 }
 .cart-item-title{
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
 }
 .cart-item-description{
-  font-size: 18px;
+  font-size: 22px;
+}
+.cart-item-utils{
+display: flex;
+}
+.cart-item-utils-a span{
+  margin: 4px;
+  padding: 2px;
+
 }

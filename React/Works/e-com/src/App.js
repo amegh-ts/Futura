@@ -1,5 +1,6 @@
 import './App.css';
 import Cart from './Components/Cart';
+import Details from './Components/Details';
 import Loading from './Components/Loading';
 import Main from './Components/Main';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -8,16 +9,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
   const router=createBrowserRouter([
-    // {
-    //   path:'/',
-    //   element:<Loading/>
-    // },
+    {
+      path:'/',
+      element:<Loading/>
+    },
     {
       path:'home',
       element:<Main/>
-    },{
-      path:'/',
-      element:<Cart/>
+    },
+    {
+      path:'details',
+      element:<Details/>
     }
 ])
   return (
