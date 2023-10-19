@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico:wght@400&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&amp;display=swap");
 
 
 @media (max-width: 768px) {
@@ -450,7 +451,7 @@
   justify-content: space-around;
   background-color: #eceaea;
   padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: A'poppins', sans-serif;
 }
 .cart-body{
   width: auto;
