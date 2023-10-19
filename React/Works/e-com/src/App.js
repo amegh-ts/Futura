@@ -1,31 +1,35 @@
-import './App.css';
-import Cart from './Components/Cart';
-import Details from './Components/Details';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
 import Main from './Components/Main';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-
+import Details from './Components/Details';
+import Cart from './Components/Cart';
 
 function App() {
-  const router=createBrowserRouter([
+  const router = createBrowserRouter([
     {
-      path:'/',
-      element:<Loading/>
+      path: '/',
+      element: <Loading />,
     },
     {
-      path:'home',
-      element:<Main/>
+      path: 'home',
+      element: <Main />,
     },
     {
-      path:'details',
-      element:<Details/>
-    }
-])
-  return (
-    <RouterProvider router={router}></RouterProvider>
+      path: 'details/:itemId',
+      element: <Details />,
+    },
+    // {
+    //   path:'/',
+    //   element:<Cart/>
+    // }
+  ]);
 
+  return (
+    <RouterProvider router={router}>
+      <Route path="/" element={router} />
+    </RouterProvider>
   );
 }
 
 export default App;
+

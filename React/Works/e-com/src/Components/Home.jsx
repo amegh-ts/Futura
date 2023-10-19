@@ -5,9 +5,6 @@ import Body from './Body';
 
 
 const Home = () => {
-
-
-
   return (
     <div>
         <div>

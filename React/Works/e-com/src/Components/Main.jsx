@@ -9,15 +9,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import Cart from './Cart';
 
-export const values=(n1)=>{
-    console.log('888888888888888888888',n1);
-    var c=n1
-return c
-
-}
-
-var abcd=values()
-console.log('*/*/*/*/*/*/*',abcd);
 const Main = () => {
     const [activeNav, setActiveNav] = useState(0);
     const [icon, setIcon] = useState('fa-smile-o');

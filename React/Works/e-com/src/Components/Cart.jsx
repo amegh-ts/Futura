@@ -15,7 +15,6 @@ const Cart = () => {
                         <div className='cart-item-image'>
                             <img src={dummy} alt="cart-item-image" />
                         </div>
-
                         <div className='cart-item-details'>
                             <span className='cart-item-title'>Levi's</span>
                             <span className='cart-item-description'>Men 512 Mid Rise Slim Tapered Jeans</span>
@@ -25,24 +24,27 @@ const Cart = () => {
                                 <button>Qty: <span>2</span></button>
 
                                 <div className='cart-item-utils-a'>
-
-                                    <span>
-                                        <a href="">Delete</a>
-                                    </span>
-                                    <span>
-                                        <a href="">Save for later</a>
-                                    </span>
-                                    <span>
-                                        <a href="">Share</a>
-                                    </span>
+                                    <button className='cart-util-button'>Delete</button>
+                                    <button className='cart-util-button'>Save for Later</button>
+                                    <button className='cart-util-button'>Share</button>
                                 </div>
 
                             </div>
                         </div>
                     </div>
+{/* ************************************************* */}
+
+                   
+
+{/* ********************************************* */}
                 </div>
 
-                <div>djksdjkvjnksvjb</div>
+                <div className='cart-roundup'>
+                    <span className='cart-roundup-count'>Subtotal <span>(1 item) : ₹<span style={{fontWeight:"600"}}>19000</span></span></span>
+                    <div>
+                        <button className='cart-roundup-button'>Checkout</button>
+                    </div>
+                </div>
             </div>
         </div>
     )
