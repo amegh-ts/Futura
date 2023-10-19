@@ -1,10 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { cartItems } from '../Redux/ecomredux';
 
 const Details = ({ productDetails }) => {
+const dispatch = useDispatch()
+
     if (!productDetails) {
         return <div>No product details available.</div>;
     }
+console.log(productDetails);
 
+const handleAddToCart=()=>{
+  dispatch(cartItems(productDetails))
+}
     return (
         <div>
             <div className='deatils-main'>
@@ -17,7 +25,7 @@ const Details = ({ productDetails }) => {
                         <h2>{productDetails.description}</h2>
                         <span>Price: {productDetails.price} MRP {productDetails.mrp}</span>
                         <div>
-                            <button>Add to cart</button>
+                            <button onClick={handleAddToCart}>Add to cart</button>
                             <button>Buy Now</button>
                         </div>
                     </div>
@@ -27,4 +35,4 @@ const Details = ({ productDetails }) => {
     );
 }
 
-export default Details;
+export default React.memo(Details);

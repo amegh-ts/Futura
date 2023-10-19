@@ -3,25 +3,18 @@ import { createSlice } from '@reduxjs/toolkit'
 const ecomredux = createSlice({
     name: 'users',
     initialState: {
-        productinfo:[],
+        productinfo: [],
     },
     reducers: {
-        viewProducts: (state, action) => {
-            state.productinfo.push(action.payload)
+        cartItems: (state, action) => {
+            state.productinfo.push(action.payload);
             console.log(action.payload);
         },
-        // addproduct:(state,action)=>{
-        //     state.productinfo.push()
-        // }
-        
-
-        // remove data from local storage
-        removeData:(state)=>{
-            state.userInfo=[]
+        removeData: (state) => {
+            state.productinfo = []; // Clear the productinfo array
         },
-    
     }
+});
 
-})
-export const { viewProducts,removeData } = ecomredux.actions
-export default ecomredux.reducer
+export const { cartItems, removeData } = ecomredux.actions;
+export default ecomredux.reducer;

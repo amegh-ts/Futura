@@ -7,10 +7,10 @@ import { apiData } from './Components/API/api';
 
 function App() {
   const router = createBrowserRouter([
-    // {
-    //   path: '/',
-    //   element: <Loading />,
-    // },
+    {
+      path: '/',
+      element: <Loading />,
+    },
     {
       path: 'home',
       element: <Main />,
@@ -19,10 +19,10 @@ function App() {
       path: 'details/:itemId',
       element: <Details items={apiData}/>,
     },
-    {
-      path:'/',
-      element:<Details/>
-    }
+    // {
+    //   path:'/',
+    //   element:<Details/>
+    // }
   ]);
 
   return (
