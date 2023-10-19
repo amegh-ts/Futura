@@ -38,6 +38,7 @@ const Body = () => {
                 <div className="title">
                     <span>COLLECTION</span>
                     <h2>Our Top Collection</h2>
+                    {/* <i class="fa-brands fa-instagram fa-spin fa-xl" style={{color: "#000000"}}></i> */}
                 </div>
                 <div className='collection-filter'>
                     <button onClick={() => handleClick('All')} className={`collection-button ${activeFilter === 'All' ? 'active' : ''}`}>All Collection</button>
@@ -70,7 +71,7 @@ const Body = () => {
                     </div>
 
                     <div className='b-dropdown'>
-                        <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</button>
+                        <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewellery</button>
                         <div className="b-dropdown-content">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>

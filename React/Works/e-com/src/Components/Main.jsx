@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import './Main.css'
-import { BsSearch } from 'react-icons/bs';
+import { FaSearch } from 'react-icons/fa';
 import { BsCart3 } from 'react-icons/bs';
 import { BsPerson } from 'react-icons/bs';
 import navlogo from './Assets/logo.png'
-import womanincart from './Assets/woman-in-cart.png'
-import Body from './Body';
+
 import 'font-awesome/css/font-awesome.min.css';
+import Home from './Home';
+import Cart from './Cart';
 
 
 const Main = () => {
+    const [activeNav, setActiveNav] = useState(0);
     const [icon, setIcon] = useState('fa-smile-o');
 
     const smile = () => {
@@ -28,26 +30,30 @@ const Main = () => {
         smile();
         const intervalId = setInterval(() => {
             smile();
-        }, 4000);
+        }, 3000);
 
         return () => {
             clearInterval(intervalId);
         };
     }, []);
 
+
+    const handleNavigationClick = (index) => {
+        setActiveNav(index);
+    }
     return (
         <div className='main-div'>
             <header className='nav-bar'>
 
-                <div className='nav-logo'>
-                <i id="div1" className={`fa ${icon}`} />
+                <div className='nav-logo' onClick={()=>handleNavigationClick(0)}>
+                    <i id="div1" className={`fa ${icon}`} />
 
                     <img src={navlogo} alt="" />
 
                 </div>
                 <div className='nav-navigation'>
                     <ul className="list">
-                        <li><a href="#" className="link">
+                        <li><a href="#" className="link" onClick={()=>handleNavigationClick(0)}>
                             Home</a></li>
                         <li><a href="#" className="link  ">
                             Shop</a></li>
@@ -61,13 +67,14 @@ const Main = () => {
                 </div>
                 <div className='nav-search'>
                     <input type="text" placeholder="Search..." className='nav-search-input' />
-                    <div className='nav-serch-icon'>
-                        <BsSearch />
+                    <div className='nav-serch-icon-container'>
+                        <FaSearch className='nav-serch-icon' />
+                        {/* <i class="fa-sharp fa-solid fa-magnifying-glass fa-xl" style={{color: "#F86F14;"}}></i>                       */}
                     </div>
                 </div>
                 <div className='nav-end'>
 
-                    <button className='nav-cart'>
+                    <button className='nav-cart' onClick={()=>handleNavigationClick(1)}>
                         <div className='nav-cart-child'>
                             <BsCart3 />
                             <span className='nav-cart-label'>Cart</span>
@@ -97,23 +104,14 @@ const Main = () => {
 
                 </div>
             </header>
-            <div>
-                <div className="banner">
-                    <div className='banner-content'>
-                        <h1>fash<span className="i">i</span>on</h1>
-                        <div>
-                            <button className='banner-button'>Explore Now!</button>
-                        </div>
-                    </div>
-                    <div className='banner-image'>
-                        <img src={womanincart} alt="" />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <Body />
-            </div>
 
+            <div>
+                {activeNav===0 && <div><Home /></div>}
+                {activeNav===1 && <div><Cart/></div>}
+                
+
+                
+            </div>
 
 
 
