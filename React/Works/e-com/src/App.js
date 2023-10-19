@@ -3,25 +3,26 @@ import Loading from './Components/Loading';
 import Main from './Components/Main';
 import Details from './Components/Details';
 import Cart from './Components/Cart';
+import { apiData } from './Components/API/api';
 
 function App() {
   const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Loading />,
-    },
+    // {
+    //   path: '/',
+    //   element: <Loading />,
+    // },
     {
       path: 'home',
       element: <Main />,
     },
     {
       path: 'details/:itemId',
-      element: <Details />,
+      element: <Details items={apiData}/>,
     },
-    // {
-    //   path:'/',
-    //   element:<Cart/>
-    // }
+    {
+      path:'/',
+      element:<Details/>
+    }
   ]);
 
   return (

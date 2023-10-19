@@ -527,5 +527,29 @@ display: flex;
   font-size: 17px;
 }
 .cart-roundup-button{
-  
+
+}
+
+
+
+
+/********************* details ***********************/
+
+.deatils-main{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.details-card{
+  display: flex;
+}
+.details-card-image img{
+  max-width: 500px;
+}
+.details-card-content{
+  max-width: 500px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

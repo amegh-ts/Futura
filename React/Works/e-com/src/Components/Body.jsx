@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { apiData } from './API/api';
 
 
-const Body = () => {
+const Body = ({ setActiveNav, setProductDetails }) => {
     const [state, setState] = useState([]);
     const [filteredState, setFilteredState] = useState([]);
     const [activeFilter, setActiveFilter] = useState('All');
@@ -31,6 +31,11 @@ const Body = () => {
             const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
             setFilteredState(filtered);
         }
+    }
+
+    const handleCardClick = (item) => {
+        setProductDetails(item);
+        setActiveNav(2);
     }
 
 
@@ -88,16 +93,15 @@ const Body = () => {
             <div >
                 <div className='b-card-container'>
                     {filteredState.map(item => (
-                        <div key={item.id} className="card-items" >
+                        <div key={item.id} className="card-items" onClick={() => handleCardClick(item)}>
                             <img src={item.thumbnail} alt={item.name} className='card-image' />
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
-                                <span className='card-item-description'>{item.description} </span>
+                                <span className='card-item-description'>{item.description}</span>
                                 <span>{item.price}</span>
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
         </div>

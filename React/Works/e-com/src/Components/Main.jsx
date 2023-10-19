@@ -8,10 +8,12 @@ import navlogo from './Assets/logo.png'
 import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import Cart from './Cart';
+import Details from './Details';
 
 const Main = () => {
     const [activeNav, setActiveNav] = useState(0);
     const [icon, setIcon] = useState('fa-smile-o');
+    const [productDetails, setProductDetails] = useState(null);
 
     const smile = () => {
         setTimeout(() => {
@@ -39,11 +41,16 @@ const Main = () => {
     const handleNavigationClick = (index) => {
         setActiveNav(index);
     }
+
+    const handleCardClick = (itemId) => {
+        console.log(`Item with ID ${itemId} clicked in Main component.`);
+        // You can add the item to the cart here.
+    };
     return (
         <div className='main-div'>
             <header className='nav-bar'>
 
-                <div className='nav-logo' onClick={()=>handleNavigationClick(0)}>
+                <div className='nav-logo' onClick={() => handleNavigationClick(0)}>
                     <i id="div1" className={`fa ${icon}`} />
 
                     <img src={navlogo} alt="" />
@@ -51,7 +58,7 @@ const Main = () => {
                 </div>
                 <div className='nav-navigation'>
                     <ul className="list">
-                        <li><a href="#" className="link" onClick={()=>handleNavigationClick(0)}>
+                        <li><a href="#" className="link" onClick={() => handleNavigationClick(0)}>
                             Home</a></li>
                         <li><a href="#" className="link  ">
                             Shop</a></li>
@@ -72,7 +79,7 @@ const Main = () => {
                 </div>
                 <div className='nav-end'>
 
-                    <button className='nav-cart' onClick={()=>handleNavigationClick(1)}>
+                    <button className='nav-cart' onClick={() => handleNavigationClick(1)}>
                         <div className='nav-cart-child'>
                             <BsCart3 />
                             <span className='nav-cart-label'>Cart</span>
@@ -104,11 +111,13 @@ const Main = () => {
             </header>
 
             <div>
-                {activeNav===0 && <div><Home /></div>}
-                {activeNav===1 && <div><Cart/></div>}
                 
+            {activeNav === 0 && <Home setActiveNav={setActiveNav} setProductDetails={setProductDetails} />}
+                {activeNav === 1 && <Cart />}
+                {activeNav === 2 && <Details productDetails={productDetails} />}
 
-                
+
+
             </div>
 
 
