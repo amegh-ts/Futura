@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const ecomredux = createSlice({
     name: 'users',
     initialState: {
-        productinfo:[]
+        productinfo:[],
     },
     reducers: {
         viewProducts: (state, action) => {
@@ -18,7 +18,8 @@ const ecomredux = createSlice({
         // remove data from local storage
         removeData:(state)=>{
             state.userInfo=[]
-        }
+        },
+    
     }
 
 })

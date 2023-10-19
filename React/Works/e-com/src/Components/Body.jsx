@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { apiData } from './API/api';
+import { datas } from './data';
 
 
 const Body = () => {
@@ -32,6 +33,11 @@ const Body = () => {
             setFilteredState(filtered);
         }
     }
+
+const display=()=>{
+    datas(2)
+}
+
     return (
         <div>
             <section className="section collection">
@@ -86,7 +92,7 @@ const Body = () => {
             <div >
                 <div className='b-card-container'>
                     {filteredState.map(item => (
-                        <div key={item.id} className="card-items">
+                        <div key={item.id} className="card-items" onClick={display} >
                             <img src={item.thumbnail} alt={item.name} className='card-image' />
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>

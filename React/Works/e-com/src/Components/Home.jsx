@@ -2,7 +2,12 @@ import React from 'react'
 import womanincart from './Assets/woman-in-cart.png'
 import Body from './Body';
 
+
+
 const Home = () => {
+
+
+
   return (
     <div>
         <div>

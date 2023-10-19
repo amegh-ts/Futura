@@ -8,15 +8,18 @@ import navlogo from './Assets/logo.png'
 import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import Cart from './Cart';
-import Details from './Details';
 
+export const values=(n1)=>{
+    console.log('888888888888888888888',n1);
+    var c=n1
+return c
 
+}
+
+var abcd=values()
+console.log('*/*/*/*/*/*/*',abcd);
 const Main = () => {
     const [activeNav, setActiveNav] = useState(0);
-    const [activeCard, setActiveCard] = useState(null);
-    const [viewingItemDetails, setViewingItemDetails] = useState(false); // New state
-
-
     const [icon, setIcon] = useState('fa-smile-o');
 
     const smile = () => {
@@ -30,7 +33,6 @@ const Main = () => {
             setIcon('fa-smile-o');
         }, 3000);
     };
-
     useEffect(() => {
         smile();
         const intervalId = setInterval(() => {
@@ -46,11 +48,6 @@ const Main = () => {
     const handleNavigationClick = (index) => {
         setActiveNav(index);
     }
-
-    const handleCardClick = (card) => {
-        setActiveCard(card);
-        setViewingItemDetails(true); // Set viewingItemDetails to true when a card is clicked
-    };
     return (
         <div className='main-div'>
             <header className='nav-bar'>
@@ -118,8 +115,6 @@ const Main = () => {
             <div>
                 {activeNav===0 && <div><Home /></div>}
                 {activeNav===1 && <div><Cart/></div>}
-                {viewingItemDetails && <Details item={activeCard} />} {/* Render ItemDetail when viewingItemDetails is true */}
-
                 
 
                 
