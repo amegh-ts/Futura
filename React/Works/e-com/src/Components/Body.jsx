@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { apiData } from './API/api';
 
 
@@ -6,6 +6,8 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     const [state, setState] = useState([]);
     const [filteredState, setFilteredState] = useState([]);
     const [activeFilter, setActiveFilter] = useState('All');
+
+    const collectionRef = useRef(null);
 
     useEffect(() => {
         async function api() {
@@ -23,18 +25,15 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         console.log(state);
     }, [])
 
-    const handleClick = (filter) => {
+    const handleClick=(filter)=>{
         setActiveFilter(filter);
-        if (filter === 'All') {
-          setFilteredState(state);
-        } else if (filter === 'SomeCategory') {
-          const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
-          setFilteredState(filtered);
-        } else {
-          const filtered = state.filter(item => item.type.toLowerCase() === filter.toLowerCase());
-          setFilteredState(filtered);
+        if (filter==='All') {
+            setFilteredState(state);
+        } else{
+            const filtered=state.filter(item=>item.category.toLowerCase()===filter.toLowerCase());
+            setFilteredState(filtered)
         }
-      };
+    };
       
 
     const handleCardClick = (item) => {

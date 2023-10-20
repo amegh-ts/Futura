@@ -589,24 +589,60 @@
 
 /********************* product details ***********************/
 
-.deatils-main{
+.deatils-main {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  /* background-color: #F86F14; */
+  color: white;
+  padding: 20px;
 }
-.details-card{
+
+.details-card {
   display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-.details-card-image img{
+
+.details-card-image img {
   max-width: 500px;
 }
-.details-card-content{
+
+.details-card-content {
   max-width: 500px;
   margin-left: 40px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: black;
 }
+
+.details-card-content h2 {
+  color: #F86F14;
+}
+
+.details-card-content span {
+  font-size: 18px;
+}
+
+.dcc-bttn button {
+  background-color: #F86F14;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dcc-bttn button:hover {
+  background-color: #E55D11;
+}
+
 
 /*********************** Latest Collection *********************/
 
