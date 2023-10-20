@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { apiData } from './API/api';
 
 
@@ -26,28 +26,26 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     const handleClick = (filter) => {
         setActiveFilter(filter);
         if (filter === 'All') {
-            setFilteredState(state);
+          setFilteredState(state);
+        } else if (filter === 'SomeCategory') {
+          const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
+          setFilteredState(filtered);
         } else {
-            const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
-            setFilteredState(filtered);
-
+          const filtered = state.filter(item => item.type.toLowerCase() === filter.toLowerCase());
+          setFilteredState(filtered);
         }
-        collectionRef.current.scrollIntoView({ behavior: 'smooth' });
-
-    }
+      };
+      
 
     const handleCardClick = (item) => {
         setProductDetails(item);
         setActiveNav(2);
     }
 
-    const collectionRef = useRef(null); // Add this ref
-
-
 
     return (
         <div>
-            <section className="section collection" ref={collectionRef}>
+            <section className="section collection">
                 <div className="title">
                     <span>COLLECTION</span>
                     <h2>Our Top Collection</h2>
@@ -60,7 +58,7 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                         <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
                         <div className="b-dropdown-content">
                             <a href="#">Men</a>
-                            <a href="#">Women</a>
+                            <a href="#" >Women</a>
                             <a href="#">Kids</a>
                         </div>
                     </div>
@@ -77,19 +75,18 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                     <div className='b-dropdown' >
                         <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Makeup</a>
+                            <a href="#" >Makeup</a>
                             <a href="#">skincare</a>
-                            <a href="#">wellness</a>
+                            <a href="#" >wellness</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewellery</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Chain</a>
-                            <a href="#">Ring</a>
-                            <a href="#">anklet</a>
-                            <a href="#">arrings</a>
+                            <a href="#" >Chain</a>
+                            <a href="#" >Anklet</a>
+                            <a href="#" >Earrings</a>
                         </div>
                     </div>
                 </div>
@@ -115,4 +112,4 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     )
 }
 
-export default Body
+export default Body

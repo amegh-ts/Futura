@@ -150,7 +150,7 @@ const Main = () => {
 
                 {activeNav === 0 && <Home setActiveNav={setActiveNav} setProductDetails={setProductDetails} />}
                 {activeNav === 1 && <Cart />}
-                {activeNav === 2 && <Details productDetails={productDetails} />}
+                {activeNav === 2 && <Details productDetails={productDetails}/>}
                 {activeNav === 3 && <Body />}
                 {activeNav === 4 && <Collections />}
                 {activeNav === 5 && <News />}
