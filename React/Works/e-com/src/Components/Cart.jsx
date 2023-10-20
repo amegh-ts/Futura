@@ -1,13 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeItem } from '../Redux/ecomredux';
 
 
 const Cart = ({}) => {
-
+const dispatch=useDispatch()
     const cartItems = useSelector((state) => state.ecomredux.productinfo);
     const calculateTotalPrice = (items) => {
         return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
+
+   function removecart(ids){
+dispatch(removeItem(ids))
+   }
 
     return (
         <div>
@@ -27,7 +32,7 @@ const Cart = ({}) => {
                                     <div className='cart-item-utils'>
                                         <button className='cart-item-count'>Qty: {item.quantity}</button>
                                         <div className='cart-item-utils-a'>
-                                            <button className='cart-util-button'>Delete</button>
+                                            <button className='cart-util-button' onClick={()=>removecart(item.id)}>Delete</button>
                                             <button className='cart-util-button'>Save for Later</button>
                                             <button className='cart-util-button'>Share</button>
                                         </div>

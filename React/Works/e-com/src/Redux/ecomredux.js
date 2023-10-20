@@ -19,16 +19,18 @@ const ecomredux = createSlice({
             }
         },
         removeItem: (state,action) => {
-            const { id } = action.payload;
-            const existingItem = state.productinfo.find(item => item.id === id);
-
+            console.log(action.payload);
+            const existingItem = state.productinfo.find(item => item.id === action.payload);
+            console.log('first 0.1 ',action.payload);
+console.log('first check',existingItem);
             if (existingItem) {
                 // If the item already exists, decrease the quantity by 1
                 existingItem.quantity -= 1;
 
                 // If the quantity becomes zero, remove the item
                 if (existingItem.quantity === 0) {
-                    state.productinfo = state.productinfo.filter(item => item.id !== id);
+                    // state.productinfo = state.productinfo.pop(item => item.id == id);
+                    state.productinfo.splice(state.productinfo.findIndex((item)=>item.id==action.payload),1)
                 }
             }        },
     }

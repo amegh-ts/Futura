@@ -27,7 +27,7 @@
               <span>Price: {productDetails.price} MRP {productDetails.mrp}</span>
               <div className='dcc-bttn'>
                 <button onClick={handleAddToCart}>Add to cart</button>
-                <Link to="buy">
+                <Link to="/buy">
                   <button>Buy Now</button>
                 </Link>
               </div>

@@ -4,7 +4,6 @@ import Main from './Components/Main';
 import Details from './Components/Details';
 import { apiData } from './Components/API/api';
 import Buy from './Components/Buy';
-import Niha from './Components/Test/Niha';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,12 +20,9 @@ function App() {
       element: <Details items={apiData}/>,
     },
     {
-      path:'buy',
+      path:'/buy',
       element:<Buy/>
-    },{
-      path:'niha',
-      element:<Niha/>
-    }
+    },
   ]);
 
   return (

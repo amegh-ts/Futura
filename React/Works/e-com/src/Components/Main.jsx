@@ -55,25 +55,32 @@ const Main = () => {
     }
 
 
+
     const handleSearch = () => {
-        if (searchQuery.trim() === '') {
-          // If the search query is empty or consists only of spaces, show all items
-          setSearchResults(apiData);
-        } else {
+        // Ensure that the search query is not empty or consists only of spaces
+        if (searchQuery.trim() !== '') {
+          // Convert the search query to lowercase for case-insensitive search
+          const lowerCaseQuery = searchQuery.toLowerCase();
+      
+          // Use filter to find items that match the search query
           const results = apiData.filter((item) => {
-            const lowerCaseQuery = searchQuery.toLowerCase();
-            const lowerCaseType = (item.type || '').toLowerCase();
-            return (
-              (lowerCaseType === 'kids' || lowerCaseType === 'child') ||
-              lowerCaseType.includes(lowerCaseQuery) ||
-              (item.category || '').toLowerCase().includes(lowerCaseQuery) ||
-              (item.title || '').toLowerCase() === lowerCaseQuery
-            );
+            const itemTitle = item.title.toLowerCase();
+            const itemCategory = item.category.toLowerCase();
+            const itemType = item.type.toLowerCase();
+      
+            return itemTitle.includes(lowerCaseQuery) || itemCategory.includes(lowerCaseQuery) || itemType.includes(lowerCaseQuery);
           });
+      
+          // Update the UI with the search results
           setSearchResults(results);
+      
+          // Set the active navigation to the search results page (assuming 7 represents it)
+          setActiveNav(7);
         }
-        setActiveNav(7); // Make sure that 7 represents the search results page
       };
+      
+          
+      
       
 
     return (
