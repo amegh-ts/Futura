@@ -2,11 +2,9 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
 import Main from './Components/Main';
 import Details from './Components/Details';
-import Cart from './Components/Cart';
 import { apiData } from './Components/API/api';
-import Collections from './Components/Collections';
-import News from './Components/News';
-import About from './Components/About';
+import Buy from './Components/Buy';
+import Niha from './Components/Test/Niha';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,8 +21,11 @@ function App() {
       element: <Details items={apiData}/>,
     },
     {
-      path:'test',
-      element:<About/>
+      path:'buy',
+      element:<Buy/>
+    },{
+      path:'niha',
+      element:<Niha/>
     }
   ]);
 

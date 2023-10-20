@@ -33,6 +33,9 @@ const Body = ({ setActiveNav, setProductDetails }) => {
             const filtered=state.filter(item=>item.category.toLowerCase()===filter.toLowerCase());
             setFilteredState(filtered)
         }
+        if (collectionRef.current) {
+            collectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
     };
       
 
@@ -44,7 +47,7 @@ const Body = ({ setActiveNav, setProductDetails }) => {
 
     return (
         <div>
-            <section className="section collection">
+            <section className="section collection" ref={collectionRef}>
                 <div className="title">
                     <span>COLLECTION</span>
                     <h2>Our Top Collection</h2>
@@ -97,7 +100,10 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                 <div className='b-card-container'>
                     {filteredState.map(item => (
                         <div key={item.id} className="card-items" onClick={() => handleCardClick(item)}>
+                            <div className='card-image-div'>
                             <img src={item.thumbnail} alt={item.name} className='card-image' />
+
+                            </div>
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
                                 <span className='card-item-description'>{item.description}</span>

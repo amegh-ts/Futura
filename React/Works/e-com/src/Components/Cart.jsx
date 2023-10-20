@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 
-const Cart = ({cartCount}) => {
+const Cart = ({}) => {
 
     const cartItems = useSelector((state) => state.ecomredux.productinfo);
     const calculateTotalPrice = (items) => {
@@ -25,7 +25,7 @@ const Cart = ({cartCount}) => {
                                     <span className='cart-item-description'>{item.description}</span>
                                     <span>Price: ₹{item.price} MRP {item.mrp}</span>
                                     <div className='cart-item-utils'>
-                                        <button>Qty: {item.quantity}</button>
+                                        <button className='cart-item-count'>Qty: {item.quantity}</button>
                                         <div className='cart-item-utils-a'>
                                             <button className='cart-util-button'>Delete</button>
                                             <button className='cart-util-button'>Save for Later</button>
