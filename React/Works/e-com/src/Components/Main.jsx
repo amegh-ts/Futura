@@ -143,7 +143,7 @@ const Main = () => {
                             </div>
                         </button>
                         <div className="dropdown-content">
-                            <a href="#">Link 1</a>
+                            <a href="#">View Profile</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
                         </div>
@@ -158,7 +158,7 @@ const Main = () => {
                 {activeNav === 0 && <Home setActiveNav={setActiveNav} setProductDetails={setProductDetails} />}
                 {activeNav === 1 && <Cart />}
                 {activeNav === 2 && <Details productDetails={productDetails}/>}
-                {activeNav === 3 && <Body />}
+                {activeNav === 3 && <Body setProductDetails={setProductDetails} setActiveNav={setActiveNav}/>}
                 {activeNav === 4 && <Collections />}
                 {activeNav === 5 && <News />}
                 {activeNav === 6 && <About />}

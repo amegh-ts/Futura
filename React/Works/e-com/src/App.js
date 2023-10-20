@@ -4,11 +4,12 @@ import Main from './Components/Main';
 import Details from './Components/Details';
 import { apiData } from './Components/API/api';
 import Buy from './Components/Buy';
+import Login from './Login signup/Login';
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/loading',
       element: <Loading />,
     },
     {
@@ -17,11 +18,15 @@ function App() {
     },
     {
       path: 'details/:itemId',
-      element: <Details items={apiData}/>,
+      element: <Details items={apiData} />,
     },
     {
-      path:'/buy',
-      element:<Buy/>
+      path: '/buy',
+      element: <Buy />
+    },
+    {
+      path: '/',
+      element: <Login />
     },
   ]);
 

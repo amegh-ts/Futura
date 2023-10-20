@@ -18,11 +18,11 @@ const ecomredux = createSlice({
                 state.productinfo.push({ ...action.payload, quantity: 1 });
             }
         },
-        removeItem: (state,action) => {
+        removeItem: (state, action) => {
             console.log(action.payload);
             const existingItem = state.productinfo.find(item => item.id === action.payload);
-            console.log('first 0.1 ',action.payload);
-console.log('first check',existingItem);
+            console.log('first 0.1 ', action.payload);
+            console.log('first check', existingItem);
             if (existingItem) {
                 // If the item already exists, decrease the quantity by 1
                 existingItem.quantity -= 1;
@@ -30,9 +30,10 @@ console.log('first check',existingItem);
                 // If the quantity becomes zero, remove the item
                 if (existingItem.quantity === 0) {
                     // state.productinfo = state.productinfo.pop(item => item.id == id);
-                    state.productinfo.splice(state.productinfo.findIndex((item)=>item.id==action.payload),1)
+                    state.productinfo.splice(state.productinfo.findIndex((item) => item.id == action.payload), 1)
                 }
-            }        },
+            }
+        },
     }
 });
 

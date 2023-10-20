@@ -12,6 +12,7 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import ecomredux from "./ecomredux";
+import authredux from "./authredux";
 
 const persistConfig = {
     key: 'ecom',
@@ -19,7 +20,7 @@ const persistConfig = {
     storage,
 }
 
-const rootReducer = combineReducers({ ecomredux: ecomredux })
+const rootReducer = combineReducers({ ecomredux: ecomredux ,authredux: authredux})
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({

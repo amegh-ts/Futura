@@ -25,19 +25,19 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         console.log(state);
     }, [])
 
-    const handleClick=(filter)=>{
+    const handleClick = (filter) => {
         setActiveFilter(filter);
-        if (filter==='All') {
+        if (filter === 'All') {
             setFilteredState(state);
-        } else{
-            const filtered=state.filter(item=>item.category.toLowerCase()===filter.toLowerCase());
+        } else {
+            const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
             setFilteredState(filtered)
         }
         if (collectionRef.current) {
             collectionRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
-      
+
 
     const handleCardClick = (item) => {
         setProductDetails(item);
@@ -101,8 +101,7 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                     {filteredState.map(item => (
                         <div key={item.id} className="card-items" onClick={() => handleCardClick(item)}>
                             <div className='card-image-div'>
-                            <img src={item.thumbnail} alt={item.name} className='card-image' />
-
+                                <img src={item.thumbnail} alt={item.name} className='card-image' />
                             </div>
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
@@ -117,4 +116,4 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     )
 }
 
-export default Body
+export default Body
