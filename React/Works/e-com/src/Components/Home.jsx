@@ -1,6 +1,7 @@
 import React from 'react'
 import womanincart from './Assets/woman-in-cart.png'
 import Body from './Body';
+import { Link} from 'react-scroll';
 
 
 
@@ -15,7 +16,10 @@ const Home = ({ setActiveNav, setProductDetails }) => {
                     <div className='banner-content'>
                         <h1>fash<span className="i">i</span>on</h1>
                         <div>
+                            <Link to="title" smooth={true} duration={500}>
                             <button className='banner-button'>Explore Now!</button>
+                            </Link>
+                            
                         </div>
                     </div>
                     <div className='banner-image'>

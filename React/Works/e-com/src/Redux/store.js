@@ -14,7 +14,7 @@ import storage from 'redux-persist/lib/storage'
 import ecomredux from "./ecomredux";
 
 const persistConfig = {
-    key: 'root',
+    key: 'ecom',
     version: 1,
     storage,
 }

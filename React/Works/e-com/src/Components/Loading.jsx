@@ -9,7 +9,7 @@ const Loading = () => {
       const redirectToMain = () => {
         setTimeout(() => {
           navigate('/home');
-        }, 4000);
+        }, 2000);
       };
 
       redirectToMain();

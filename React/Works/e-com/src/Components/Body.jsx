@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { apiData } from './API/api';
 
 
@@ -30,7 +30,10 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         } else {
             const filtered = state.filter(item => item.category.toLowerCase() === filter.toLowerCase());
             setFilteredState(filtered);
+
         }
+        collectionRef.current.scrollIntoView({ behavior: 'smooth' });
+
     }
 
     const handleCardClick = (item) => {
@@ -38,10 +41,13 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         setActiveNav(2);
     }
 
+    const collectionRef = useRef(null); // Add this ref
+
+
 
     return (
         <div>
-            <section className="section collection">
+            <section className="section collection" ref={collectionRef}>
                 <div className="title">
                     <span>COLLECTION</span>
                     <h2>Our Top Collection</h2>
@@ -53,36 +59,37 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Kids</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Mobile</a>
+                            <a href="#">Camera</a>
+                            <a href="#">Accessories</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown' >
                         <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Makeup</a>
+                            <a href="#">skincare</a>
+                            <a href="#">wellness</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewellery</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Chain</a>
+                            <a href="#">Ring</a>
+                            <a href="#">anklet</a>
+                            <a href="#">arrings</a>
                         </div>
                     </div>
                 </div>

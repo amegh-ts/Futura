@@ -4,6 +4,9 @@ import Main from './Components/Main';
 import Details from './Components/Details';
 import Cart from './Components/Cart';
 import { apiData } from './Components/API/api';
+import Collections from './Components/Collections';
+import News from './Components/News';
+import About from './Components/About';
 
 function App() {
   const router = createBrowserRouter([
@@ -19,10 +22,10 @@ function App() {
       path: 'details/:itemId',
       element: <Details items={apiData}/>,
     },
-    // {
-    //   path:'/',
-    //   element:<Details/>
-    // }
+    {
+      path:'test',
+      element:<About/>
+    }
   ]);
 
   return (

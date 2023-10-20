@@ -1,9 +1,9 @@
 import React from 'react'
-import dummy from './Assets/woman-in-cart.png'
 import { useSelector } from 'react-redux';
 
 
-const Cart = () => {
+const Cart = ({cartCount}) => {
+
     const cartItems = useSelector((state) => state.ecomredux.productinfo);
     const calculateTotalPrice = (items) => {
         return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
@@ -14,8 +14,7 @@ const Cart = () => {
             <div className='cart-main-container'>
                 <div className='cart-body'>
                     <h2>My Cart</h2>
-                    <div className='cart-items'>
-                    <div className='cart-items'>
+                    <div className='cart-items-container'>
                         {cartItems.map((item, index) => (
                             <div className='cart-item' key={index}>
                                 <div className='cart-item-image'>
@@ -42,14 +41,13 @@ const Cart = () => {
                 <div className='cart-roundup'>
                     <span className='cart-roundup-count'>
                         Subtotal <span>({cartItems.length} item) : ₹{calculateTotalPrice(cartItems)}
-                    </span></span>
+                        </span></span>
                     <div>
                         <button className='cart-roundup-button'>Checkout</button>
                     </div>
                 </div>
             </div>
         </div>
- </div>
     )
 }
 

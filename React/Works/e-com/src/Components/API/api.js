@@ -489,7 +489,7 @@ export const apiData = [
   {
     id: 51,
     category: 'electronics',
-    type: 'laptop accessories',
+    type: 'accessories',
     title: 'HyperX',
     description: 'Cloud Stinger 2 Greatness Refined, Lightweight Wired Over Ear Headset with mic',
     mrp:4000,
@@ -499,7 +499,7 @@ export const apiData = [
   {
     id: 52,
     category: 'electronics',
-    type: 'laptop accessories',
+    type: 'accessories',
     title: 'Zebronics',
     description: 'Zeb-Transformer Gaming Keyboard and Mouse Combo (USB, Braided Cable)',
     mrp:2500,
@@ -509,7 +509,7 @@ export const apiData = [
   {
     id: 53,
     category: 'electronics',
-    type: 'laptop accessories',
+    type: 'accessories',
     title: 'Logitech',
     description: 'MX Master 2S Wireless Mouse, Multi-Device, Bluetooth or 2.4GHz Wireless with USB Unifying Receiver, 4000 DPI Any Surface Tracking, 7 Buttons, Fast Rechargeable, Laptop/PC/Mac/iPad OS - Black',
     mrp:8000,
@@ -519,7 +519,7 @@ export const apiData = [
   {
     id: 54,
     category: 'electronics',
-    type: 'laptop accessories',
+    type: 'accessories',
     title: 'Logitech',
     description: 'G29 Driving Force Racing Wheel and Floor Pedals, Real Force Feedback, Stainless Steel Paddle Shifters, Leather Steering Wheel Cover for PS5, PS4, PC, Mac - Black',
     mrp:32000,
@@ -529,7 +529,7 @@ export const apiData = [
   {
     id: 55,
     category: 'electronics',
-    type: 'laptop accessories',
+    type: 'accessories',
     title: 'Corsair',
     description: 'HS80 RGB Wireless Premium Gaming On Ear Headset with Dolby Atmos Audio (Low-Latency, Omni-Directional Microphone, 60ft Range, Up to 20 Hours Battery Life, PS5/PS4 Wireless Compatibility) White',
     mrp:20000,
@@ -548,7 +548,7 @@ export const apiData = [
   {
     id: 57,
     category: 'dress',
-    type: 'western',
+    type: 'women',
     title: 'J B Fashion',
     description: 'Dresses for Women || Western Dresses for Women || Dress for...',
     mrp:899,
@@ -658,7 +658,7 @@ export const apiData = [
   {
     id: 68,
     category: 'jewelleri',
-    type: 'Ring',
+    type: 'ring',
     title: 'GIVA 925',
     description: 'Silver Stereo Hearts Ring, Adjustable | Gifts for Girlfriend, Gifts for Women and Girls | With Certificate of Authenticity and 925 Stamp | 6 Month Warranty*',
     mrp:1500,
@@ -668,7 +668,7 @@ export const apiData = [
   {
     id: 69,
     category: 'jewelleri',
-    type: 'Anklet',
+    type: 'anklet',
     title: 'Shining Diva Fashion',
     description: 'Italian Designer Rose Gold Plated Butterfly Anklet and Necklace Fo...',
     mrp:399,
@@ -678,7 +678,7 @@ export const apiData = [
   {
     id: 70,
     category: 'jewelleri',
-    type: 'Earrings',
+    type: 'earrings',
     title: 'jewel',
     description: ' Traditional Handcrafted Pearl Kundan Beaded Chandbali Earrings for Women/Girls',
     mrp:400,
