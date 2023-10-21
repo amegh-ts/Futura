@@ -31,13 +31,17 @@ const Login = () => {
     return (
         <div>
 
-            <div className='login-main'>
+            <div className='login-main'> 
                 <div className='login-card'>
                     <h2>LOGIN</h2>
                     <p>Please enter your login and password!</p>
                     <div className='login-inputs'>
                         <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} onKeyPress={(e)=>{
+                            if(e.key==='Enter'){
+                                handleLogin();
+                            }
+                        }}/>
                         <p>Forgot Password?</p>
 
                     </div>

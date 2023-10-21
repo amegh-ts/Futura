@@ -30,7 +30,7 @@ const ecomredux = createSlice({
                 // If the quantity becomes zero, remove the item
                 if (existingItem.quantity === 0) {
                     // state.productinfo = state.productinfo.pop(item => item.id == id);
-                    state.productinfo.splice(state.productinfo.findIndex((item) => item.id == action.payload), 1)
+                    state.productinfo.splice(state.productinfo.findIndex((item) => item.id === action.payload), 1)
                 }
             }
         },
