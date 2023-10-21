@@ -5,6 +5,8 @@ import Details from './Components/Details';
 import { apiData } from './Components/API/api';
 import Buy from './Components/Buy';
 import Login from './Components/Loginsignup/Login';
+import Footer from './Components/Footer';
+import Profile from './Components/Profile';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +29,12 @@ function App() {
     {
       path: '/login',
       element: <Login />
+    },{
+      path: '/footer',
+      element: <Footer />
+    },{
+      path: '/profile',
+      element: <Profile />
     },
   ]);
 

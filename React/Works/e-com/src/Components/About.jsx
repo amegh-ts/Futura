@@ -6,8 +6,8 @@ const About = () => {
 
             <div className="about-page">
                 <div>
-                    <section class="section blog">
-                        <div class="title">
+                    <section className="section blog">
+                        <div className="title">
                             <span>ABOUT</span>
                             <h2>About Us</h2>
                         </div>

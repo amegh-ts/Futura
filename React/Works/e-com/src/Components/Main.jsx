@@ -9,7 +9,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import Cart from './Cart';
 import Details from './Details';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Body from './Body';
 import Collections from './Collections';
 import News from './News';
@@ -18,8 +18,11 @@ import SearchResults from './SearchResults';
 import Profile from './Profile';
 import Login from './Loginsignup/Login';
 import { Link } from 'react-router-dom';
+import { logout } from '../Redux/authredux';
 
 const Main = () => {
+    const dispatch = useDispatch(); 
+
 
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -77,11 +80,14 @@ const Main = () => {
           // Update the UI with the search results
           setSearchResults(results);
       
-          // Set the active navigation to the search results page (assuming 7 represents it)
+          // Set the active navigation to the search resultZs page (assuming 7 represents it)
           setActiveNav(7);
         }
       };
       
+const handleLogout=()=>{
+    dispatch(logout())
+}
           
       
       
@@ -148,7 +154,7 @@ const Main = () => {
                         <div className="dropdown-content">
                             <a href="#" onClick={()=>handleNavigationClick(8)}>View Profile</a>
                             <Link to={'/login'}><a href="#">Login</a></Link>
-                            <a href="#">Logout</a>
+                            <a href="#" onClick={()=>handleLogout()}>Logout</a>
                         </div>
                     </div>
 

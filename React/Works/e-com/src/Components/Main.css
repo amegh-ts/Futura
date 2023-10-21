@@ -34,7 +34,8 @@
   height: 60px;
   padding: 10px;
 }
-.nav-logo:hover{
+
+.nav-logo:hover {
   cursor: pointer;
 }
 
@@ -83,7 +84,7 @@
 .link::after {
   bottom: -3px;
   transform-origin: right;
-  
+
 }
 
 .link:hover::before,
@@ -295,7 +296,8 @@
   opacity: .7;
   font-size: large;
 }
-.banner-button:hover{
+
+.banner-button:hover {
   cursor: pointer;
 }
 
@@ -423,11 +425,13 @@
 .card-items:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.card-image-div{
+
+.card-image-div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .card-image {
   width: 300px;
   height: 350px;
@@ -534,12 +538,14 @@
   font-size: 16px;
   color: #666;
 }
-.cart-item-mrp{
+
+.cart-item-mrp {
   font-size: 12px;
   color: #666;
   font-weight: 400;
 }
-.cart-item-mrp span{
+
+.cart-item-mrp span {
   text-decoration: line-through;
   font-weight: 400;
 
@@ -550,7 +556,8 @@
   display: flex;
   align-items: center;
 }
-.cart-item-count{
+
+.cart-item-count {
   border: none;
   padding: 10px;
   font-weight: 500;
@@ -668,40 +675,51 @@
 
 /*********************** Latest Collection *********************/
 
-.collections-container{
+.collections-container {
   display: flex;
   flex-direction: column;
   /* margin-top: 20px; */
 }
-.collections-card-container{
+
+.collections-card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
 }
-.collections-card-container-left{
+
+.collections-card-container-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
 }
-.collections-card-container-left img{
-   height: 350px;
+
+.collections-card-container-left img {
+  height: 350px;
 
 }
 
 .cccl1 {
-  position: relative; /* Make the container a positioning context */
+  position: relative;
+  /* Make the container a positioning context */
 }
 
 .image-text1 {
-  position: absolute; /* Position the text absolutely within the container */
-  top: 83%; /* Position the text vertically in the center */
-  left: 18%; /* Position the text horizontally in the center */
-  transform: translate(-50%, -50%); /* Center the text precisely */
-  color: #fff; /* Text color */
-  padding: 10px; /* Add some padding to the text */
-  border-radius: 5px; /* Add rounded corners to the background */
+  position: absolute;
+  /* Position the text absolutely within the container */
+  top: 83%;
+  /* Position the text vertically in the center */
+  left: 18%;
+  /* Position the text horizontally in the center */
+  transform: translate(-50%, -50%);
+  /* Center the text precisely */
+  color: #fff;
+  /* Text color */
+  padding: 10px;
+  /* Add some padding to the text */
+  border-radius: 5px;
+  /* Add rounded corners to the background */
   display: flex;
   flex-direction: column;
   font-size: 20px;
@@ -709,17 +727,25 @@
 }
 
 .cccl2 {
-  position: relative; /* Make the container a positioning context */
+  position: relative;
+  /* Make the container a positioning context */
 }
 
 .image-text2 {
-  position: absolute; /* Position the text absolutely within the container */
-  top: 85%; /* Position the text vertically in the center */
-  left: 18%; /* Position the text horizontally in the center */
-  transform: translate(-50%, -50%); /* Center the text precisely */
-  color: #fff; /* Text color */
-  padding: 10px; /* Add some padding to the text */
-  border-radius: 5px; /* Add rounded corners to the background */
+  position: absolute;
+  /* Position the text absolutely within the container */
+  top: 85%;
+  /* Position the text vertically in the center */
+  left: 18%;
+  /* Position the text horizontally in the center */
+  transform: translate(-50%, -50%);
+  /* Center the text precisely */
+  color: #fff;
+  /* Text color */
+  padding: 10px;
+  /* Add some padding to the text */
+  border-radius: 5px;
+  /* Add rounded corners to the background */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -727,22 +753,30 @@
   font-weight: 600;
 }
 
-.collections-card-container-right img{
+.collections-card-container-right img {
   height: 750px;
 }
 
 .cccr1 {
-  position: relative; /* Make the container a positioning context */
+  position: relative;
+  /* Make the container a positioning context */
 }
 
 .image-text3 {
-  position: absolute; /* Position the text absolutely within the container */
-  top: 88%; /* Position the text vertically in the center */
-  left: 15%; /* Position the text horizontally in the center */
-  transform: translate(-50%, -50%); /* Center the text precisely */
-  color: #fff; /* Text color */
-  padding: 10px; /* Add some padding to the text */
-  border-radius: 5px; /* Add rounded corners to the background */
+  position: absolute;
+  /* Position the text absolutely within the container */
+  top: 88%;
+  /* Position the text vertically in the center */
+  left: 15%;
+  /* Position the text horizontally in the center */
+  transform: translate(-50%, -50%);
+  /* Center the text precisely */
+  color: #fff;
+  /* Text color */
+  padding: 10px;
+  /* Add some padding to the text */
+  border-radius: 5px;
+  /* Add rounded corners to the background */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -752,39 +786,44 @@
 
 /********************* news container *******************/
 
-.news-container{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 20px;
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.news-col{
+
+.news-col {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
 }
-.news-cards{
-  box-shadow: 0 4px 8px 0 rgba(54, 54, 54, 0.2), 0 6px 20px 0  rgba(90, 89, 89, 0.2);
+
+.news-cards {
+  box-shadow: 0 4px 8px 0 rgba(54, 54, 54, 0.2), 0 6px 20px 0 rgba(90, 89, 89, 0.2);
   border-radius: 20px;
 }
 
-.news-card-poster img{
+.news-card-poster img {
   width: 600px;
   height: 600px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.news-card-content{
+
+.news-card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
 }
-.news-card-content h3{
+
+.news-card-content h3 {
   color: #F86F14;
   font-size: 26px;
 }
-.lorem-con{
+
+.lorem-con {
   max-width: 500px;
   text-align: center;
   font-weight: 600;
@@ -793,10 +832,11 @@ margin-bottom: 20px;
 
 
 /*************** about page ****************/
-.about-container{
+.about-container {
   display: flex;
   justify-content: center;
 }
+
 .about-page {
   padding: 0px 20px;
   text-align: center;
@@ -807,32 +847,38 @@ margin-bottom: 20px;
 .about-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #F86F14; /* Orange */
+  color: #F86F14;
+  /* Orange */
 }
 
 .about-header p {
   font-size: 1.2rem;
-  color: #333; /* Dark gray */
+  color: #333;
+  /* Dark gray */
 }
 
 .about-content h2 {
   font-size: 1.8rem;
   margin: 20px 0;
-  color: #F86F14; /* Orange */
-  border-bottom: 2px solid #F86F14; /* Orange */
+  color: #F86F14;
+  /* Orange */
+  border-bottom: 2px solid #F86F14;
+  /* Orange */
   padding-bottom: 10px;
 }
 
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #444; /* A slightly darker gray */
+  color: #444;
+  /* A slightly darker gray */
   margin-bottom: 20px;
 }
 
 /* Add some background and padding for a better visual appeal */
 .about-page {
-  background-color: #fff; /* White */
+  background-color: #fff;
+  /* White */
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -843,7 +889,134 @@ margin-bottom: 20px;
   .about-header h1 {
     font-size: 2rem;
   }
+
   .about-content h2 {
     font-size: 1.5rem;
   }
+}
+
+
+
+
+/**************************** footer *****************************/
+
+.footer-main-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+.footer {
+  background-color: rgba(252, 203, 144, 0.15);
+  padding: 6rem 3rem;
+  margin-top: 7rem;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.col1 {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-logo{
+  
+}
+.footer-icon-div{
+  display: flex;
+  gap: 20px;
+}
+.footer-icon{
+  font-size: 20px;
+}
+.col2 {
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 200px;
+}
+.col2-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.col2-content h4{
+   font-size: 22px;
+}
+.col2-links{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.col3{
+
+}
+
+
+
+@media (max-width: 1200px) {
+  .footer .col:first-child {
+    display: none;
+  }
+
+  .footer .row {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .footer .row .col:last-child {
+    grid-template-columns: 1fr;
+    gap: 3rem 0;
+  }
+}
+
+
+
+/************************ Profile *************************/
+.profile-main{
+  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:#f89a5c; */
+    background-image: linear-gradient(to right, #f89a5c, #ee6c3d);
+    color: #E55D11;
+}
+.profile-card{
+  background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    max-width: 90%;
+    height: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.profile-top{
+
+}
+.profile-pic{
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.profile-pic img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }

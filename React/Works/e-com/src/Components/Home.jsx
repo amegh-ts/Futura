@@ -2,6 +2,7 @@ import React from 'react'
 import womanincart from './Assets/woman-in-cart.png'
 import Body from './Body';
 import { Link} from 'react-scroll';
+import Footer from './Footer';
 
 
 
@@ -30,6 +31,9 @@ const Home = ({ setActiveNav, setProductDetails }) => {
             <div>
             <Body setActiveNav={setActiveNav} setProductDetails={setProductDetails} />
                 {/* <Body onCartClick={cartCount}  /> */}
+            </div>
+            <div>
+                <Footer/>
             </div>
         </div>
     )
