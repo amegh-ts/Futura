@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { removeItem } from '../Redux/ecomredux';
 
 
-const Cart = ({ }) => {
+const Cart = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector((state) => state.ecomredux.productinfo);
     const calculateTotalPrice = (items) => {

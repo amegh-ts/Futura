@@ -72,9 +72,10 @@
 
 .login-icons {
     display: flex;
+    justify-content: center;
     gap: 20px;
     font-size: 30px;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .login-icons i {

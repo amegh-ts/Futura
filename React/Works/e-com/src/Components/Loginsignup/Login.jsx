@@ -49,7 +49,6 @@ const Login = () => {
                         <button className='login-button' onClick={handleLogin}>LOGIN</button>
                     </div>
                     <div className='login-icons'>
-                        a
                         <i className="fa-brands fa-facebook-f fa-beat"></i>
                         <i className="fa-brands fa-twitter fa-beat"></i>
                         <i className="fa-brands fa-instagram fa-beat"></i>

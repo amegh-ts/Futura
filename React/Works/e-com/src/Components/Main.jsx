@@ -57,7 +57,9 @@ const Main = () => {
 
 
     const handleNavigationClick = (index) => {
-        setActiveNav(index);
+        if (index !== activeNav) {
+            setActiveNav(index);
+          }
     }
 
 
