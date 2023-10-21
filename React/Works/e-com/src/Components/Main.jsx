@@ -15,6 +15,9 @@ import Collections from './Collections';
 import News from './News';
 import About from './About';
 import SearchResults from './SearchResults';
+import Profile from './Profile';
+import Login from './Loginsignup/Login';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -143,9 +146,9 @@ const Main = () => {
                             </div>
                         </button>
                         <div className="dropdown-content">
-                            <a href="#">View Profile</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#" onClick={()=>handleNavigationClick(8)}>View Profile</a>
+                            <Link to={'/login'}><a href="#">Login</a></Link>
+                            <a href="#">Logout</a>
                         </div>
                     </div>
 
@@ -163,6 +166,9 @@ const Main = () => {
                 {activeNav === 5 && <News />}
                 {activeNav === 6 && <About />}
                 {activeNav === 7 && <SearchResults searchQuery={searchQuery} searchResults={searchResults} />}
+                {activeNav === 8 && <Profile />}
+                {activeNav === 9 && <Login />}
+                
 
 
 

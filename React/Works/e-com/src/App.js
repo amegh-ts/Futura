@@ -4,16 +4,16 @@ import Main from './Components/Main';
 import Details from './Components/Details';
 import { apiData } from './Components/API/api';
 import Buy from './Components/Buy';
-import Login from './Login signup/Login';
+import Login from './Components/Loginsignup/Login';
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/loading',
+      path: '/',
       element: <Loading />,
     },
     {
-      path: 'home',
+      path: '/home',
       element: <Main />,
     },
     {
@@ -25,7 +25,7 @@ function App() {
       element: <Buy />
     },
     {
-      path: '/',
+      path: '/login',
       element: <Login />
     },
   ]);

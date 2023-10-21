@@ -60,6 +60,7 @@
   font-size: 20px;
   border: none;
   background-color: white;
+  cursor: pointer;
 }
 
 .link::before,
@@ -187,7 +188,7 @@
   display: none;
   position: absolute;
   background-color: #ffffff;
-  min-width: 160px;
+  min-width: 140px;
   z-index: 1;
 }
 
@@ -532,6 +533,16 @@
 .cart-item-description {
   font-size: 16px;
   color: #666;
+}
+.cart-item-mrp{
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+.cart-item-mrp span{
+  text-decoration: line-through;
+  font-weight: 400;
+
 }
 
 /* .cart-item-utils styles */

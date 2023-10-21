@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './login.css'
 import { userapi } from './user';
-import Loading from '../Components/Loading';
 import { useDispatch } from 'react-redux';
-import { login } from '../Redux/authredux';
+import { login } from '../../Redux/authredux';
+import Loading from '../Loading';
 
 
 const Login = () => {
@@ -14,7 +14,7 @@ const Login = () => {
 
     const handleLogin = () => {
         // Replace this with your API database check
-        const user = userapi.find((user) => user.email === email && user.password === password);
+        const user = userapi.find((user) => (user.email === email || user.username === email) && user.password === password);
 
         if (user) {
             dispatch(login(user));
@@ -49,7 +49,8 @@ const Login = () => {
                         <button className='login-button' onClick={handleLogin}>LOGIN</button>
                     </div>
                     <div className='login-icons'>
-                        <i c    lassName="fa-brands fa-facebook-f fa-beat"></i>
+                        a
+                        <i className="fa-brands fa-facebook-f fa-beat"></i>
                         <i className="fa-brands fa-twitter fa-beat"></i>
                         <i className="fa-brands fa-instagram fa-beat"></i>
                         <i className="fa-brands fa-google fa-beat"></i>

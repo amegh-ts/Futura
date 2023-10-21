@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { removeItem } from '../Redux/ecomredux';
 
 
-const Cart = ({}) => {
-const dispatch=useDispatch()
+const Cart = ({ }) => {
+    const dispatch = useDispatch()
     const cartItems = useSelector((state) => state.ecomredux.productinfo);
     const calculateTotalPrice = (items) => {
         return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
 
-   function removecart(ids){
-dispatch(removeItem(ids))
-   }
+    function removecart(id) {
+        dispatch(removeItem(id))
+    }
 
     return (
         <div>
@@ -28,11 +28,11 @@ dispatch(removeItem(ids))
                                 <div className='cart-item-details'>
                                     <span className='cart-item-title'>{item.title}</span>
                                     <span className='cart-item-description'>{item.description}</span>
-                                    <span>Price: ₹{item.price} MRP {item.mrp}</span>
+                                    <span>Price: ₹{item.price} <span className='cart-item-mrp'> M.R.P ₹<span>{item.mrp}</span></span></span>
                                     <div className='cart-item-utils'>
                                         <button className='cart-item-count'>Qty: {item.quantity}</button>
                                         <div className='cart-item-utils-a'>
-                                            <button className='cart-util-button' onClick={()=>removecart(item.id)}>Delete</button>
+                                            <button className='cart-util-button' onClick={() => removecart(item.id)}>Delete</button>
                                             <button className='cart-util-button'>Save for Later</button>
                                             <button className='cart-util-button'>Share</button>
                                         </div>
