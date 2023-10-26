@@ -2,8 +2,11 @@ import React from 'react'
 
 const Buy = () => {
   return (
-    <div>B
-        hjjhhvhhuy</div>
+    <div className='buy-main'>
+      <div className="message-container">
+        <p className="message">Item purchased successfully</p>
+      </div>
+    </div>
   )
 }
 

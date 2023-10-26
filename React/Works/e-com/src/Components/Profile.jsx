@@ -1,34 +1,23 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react';
 
 const Profile = () => {
-  const userDataa = useSelector((state) => state.auth && state.auth.user);
-  console.log('egfjhsdjbsejfvgjbjfva', userDataa);
-  
-  if (!Array.isArray(userDataa)) {
-    return <div>No user data available.</div>;
-  }
+  const userData = JSON.parse(JSON.parse(localStorage.getItem('persist:ecom')).ecomredux.authredux.user);
+
   return (
     <div>
       <div className='profile-main'>
-        {userDataa.map((user, index) => (
-          <div className='profile-card' key={index}>
-            <div className='profile-top'>
-              <div className='profile-pic'>
-                <img src={user.dp} alt={user.name} />
-                <h2>{user.name}</h2>
-                <h3>Email</h3>
-              </div>
-              <div></div>
-              <div></div>
+        <div className='profile-card'>
+          <div className='profile-top'>
+            <div className='profile-pic'>
+              <img src={userData.dp} alt={userData.name} />
+              <h2>{userData.name}</h2>
+              <h3>{userData.email}</h3> {/* Display the user's email */}
             </div>
-
           </div>
-        ))}
-
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

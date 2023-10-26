@@ -1,8 +1,15 @@
 import React from 'react';
 
-const SearchResults = ({ searchQuery, searchResults }) => {
+const SearchResults = ({ searchQuery, searchResults,setActiveNav, setProductDetails }) => {
     console.log('searchQuery:', searchQuery);
     console.log('searchResults:', searchResults);
+
+
+    const handleCardClick = (result) => {
+        setProductDetails(result);
+        setActiveNav(2);
+        console.log("ahwfjgawfkhjabjfuakefbh",result);
+    }
 
     return (
         <div>
@@ -11,7 +18,7 @@ const SearchResults = ({ searchQuery, searchResults }) => {
             <div >
                 <div className='b-card-container'>
                     {searchResults.map((result) => (
-                        <div key={result.id} className="card-items">
+                        <div key={result.id} className="card-items" onClick={() => handleCardClick(result)}>
                             <img src={result.thumbnail} alt={result.name} className='card-image' />
                             <div className="card-item-details">
                                 <span className='card-item-title'>{result.title}</span>

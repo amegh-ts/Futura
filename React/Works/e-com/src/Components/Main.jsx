@@ -173,12 +173,9 @@ const Main = () => {
                 {activeNav === 4 && <Collections />}
                 {activeNav === 5 && <News />}
                 {activeNav === 6 && <About />}
-                {activeNav === 7 && <SearchResults searchQuery={searchQuery} searchResults={searchResults} />}
+                {activeNav === 7 && <SearchResults searchQuery={searchQuery} searchResults={searchResults} setActiveNav={setActiveNav} setProductDetails={setProductDetails}/>}
                 {activeNav === 8 && <Profile />}
                 {activeNav === 9 && <Login />}
-
-
-
 
             </div>
 

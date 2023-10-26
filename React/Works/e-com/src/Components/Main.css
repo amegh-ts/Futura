@@ -1020,3 +1020,30 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+
+/*********************** Buy page ********************/
+
+body {
+  background-color: #F86F14;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.message-container {
+  text-align: center;
+}
+
+.message {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}

@@ -44,7 +44,7 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         setActiveNav(2);
         console.log("ahwfjgawfkhjabjfuakefbh",item);
     }
-
+    
 
     return (
         <div>
