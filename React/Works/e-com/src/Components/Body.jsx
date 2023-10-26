@@ -60,36 +60,36 @@ const Body = ({ setActiveNav, setProductDetails }) => {
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Dress')} className={`collection-button ${activeFilter === 'Dress' ? 'active' : ''}`}>Dress</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Men</a>
-                            <a href="#" >Women</a>
-                            <a href="#">Kids</a>
+                            <a href="home">Men</a>
+                            <a href="home" >Women</a>
+                            <a href="home">Kids</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Electronics')} className={`collection-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</button>
                         <div className="b-dropdown-content">
-                            <a href="#">Mobile</a>
-                            <a href="#">Camera</a>
-                            <a href="#">Accessories</a>
+                            <a href="home">Mobile</a>
+                            <a href="home">Camera</a>
+                            <a href="home">Accessories</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown' >
                         <button onClick={() => handleClick('Beauty')} className={`collection-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty & Health</button>
                         <div className="b-dropdown-content">
-                            <a href="#" >Makeup</a>
-                            <a href="#">skincare</a>
-                            <a href="#" >wellness</a>
+                            <a href="home" >Makeup</a>
+                            <a href="home">skincare</a>
+                            <a href="home" >wellness</a>
                         </div>
                     </div>
 
                     <div className='b-dropdown'>
                         <button onClick={() => handleClick('Jewelleri')} className={`collection-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewellery</button>
                         <div className="b-dropdown-content">
-                            <a href="#" >Chain</a>
-                            <a href="#" >Anklet</a>
-                            <a href="#" >Earrings</a>
+                            <a href="home" >Chain</a>
+                            <a href="home" >Anklet</a>
+                            <a href="home" >Earrings</a>
                         </div>
                     </div>
                 </div>

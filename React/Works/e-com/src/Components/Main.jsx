@@ -42,7 +42,10 @@ const Main = () => {
         }, 2000);
         setTimeout(() => {
             setIcon('fa-smile-o');
-        }, 3000);
+        }, 3000);   
+        setTimeout(() => {
+            setIcon('fa-face-smile');
+        }, 4000);   
     };
     useEffect(() => {
         smile();
@@ -154,9 +157,9 @@ const Main = () => {
                             </div>
                         </button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={() => handleNavigationClick(8)}>View Profile</a>
-                            <Link to={'/login'}><a href="#">Login</a></Link>
-                            <a href="#" onClick={() => handleLogout()}>Logout</a>
+                            <a href="profile" onClick={() => handleNavigationClick(8)}>View Profile</a>
+                            <Link to={'/login'}><a href="login">Login</a></Link>
+                            <a href="home" onClick={() => handleLogout()}>Logout</a>
                         </div>
                     </div>
 

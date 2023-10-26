@@ -314,7 +314,7 @@
   margin-bottom: 5rem;
 }
 
-.title {}
+/* .title {} */
 
 .section .title span {
   display: inline-block;
@@ -926,9 +926,9 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.footer-logo{
+/* .footer-logo{
   
-}
+} */
 .footer-icon-div{
   display: flex;
   gap: 20px;
@@ -954,9 +954,9 @@
   flex-direction: column;
   gap: 25px;
 }
-.col3{
+/* .col3{
 
-}
+} */
 
 
 
@@ -1001,9 +1001,9 @@
     height: 500px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.profile-top{
+/* .profile-top{
 
-}
+} */
 .profile-pic{
   border: 1px solid black;
   height: 150px;
