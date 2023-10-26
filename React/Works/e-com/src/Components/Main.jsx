@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 import { logout } from '../Redux/authredux';
 
 const Main = () => {
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
 
 
     const [searchQuery, setSearchQuery] = useState('');
@@ -59,7 +59,7 @@ const Main = () => {
     const handleNavigationClick = (index) => {
         if (index !== activeNav) {
             setActiveNav(index);
-          }
+        }
     }
 
 
@@ -67,32 +67,32 @@ const Main = () => {
     const handleSearch = () => {
         // Ensure that the search query is not empty or consists only of spaces
         if (searchQuery.trim() !== '') {
-          // Convert the search query to lowercase for case-insensitive search
-          const lowerCaseQuery = searchQuery.toLowerCase();
-      
-          // Use filter to find items that match the search query
-          const results = apiData.filter((item) => {
-            const itemTitle = item.title.toLowerCase();
-            const itemCategory = item.category.toLowerCase();
-            const itemType = item.type.toLowerCase();
-      
-            return itemTitle.includes(lowerCaseQuery) || itemCategory.includes(lowerCaseQuery) || itemType.includes(lowerCaseQuery);
-          });
-      
-          // Update the UI with the search results
-          setSearchResults(results);
-      
-          // Set the active navigation to the search resultZs page (assuming 7 represents it)
-          setActiveNav(7);
+            // Convert the search query to lowercase for case-insensitive search
+            const lowerCaseQuery = searchQuery.toLowerCase();
+
+            // Use filter to find items that match the search query
+            const results = apiData.filter((item) => {
+                const itemTitle = item.title.toLowerCase();
+                const itemCategory = item.category.toLowerCase();
+                const itemType = item.type.toLowerCase();
+
+                return itemTitle.includes(lowerCaseQuery) || itemCategory.includes(lowerCaseQuery) || itemType.includes(lowerCaseQuery);
+            });
+
+            // Update the UI with the search results
+            setSearchResults(results);
+
+            // Set the active navigation to the search resultZs page (assuming 7 represents it)
+            setActiveNav(7);
         }
-      };
-      
-const handleLogout=()=>{
-    dispatch(logout())
-}
-          
-      
-      
+    };
+
+    const handleLogout = () => {
+        dispatch(logout())
+    }
+
+
+
 
     return (
         <div className='main-div'>
@@ -125,7 +125,7 @@ const handleLogout=()=>{
                             handleSearch();
                         }
                     }} className='nav-search-input' />
-                
+
                     <div className='nav-serch-icon-container' onClick={handleSearch}>
                         <FaSearch className='nav-serch-icon' />
                         {/* <i class="fa-sharp fa-solid fa-magnifying-glass fa-xl" style={{color: "#F86F14;"}}></i>                       */}
@@ -154,9 +154,9 @@ const handleLogout=()=>{
                             </div>
                         </button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={()=>handleNavigationClick(8)}>View Profile</a>
+                            <a href="#" onClick={() => handleNavigationClick(8)}>View Profile</a>
                             <Link to={'/login'}><a href="#">Login</a></Link>
-                            <a href="#" onClick={()=>handleLogout()}>Logout</a>
+                            <a href="#" onClick={() => handleLogout()}>Logout</a>
                         </div>
                     </div>
 
@@ -168,15 +168,15 @@ const handleLogout=()=>{
 
                 {activeNav === 0 && <Home setActiveNav={setActiveNav} setProductDetails={setProductDetails} />}
                 {activeNav === 1 && <Cart />}
-                {activeNav === 2 && <Details productDetails={productDetails}/>}
-                {activeNav === 3 && <Body setProductDetails={setProductDetails} setActiveNav={setActiveNav}/>}
+                {activeNav === 2 && <Details productDetails={productDetails} />}
+                {activeNav === 3 && <Body setProductDetails={setProductDetails} setActiveNav={setActiveNav} />}
                 {activeNav === 4 && <Collections />}
                 {activeNav === 5 && <News />}
                 {activeNav === 6 && <About />}
                 {activeNav === 7 && <SearchResults searchQuery={searchQuery} searchResults={searchResults} />}
                 {activeNav === 8 && <Profile />}
                 {activeNav === 9 && <Login />}
-                
+
 
 
 
