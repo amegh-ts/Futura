@@ -25,8 +25,8 @@ const Footer = () => {
                             <div className="footer-icon"><FaYoutube/></div>
                         </div>
                         <p className="color">
-                            Copyrights 2021 <br />
-                            @Iamabdulqadeer01
+                            Copyrights 2023 <br />
+                            @amz
                         </p>
                     </div>
                     <div className="col2">
