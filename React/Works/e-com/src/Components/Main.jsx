@@ -9,7 +9,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import Cart from './Cart';
 import Details from './Details';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Body from './Body';
 import Collections from './Collections';
 import News from './News';
@@ -18,10 +18,8 @@ import SearchResults from './SearchResults';
 import Profile from './Profile';
 import Login from './Loginsignup/Login';
 import { Link } from 'react-router-dom';
-import { logout } from '../Redux/authredux';
 
 const Main = () => {
-    const dispatch = useDispatch();
 
 
     const [searchQuery, setSearchQuery] = useState('');
@@ -43,9 +41,7 @@ const Main = () => {
         setTimeout(() => {
             setIcon('fa-smile-o');
         }, 3000);   
-        setTimeout(() => {
-            setIcon('fa-face-smile');
-        }, 4000);   
+        
     };
     useEffect(() => {
         smile();
@@ -89,10 +85,22 @@ const Main = () => {
             setActiveNav(7);
         }
     };
+// Get the current value from local storage
+const currentValue = localStorage.getItem('persist:ecom');
 
-    const handleLogout = () => {
-        dispatch(logout())
-    }
+// Parse the JSON value to work with it as an object
+const parsedValue = JSON.parse(currentValue);
+
+// Set the "authredux" property to null
+parsedValue.authredux = {};
+
+// Convert the modified object back to a JSON string
+const modifiedValue = JSON.stringify(parsedValue);
+
+const handleLogout=()=>{
+    localStorage.setItem('persist:ecom', modifiedValue);
+}
+
 
 
 

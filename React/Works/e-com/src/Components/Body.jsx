@@ -13,17 +13,15 @@ const Body = ({ setActiveNav, setProductDetails }) => {
         async function api() {
             try {
                 setState(apiData);
-                setFilteredState(apiData)
-            }
-            catch (error) {
+                setFilteredState(apiData);
+            } catch (error) {
                 console.error('Error fetching data:', error);
             }
-
-
         }
-        api()
+        api();
         console.log(state);
-    }, [])
+    }, [state]); // Include 'state' in the dependency array
+
 
     const handleClick = (filter) => {
         setActiveFilter(filter);
@@ -42,9 +40,9 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     const handleCardClick = (item) => {
         setProductDetails(item);
         setActiveNav(2);
-        console.log("ahwfjgawfkhjabjfuakefbh",item);
+        console.log("ahwfjgawfkhjabjfuakefbh", item);
     }
-    
+
 
     return (
         <div>
