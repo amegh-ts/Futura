@@ -27,15 +27,6 @@ fs.appendFile('sreerag.js', '\n var a=100', (err) => {
     }
 });
 
-//create or update(overwrite)
-fs.appendFile('sreerag-js', '\n var a=100 ', (err) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log("file created");
-    }
-});
 //renamed file
 fs.rename('./nodejs.txt', 'abcdefg.txt', (err) => {
     if (err) {
