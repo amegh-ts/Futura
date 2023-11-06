@@ -1,7 +1,7 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SignUp from './Components/Pages/Login/SignUp';
-import Test from './Components/Pages/Login/test';
+import Test from './Components/Pages/Test/Test';
 
 
 function App() {
