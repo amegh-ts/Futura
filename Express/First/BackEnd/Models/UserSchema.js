@@ -3,7 +3,7 @@ const mongoose=require('mongoose')
 const UserSchema=new mongoose.Schema({
     // username:{type:String,require:true,unique:true},  //require:true is user to make this feild compulsory
     username:{type:String},
-    email:{type:String},
+    email:{type:String,unique:true},
     password:{type:String},
 },{timestamps:true}) //to add the date and time the value is added to DB or edited
 
