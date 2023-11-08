@@ -120,7 +120,7 @@
     display: flex;
     justify-content:center ;
     align-items: center;
-    
+    padding: 20px 0px;
 }
 .signup-container h2{
     color: var(--text-color);
@@ -161,3 +161,33 @@
     margin-top: 10px;
     cursor: pointer;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .signup-box div{
+        /* display: none; */
+        visibility: hidden;
+    }
+  }
+  
+  .signup-message{
+    display: none;
+  }
+  @media (max-width: 320px) {
+    /* Styles for screens narrower than 320px */
+  
+    .signup-container {
+      display: none; /* Hide the signup container */
+    }
+  
+    .signup-message {
+      display: block; /* Display the message */
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff0000;
+    }
+  }
+  

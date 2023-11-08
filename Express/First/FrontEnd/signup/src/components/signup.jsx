@@ -18,6 +18,9 @@ const Signup = () => {
     return (
         <div>
             <div className='signup-wraper'>
+                <div className="signup-message">
+                    please use a larger display size
+                </div>
                 <div className="signup-box">
                     <div></div>
                     <div></div>
@@ -39,7 +42,8 @@ const Signup = () => {
                             <input type="date" placeholder='DOB' value={dob} onChange={(e) => setDob(e.target.value)} />
                             <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
                             <input type="text" placeholder='Phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                            <input type="text" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <input type="text" placeholder='Password'/>
+                            <input type="text" placeholder='Confirm Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div className='signup-button'>
                             <button onClick={display}>SignUp</button>
