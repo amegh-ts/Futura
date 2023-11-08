@@ -3,6 +3,8 @@ const express=require('express')
 const app=express()
 const dotenv=require('dotenv')
 const mongoose=require('mongoose')
+const cors=require('cors')
+app.use(cors())
 dotenv.config() //to access the .env file in your directory
 
 const userRouter=require('./Router/UserRouter')
@@ -19,6 +21,6 @@ app.use(express.json()) //to access the data stored in express() assigned to the
 app.use('/',userRouter)
 
 
-app.listen(3000,()=>{
+app.listen(7000,()=>{
     console.log('Connected to Server');
 })

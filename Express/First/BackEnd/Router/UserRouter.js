@@ -4,12 +4,12 @@ const users=require('../Models/UserSchema')  //here the users variable is the sa
 
 router.post('/postmethods',async(req,res)=>{
     console.log('Postman data ?',req.body);  // request.body contain datas comming from the front end
-    // const newUser= new users(req.body)
-    const newUser= new users({
-        username:req.body.bname,
-        email:req.body.bemail,
-        password:req.body.bpassword
-    })
+    const newUser= new users(req.body)
+    // const newUser= new users({
+    //     username:req.body.bname,
+    //     email:req.body.bemail,
+    //     password:req.body.bpassword
+    // })
 
     // for error handling
     try{
