@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
 const UserSchema=new mongoose.Schema({
-    // username:{type:String,require:true,unique:true},  //require:true is user to make this feild compulsory
+    // username:{type:String,required:true,unique:true},  //require:true is user to make this feild compulsory
     firstname:{type:String},
     lastname:{type:String},
     dob:{type:String},

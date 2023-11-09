@@ -20,6 +20,15 @@ router.post('/postmethods',async(req,res)=>{
     }
 });  // post used to get front end values to backend
 
+router.get('/getmethod',async(req,res)=>{
+    try {
+        const datas=await users.find()
+        console.log(datas);
+        res.status(200).json(datas)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports=router
 
