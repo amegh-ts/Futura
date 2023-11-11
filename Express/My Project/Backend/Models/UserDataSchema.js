@@ -8,4 +8,6 @@ const UserDataSchema=new mongoose.Schema({
     phone:{type:String,required:true},
     password:{type:String,required:true},
 
-},{timestamps})
+},{timestamps:true})
+
+module.exports=mongoose.model("userData",UserDataSchema)
