@@ -11,3 +11,14 @@ export const signUpData = async (data) => {
         console.log(err);
     }
 }
+
+export const getIdData=async(id)=>{
+    console.log('id ?',id);
+    try {
+        const res=await axios.get(`http://localhost:7000/getmethod/${id}`)
+        console.log('888888888888',res);
+         return res.data
+    } catch (err) {
+        console.log(err);
+    }
+}

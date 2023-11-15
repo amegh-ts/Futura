@@ -35,13 +35,29 @@ router.get('/getmethod/:id', async (req, res) => {
     console.log(req.params.id);
     try {
         // const datas = await users.find()
-        const ids = await users.findById(req.params.id) 
+        const ids = await users.findById(req.params.id)
         console.log(ids);
         res.status(200).json(ids)
     } catch (err) {
         res.status(500).json(err)
     }
 })
+
+
+// to update values in data base
+router.put('/updatedata/:id', async (req, res) => {
+    try {
+        const updateData = await users.findByIdAndUpdate(req.params.id, {
+            $set: req.body       //quer containing the req from body
+        }, { new: true })  // new: true used to add new data if not given it will nnot update
+        res.status(200).json(updateData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+
+// delete file
 
 
 module.exports = router

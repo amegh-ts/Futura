@@ -191,3 +191,86 @@
     }
   }
   
+
+  .sigin-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+  }
+
+  .sigin-form input{
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .signin-button{
+    display: flex;
+    justify-content: center;
+  }
+  .signin-button button{
+    background-color: var(--button-color);
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .profile-container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    max-width: 100%;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .profile-id-form{
+    margin: 0px 10px;
+  }
+  .profile-id-form span{
+    margin: 0px 5px;
+  }
+  .profile-id-form span input{
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .profile-id-form span button{
+    background-color: var(--button-color);
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .profile-display{
+    
+  }

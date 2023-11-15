@@ -2,15 +2,23 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Display from './components/display';
 import Signup from './components/signup';
+import SignIn from './components/signin';
+import Profile from './components/profile';
 
 function App() {
   const router = createBrowserRouter([
     {
       path:'/',
-      element:<Signup/>
+      element:<SignIn/>
     },{
       path:'/display',
       element:<Display/>
+    },{
+      path:'/signup',
+      element:<Signup/>
+    },{
+      path:'/profile',
+      element:<Profile/>
     },
   ])
   return (
