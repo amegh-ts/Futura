@@ -1,30 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import { getIdData } from './apiCall';
+import React, { useState } from 'react'
+import { deleteIdData, getIdData, updateData } from './apiCall';
 
 const Profile = () => {
     const [profileId, setProfileId] = useState('');
     const [data, setData] = useState({});
 
+    const [firstname, setFirstName] = useState('')
+    const [lastname, setLastName] = useState('')
+    const [dob, setDob] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+
+    const update = () => {
+        
+        updateData(profileId,{ firstname, lastname, dob, email, phone })
+    }
+
     const handleInputChange = (event) => {
         setProfileId(event.target.value);
 
     };
-    // console.log("fhfhf",profileId)
-    //    async function handleSubmit1(){
-    //         var a=await getIdData(profileId)
-    //         console.log('a where?',a);
-    //         setData(a)
-    //     }
+
 
     console.log('data ?', data);
     const handleSubmit = async () => {
-        // console.log('Profile ID submitted:', profileId);
-        var a = await getIdData(profileId)
-        console.log('a where?', a);
-         setData(a)
+        try {
+            console.log('Profile ID submitted:', profileId);
+            const a = await getIdData(profileId);
+            console.log('Result:', a);
+            setData(a);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     };
-    
-console.log("gggg",data)
+
+    const handleDelete = async () => {
+        try {
+            console.log('Profile id submited to delete is ?', profileId);
+            deleteIdData(profileId)
+            console.log('profile deleted');
+        } catch (err) {
+            console.log('Error Deleting user', err);
+        }
+    }
+
+
+
+    console.log("gggg", data)
     return (
         <div>
             <div className='signup-wraper'>
@@ -46,36 +68,26 @@ console.log("gggg",data)
                 <div className="profile-container">
                     <div className='profile-id-form'>
                         <span>
-                            <input type="text" placeholder='enter the id' value={profileId} onChange={handleInputChange} />
+                            <input type="text" placeholder='enter the id' value={profileId} onChange={handleInputChange} required />
                         </span>
                         <span>
                             <button onClick={handleSubmit}>Submit</button>
+                            <span> </span>
+                            <button onClick={handleDelete}>Delete</button>
                         </span>
                     </div>
                     <div className='profile-display'>
-                        <ul>
-                           
-                                <li >
-                                    <div>
-                                        <span>{data._id}</span>
-                                    </div>
-                                    <div>
-                                        <span>{data.firstname}</span><span> </span>
-                                        <span>{data.lastname}</span>
-                                    </div>
-                                    <div>
-                                        <span>{data.dob}</span>
-                                    </div>
-                                    <div>
-                                        <span>{data.email}</span>
-                                    </div>
-                                    <div>
-                                        <span>{data.phone}</span>
-                                    </div>
-                                </li>
-                     
-                        </ul>
+                        <div className='profile-display-form'>
+                        <input type="text" placeholder={data.firstname} value={firstname} onChange={(e)=>setFirstName(e.target.value)}/>
+                        <input type="text" placeholder={data.lastname} value={lastname} onChange={(e)=>setLastName(e.target.value)}/>
+                        <input type="date" placeholder={data.dob} value={dob} onChange={(e)=>setDob(e.target.value)}/>
+                        <input type="mail" placeholder={data.email} value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                        <input type="text" placeholder={data.phone} value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                        </div>
                     </div>
+                    <div className='signup-button'>
+                            <button onClick={update}>Update</button>
+                        </div>
                 </div>
             </div>
         </div>
