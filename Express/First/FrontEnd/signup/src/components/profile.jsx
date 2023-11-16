@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { deleteIdData, getIdData, updateData } from './apiCall';
 
 const Profile = () => {
@@ -11,9 +11,11 @@ const Profile = () => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
 
+
+
     const update = () => {
-        
-        updateData(profileId,{ firstname, lastname, dob, email, phone })
+
+        updateData(profileId, { firstname, lastname, dob, email, phone })
     }
 
     const handleInputChange = (event) => {
@@ -36,7 +38,7 @@ const Profile = () => {
 
     const handleDelete = async () => {
         try {
-            console.log('Profile id submited to delete is ?', profileId);
+            console.log('Profile id submitted to delete is ?', profileId);
             deleteIdData(profileId)
             console.log('profile deleted');
         } catch (err) {
@@ -44,7 +46,13 @@ const Profile = () => {
         }
     }
 
-
+    useEffect(() => {
+        setFirstName(data.firstname)
+        setLastName(data.lastname)
+        setDob(data.dob)
+        setEmail(data.email)
+        setPhone(data.phone)
+    }, [data])
 
     console.log("gggg", data)
     return (
@@ -78,16 +86,16 @@ const Profile = () => {
                     </div>
                     <div className='profile-display'>
                         <div className='profile-display-form'>
-                        <input type="text" placeholder={data.firstname} value={firstname} onChange={(e)=>setFirstName(e.target.value)}/>
-                        <input type="text" placeholder={data.lastname} value={lastname} onChange={(e)=>setLastName(e.target.value)}/>
-                        <input type="date" placeholder={data.dob} value={dob} onChange={(e)=>setDob(e.target.value)}/>
-                        <input type="mail" placeholder={data.email} value={email} onChange={(e)=>setEmail(e.target.value)}/>
-                        <input type="text" placeholder={data.phone} value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                            <input type="text" placeholder={data.firstname} value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+                            <input type="text" placeholder={data.lastname} value={lastname} onChange={(e) => setLastName(e.target.value)} />
+                            <input type="date" placeholder={data.dob} value={dob} onChange={(e) => setDob(e.target.value)} />
+                            <input type="mail" placeholder={data.email} value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <input type="text" placeholder={data.phone} value={phone} onChange={(e) => setPhone(e.target.value)} />
                         </div>
                     </div>
                     <div className='signup-button'>
-                            <button onClick={update}>Update</button>
-                        </div>
+                        <button onClick={update}>Update</button>
+                    </div>
                 </div>
             </div>
         </div>

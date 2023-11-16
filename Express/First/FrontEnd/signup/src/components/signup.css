@@ -38,6 +38,7 @@
 .signup-box div:nth-child(1) {
   top: 12%;
   left: 42%;
+  border-radius: 100px;
   animation: animate 10s linear infinite;
 }
 
@@ -108,7 +109,7 @@
 }
 
 .signup-container {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
