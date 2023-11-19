@@ -23,7 +23,6 @@ const Profile = () => {
 
     };
 
-
     console.log('data ?', data);
     const handleSubmit = async () => {
         try {
@@ -73,7 +72,7 @@ const Profile = () => {
                     <div></div>
                     <div></div>
                 </div>
-                <div className="profile-container">
+                <div className="signup-container">
                     <div className='profile-id-form'>
                         <span>
                             <input type="text" placeholder='enter the id' value={profileId} onChange={handleInputChange} required />
@@ -96,6 +95,8 @@ const Profile = () => {
                     <div className='signup-button'>
                         <button onClick={update}>Update</button>
                     </div>
+
+                    
                 </div>
             </div>
         </div>

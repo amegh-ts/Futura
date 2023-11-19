@@ -1,9 +1,12 @@
-const router = require('express').Router()   //Router used to access database. it is a module insite express package
+const router = require('express').Router()   //Router used to access database. it is a module inside express package
 
 const users = require('../Models/UserSchema')  //here the users variable is the same name given in the useschema.js
 
+const Crypto = require('crypto-js')
+
 router.post('/postmethods', async (req, res) => {
-    console.log('Postman data ?', req.body);  // request.body contain datas comming from the front end
+    req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+    console.log('Postman data ?', req.body);  // request.body contain datas coming from the front end
     const newUser = new users(req.body)
     // const newUser= new users({
     //     username:req.body.bname,
@@ -42,24 +45,36 @@ router.get('/getmethod/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
-
-
+  
 // to update values in data base
 router.put('/updatedata/:id', async (req, res) => {
     try {
         const updateData = await users.findByIdAndUpdate(req.params.id, {
-            $set: req.body       //quer containing the req from body
-        }, { new: true })  // new: true used to add new data if not given it will nnot update
+            $set: req.body       //query containing the req from body
+        }, { new: true })  // new: true used to add new data if not given it will not update
         res.status(200).json(updateData)
     } catch (err) {
         res.status(500).json(err)
     }
 })
 
-
-// delete file
+// login
+router.post('/login', async (req, res) => {
+    console.log('Backend login', req.body);
+    try {
+        const DB = await users.findOne({ email: req.body.email })
+        !DB && res.status(401).json({ response: 'Please check Your Email' })
+        console.log('Backend Data', DB);
+        const hashedPassword = Crypto.AES.decrypt(DB.password, process.env.Crypto_js)
+        console.log('Hashed Password is ', hashedPassword);
+        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
+        console.log('Original Password is', originalPassword);
+        originalPassword != req.body.password && res.status(401).json({response:"Password and Email doesn't match"})
+        res.status(200).json('Success')
+    } catch (err) {
+        res.status(400)
+    }
+})
 
 
 module.exports = router
-
-

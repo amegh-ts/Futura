@@ -34,7 +34,7 @@ export const deleteIdData=async(id)=>{
 }
 
 export const updateData=async(id ,datas)=>{
-    console.log('Update is ?',id);
+    console.log('Update id ?',id);
     try {
         const res=await axios.put(`http://localhost:7000/updatedata/${id}`,datas)
         console.log('Updated data is',res.data);
@@ -42,5 +42,16 @@ export const updateData=async(id ,datas)=>{
     } catch (err) {
         console.log(err);
         
+    }
+}
+
+export const loginData=async(loginData)=>{
+    console.log('Login Data is?',loginData);
+    try {
+        const res=await axios.post('http://localhost:7000/login',loginData);
+        console.log('Response Status:', res.status);
+        console.log('Response Data:', res.data);
+    } catch (err) {
+       console.log(err); 
     }
 }

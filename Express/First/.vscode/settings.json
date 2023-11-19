@@ -1,8 +1,20 @@
 {
     "cSpell.words": [
+        "alldata",
+        "bemail",
+        "bname",
+        "bpassword",
+        "datas",
         "firstname",
+        "getmethod",
         "lastname",
+        "postmethods",
+        "quer",
+        "sigin",
+        "signin",
         "signup",
+        "updatedata",
+        "useschema",
         "wraper"
     ]
 }

@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { loginData } from './apiCall'
 
 const SignIn = () => {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+const login=()=>{
+console.log(email,password);
+loginData({email,password})
+}
     return (
         <div>
             <div className='signup-wraper'>
@@ -23,11 +32,11 @@ const SignIn = () => {
                     <div className='signup-form-container'>
                         <h2>Login</h2>
                         <div className='sigin-form'>
-                            <input type="mail" placeholder='Email' />
-                            <input type="password" placeholder='Password' />
+                            <input type="mail" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div className="signin-button">
-                            <button>Login</button>
+                            <button onClick={login}>Login</button>
                         </div>
                     </div>
                 </div>
