@@ -1,11 +1,11 @@
 *{
   margin: 0px;
 }
-#App{
+.App{
   background-color: black;
 }
 #light {
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   --anim-block-color: #05af49;
   --primary-color: #067b23;
   --body-bg-color:#ffffff;
@@ -16,7 +16,7 @@
 }
 
 #dark {
-  /* background-color: #000000; */
+  background-color: #000000;
   --anim-block-color: #04be36; 
   --primary-color: #067b23; 
   --body-bg-color:#000000;

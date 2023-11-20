@@ -1,9 +1,25 @@
 
 import React, { useState } from 'react'
 import './Login.css'
+import { signUpData } from '../apiCall';
 
 const Login = () => {
   const [isRegisterActive, setRegisterActive] = useState(false);
+
+  const [uname,setUname]=useState('')
+  const [dob,setDob]=useState('')
+  const [phone,setPhone]=useState('')
+  const [email,setEmail]=useState('')
+  const [password,setPassword]=useState('')
+
+
+  const onSignUpClick =()=>{
+    signUpData({uname,dob,phone,email,password})
+  }
+
+
+   
+
 
   const toggleForm = () => {
     setRegisterActive(!isRegisterActive);
@@ -37,12 +53,12 @@ const Login = () => {
                 <form onSubmit={handleSubmit}>
                   <h1>Create Account</h1>
 
-                  <input type="text" placeholder="Name" />
-                  <input type="date" placeholder="DOB" />
-                  <input type="number" placeholder="Phone" />
-                  <input type="email" placeholder="Email" />
-                  <input type="password" placeholder="Password" />
-                  <button>Sign Up</button>
+                  <input type="text" placeholder="Name" value={uname} onChange={(e)=>setUname(e.target.value)}/>
+                  <input type="date" placeholder="DOB" value={dob} onChange={(e)=>setDob(e.target.value)}/>
+                  <input type="number" placeholder="Phone" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                  <input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                  <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                  <button onClick={onSignUpClick}>Sign Up</button>
                   {/* <div className="social-icons">
                     <a href="#" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
