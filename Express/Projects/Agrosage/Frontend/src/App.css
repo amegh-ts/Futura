@@ -1,0 +1,27 @@
+*{
+  margin: 0px;
+}
+#App{
+  background-color: black;
+}
+#light {
+  /* background-color: #ffffff; */
+  --anim-block-color: #05af49;
+  --primary-color: #067b23;
+  --body-bg-color:#ffffff;
+  --font-color:#000000;
+--card-gradient-color1:#067b23;
+--card-gradient-color2:#1c8f39;
+
+}
+
+#dark {
+  /* background-color: #000000; */
+  --anim-block-color: #04be36; 
+  --primary-color: #067b23; 
+  --body-bg-color:#000000;
+  --font-color:#ffffff;
+  --card-gradient-color1:#067b23;
+  --card-gradient-color2:#1c8f39;
+}
+
