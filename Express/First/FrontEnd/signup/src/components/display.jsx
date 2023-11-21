@@ -4,12 +4,12 @@ import axios from 'axios'
 
 const Display = () => {
 
-    const [state, setstate] = useState([]);
+    const [state, setState] = useState([]);
     useEffect(() => {
         async function display() {
-            const res = await axios.get('http://localhost:7000/alldata')
+            const res = await axios.get('http://localhost:5000/alldata')
             console.log(res.data);
-            setstate(res.data)
+            setState(res.data)
         }
         display()
     }, [])

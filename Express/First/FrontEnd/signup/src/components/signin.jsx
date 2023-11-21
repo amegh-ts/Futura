@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { loginData } from './apiCall'
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../Redux/UserRedux';
+// import { loginUser } from '../Redux/UserRedux';
 
 
 const SignIn = () => {
@@ -15,14 +15,7 @@ const SignIn = () => {
     const login = async () => {
         console.log(email, password);
         try {
-            const userData = await loginData({ email, password },dispatch);
-            console.log('User Data:', userData);
-
-            // Dispatch the action to update Redux store with user data
-         
-
-            // Store user data in local storage
-            localStorage.setItem('userData', JSON.stringify(userData));
+            loginData({ email, password },dispatch);
         } catch (error) {
             console.error('Login failed:', error);
         }

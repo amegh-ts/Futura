@@ -87,3 +87,4 @@ router.post('/login', async (req, res) => {
 
 module.exports = router
 
+    // "start": "set PORT=3006 && react-scripts start",

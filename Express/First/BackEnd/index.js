@@ -22,6 +22,6 @@ app.use(express.json()) //to access the data stored in express() assigned to the
 app.use('/',userRouter)
 app.use('/',crudRouter)
 
-app.listen(7000,()=>{
+app.listen(5000,()=>{
     console.log('Connected to Server');
 })
