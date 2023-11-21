@@ -8,6 +8,7 @@
         "firstname",
         "getmethod",
         "lastname",
+        "loginusers",
         "postmethods",
         "quer",
         "sigin",

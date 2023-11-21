@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { loginUser } from '../Redux/UserRedux';
 
 export const signUpData = async (data) => {
     console.log('first check', data);
@@ -45,12 +46,13 @@ export const updateData=async(id ,datas)=>{
     }
 }
 
-export const loginData=async(loginData)=>{
+export const loginData=async(loginData,dispatch)=>{
     console.log('Login Data is?',loginData);
     try {
         const res=await axios.post('http://localhost:7000/login',loginData);
         console.log('Response Status:', res.status);
-        console.log('Response Data:', res.data);
+        // console.log('Response Data:', res.data);
+        dispatch(loginUser(res.data))
     } catch (err) {
        console.log(err); 
     }

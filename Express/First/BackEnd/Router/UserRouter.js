@@ -4,6 +4,8 @@ const users = require('../Models/UserSchema')  //here the users variable is the 
 
 const Crypto = require('crypto-js')
 
+const Jwt=require('jsonwebtoken')
+
 router.post('/postmethods', async (req, res) => {
     req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
     console.log('Postman data ?', req.body);  // request.body contain datas coming from the front end
@@ -70,7 +72,13 @@ router.post('/login', async (req, res) => {
         const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
         console.log('Original Password is', originalPassword);
         originalPassword != req.body.password && res.status(401).json({response:"Password and Email doesn't match"})
-        res.status(200).json('Success')
+        const accessToken=Jwt.sign({
+            id:DB._id
+        },process.env.Jwt_Key,
+        {expiresIn:'5d'})
+        const {password,...others}=DB._doc    // here ...others is used to allow all other data to be passed to the frontend other than the password. and _doc is used to store the necessary data and only pass that, else all useless data will be passed
+
+        res.status(200).json({...others,accessToken})
     } catch (err) {
         res.status(400)
     }
