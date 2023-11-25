@@ -22,7 +22,7 @@
   position: absolute;
   background-color: var(--background-color);
   display: flex;
-  justify-content: center;
+  justify-content: center;       
   align-items: center;
 }
 

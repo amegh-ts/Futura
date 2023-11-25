@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { deleteIdData, getIdData, updateData } from './apiCall';
+import { useDispatch } from 'react-redux';
+import {  logoutUser } from '../Redux/UserRedux';
 
-const Profile = () => {
+const Profile = ({value}) => {
     const [profileId, setProfileId] = useState('');
     const [data, setData] = useState({});
 
@@ -17,6 +19,11 @@ const Profile = () => {
 
         updateData(profileId, { firstname, lastname, dob, email, phone })
     }
+
+    const dispatch=useDispatch()
+
+console.log('valueeeeeeeeees',value);
+
 
     const handleInputChange = (event) => {
         setProfileId(event.target.value);
@@ -45,7 +52,12 @@ const Profile = () => {
         }
     }
 
+    function handleLOgout() {
+        dispatch(logoutUser())
+    }
+
     useEffect(() => {
+        setProfileId(value)
         setFirstName(data.firstname)
         setLastName(data.lastname)
         setDob(data.dob)
@@ -80,7 +92,7 @@ const Profile = () => {
                         <span>
                             <button onClick={handleSubmit}>Submit</button>
                             <span> </span>
-                            <button onClick={handleDelete}>Delete</button>
+                            <button onClick={handleDelete}>Delete</button>    
                         </span>
                     </div>
                     <div className='profile-display'>
@@ -95,8 +107,9 @@ const Profile = () => {
                     <div className='signup-button'>
                         <button onClick={update}>Update</button>
                     </div>
-
-                    
+                    <div className='signup-button'>
+                        <button onClick={handleLOgout}>Logout</button>
+                    </div>
                 </div>
             </div>
         </div>

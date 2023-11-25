@@ -1,7 +1,7 @@
 const express=require('express')
 const app=express()
 const dotenv=require('dotenv')
-const mongoose=require('mongoose')
+    const mongoose=require('mongoose')
 const cors=require('cors')
 app.use(cors())
 dotenv.config() //to access the .env file in your directory
@@ -25,3 +25,4 @@ app.use('/',crudRouter)
 app.listen(5000,()=>{
     console.log('Connected to Server');
 })
+

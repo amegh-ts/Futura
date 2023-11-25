@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { loginData } from './apiCall'
 import { useDispatch } from 'react-redux';
+// import { Link } from 'react-router-dom';
+
 // import { loginUser } from '../Redux/UserRedux';
 
 
@@ -11,11 +13,12 @@ const SignIn = () => {
 
     const dispatch = useDispatch();
 
+   
 
     const login = async () => {
         console.log(email, password);
         try {
-            loginData({ email, password },dispatch);
+            loginData({ email, password }, dispatch);
         } catch (error) {
             console.error('Login failed:', error);
         }
@@ -47,7 +50,9 @@ const SignIn = () => {
                             <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div className="signin-button">
-                            <button onClick={login}>Login</button>
+                            {/* <Link to={'/profile'}> */}
+                                <button onClick={login}>Login</button>
+                            {/* </Link> */}
                         </div>
                     </div>
                 </div>
