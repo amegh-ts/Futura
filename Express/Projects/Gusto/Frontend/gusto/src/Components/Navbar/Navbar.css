@@ -1,0 +1,8 @@
+*{
+    color: aqua;
+}
+
+.nav-main{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
