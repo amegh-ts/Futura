@@ -1,10 +1,10 @@
-import axios from 'axios';
 import { loginUser } from '../Redux/UserRedux';
+import { publicRequest } from '../RequestMethod';
 
 export const signUpData = async (data) => {
     console.log('first check', data);
     try {
-        const res = await axios.post('http://localhost:5000/postmethods', data);
+        const res = await publicRequest.post('/postmethods', data);
         console.log('Response Status:', res.status);
         console.log('Response Data:', res.data);
 
@@ -16,7 +16,7 @@ export const signUpData = async (data) => {
 export const getIdData=async(id)=>{
     console.log('id ?',id);
     try {
-        const res=await axios.get(`http://localhost:5000/getmethod/${id}`)
+        const res=await publicRequest.get(`/getmethod/${id}`)
         console.log('Sing res',res);
          return res.data
     } catch (err) {
@@ -27,7 +27,7 @@ export const getIdData=async(id)=>{
 export const deleteIdData=async(id)=>{
     console.log('Delete id ?',id);
     try {
-        const res=await axios.delete(`http://localhost:5000/delete/${id}`)
+        const res=await publicRequest.delete(`/delete/${id}`)
         console.log('deleted');
     } catch (err) {
         console.log(err);
@@ -37,7 +37,7 @@ export const deleteIdData=async(id)=>{
 export const updateData=async(id ,datas)=>{
     console.log('Update id ?',id);
     try {
-        const res=await axios.put(`http://localhost:5000/updatedata/${id}`,datas)
+        const res=await publicRequest.put(`/updatedata/${id}`,datas)
         console.log('Updated data is',res.data);
         
     } catch (err) {
@@ -49,7 +49,7 @@ export const updateData=async(id ,datas)=>{
 export const loginData=async(loginData,dispatch)=>{
     console.log('Login Data is?',loginData);
     try {
-        const res=await axios.post('http://localhost:5000/login',loginData);
+        const res=await publicRequest.post('/login',loginData);
         console.log('Response Status:', res.status);
         // console.log('Response Data:', res.data);
         dispatch(loginUser(res.data))
