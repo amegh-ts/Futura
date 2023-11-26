@@ -5,6 +5,7 @@ import SignUp from './Login/SignUp'
 import About from './About/About'
 import Shops from './Shops/Shops'
 import Review from './Review/Review'
+import Contact from './Contact/Contact'
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
         <About/>
         <Shops/>
         <Review/>
+        <Contact/>
         <SignIn/>
         <SignUp/>
     </div>
