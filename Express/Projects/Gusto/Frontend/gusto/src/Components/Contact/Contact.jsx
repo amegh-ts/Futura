@@ -1,6 +1,6 @@
 import React from 'react'
 import './Contact.css'
-import { IoLogoFacebook, IoLogoTwitter, IoLogoGithub, IoLogoGoogle,IoPhonePortraitOutline } from "react-icons/io5";
+import { IoLogoFacebook, IoLogoTwitter, IoLogoGithub, IoLogoGoogle, IoPhonePortraitOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 
 
@@ -22,19 +22,20 @@ const Contact = () => {
                         <h2>Contact Us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dolore doloremque praesentium ipsum, quia commodi eaque quas ea similique vitae cupiditate fugiat error. Sequi, cumque libero voluptas impedit porro odio!</p>
                         <div className="contact-social">
-                            <IoLogoFacebook className='social-icons'/>
-                            <IoLogoTwitter className='social-icons'/>
-                            <IoLogoGithub className='social-icons'/>
-                            <IoLogoGoogle className='social-icons'/>
+                            <IoLogoFacebook className='social-icons' />
+                            <IoLogoTwitter className='social-icons' />
+                            <IoLogoGithub className='social-icons' />
+                            <IoLogoGoogle className='social-icons' />
                         </div>
                     </div>
 
                     <div className="contact-details">
                         <div className="detail-item">
-                            <FaLocationDot /><span>Pantheerankave, Calicut-19</span>
+                            <FaLocationDot className='di-icon' /><span>  Pantheerankave, Calicut-19</span>
                         </div>
-                        <div className="detail-item"></div>
-                        <IoPhonePortraitOutline /><span>+91 7485632712</span>
+                        <div className="detail-item">
+                            <IoPhonePortraitOutline className='di-icon' /><span>  +91 7485632712</span>
+                        </div>
                     </div>
                 </div>
             </div>

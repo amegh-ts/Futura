@@ -68,8 +68,7 @@ body{
     width: 100%;
 }
 .container{
-    padding: 30px 14% 70px;
-    width: 100%;
+        width: 100%;
     /* display: flex;
     flex-wrap: wrap;*/
     gap: 10px; 

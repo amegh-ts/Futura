@@ -16,7 +16,6 @@
     align-items: center;
     justify-content: space-between;
     background: black;
-    padding: 20px 14%;
     transition: all .50s ease;
 }
 
@@ -33,9 +32,20 @@
 }
 
 .nav-navigation {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: left;
+    background: var(--other-color);
+    transition: all 0.5s ease;
 }
 
+.nav-navigation.active {
+    display: flex;
+}
 .nav-navigation li {
     font-size: var(--p-font);
     font-weight: 600;

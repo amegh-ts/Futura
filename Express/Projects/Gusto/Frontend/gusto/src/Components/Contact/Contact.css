@@ -60,4 +60,15 @@
     cursor: pointer;
 }
 
-.contact-details {}
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+.detail-item .di-icon{
+    /* display: flex; */
+    align-items: center;
+    color: var(--main-color);
+    font-size: 28px;
+}
