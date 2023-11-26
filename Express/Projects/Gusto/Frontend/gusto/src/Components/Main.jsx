@@ -4,6 +4,7 @@ import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import About from './About/About'
 import Shops from './Shops/Shops'
+import Review from './Review/Review'
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
         <Navbar/>
         <About/>
         <Shops/>
+        <Review/>
         <SignIn/>
         <SignUp/>
     </div>
