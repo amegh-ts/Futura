@@ -1,10 +1,12 @@
-
-.nav-main{
+.nav-main {
     background-color: var(--bg-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 1;
 }
-
-header{
+.navbar-header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -13,12 +15,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
-    padding: 30px 14%;
+    background: black;
+    padding: 20px 14%;
     transition: all .50s ease;
 }
 
-.nav-logo{
+.nav-logo {
     display: flex;
     align-items: center;
     color: var(--text-color);
@@ -30,7 +32,7 @@ header{
     display: flex;
 }
 
-.nav-navigation li{
+.nav-navigation li {
     font-size: var(--p-font);
     font-weight: 600;
     margin: 0 30px;
@@ -38,8 +40,46 @@ header{
 }
 
 
-.nav-navigation li:hover{
-color: var(--main-color);
-cursor: pointer;
+.nav-navigation li:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
 
+.nav-icons {
+    display: flex;
+    align-items: center;
+    padding: 13px 16px;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: #ff9f0d 0px 1px 25px;
+   
+}
+
+.nav-icons li {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: var(--bg-color);
+    margin-right: 8px;
+    margin-left: 5px;
+    transition: all .50s ease;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    z-index: 10001;
+    color: var(--bg-color);
+    cursor: pointer;
+    display: none;
+}
+.nav-icons li:hover{
+    transform: scale(1.1);
+    color: var(--text-color);
+}
+.body-main{
+    margin-top: 100px
+}
