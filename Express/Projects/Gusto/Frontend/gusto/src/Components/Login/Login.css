@@ -75,7 +75,88 @@ body {
     color: var(--main-color);
 }
 
+/****************** SignUp ***************/
 
+
+body {
+    background-color: black;
+
+}
+
+.signup-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-container {
+    width: 450px;
+    min-height: 650px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    /* background-color: white; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: #ff9f0d 0px 1px 25px;
+    transition: all .50s ease;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup-input-group {
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.signup-input-group input {
+    all: unset;
+    color: var(--text-color);
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; /* Remove default outline */
+}
+.signup-input-group input::placeholder{
+    color: var(--text-color);
+}
+
+.signup-input-group input:focus{
+    box-shadow: #ffffff 1px 1px 10px;
+    transition: all .50s ease;
+}
+.signup-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.signup-button button{
+    min-width: 150px;
+    min-height: 40px;
+    color: var(--text-color);
+    font-size: var(  --p-font);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background: var(--main-color);
+    transition: all .50s ease;
+
+}
+.signup-button button:hover{
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+
+/******************* Toast **************/
 
 .toast-message {
     position: fixed;
@@ -90,7 +171,8 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    width: 400px; 
+    max-width: 300px;
+    width: 100%; 
     font-weight: 600;
 }
 
@@ -109,3 +191,7 @@ body {
     align-items: flex-end;
     z-index: 1000;
 }
+
+
+
+

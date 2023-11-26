@@ -33,7 +33,7 @@ const SignIn = () => {
                     <div className='signin-form'>
                         <div className="signin-input-group">
                             <input
-                                type="text"
+                                type="mail"
                                 placeholder='Email'
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
