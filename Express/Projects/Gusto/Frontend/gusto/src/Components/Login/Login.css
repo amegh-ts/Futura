@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+
+}
+
+.signin-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signin-container {
+    width: 450px;
+    height: 600px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    /* background-color: white; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: #ff9f0d 0px 1px 25px;
+
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signin-input-group {
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.signin-input-group input {
+    all: unset;
+    color: #fefefe;
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; /* Remove default outline */
+}
+
+.signin-input-group label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #ffffff;
+    pointer-events: none;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.signin-input-group input:focus,
+.signin-input-group input:valid {
+    border: 3px solid white;
+}
+
+.signin-input-group input:focus + label,
+.signin-input-group input:valid + label {
+    transform: translateY(-120%) scale(0.7);
+    padding-inline: 0.3rem;
+    color: white;
+}
