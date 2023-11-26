@@ -64,3 +64,43 @@ section {
     transform: scale(1.1) translateX(12px);
     cursor: pointer;
 }
+body{
+    width: 100%;
+}
+.container{
+    padding: 30px 14% 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container-box{
+    padding: 43px 43px 43px 43px;
+    background: var(--other-color);
+    border-radius: 3rem;
+}
+
+.container-box img{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+.container-box h3{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.container-box p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    letter-spacing: 1px;
+    transition: all .50s ease;
+}
+
+.container-box p:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}

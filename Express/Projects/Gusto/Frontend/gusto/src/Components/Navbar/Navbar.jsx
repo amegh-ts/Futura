@@ -9,7 +9,7 @@ import Home from '../Home/Home';
 const Navbar = () => {
     return (
         <navbar className='nav-main'>
-            <header className='navbar-header'>
+            <header className='navbar-header' >
                 <div className='nav-logo'>
                     <h1>Gusto</h1>
                 </div>

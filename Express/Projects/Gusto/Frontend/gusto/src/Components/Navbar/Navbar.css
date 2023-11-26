@@ -28,6 +28,10 @@
     font-weight: 700;
 }
 
+.nav-logo h1{
+    font-family: Aclonica;
+}
+
 .nav-navigation {
     display: flex;
 }
