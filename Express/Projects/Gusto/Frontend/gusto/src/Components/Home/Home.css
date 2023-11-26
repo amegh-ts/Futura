@@ -70,7 +70,12 @@ body{
 .container{
     padding: 30px 14% 70px;
     width: 100%;
-    display: flex;
+    /* display: flex;
+    flex-wrap: wrap;*/
+    gap: 10px; 
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
     justify-content: space-between;
     text-align: center;
 }

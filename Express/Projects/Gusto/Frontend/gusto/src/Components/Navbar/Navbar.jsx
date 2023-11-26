@@ -17,7 +17,7 @@ const Navbar = () => {
                     <li className='active'>Home</li>
                     <li className='active'>About Us</li>
                     <li className='active'>Our Shops</li>
-                    <li className='active'>Shop</li>
+                    <li className='active'>Reviews</li>
                     <li className='active'>Contact</li>
                 </ul>
                 <div className='nav-icons'>
