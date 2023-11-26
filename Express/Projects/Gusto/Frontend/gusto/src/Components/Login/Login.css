@@ -23,7 +23,7 @@ body {
     align-items: center;
     gap: 20px;
     box-shadow: #ff9f0d 0px 1px 25px;
-
+    transition: all .50s ease;
 }
 
 .signin-form {
@@ -39,32 +39,73 @@ body {
 
 .signin-input-group input {
     all: unset;
-    color: #fefefe;
+    color: var(--text-color);
     padding: 1rem;
     border: 1px solid #ffffff;
     border-radius: 10px;
     transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none; /* Remove default outline */
 }
-
-.signin-input-group label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #ffffff;
-    pointer-events: none;
-    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
-                color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+.signin-input-group input::placeholder{
+    color: var(--text-color);
 }
 
-.signin-input-group input:focus,
-.signin-input-group input:valid {
-    border: 3px solid white;
+.signin-input-group input:focus{
+    box-shadow: #ffffff 1px 1px 10px;
+    transition: all .50s ease;
+}
+.signin-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.signin-button button{
+    min-width: 150px;
+    min-height: 40px;
+    color: var(--text-color);
+    font-size: var(  --p-font);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background: var(--main-color);
+    transition: all .50s ease;
+
+}
+.signin-button button:hover{
+    background-color: #ffffff;
+    color: var(--main-color);
 }
 
-.signin-input-group input:focus + label,
-.signin-input-group input:valid + label {
-    transform: translateY(-120%) scale(0.7);
-    padding-inline: 0.3rem;
-    color: white;
+
+
+.toast-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: #fff; 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    width: 400px; 
+    font-weight: 600;
+}
+
+.toast-close {
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* To display the toasts in reverse order */
+    align-items: flex-end;
+    z-index: 1000;
 }
