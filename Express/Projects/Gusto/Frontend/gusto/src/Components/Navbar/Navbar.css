@@ -36,3 +36,10 @@ header{
     margin: 0 30px;
     transition: all .50s ease;
 }
+
+
+.nav-navigation li:hover{
+color: var(--main-color);
+cursor: pointer;
+}
+
