@@ -39,7 +39,7 @@ const SignIn = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <div className="signin-input-group">
+                        <div className="signin-input-group">    
                             <input
                                 type="password"
                                 placeholder='Password'
