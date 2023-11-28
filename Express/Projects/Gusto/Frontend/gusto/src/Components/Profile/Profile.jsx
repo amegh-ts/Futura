@@ -25,6 +25,7 @@ const Profile = () => {
               <input type="text" placeholder='Phone' />
               <button>Update</button>
             </div>
+            
             <div className='profile-right-change-pass'>
               <h2>Change Password</h2>
               <input type="password" placeholder='Current Password' />
