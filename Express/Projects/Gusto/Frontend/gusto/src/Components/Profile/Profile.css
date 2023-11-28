@@ -114,19 +114,22 @@
     border-radius: 20px;
 }
 
-.h-btn {
-    padding: 15px 35px;
-    background-color: var(--other-color);
-    color: var(--main-color);
+.profile-right button {
+    padding: 10px 35px;
+    background-color: #626262;
+    /* background-color: var(--other-color); */
+    color: var(--text-color);
+    /* color: var(--main-color); */
     font-size: var(--p-font);
     letter-spacing: 1px;
     border-radius: 3rem;
     transition: all .50s ease;
     border: none;
     align-items: center;
+    margin-top: 12px;
 }
 
-.h-btn:hover {
+.profile-right button:hover {
     background: var(--main-color);
     color: var(--bg-color);
     box-shadow: #ff9f0d 0px 1px 25px;
