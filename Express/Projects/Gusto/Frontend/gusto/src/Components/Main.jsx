@@ -8,6 +8,7 @@ import Shops from './Shops/Shops';
 import Review from './Review/Review';
 import Contact from './Contact/Contact';
 import { IoArrowUpCircleSharp } from 'react-icons/io5';
+import Profile from './Profile/Profile';
 
 const Main = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -44,6 +45,7 @@ const Main = () => {
       <Shops />
       <Review />
       <Contact />
+      <Profile/>
       <SignIn />
       <SignUp />
 

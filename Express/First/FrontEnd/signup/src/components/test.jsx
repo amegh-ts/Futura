@@ -8,7 +8,17 @@ const Test = () => {
 
 
   return (
-    <div>test</div>
+    <div>
+       <ul>
+        {reduxData.map((user) => (
+          <li key={user._id}>
+            <strong>Name:</strong> {user.firstname} {user.lastname}, <br />
+            <strong>DOB:</strong> {user.dob}, <br />
+            <strong>Email:</strong> {user.email}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 

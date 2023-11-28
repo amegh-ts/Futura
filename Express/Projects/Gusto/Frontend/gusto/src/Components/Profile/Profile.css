@@ -1,0 +1,19 @@
+.profile-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.profile-container{
+    background: var(--main-color);
+    width: 2000px;
+    height: 750px;
+    border-radius: 20px;
+    display: flex;
+    
+}
+
+.profile-left{
+    background: ;
+}

@@ -4,7 +4,8 @@ const users = require('../Models/UserSchema')  //here the users variable is the 
 
 const Crypto = require('crypto-js')
 
-const Jwt=require('jsonwebtoken')
+const Jwt=require('jsonwebtoken');
+const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
 
 router.post('/postmethods', async (req, res) => {
     req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
@@ -81,6 +82,20 @@ router.post('/login', async (req, res) => {
         res.status(200).json({...others,accessToken})
     } catch (err) {
         res.status(400)
+    }
+})
+
+
+
+
+// method to use backend verification //test
+
+router.get("/verifytest/:id",verifyToken,verifyTokenAndAuthorization,async(req,res)=>{
+    try {
+        const verifytest=await users.findById(req.params.id)
+        res.status(200).json(verifytest)
+    } catch (err) {
+        res.status(500).json(err)
     }
 })
 
