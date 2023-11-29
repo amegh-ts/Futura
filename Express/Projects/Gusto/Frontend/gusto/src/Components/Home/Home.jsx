@@ -27,17 +27,14 @@ const Home = () => {
                 </div>
 
                 <div className="container-box">
-                    <img src="/img/c2.png" alt="" loading="lazy" />
-                    <LazyLoadImage src="/img/hero.png" alt="" effect="blur" />
+                    <LazyLoadImage src="/img/c2.png" alt="" effect="blur" />
 
                     <h3>Pantheerankave, Calicut-19</h3>
                     <p>Get Direction</p>
                 </div>
 
                 <div className="container-box">
-                    <img src="/img/c3.png" alt="" loading="lazy" />
-                    <LazyLoadImage src="/img/hero.png" alt="" effect="blur" />
-
+                    <LazyLoadImage src="/img/c3.png" alt="" effect="blur" />
                     <h3>+91 8945712567</h3>
                     <p>Call Us Now</p>
                 </div>
