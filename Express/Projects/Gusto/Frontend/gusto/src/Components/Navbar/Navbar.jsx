@@ -12,13 +12,17 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(true);
+    };
+
     return (
         <nav className='nav-main'>
             <header className='navbar-header'>
                 <div className='nav-logo'>
                     <h1>Gusto</h1>
                 </div>
-                <ul className={`nav-navigation ${menuOpen ? 'active' : ''}`}>
+                <ul className={`nav-navigation ${menuOpen ? 'active' : ''}`} onClick={closeMenu}>
                     <li className='active'>Home</li>
                     <li className='active'>About Us</li>
                     <li className='active'>Our Shops</li>

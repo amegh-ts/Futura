@@ -1,10 +1,11 @@
-import React from 'react'
-import './Home.css'
+import React from 'react';
+import './Home.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; // Import the CSS for blur effect
+
 
 const Home = () => {
     return (
-
-        // main contents
         <body>
             <section className='home-main' id='home-main'>
                 <div className='home-text'>
@@ -13,32 +14,36 @@ const Home = () => {
                     <button className='h-btn2'>Order Now</button>
                 </div>
                 <div className='home-img'>
-                    <img src="/img/hero.png" alt="" />
+                <LazyLoadImage src="/img/hero.png" alt="" effect="blur" />
+                </div>
+            </section>
+
+            <div className='container'>
+                <div className="container-box">
+                    <LazyLoadImage src="/img/c1.png" alt="" effect="blur" />
+
+                    <h3>11:00 am - 8:00 pm</h3>
+                    <p>Working Hours</p>
                 </div>
 
-            </section>
-            <body className='container'>
-                    <div className="container-box">
-                        <img src="/img/c1.png" alt="" />
-                        <h3>11:00 am - 8:00 pm</h3>
-                        <p>Working Hours</p>
-                    </div>
+                <div className="container-box">
+                    <img src="/img/c2.png" alt="" loading="lazy" />
+                    <LazyLoadImage src="/img/hero.png" alt="" effect="blur" />
 
-                    <div className="container-box">
-                        <img src="/img/c2.png" alt="" />
-                        <h3>Pantheerankave, Calicut-19</h3>
-                        <p>Get Direction</p>
-                    </div>
+                    <h3>Pantheerankave, Calicut-19</h3>
+                    <p>Get Direction</p>
+                </div>
 
-                    <div className="container-box">
-                        <img src="/img/c3.png" alt="" />
-                        <h3>+91 8945712567</h3>
-                        <p>Call Us Now</p>
-                    </div>
-                </body>
+                <div className="container-box">
+                    <img src="/img/c3.png" alt="" loading="lazy" />
+                    <LazyLoadImage src="/img/hero.png" alt="" effect="blur" />
+
+                    <h3>+91 8945712567</h3>
+                    <p>Call Us Now</p>
+                </div>
+            </div>
         </body>
-
     )
 }
 
-export default Home
+export default Home;

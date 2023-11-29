@@ -32,19 +32,21 @@
 }
 
 .nav-navigation {
-    display: none;
-    flex-direction: column;
-    position: absolute;
+    display: flex;
+    /* position: absolute;   */
     top: 100%;
     left: 0;
     right: 0;
     text-align: left;
-    background: var(--other-color);
     transition: all 0.5s ease;
 }
 
 .nav-navigation.active {
     display: flex;
+    display: none;
+    background: var(--other-color);
+    flex-direction: column;
+
 }
 .nav-navigation li {
     font-size: var(--p-font);

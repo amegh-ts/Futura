@@ -82,10 +82,10 @@
 
 .profile-right input {
     border: none;
-    outline: none;
+    outline: none   ;
     padding: 10px 20px;
     background-color: #e0e0e0;
-    margin-top: 6px;
+    margin-top: 14px;
     border-radius: 20px;
     color: black;
 }
