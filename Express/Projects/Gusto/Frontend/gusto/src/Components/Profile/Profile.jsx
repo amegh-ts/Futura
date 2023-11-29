@@ -10,7 +10,7 @@ const Profile = () => {
         <div className='profile-container'>
           <div className='profile-left'>
             <div className='profile-left-img'>
-              <img src="img/p1.png" alt="" />
+            <LazyLoadImage src="/img/p1.png" alt="" effect="blur" />
             </div>
             <div className='profile-left-content'>
               <h2>Albert John</h2>

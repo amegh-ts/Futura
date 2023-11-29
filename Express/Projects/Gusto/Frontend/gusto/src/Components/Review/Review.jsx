@@ -1,7 +1,8 @@
 import React from 'react'
 import './Review.css'
 import { IoStar } from "react-icons/io5";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; 
 
 const Review = () => {
     return (
@@ -17,11 +18,11 @@ const Review = () => {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, recusandae incidunt. Harum, nam distinctio.</p>
                         <div className="review-card-child">
                             <div className="review-card-img">
-                                <img src="img/r1.jpg" alt="" />
+                            <LazyLoadImage src="/img/r1.jpg" alt="" effect="blur" />
                             </div>
                             <div className="review-card-text">
                                 <h4>David Bombal</h4>
-                                <h5>Food Vlogger</h5>
+                                <h5>Food Blogger</h5>
                                 <div className='review-rating'>
                                     <IoStar className='rating-stars'/>
                                     <IoStar className='rating-stars'/>
@@ -37,11 +38,11 @@ const Review = () => {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, recusandae incidunt. Harum, nam distinctio.</p>
                         <div className="review-card-child">
                             <div className="review-card-img">
-                                <img src="img/r2.jpg" alt="" />
+                            <LazyLoadImage src="/img/r2.jpg" alt="" effect="blur" />
                             </div>
                             <div className="review-card-text">
                                 <h4>David Bombal</h4>
-                                <h5>Food Vlogger</h5>
+                                <h5>Food Blogger</h5>
                                 <div className='review-rating'>
                                     <IoStar className='rating-stars'/>
                                     <IoStar className='rating-stars'/>
@@ -57,11 +58,11 @@ const Review = () => {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, recusandae incidunt. Harum, nam distinctio.</p>
                         <div className="review-card-child">
                             <div className="review-card-img">
-                                <img src="img/r3.jpg" alt="" />
+                            <LazyLoadImage src="/img/r3.jpg" alt="" effect="blur" />
                             </div>
                             <div className="review-card-text">
                                 <h4>David Bombal</h4>
-                                <h5>Food Vlogger</h5>
+                                <h5>Food Blogger</h5>
                                 <div className='review-rating'>
                                     <IoStar className='rating-stars'/>
                                     <IoStar className='rating-stars'/>
