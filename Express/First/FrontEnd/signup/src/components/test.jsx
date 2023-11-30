@@ -5,7 +5,7 @@ import { verifyTest } from './apiCall';
 
 const Test = () => {
   // const reduxData=useSelector((state)=>state.user.userInfo)
-  // console.log('hdsbsjdfvaskbvfdjhkb hskdafn',reduxData);
+  // console.log('redux data is',reduxData);
 
   const [data, setData] = useState({});
 
