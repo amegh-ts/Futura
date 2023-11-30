@@ -9,7 +9,7 @@ const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
 
 router.post('/postmethods', async (req, res) => {
     req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
-    console.log('Postman data ?', req.body);  // request.body contain datas coming from the front end
+    // console.log('Postman data ?', req.body);  // request.body contain datas coming from the front end
     const newUser = new users(req.body)
     // const newUser= new users({
     //     username:req.body.bname,
@@ -29,7 +29,7 @@ router.post('/postmethods', async (req, res) => {
 router.get('/alldata', async (req, res) => {
     try {
         const datas = await users.find()
-        console.log(datas);
+        // console.log(datas);
         res.status(200).json(datas)
     } catch (err) {
         res.status(500).json(err)
@@ -38,11 +38,11 @@ router.get('/alldata', async (req, res) => {
 
 //to find the value by its id
 router.get('/getmethod/:id', async (req, res) => {
-    console.log(req.params.id);
+    // console.log(req.params.id);
     try {
         // const datas = await users.find()
         const ids = await users.findById(req.params.id)
-        console.log(ids);
+        // console.log(ids);
         res.status(200).json(ids)
     } catch (err) {
         res.status(500).json(err)
@@ -63,15 +63,15 @@ router.put('/updatedata/:id', async (req, res) => {
 
 // login
 router.post('/login', async (req, res) => {
-    console.log('Backend login', req.body);
+    // console.log('Backend login', req.body);
     try {
         const DB = await users.findOne({ email: req.body.email })
         !DB && res.status(401).json({ response: 'Please check Your Email' })
-        console.log('Backend Data', DB);
+        // console.log('Backend Data', DB);
         const hashedPassword = Crypto.AES.decrypt(DB.password, process.env.Crypto_js)
-        console.log('Hashed Password is ', hashedPassword);
+        // console.log('Hashed Password is ', hashedPassword);
         const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
-        console.log('Original Password is', originalPassword);
+        // console.log('Original Password is', originalPassword);
         originalPassword != req.body.password && res.status(401).json({response:"Password and Email doesn't match"})
         const accessToken=Jwt.sign({
             id:DB._id

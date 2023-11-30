@@ -33,9 +33,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
         // console.log('req.user.id==', req.user.id);
         // console.log('req.params.id==', req.params.id);
         if (req.user.id === req.params.id) {
-            // console.log('successful');
-            return res.status(200).json('Successful')
-
+            console.log('successful');
             next()
         } else {
             // console.log("Id's doesn't match");
