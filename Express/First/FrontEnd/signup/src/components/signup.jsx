@@ -37,6 +37,7 @@ const Signup = () => {
                     <div className='signup-form-container'>
                         <h2>SignUp</h2>
                         <div className='signup-forms'>
+                            
                             <input type="text" placeholder='First Name' value={firstname} onChange={(e) => setFirstName(e.target.value)} />
                             <input type="text" placeholder='Last Name' value={lastname} onChange={(e) => setLastName(e.target.value)} />
                             <input type="date" placeholder='DOB' value={dob} onChange={(e) => setDob(e.target.value)} />

@@ -18,6 +18,7 @@ const Profile = ({ value }) => {
     const update = () => {
 
         updateData(profileId, { firstname, lastname, dob, email, phone })
+        alert('Successfully updated')
     }
 
     const dispatch = useDispatch()
@@ -47,6 +48,7 @@ const Profile = ({ value }) => {
             // console.log('Profile id submitted to delete is ?', profileId);
             deleteIdData(profileId)
             // console.log('profile deleted');
+            alert('Successfully deleted Profile')
         } catch (err) {
             // console.log('Error Deleting user', err);
         }

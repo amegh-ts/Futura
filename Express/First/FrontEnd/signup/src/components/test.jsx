@@ -13,10 +13,10 @@ const Test = () => {
     async function fetchData() {
       try {
         const apiData = await verifyTest();
-        // console.log('Data from API:', apiData);
+        console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
-        // console.log(error);
+        console.log(error);
       }
     }
 
@@ -42,6 +42,7 @@ const Test = () => {
           <div></div>
         </div>
         <div className="signup-container">
+
           <ul>
             <li>
               <strong>Name:</strong> {data.firstname} {data.lastname}, <br />
