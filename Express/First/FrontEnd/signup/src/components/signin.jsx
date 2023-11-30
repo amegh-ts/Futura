@@ -16,11 +16,11 @@ const SignIn = () => {
    
 
     const login = async () => {
-        console.log(email, password);
+        // console.log(email, password);
         try {
             loginData({ email, password }, dispatch);
         } catch (error) {
-            console.error('Login failed:', error);
+            // console.error('Login failed:', error);
         }
     }
 

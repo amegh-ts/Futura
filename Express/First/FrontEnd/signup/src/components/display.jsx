@@ -8,12 +8,12 @@ const Display = () => {
     useEffect(() => {
         async function display() {
             const res = await axios.get('http://localhost:5000/alldata')
-            console.log(res.data);
+            // console.log(res.data);
             setState(res.data)
         }
         display()
     }, [])
-    console.log('State data', state);
+    // console.log('State data', state);
     return (
         <div>
             <div className='signup-wraper'>

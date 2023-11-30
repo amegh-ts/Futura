@@ -3,22 +3,22 @@ const jwt = require("jsonwebtoken");
 
 // Code to check the token is correct
 const verifyToken = (req, res, next) => {
-    console.log('>>>>>>>>>>>>>>>', req);
+    // console.log('>>>>>>>>>>>>>>>', req);
     let authHeader = req.headers.token        //assigned the toked passed via header to authHeader
-    console.log("req.header.token===", authHeader);
+    // console.log("req.header.token===", authHeader);
 
     if (authHeader) {
-        const token = authHeader.split(" ")[1];          //to split and take the token from header as there is Bearer infront of the token
-        console.log('Separated token==', token);
+        const token = authHeader.split(" ")[1];          //to split and take the token from header as there is Bearer in front of the token
+        // console.log('Separated token==', token);
 
         jwt.verify(token, process.env.Jwt_Key, (err, user) => {
             if (err) {
-                console.log('Token Verification Error', err);
+                // console.log('Token Verification Error', err);
                 return res.status(403).json("This token is not valid");
             }
             req.user = user;
-            console.log("User?????????", user);
-            next();
+            // console.log("User?????????", user);
+            next();                                           // when next() is called the next portion of the code is executed
         });
     } else {
         return res.status(401).json({ error: "Token not found" })
@@ -29,14 +29,16 @@ const verifyToken = (req, res, next) => {
 //code to check if id matches 
 const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, (data) => {
-        console.log('data?????',data);
-        console.log('req.user.id==', req.user.id);
-        console.log('req.params.id==', req.params.id);
+        // console.log('data?????',data);
+        // console.log('req.user.id==', req.user.id);
+        // console.log('req.params.id==', req.params.id);
         if (req.user.id === req.params.id) {
-            console.log('successful');
+            // console.log('successful');
+            return res.status(200).json('Successful')
+
             next()
         } else {
-            console.log("Id's doesn't match");
+            // console.log("Id's doesn't match");
             return res.status(403).json('You are not allowed')
         }
     })

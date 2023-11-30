@@ -13,13 +13,13 @@ import { useSelector } from 'react-redux';
 function App() {
 
   const reduxData = useSelector((state) => state.user.userInfo[0])
-  console.log('hdsbsjdfvaskbvfdjhkb hskdafn', reduxData);
+  // console.log('hdsbsjdfvaskbvfdjhkb hskdafn', reduxData);
   
   if (reduxData) {
     var Token=reduxData && reduxData.accessToken
-    console.log("The access token is",Token);
+    // console.log("The access token is",Token);
     var ids=reduxData && reduxData._id
-    console.log('the id is',ids);
+    // console.log('the id is',ids);
   }
 
   const router = createBrowserRouter([

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { deleteIdData, getIdData, updateData } from './apiCall';
 import { useDispatch } from 'react-redux';
-import {  logoutUser } from '../Redux/UserRedux';
+import { logoutUser } from '../Redux/UserRedux';
 
-const Profile = ({value}) => {
+const Profile = ({ value }) => {
     const [profileId, setProfileId] = useState('');
     const [data, setData] = useState({});
 
@@ -20,9 +20,9 @@ const Profile = ({value}) => {
         updateData(profileId, { firstname, lastname, dob, email, phone })
     }
 
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
 
-console.log('valueeeeeeeeees',value);
+    // console.log('valueeeeeeeeees', value);
 
 
     const handleInputChange = (event) => {
@@ -30,25 +30,25 @@ console.log('valueeeeeeeeees',value);
 
     };
 
-    console.log('data ?', data);
+    // console.log('data ?', data);
     const handleSubmit = async () => {
         try {
-            console.log('Profile ID submitted:', profileId);
+            // console.log('Profile ID submitted:', profileId);
             const a = await getIdData(profileId);
-            console.log('Result:', a);
+            // console.log('Result:', a);
             setData(a);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            // console.error('Error fetching data:', error);
         }
     };
 
     const handleDelete = async () => {
         try {
-            console.log('Profile id submitted to delete is ?', profileId);
+            // console.log('Profile id submitted to delete is ?', profileId);
             deleteIdData(profileId)
-            console.log('profile deleted');
+            // console.log('profile deleted');
         } catch (err) {
-            console.log('Error Deleting user', err);
+            // console.log('Error Deleting user', err);
         }
     }
 
@@ -58,14 +58,14 @@ console.log('valueeeeeeeeees',value);
 
     useEffect(() => {
         setProfileId(value)
-        setFirstName(data.firstname)
-        setLastName(data.lastname)
-        setDob(data.dob)
-        setEmail(data.email)
-        setPhone(data.phone)
+        setFirstName(data.firstname || ''); // Set default value to empty string if undefined
+        setLastName(data.lastname || '');
+        setDob(data.dob || '');
+        setEmail(data.email || '');
+        setPhone(data.phone || '');
     }, [data])
 
-    console.log("gggg", data)
+    // console.log("gggg", data)
     return (
         <div>
             <div className='signup-wraper'>
@@ -92,7 +92,7 @@ console.log('valueeeeeeeeees',value);
                         <span>
                             <button onClick={handleSubmit}>Submit</button>
                             <span> </span>
-                            <button onClick={handleDelete}>Delete</button>    
+                            <button onClick={handleDelete}>Delete</button>
                         </span>
                     </div>
                     <div className='profile-display'>
