@@ -8,7 +8,7 @@ export const musicDl = async (data) => {
         });
 
         const contentDispositionHeader = response.headers['content-disposition'];
-        const thumbnailUrl = response.headers['x-thumnail-url'];
+        const thumbnailUrl = response.headers['x-thumbnail-url'];
 
         console.log('Content-Disposition Header:', contentDispositionHeader);
         console.log('Thumbnail URL:', thumbnailUrl);
@@ -25,6 +25,7 @@ export const musicDl = async (data) => {
         const videoInfo = {
             data: response.data,
             videoTitle: videoTitle,
+            thumbnailUrl: thumbnailUrl,
             // You can add more information here based on your requirements
             // For example, video duration, author, thumbnail, etc.
         };
@@ -35,3 +36,24 @@ export const musicDl = async (data) => {
         throw error;
     }
 };
+
+// export const showDetails = async (data) => {
+//     try {
+//         const response = await axios.post('http://localhost:5000/api/videoInfo', data);
+
+//         console.log('Axios Response:', response);
+
+//         if (response.data && response.data.videoInfo) {
+//             const videoInfo = response.data.videoInfo;
+//             console.log('Video Information:', videoInfo);
+//             return videoInfo;
+//         } else {
+//             console.error('Invalid response format. Check server response structure.');
+//             // Handle the issue as needed
+//         }
+
+//     } catch (error) {
+//         console.error('Error fetching video details:', error);
+//         // Handle the error as needed
+//     }
+// }

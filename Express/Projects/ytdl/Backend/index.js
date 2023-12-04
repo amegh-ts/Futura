@@ -5,7 +5,7 @@ const router = express.Router();
 const ytdl = require('ytdl-core');
 const cors = require('cors')
 app.use(cors({
-    exposedHeaders: ['Content-Disposition'],
+    exposedHeaders: ['Content-Disposition','x-thumbnail-url'],
 }))
 
 
@@ -24,7 +24,7 @@ router.post('/api/download', async (req, res) => {
         ? video.videoDetails.thumbnails[0].url
         : 'default-thumbnail-url.jpg';
 
-        console.log('Video title and info:', videoInfo);
+        // console.log('Video title and info:', videoInfo);
         console.log('thumpnaillll:', thumbnailUrl);
 
         const downloadOptions = {
@@ -46,10 +46,12 @@ router.post('/api/download', async (req, res) => {
         // Set response headers for downloading the audio file
         res.header('Content-Disposition', `attachment; filename="${videoTitle}"`);
         res.header('Content-Type', 'audio/mpeg');
-        res.header('X-Thumnail-Url', thumbnailUrl);
+        res.header('x-thumbnail-url', thumbnailUrl);
 
 
-        console.log('Response Headers:', res.getHeaders());
+        // console.log('Response Headers:', res.getHeaders());
+
+
 
         // Pipe the stream to the response
         audioStream.pipe(res);
@@ -60,12 +62,12 @@ router.post('/api/download', async (req, res) => {
     }
 });
 
-router.get('/api/videoInfo', async (req, res) => {
-    const videoUrl = req.query.videoUrl;
+router.post('/api/videoInfo', async (req, res) => {
+    const videoUrl = req.body.videoUrl;
 
     try {
-        res.header('Content-Disposition', `attachment; filename="${videoTitle}.mp3"`);
-        res.header('Content-Type', 'audio/mpeg');
+        const video = await ytdl.getInfo(videoUrl);
+        const videoInfo = video.videoDetails;
 
         console.log('Video info:', videoInfo);
 
@@ -76,10 +78,9 @@ router.get('/api/videoInfo', async (req, res) => {
 
     } catch (error) {
         console.error('Error fetching video information:', error);
-        res.status(500).send('Error fetching video information');
+        res.status(500).json({ error: 'Error fetching video information' });
     }
 });
-
 
 app.use('/', router);
 

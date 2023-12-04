@@ -1,10 +1,11 @@
- // Main.js
+// Main.js
 import React, { useState } from 'react';
-import { musicDl } from './ApiCalls';
+import { musicDl, showDetails } from './ApiCalls';
+import './Main.css';
 
 const Main = () => {
   const [videoUrl, setVideoUrl] = useState('');
-  const [error, setError] = useState('');
+  // const [videoDetails, setVideoDetails] = useState(null);
 
   const handleInputChange = (event) => {
     setVideoUrl(event.target.value);
@@ -15,7 +16,7 @@ const Main = () => {
       const result = await musicDl({ videoUrl });
 
       if (!result) {
-        setError('Download failed. Please try again.');
+        alert('Download failed. Please try again.');
         return;
       }
 
@@ -38,19 +39,46 @@ const Main = () => {
       document.body.removeChild(link);
     } catch (error) {
       console.error('Error:', error);
-      setError('An error occurred. Please try again.');
+      alert('An error occurred. Please try again.');
     }
+
   };
+
+
+// const handleDetails = async () => {
+//     try {
+//       const details = await showDetails({ videoUrl });
+//       console.log('Video Details:', details.videoInfo);
+
+//       // Set the videoDetails state to display in the right div
+//       setVideoDetails(details.videoInfo);
+//     } catch (error) {
+//       console.error('Error fetching video details:', error);
+//       // Handle the error as needed
+//     }
+//   };
+
 
   return (
     <div>
-      <h1>YouTube to MP3 Downloader</h1>
-      <label>
-        YouTube Video URL:
-        <input type="text" value={videoUrl} onChange={handleInputChange} />
-      </label>
-      <button onClick={handleDownload}>Download MP3</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div className="container">
+        <div className='left'>
+          <h1>YouTube Downloader</h1>
+
+          <input type="text" value={videoUrl} onChange={handleInputChange} placeholder='Paste the url here' />
+          <div>
+            {/* <button onClick={handleDetails}>Show Details</button> */}
+            <button onClick={handleDownload}>Download MP3</button>
+
+          </div>
+        </div>
+        {/* <div className='right'>
+          <div>
+            
+          </div>
+
+        </div> */}
+      </div>
     </div>
   );
 };
