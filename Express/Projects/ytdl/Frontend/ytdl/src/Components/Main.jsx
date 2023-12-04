@@ -10,7 +10,6 @@ const Main = () => {
     console.log('Url====', videoUrl);
   };
 
-  const downloadRoute = '/api/download';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,10 +18,19 @@ const Main = () => {
       const result = await musicDl({ videoUrl });
       console.log('Download successful:', result);
   
-      // Check if the result is successful (assuming the API returns a success flag or status code)
       if (result.success) {
-        // Redirect to the download route
-        window.location.href = `${downloadRoute}?url=${encodeURIComponent(result.downloadLink)}`;
+        // Create a Blob from the response data
+        const blob = new Blob([result.data], { type: 'audio/mpeg' });
+  
+        // Create a download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = `${result.filename}.mp3`;
+  
+        // Trigger a click on the link to start the download
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
       } else {
         setError('Download failed. Please try again.');
       }
@@ -31,6 +39,7 @@ const Main = () => {
       setError('An error occurred. Please try again.');
     }
   };
+  
 
   return (
     <div>
