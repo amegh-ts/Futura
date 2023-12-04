@@ -20,10 +20,9 @@ const Main = () => {
         return;
       }
 
-      const blob = new Blob([result.data], { type: 'audio/mpeg' });
+      const blob = new Blob([new Uint8Array(result.data)], { type: 'audio/mpeg' });
       const videoTitle = result.headers['content-disposition'].match(/filename="(.+?)"/)[1];
 
-      // Trigger download
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
       link.download = `${videoTitle}.mp3`;

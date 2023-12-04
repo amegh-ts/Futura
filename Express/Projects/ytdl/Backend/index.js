@@ -4,6 +4,9 @@ const app = express();
 const router = express.Router();
 const ytdl = require('ytdl-core');
 const path = require('path');
+const cors = require('cors')
+app.use(cors())
+
 
 app.use(express.json());
 
