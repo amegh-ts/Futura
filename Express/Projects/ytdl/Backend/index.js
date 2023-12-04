@@ -3,55 +3,87 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const ytdl = require('ytdl-core');
-const path = require('path');
 const cors = require('cors')
-app.use(cors())
+app.use(cors({
+    exposedHeaders: ['Content-Disposition'],
+}))
 
 
 app.use(express.json());
 
+
 router.post('/api/download', async (req, res) => {
-  const videoUrl = req.body.videoUrl;
+    const videoUrl = req.body.videoUrl;
 
-  try {
-    const video = await ytdl.getInfo(videoUrl);
-    const videoTitle = video.videoDetails.title;
-    const videoInfo=video.videoDetails;
+    try {
+        const video = await ytdl.getInfo(videoUrl);
+        const videoTitle = video.videoDetails.title;
+        const videoInfo = video.videoDetails;
 
-    console.log('vidieo title and info',videoInfo);
+        const thumbnailUrl = video.videoDetails.thumbnails && video.videoDetails.thumbnails.length > 0
+        ? video.videoDetails.thumbnails[0].url
+        : 'default-thumbnail-url.jpg';
 
-    const downloadOptions = {
-      format: 'audioonly',
-      quality: 'highestaudio',
-      filter: 'audioonly',
-      highWaterMark: 1 << 25,
-      requestOptions: {},
-    };
+        console.log('Video title and info:', videoInfo);
+        console.log('thumpnaillll:', thumbnailUrl);
 
-    if (req.headers.cookie) {
-      downloadOptions.requestOptions.headers = {
-        cookie: req.headers.cookie,
-      };
+        const downloadOptions = {
+            format: 'audioonly',
+            quality: 'highestaudio',
+            filter: 'audioonly',
+            highWaterMark: 1 << 25,
+            requestOptions: {},
+        };
+
+        if (req.headers.cookie) {
+            downloadOptions.requestOptions.headers = {
+                cookie: req.headers.cookie,
+            };
+        }
+
+        const audioStream = ytdl(videoUrl, downloadOptions);
+
+        // Set response headers for downloading the audio file
+        res.header('Content-Disposition', `attachment; filename="${videoTitle}"`);
+        res.header('Content-Type', 'audio/mpeg');
+        res.header('X-Thumnail-Url', thumbnailUrl);
+
+
+        console.log('Response Headers:', res.getHeaders());
+
+        // Pipe the stream to the response
+        audioStream.pipe(res);
+
+    } catch (error) {
+        console.error('Error downloading video:', error);
+        res.status(500).send('Error downloading video');
     }
-
-    const audioStream = ytdl(videoUrl, downloadOptions);
-
-    // Set response headers
-    res.header('Content-Disposition', `attachment; filename="${videoTitle}.mp3"`);
-    res.header('Content-Type', 'audio/mpeg');    
-
-    // Pipe the stream to the response
-    audioStream.pipe(res);
-    
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Error downloading video');
-  }
 });
+
+router.get('/api/videoInfo', async (req, res) => {
+    const videoUrl = req.query.videoUrl;
+
+    try {
+        res.header('Content-Disposition', `attachment; filename="${videoTitle}.mp3"`);
+        res.header('Content-Type', 'audio/mpeg');
+
+        console.log('Video info:', videoInfo);
+
+        // Send video information as JSON response
+        res.json({
+            videoInfo: videoInfo,
+        });
+
+    } catch (error) {
+        console.error('Error fetching video information:', error);
+        res.status(500).send('Error fetching video information');
+    }
+});
+
 
 app.use('/', router);
 
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

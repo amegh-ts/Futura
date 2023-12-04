@@ -1,4 +1,4 @@
-// Main.js
+ // Main.js
 import React, { useState } from 'react';
 import { musicDl } from './ApiCalls';
 
@@ -10,8 +10,7 @@ const Main = () => {
     setVideoUrl(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleDownload = async () => {
     try {
       const result = await musicDl({ videoUrl });
 
@@ -46,13 +45,11 @@ const Main = () => {
   return (
     <div>
       <h1>YouTube to MP3 Downloader</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          YouTube Video URL:
-          <input type="text" value={videoUrl} onChange={handleInputChange} />
-        </label>
-        <button type="submit">Download MP3</button>
-      </form>
+      <label>
+        YouTube Video URL:
+        <input type="text" value={videoUrl} onChange={handleInputChange} />
+      </label>
+      <button onClick={handleDownload}>Download MP3</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
