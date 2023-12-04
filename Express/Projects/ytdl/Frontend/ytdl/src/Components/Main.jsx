@@ -21,11 +21,23 @@ const Main = () => {
       }
   
       const blob = new Blob([result.data], { type: 'audio/mpeg' });
-      const videoTitle = result.headers['content-disposition'].match(/filename="(.+?)"/)[1];
+  
+      // Extract filename from the response headers
+      let videoTitle = 'download';
+      const contentDispositionHeader = result.headers && result.headers['content-disposition'];
+      if (contentDispositionHeader) {
+        const match = contentDispositionHeader.match(/filename="(.+?)"/);
+        if (match) {
+          videoTitle = match[1];
+        }
+      }
   
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `${videoTitle}.mp3`;
+      
+      // Ensure the filename is URI-encoded to handle special characters
+      link.download = `${encodeURIComponent(videoTitle)}.mp3`;
+      
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -34,6 +46,8 @@ const Main = () => {
       setError('An error occurred. Please try again.');
     }
   };
+  
+  
   
 
   return (
