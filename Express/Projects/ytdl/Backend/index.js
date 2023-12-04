@@ -35,7 +35,7 @@ router.post('/api/download', async (req, res) => {
 
     // Set response headers
     res.header('Content-Disposition', `attachment; filename="${videoTitle}.mp3"`);
-    res.header('Content-Type', 'audio/mpeg');
+    res.header('Content-Type', 'audio/mpeg');    
 
     // Pipe the stream to the response
     audioStream.pipe(res);
