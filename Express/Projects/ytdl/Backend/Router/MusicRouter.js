@@ -1,27 +1,43 @@
-const youtubeDlExec = require('youtube-dl-exec');
-const router = require('express').Router();
 const express = require('express');
+const router = express.Router();
+const ytdl = require('ytdl-core');
 
-router.use(express.json()); 
+router.use(express.json());
 
 router.post('/api/download', async (req, res) => {
-    const videoUrl = req.body.videoUrl;  // Use req.body.videoUrl instead of req.params.videoUrl
-    console.log('videourl==', videoUrl);
+    const videoUrl = req.body.videoUrl;
 
     try {
-        const videoInfo = await youtubeDlExec.getBasicInfo(videoUrl);
-        const videoTitle = videoInfo.title;
+        // Get video info
+        const videoInfo = await ytdl.getInfo(videoUrl);
+        const videoTitle = videoInfo.videoDetails.title;
         const videoFormat = 'mp3';
 
+        // Download options
         const downloadOptions = {
-            format: videoFormat,
-            output: `${videoTitle}.${videoFormat}`,
+            format: 'audioonly',
+            quality: 'highestaudio',
+            filter: 'audioonly',
+            highWaterMark: 1 << 25, // Set a high watermark to prevent issues with large downloads
+            requestOptions: {},
         };
 
-        const result = await youtubeDlExec.exec(videoUrl, downloadOptions);
-        const downloadLink = result.output;
+        // Check if the cookie header exists in the client's request
+        if (req.headers.cookie) {
+            downloadOptions.requestOptions.headers = {
+                cookie: req.headers.cookie,
+            };
+        }
 
-        res.json({ downloadLink });
+        // Create a readable stream
+        const audioStream = ytdl(videoUrl, downloadOptions);
+
+        // Set response headers
+        res.header('Content-Disposition', `attachment; filename="${videoTitle}.${videoFormat}"`);
+        res.header('Content-Type', 'audio/mpeg');
+
+        // Pipe the stream to the response
+        audioStream.pipe(res);
     } catch (error) {
         console.error(error);
         res.status(500).send('Error downloading video');
