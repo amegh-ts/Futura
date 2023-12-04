@@ -1,9 +1,10 @@
 // ApiCalls.js
 import axios from 'axios';
+import { publicRequest } from '../RequestMethod';
 
 export const musicDl = async (data) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/download', data, {
+        const response = await publicRequest.post('/api/download', data, {
             responseType: 'arraybuffer',
         });
 
