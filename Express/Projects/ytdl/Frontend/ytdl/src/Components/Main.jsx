@@ -1,3 +1,4 @@
+// Main.js
 import React, { useState } from 'react';
 import { musicDl } from './ApiCalls';
 
@@ -7,48 +8,34 @@ const Main = () => {
 
   const handleInputChange = (event) => {
     setVideoUrl(event.target.value);
-    console.log('Url====', videoUrl);
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('Request Payload:', { videoUrl });
       const result = await musicDl({ videoUrl });
-      console.log('Download successful:', result);
-  
+
       if (!result) {
         setError('Download failed. Please try again.');
         return;
       }
-  
-      // Ensure that the result is a Blob or ArrayBuffer
+
       const blob = new Blob([result.data], { type: 'audio/mpeg' });
-  
-      // Extract videoTitle from the response headers, if available
-      const contentDisposition = result.headers ? result.headers['content-disposition'] : null;
-      const match = contentDisposition ? contentDisposition.match(/filename="(.+?)"/) : null;
-      const videoTitle = match ? match[1] : 'download';
-  
-      // Create a download link
-      const downloadLink = document.createElement('a');
-      downloadLink.href = URL.createObjectURL(blob);
-      downloadLink.download = `${videoTitle}.mp3`;
-  
-      // Trigger a click on the link to start the download
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+      const videoTitle = result.headers['content-disposition'].match(/filename="(.+?)"/)[1];
+
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `${videoTitle}.mp3`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
     } catch (error) {
       console.error('Error:', error);
       setError('An error occurred. Please try again.');
     }
   };
-  
-  
-  
-  
 
   return (
     <div>

@@ -1,8 +1,7 @@
-import { publicRequest } from "../RequestMethod";
-
+import axiox from 'axios'
 export const musicDl = async (data) => {
     try {
-        const res = await publicRequest.post('/api/download', data);
+        const res = await axiox.post('http://localhost:5000/api/download', data);
         console.log('Response Status:', res.status);
         console.log('Response Data:', res.data);
 
