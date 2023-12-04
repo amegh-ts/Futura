@@ -14,8 +14,11 @@ router.post('/api/download', async (req, res) => {
   const videoUrl = req.body.videoUrl;
 
   try {
-    const videoInfo = await ytdl.getInfo(videoUrl);
-    const videoTitle = videoInfo.videoDetails.title;
+    const video = await ytdl.getInfo(videoUrl);
+    const videoTitle = video.videoDetails.title;
+    const videoInfo=video.videoDetails;
+
+    console.log('vidieo title and info',videoInfo);
 
     const downloadOptions = {
       format: 'audioonly',
@@ -39,6 +42,7 @@ router.post('/api/download', async (req, res) => {
 
     // Pipe the stream to the response
     audioStream.pipe(res);
+    
   } catch (error) {
     console.error(error);
     res.status(500).send('Error downloading video');

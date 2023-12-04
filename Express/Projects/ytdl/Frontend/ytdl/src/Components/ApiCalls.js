@@ -7,6 +7,10 @@ export const musicDl = async (data) => {
       responseType: 'arraybuffer',
     });
 
+    console.log('Content-Disposition Header:', response.headers['content-disposition']);
+
+    console.log('Response Headers:', response.headers);
+
     const videoInfo = {
       data: response.data,
       videoTitle: response.headers['content-disposition']
@@ -15,7 +19,6 @@ export const musicDl = async (data) => {
       // You can add more information here based on your requirements
       // For example, video duration, author, thumbnail, etc.
     };
-
     return videoInfo;
   } catch (error) {
     console.error('API Call Error:', error);
