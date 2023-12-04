@@ -6,6 +6,7 @@ import SignIn from './components/signin';
 import Profile from './components/profile';
 import Test from './components/test';
 import { useSelector } from 'react-redux';
+import Niha from './components/niha';
 // import Animation1 from './components/Animations/Animation1/Animation1';
 // import Animation2 from './components/Animations/Animation2/Animation2';
 // import Animation3 from './components/Animations/Animation3/Animation3';
@@ -38,6 +39,9 @@ function App() {
     },{
       path:'test',
       element:<Test/>
+    },{
+      path:'/niha',
+      element:<Niha/>
     }
     // {
     //   path:'/animation1',

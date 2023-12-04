@@ -9,11 +9,13 @@ const Test = () => {
 
   const [data, setData] = useState({});
 
+
+  
   useEffect(() => {
     async function fetchData() {
       try {
         const apiData = await verifyTest();
-        // console.log('Data from API:', apiData);
+        console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);
