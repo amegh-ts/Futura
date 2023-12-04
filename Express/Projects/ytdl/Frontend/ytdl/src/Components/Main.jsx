@@ -24,11 +24,11 @@ const Main = () => {
       }
   
       // Ensure that the result is a Blob or ArrayBuffer
-      const blob = new Blob([result], { type: 'audio/mpeg' });
+      const blob = new Blob([result.data], { type: 'audio/mpeg' });
   
-      // Extract videoTitle from the response headers
-      const contentDisposition = result.headers['content-disposition'];
-      const match = contentDisposition.match(/filename="(.+?)"/);
+      // Extract videoTitle from the response headers, if available
+      const contentDisposition = result.headers ? result.headers['content-disposition'] : null;
+      const match = contentDisposition ? contentDisposition.match(/filename="(.+?)"/) : null;
       const videoTitle = match ? match[1] : 'download';
   
       // Create a download link
