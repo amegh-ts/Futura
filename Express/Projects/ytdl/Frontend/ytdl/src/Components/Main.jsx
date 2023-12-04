@@ -14,30 +14,26 @@ const Main = () => {
     event.preventDefault();
     try {
       const result = await musicDl({ videoUrl });
-  
+
       if (!result) {
         setError('Download failed. Please try again.');
         return;
       }
-  
+
+      // Use the additional information from the response
+      const { videoTitle, duration, author, thumbnail } = result;
+
+      console.log('Video Title:', videoTitle);
+      console.log('Video Duration:', duration);
+      console.log('Video Author:', author);
+      console.log('Video Thumbnail:', thumbnail);
+
       const blob = new Blob([result.data], { type: 'audio/mpeg' });
-  
-      // Extract filename from the response headers
-      let videoTitle = 'download';
-      const contentDispositionHeader = result.headers && result.headers['content-disposition'];
-      if (contentDispositionHeader) {
-        const match = contentDispositionHeader.match(/filename="(.+?)"/);
-        if (match) {
-          videoTitle = match[1];
-        }
-      }
-  
+
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      
-      // Ensure the filename is URI-encoded to handle special characters
-      link.download = `${encodeURIComponent(videoTitle)}.mp3`;
-      
+      link.download = `${videoTitle}.mp3`;
+
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -46,9 +42,6 @@ const Main = () => {
       setError('An error occurred. Please try again.');
     }
   };
-  
-  
-  
 
   return (
     <div>
