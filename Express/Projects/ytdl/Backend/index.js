@@ -28,9 +28,9 @@ router.post('/api/download', async (req, res) => {
         console.log('thumpnaillll:', thumbnailUrl);
 
         const downloadOptions = {
-            format: 'audioonly',
-            quality: 'highestaudio',
-            filter: 'audioonly',
+            format:'videoonly',
+            quality: 'lowestvideo',
+            filter: 'videoonly',
             highWaterMark: 1 << 25,
             requestOptions: {},
         };
@@ -45,7 +45,8 @@ router.post('/api/download', async (req, res) => {
 
         // Set response headers for downloading the audio file
         res.header('Content-Disposition', `attachment; filename="${videoTitle}"`);
-        res.header('Content-Type', 'audio/mpeg');
+        // res.header('Content-Type', 'audio/mpeg');
+        res.header('Content-Type', 'video/mp4');
         res.header('x-thumbnail-url', thumbnailUrl);
 
 

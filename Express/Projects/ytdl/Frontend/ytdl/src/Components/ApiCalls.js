@@ -2,41 +2,41 @@
 import axios from 'axios';
 import { publicRequest } from '../RequestMethod';
 
-export const musicDl = async (data) => {
-    try {
-        const response = await publicRequest.post('/api/download', data, {
-            responseType: 'arraybuffer',
-        });
+// export const musicDl = async (data) => {
+//     try {
+//         const response = await publicRequest.post('/api/download', data, {
+//             responseType: 'arraybuffer',
+//         });
 
-        const contentDispositionHeader = response.headers['content-disposition'];
-        const thumbnailUrl = response.headers['x-thumbnail-url'];
+//         const contentDispositionHeader = response.headers['content-disposition'];
+//         const thumbnailUrl = response.headers['x-thumbnail-url'];
 
-        console.log('Content-Disposition Header:', contentDispositionHeader);
-        console.log('Thumbnail URL:', thumbnailUrl);
+//         console.log('Content-Disposition Header:', contentDispositionHeader);
+//         console.log('Thumbnail URL:', thumbnailUrl);
 
-        const defaultFileName = 'download.mp3'; // Default filename if not found in header
+//         const defaultFileName = 'download.mp4'; // Default filename if not found in header
 
-        // Extract filename from Content-Disposition header
-        const fileNameMatch = contentDispositionHeader ? contentDispositionHeader.match(/filename="(.+?)"/) : null;
-        const videoTitle = fileNameMatch ? fileNameMatch[1] : defaultFileName;
+//         // Extract filename from Content-Disposition header
+//         const fileNameMatch = contentDispositionHeader ? contentDispositionHeader.match(/filename="(.+?)"/) : null;
+//         const videoTitle = fileNameMatch ? fileNameMatch[1] : defaultFileName;
 
-        console.log('Content-Disposition Header:', contentDispositionHeader);
-        console.log('Response Headers:', response.headers);
+//         console.log('Content-Disposition Header:', contentDispositionHeader);
+//         console.log('Response Headers:', response.headers);
 
-        const videoInfo = {
-            data: response.data,
-            videoTitle: videoTitle,
-            thumbnailUrl: thumbnailUrl,
-            // You can add more information here based on your requirements
-            // For example, video duration, author, thumbnail, etc.
-        };
+//         const videoInfo = {
+//             data: response.data,
+//             videoTitle: videoTitle,
+//             thumbnailUrl: thumbnailUrl,
+//             // You can add more information here based on your requirements
+//             // For example, video duration, author, thumbnail, etc.
+//         };
 
-        return videoInfo;
-    } catch (error) {
-        console.error('API Call Error:', error);
-        throw error;
-    }
-};
+//         return videoInfo;
+//     } catch (error) {
+//         console.error('API Call Error:', error);
+//         throw error;
+//     }
+// };
 
 // export const showDetails = async (data) => {
 //     try {
@@ -58,3 +58,52 @@ export const musicDl = async (data) => {
 //         // Handle the error as needed
 //     }
 // }
+
+
+
+// video download
+
+
+export const musicDl = async (data) => {
+    try {
+        const response = await publicRequest.post('/api/download', data, {
+            responseType: 'arraybuffer',
+        });
+
+        const contentDispositionHeader = response.headers['content-disposition'];
+        const thumbnailUrl = response.headers['x-thumbnail-url'];
+
+        console.log('Content-Disposition Header:', contentDispositionHeader);
+        console.log('Thumbnail URL:', thumbnailUrl);
+
+        const defaultFileName = 'download.mp4'; // Default filename if not found in header
+
+        // Extract filename from Content-Disposition header
+        const fileNameMatch = contentDispositionHeader ? contentDispositionHeader.match(/filename="(.+?)"/) : null;
+        const videoTitle = fileNameMatch ? fileNameMatch[1] : defaultFileName;
+
+        console.log('Content-Disposition Header:', contentDispositionHeader);
+        console.log('Response Headers:', response.headers);
+
+        // Convert array buffer to Blob
+        const videoBlob = new Blob([response.data], { type: 'video/mp4' });
+
+        // Create download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = window.URL.createObjectURL(videoBlob);
+        downloadLink.download = videoTitle;
+        downloadLink.click();
+
+        const videoInfo = {
+            videoTitle: videoTitle,
+            thumbnailUrl: thumbnailUrl,
+            // You can add more information here based on your requirements
+            // For example, video duration, author, thumbnail, etc.
+        };
+
+        return videoInfo;
+    } catch (error) {
+        console.error('API Call Error:', error);
+        throw error;
+    }
+};

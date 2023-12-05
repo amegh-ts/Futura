@@ -3,7 +3,7 @@ const app = express()
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const cors = require('cors')
-app.use(cors())
+app.use(cors())                     // cors is a middleware .app.use is the first thing to work so cors will get start first
 dotenv.config() //to access the .env file in your directory
 
 const userRouter = require('./Router/UserRouter')
