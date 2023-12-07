@@ -6,6 +6,9 @@ const cors = require('cors')
 app.use(cors())                     // cors is a middleware .app.use is the first thing to work so cors will get start first
 dotenv.config() //to access the .env file in your directory
 
+// Application level middlewares
+
+
 const userRouter = require('./Router/UserRouter')
 const crudRouter = require('./Router/CrudRouter')
 
