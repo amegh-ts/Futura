@@ -1,6 +1,9 @@
 import { loginUser } from '../Redux/UserRedux';
 import { publicRequest, userRequest } from '../RequestMethod';
 
+
+var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0]?._id;
+
 export const signUpData = async (data) => {
     // console.log('first check', data);
     try {
@@ -56,10 +59,9 @@ export const loginData = async (loginData, dispatch) => {
         // console.log(err);
     }
 }
-
 export const verifyTest = async () => {
     try {
-        var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0]?._id;
+       
         console.log('User ID:', userId);
         const res = await userRequest.get(`/verifytest/${userId}`);
         // console.log('API Response:', res);

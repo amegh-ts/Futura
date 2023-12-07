@@ -21,7 +21,6 @@ const Test = () => {
         console.log(error);
       }
     }
-
     fetchData();
   }, []);
 

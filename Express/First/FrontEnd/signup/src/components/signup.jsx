@@ -37,14 +37,21 @@ const Signup = () => {
                     <div className='signup-form-container'>
                         <h2>SignUp</h2>
                         <div className='signup-forms'>
+                            {/* <form action="" onSubmit={display} encType='multipart/form-data'>  */}
+                                <input type="text" placeholder='First Name' value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+                                <input type="text" placeholder='Last Name' value={lastname} onChange={(e) => setLastName(e.target.value)} />
+                                <input type="date" placeholder='DOB' value={dob} onChange={(e) => setDob(e.target.value)} />
+                                <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="text" placeholder='Phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                <input type="text" placeholder='Password' />
+                                <input type="text" placeholder='Confirm Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+
+                                <input type="file" filename='Images' />
+
+                            {/* <input type="submit" value={"submit"}/> */}
                             
-                            <input type="text" placeholder='First Name' value={firstname} onChange={(e) => setFirstName(e.target.value)} />
-                            <input type="text" placeholder='Last Name' value={lastname} onChange={(e) => setLastName(e.target.value)} />
-                            <input type="date" placeholder='DOB' value={dob} onChange={(e) => setDob(e.target.value)} />
-                            <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <input type="text" placeholder='Phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                            <input type="text" placeholder='Password'/>
-                            <input type="text" placeholder='Confirm Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                            {/* </form> */}
+
                         </div>
                         <div className='signup-button'>
                             <button onClick={display}>SignUp</button>
