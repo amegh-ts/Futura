@@ -60,7 +60,7 @@ export const loginData = async (loginData, dispatch) => {
 export const verifyTest = async () => {
     try {
         var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0]?._id;
-        // console.log('User ID:', userId);
+        console.log('User ID:', userId);
         const res = await userRequest.get(`/verifytest/${userId}`);
         // console.log('API Response:', res);
         return res.data
@@ -68,3 +68,4 @@ export const verifyTest = async () => {
         // console.log('Error during API request:', error);
     }
 };
+

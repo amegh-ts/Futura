@@ -60,6 +60,7 @@ const Profile = ({ value }) => {
 
     useEffect(() => {
         setProfileId(value)
+        
         setFirstName(data.firstname || ''); // Set default value to empty string if undefined
         setLastName(data.lastname || '');
         setDob(data.dob || '');

@@ -1,32 +1,58 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react'
+import { verifyTest } from './apiCall';
 
 const Niha = () => {
-  // Assuming that 'data' is an object
-  var data = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0];
 
-  // Wrap 'data' object in an array
-  const fullData = [data];
 
-  // State to control whether to display the data or not
-  const [data1, setdata1] = useState(false);
-
-  const handleButtonClick = () => {
-    setdata1(true);
-  };
+  useEffect(() => {
+    const displayData = async () => {
+      try {
+        const a = await verifyTest();
+        console.log(a);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    displayData(); 
+  
+  }, []); 
+  
 
   return (
-    <div>
-      <button onClick={handleButtonClick}>Display Data</button>
-      <div>
-            {data1 && fullData.map((value, index) => (
-              <div key={index}>
-                <h1>{value.firstname}</h1>
-              </div>
-            ))}
-          </div>
-    </div>
-  );
+        <div>
+            <div className='signup-wraper'>
+                <div className="signup-message">
+                    please use a larger display size
+                </div>
+                <div className="signup-box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div className="signup-container">
+                   
+                    <div className='profile-display'>
+                        <div className='profile-display-form'>
+                            {/* <input type="text" placeholder={data.firstname} value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+                            <input type="text" placeholder={data.lastname} value={lastname} onChange={(e) => setLastName(e.target.value)} />
+                            <input type="date" placeholder={data.dob} value={dob} onChange={(e) => setDob(e.target.value)} />
+                            <input type="mail" placeholder={data.email} value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <input type="text" placeholder={data.phone} value={phone} onChange={(e) => setPhone(e.target.value)} /> */}
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default Niha;
-
+export default Niha
