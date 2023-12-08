@@ -48,10 +48,19 @@ const Profile = () => {
         </div>
         <div className='profile-right'>
           <div className='edit-profile'>
-            <input type="text" placeholder={data.uname} />
-            <input type="text" placeholder={data.dob} />
-            <input type="text" placeholder={data.email} />
-            <input type="text" placeholder={data.phone} />
+            <h3>Edit Profile</h3>
+            <div className='profile-input'>
+              <input type="text" placeholder={data.uname} value={uname} onChange={(e) => setUname(e.target.value)} />
+            </div>
+            {/* <div className='profile-input'>
+              <input type="date" placeholder={data.dob} value={dob} onChange={(e) => setDob(e.target.value)} />
+            </div> */}
+            <div className='profile-input'>
+              <input type="text" placeholder={data.email} value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div className='profile-input'>
+              <input type="text" placeholder={data.phone} value={phone} onChange={(e) => setPhone(e.target.value)} />
+            </div>
             <div className="edit-profile-button">
               <button>Submit</button>
             </div>
