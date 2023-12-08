@@ -8,6 +8,8 @@
     align-items: center;
     border-radius: 20px;
     padding: 30px;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 .profile-left {
@@ -36,7 +38,15 @@
     color: var(--sidebar-color);
     text-align: center;
 }
-.profile-right {}
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
 
-
+.edit-profile{
+    display: flex;
+    flex-direction: column;
+}
 

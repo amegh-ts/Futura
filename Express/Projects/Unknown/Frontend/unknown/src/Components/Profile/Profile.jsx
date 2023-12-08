@@ -5,6 +5,11 @@ import { getIdData } from '../ApiCalls'
 const Profile = () => {
   const [data, setData] = useState({});
 
+  const [uname, setUname] = useState('')
+  const [dob, setDob] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   useEffect(() => {
     async function fetchData() {
@@ -18,6 +23,13 @@ const Profile = () => {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    setUname(data.firstname || ''); // Set default value to empty string if undefined
+    setDob(data.dob || '');
+    setEmail(data.email || '');
+    setPhone(data.phone || '');
+}, [data])
 
   console.log(data);
 
@@ -34,7 +46,15 @@ const Profile = () => {
             <h6>{data.dob}</h6>
           </div>
         </div>
-        <div className='profile-right'>ss</div>
+        <div className='profile-right'>
+          <div className='edit-profile'>
+            <input type="text" placeholder={data.firstname }/>
+            <input type="text" placeholder={data.dob }/>
+            <input type="text" placeholder={data.email }/>
+            <input type="text" placeholder={data.firstname }/>
+          </div>
+          <div>nb</div>
+        </div>
       </div>
     </profile>
   )
