@@ -2,7 +2,9 @@ import { loginUser } from '../Redux/UserRedux';
 import { publicRequest, userRequest } from '../RequestMethod';
 
 
-var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0]?._id;
+// var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).user).userInfo[0]?._id;
+var loginUsersData = JSON.parse(localStorage.getItem('persist:loginusers'));
+var userId = loginUsersData && loginUsersData.user && loginUsersData.user.userInfo[0]?._id;
 
 export const signUpData = async (data) => {
     // console.log('first check', data);

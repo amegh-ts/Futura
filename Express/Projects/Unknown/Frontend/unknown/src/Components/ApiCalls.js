@@ -1,6 +1,11 @@
 import { loginUser } from "../Redux/UserRedux";
 import { publicRequest } from "../RequestMethods";
 
+var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:unknown')).user).userInfo[0]?.id;
+
+console.log(userId);
+
+// SignUp
 export const signUpData = async (data) => {
     console.log('first check', data);
     try {
@@ -13,6 +18,7 @@ export const signUpData = async (data) => {
     }
 }
 
+//SignIn
 export const signInData = async (loginData, dispatch) => {
     try {
         const res = await publicRequest.post('/signin', loginData)
@@ -21,6 +27,18 @@ export const signInData = async (loginData, dispatch) => {
         const { _id: id, accessToken } = res.data;
         const userData = { id, accessToken };
         dispatch(loginUser(userData))
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//Profile
+export const getIdData = async (id) => {
+    try {
+        console.log('User ID:', userId);
+        const res = await publicRequest.get(`/profile/${userId}`)
+        console.log('Sing res', res);
+        return res.data
     } catch (error) {
         console.log(error);
     }

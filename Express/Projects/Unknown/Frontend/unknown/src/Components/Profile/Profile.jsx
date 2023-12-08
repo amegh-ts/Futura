@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Profile.css'
+import { getIdData } from '../ApiCalls'
 
 const Profile = () => {
+  const [data, setData] = useState({});
+
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const apiData = await getIdData();
+        console.log('Data from API:', apiData);
+        setData(apiData);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  console.log(data);
+
   return (
     <profile>
       <div className='profile-main'>

@@ -2,6 +2,7 @@ const router = require('express').Router()
 const users = require('../Models/UserSchema')
 const Crypto = require('crypto-js')
 const Jwt = require('jsonwebtoken');
+const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
 
 
 // Signup
@@ -19,7 +20,6 @@ router.post('/signup', async (req, res) => {
 
 
 //signin
-
 router.post('/signin', async (req, res) => {
     console.log('Backend login', req.body);
     try {
@@ -39,5 +39,17 @@ router.post('/signin', async (req, res) => {
     }
 })
 
+//Profile
+router.get('/profile/:id',verifyToken,verifyTokenAndAuthorization, async (req, res) => {
+    console.log(req.params.id);
+    try {
+        const datas = await users.find()
+        const ids = await users.findById(req.params.id)
+        console.log(ids);
+        res.status(200).json(ids)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router
