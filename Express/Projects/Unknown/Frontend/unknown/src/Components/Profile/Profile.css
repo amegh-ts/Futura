@@ -1,133 +1,17 @@
-.profile-main {
+.profile-main{
+    min-width: 100px;
+    min-height: 100px;
+    background: var(--sidebar-color);
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.profile-container {
-    background: var(--main-color);
-    display: grid;
-    width: 1500px;
-    height: auto;
-    /* grid-template-columns: 40% 60%; */
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
-
-    grid-column-gap: 10px;
-    padding: 30px;
+    align-items: center;
     border-radius: 20px;
 }
 
-.profile-left {
-    /* background: #ffffff; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+.profile-left{
+
 }
 
-.profile-left-img {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    margin: 10px 0px;
-    width: 100%;
-    max-width: 15rem;
+.profile-right{
     
-}
-
-.profile-left-img img {
-    width: 100%;
-    /* Make the image width 100% of the parent container */
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
-    /* Maintain the circular shape */
-}
-
-
-.profile-left-content {
-    height: auto;
-    width: 100%;
-    margin: 10px 0px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-
-}
-
-.profile-right {
-    width: 100%;
-    /* height: 100%; */
-    /* padding: 20px; */
-    display: grid;
-    grid-template-rows: 47% 49%;
-    gap: 20px;
-
-}
-
-.profile-right h2 {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.profile-right input {
-    border: none;
-    outline: none   ;
-    padding: 10px 20px;
-    background-color: #e0e0e0;
-    margin-top: 14px;
-    border-radius: 20px;
-    color: black;
-}
-
-.profile-right-edit {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-radius: 20px;
-    padding: 30px 20px;
-}
-
-.profile-right-change-pass {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-radius: 20px;
-}
-
-.profile-right button {
-    padding: 10px 35px;
-    background-color: #626262;
-    /* background-color: var(--other-color); */
-    color: var(--text-color);
-    /* color: var(--main-color); */
-    font-size: var(--p-font);
-    letter-spacing: 1px;
-    border-radius: 3rem;
-    transition: all .50s ease;
-    border: none;
-    align-items: center;
-    margin-top: 12px;
-}
-
-.profile-right button:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-    box-shadow: #ff9f0d 0px 1px 25px;
-    cursor: pointer;
 }
