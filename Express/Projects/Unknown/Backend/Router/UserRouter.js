@@ -43,12 +43,11 @@ router.post('/signin', async (req, res) => {
 router.get('/profile/:id',verifyToken,verifyTokenAndAuthorization, async (req, res) => {
     console.log(req.params.id);
     try {
-        const datas = await users.find()
-        const ids = await users.findById(req.params.id)
-        console.log(ids);
-        res.status(200).json(ids)
-    } catch (err) {
-        res.status(500).json(err)
+        const id = await users.findById(req.params.id)
+        console.log(id);
+        res.status(200).json(id)
+    } catch (error) {
+        res.status(500).json(error)
     }
 })
 

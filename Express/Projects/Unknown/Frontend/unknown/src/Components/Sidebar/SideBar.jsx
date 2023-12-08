@@ -4,10 +4,12 @@ import Dashboard from '../Dashboard/Dashboard';
 import { IoPersonSharp, IoSearch } from "react-icons/io5";
 import { logoutUser } from '../../Redux/UserRedux';
 import { useDispatch } from 'react-redux';
+import Profile from '../Profile/Profile';
 
 
 const SideBar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
+    const [activePage, setActivePage] = useState('dashboard');
     const dispatch = useDispatch()
 
     const toggleSidebar = () => {
@@ -21,6 +23,11 @@ const SideBar = () => {
     const handleLogout = () => {
         dispatch(logoutUser())
     };
+
+    const pageComponents = {
+        dashboard: <Dashboard />,
+        profile:<Profile/>
+      };
 
     return (
         <div>
@@ -49,7 +56,7 @@ const SideBar = () => {
                                 </li> */}
 
                             <ul className="menu-links">
-                                <li className="nav-link" onClick={closeSidebar}>
+                                <li className={`nav-link ${activePage === 'dashboard' ? 'active' : ''}`} onClick={() => { setActivePage('dashboard'); closeSidebar(); }}>
                                     <a href="#">
                                         <i className='bx bx-home-alt icon' ></i>
                                         <span className="text nav-text">Dashboard</span>
@@ -115,15 +122,16 @@ const SideBar = () => {
                                 <input type="text" />
                                 <IoSearch />
                             </div>
-                            <div className='navbar-icon'>
+                            <div className={`navbar-icon ${activePage==='profile'?'active':''}`} onClick={() => { setActivePage('profile'); closeSidebar(); }}>
                                 <span>
                                     <IoPersonSharp />
                                 </span>
                             </div>
                         </div>
                     </navbar>
-                    <div className='main-body' onClick={closeSidebar}>
-                        <Dashboard />
+                    <div className={'main-body'} onClick={closeSidebar}>
+                        {/* <Dashboard /> */}
+                        {pageComponents[activePage]}
                     </div>
                 </section>
             </body>

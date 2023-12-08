@@ -1,5 +1,5 @@
 import { loginUser } from "../Redux/UserRedux";
-import { publicRequest } from "../RequestMethods";
+import { publicRequest, userRequest } from "../RequestMethods";
 
 var userId = JSON.parse(JSON.parse(localStorage.getItem('persist:unknown')).user).userInfo[0]?.id;
 
@@ -33,10 +33,10 @@ export const signInData = async (loginData, dispatch) => {
 }
 
 //Profile
-export const getIdData = async (id) => {
+export const getIdData = async () => {
     try {
         console.log('User ID:', userId);
-        const res = await publicRequest.get(`/profile/${userId}`)
+        const res = await userRequest.get(`/profile/${userId}`)
         console.log('Sing res', res);
         return res.data
     } catch (error) {

@@ -29,10 +29,14 @@
 
 .profile-left-details{
     background: var(--primary-color);
-    width: 300px;
+    min-width: 300px;
+    width: auto;
     border-radius: 20px;
     padding: 20px;
     color: var(--sidebar-color);
     text-align: center;
 }
 .profile-right {}
+
+
+
