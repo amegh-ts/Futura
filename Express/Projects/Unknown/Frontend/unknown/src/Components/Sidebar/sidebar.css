@@ -257,9 +257,43 @@ header .image-text .profession{
 
 .navbar-header{
     color: var(--primary-color);
+    height: 100%;
+    display: flex;
 }
 
+.navbar-search{
+    display: flex;
+    background: var(--body-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+.navbar-search input{
+    outline: none;
+    font-size: 18px;
+    border: none;
+    background: var(--body-color);
+    width: 300px;
+}
 
+.navbar-icon{
+    display: flex;
+}
+
+.navbar-icon span{
+    color: var(--primary-color);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+.navbar-icon span:hover{
+    color: var(--sidebar-color);
+    background:var(--primary-color);
+        transition: all .5s ease;
+    
+}
 
 .main-body{
     background: var(--sidebar-color);

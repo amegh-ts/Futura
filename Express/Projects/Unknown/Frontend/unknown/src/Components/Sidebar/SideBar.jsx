@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import './sidebar.css'
+import Dashboard from '../Dashboard/Dashboard';
+import { IoPersonSharp, IoSearch } from "react-icons/io5";
+import { logoutUser } from '../../Redux/UserRedux';
+import { useDispatch } from 'react-redux';
+
+
 const SideBar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
-    const [isDarkMode, setDarkMode] = useState(false);
+    const dispatch = useDispatch()
 
     const toggleSidebar = () => {
         setSidebarClosed(!isSidebarClosed);
     };
 
-    const openSidebar = () => {
-        setSidebarClosed(false);
+    const closeSidebar = () => {
+        setSidebarClosed(true);
     };
 
-    const toggleDarkMode = () => {
-        setDarkMode(!isDarkMode);
+    const handleLogout = () => {
+        dispatch(logoutUser())
     };
 
     return (
@@ -23,7 +29,7 @@ const SideBar = () => {
                     <header>
                         <div className="image-text">
                             <span className="image">
-                                <img src="logo.png" alt=""  onClick={toggleSidebar}/>
+                                <img src="logo.png" alt="" onClick={toggleSidebar} />
                             </span>
 
                             <div className="text logo-text">
@@ -37,48 +43,48 @@ const SideBar = () => {
                     <div className="menu-bar">
                         <div className="menu">
 
-                                {/* <li className="search-box">
+                            {/* <li className="search-box">
                                     <i className='bx bx-search icon'></i>
                                     <input type="text" placeholder="Search..." />
                                 </li> */}
 
                             <ul className="menu-links">
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-home-alt icon' ></i>
                                         <span className="text nav-text">Dashboard</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-bar-chart-alt-2 icon' ></i>
                                         <span className="text nav-text">Revenue</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-bell icon'></i>
                                         <span className="text nav-text">Notifications</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-pie-chart-alt icon' ></i>
                                         <span className="text nav-text">Analytics</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-heart icon' ></i>
                                         <span className="text nav-text">Likes</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link">
+                                <li className="nav-link" onClick={closeSidebar}>
                                     <a href="#">
                                         <i className='bx bx-wallet icon' ></i>
                                         <span className="text nav-text">Wallets</span>
@@ -89,7 +95,7 @@ const SideBar = () => {
                         </div>
 
                         <div className="bottom-content">
-                            <li className="">
+                            <li className="" onClick={handleLogout}>
                                 <a href="#">
                                     <i className='bx bx-log-out icon' ></i>
                                     <span className="text nav-text">Logout</span>
@@ -99,10 +105,26 @@ const SideBar = () => {
                     </div>
                 </nav>
 
-                <section className="home">
+                <section className="home" >
                     <navbar>
-                        <div className='navbar-containe'></div>
+                        <div className='navbar-containe'>
+                            <div className='navbar-header'>
+                                <h1>Unknown</h1>
+                            </div>
+                            <div className='navbar-search'>
+                                <input type="text" />
+                                <IoSearch />
+                            </div>
+                            <div className='navbar-icon'>
+                                <span>
+                                    <IoPersonSharp />
+                                </span>
+                            </div>
+                        </div>
                     </navbar>
+                    <div className='main-body' onClick={closeSidebar}>
+                        <Dashboard />
+                    </div>
                 </section>
             </body>
         </div>
