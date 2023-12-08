@@ -25,11 +25,11 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
-    setUname(data.firstname || ''); // Set default value to empty string if undefined
+    setUname(data.uname || ''); // Set default value to empty string if undefined
     setDob(data.dob || '');
     setEmail(data.email || '');
     setPhone(data.phone || '');
-}, [data])
+  }, [data])
 
   console.log(data);
 
@@ -48,10 +48,13 @@ const Profile = () => {
         </div>
         <div className='profile-right'>
           <div className='edit-profile'>
-            <input type="text" placeholder={data.firstname }/>
-            <input type="text" placeholder={data.dob }/>
-            <input type="text" placeholder={data.email }/>
-            <input type="text" placeholder={data.firstname }/>
+            <input type="text" placeholder={data.uname} />
+            <input type="text" placeholder={data.dob} />
+            <input type="text" placeholder={data.email} />
+            <input type="text" placeholder={data.phone} />
+            <div className="edit-profile-button">
+              <button>Submit</button>
+            </div>
           </div>
           <div>nb</div>
         </div>
