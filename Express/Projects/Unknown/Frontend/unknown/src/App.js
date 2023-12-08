@@ -3,6 +3,7 @@ import './App.css';
 import SideBar from './Components/Sidebar/SideBar';
 import Login from './Components/Login/Login';
 import { useSelector } from 'react-redux';
+import Profile from './Components/Profile/Profile';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
     {
       path: '/',
       element: Token ? <SideBar /> : <Login />
+    },{
+      path:'/profile',
+      element:<Profile/>
     }
   ])
   return (
