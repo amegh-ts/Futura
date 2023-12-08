@@ -101,7 +101,7 @@ const SideBar = () => {
 
                 <section className="home">
                     <navbar>
-                                
+                        <div className='navbar-containe'></div>
                     </navbar>
                 </section>
             </body>
