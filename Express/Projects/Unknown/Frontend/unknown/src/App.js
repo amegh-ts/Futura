@@ -1,22 +1,32 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css';
+import SideBar from './Components/Sidebar/SideBar';
+import Login from './Components/Login/Login';
+import { useSelector } from 'react-redux';
+
 
 function App() {
+  const reduxData = useSelector((state) => state.user.userInfo[0])
+  console.log('reduxdata', reduxData);
+
+  if (reduxData) {
+    var Token = reduxData && reduxData.accessToken
+    console.log("The access token is", Token);
+    var id = reduxData && reduxData.id
+    console.log('the id is', id);
+  }
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: Token ? <SideBar /> : <Login />
+    }
+  ])
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <RouterProvider router={router}></RouterProvider>
+
+        {/* <SideBar/> */}
       </header>
     </div>
   );
