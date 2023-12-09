@@ -41,8 +41,8 @@ const Profile = () => {
             <img src="/Images/p1.png" alt="" />
           </div>
           <div className='profile-left-details'>
-            <h2>{data.uname}</h2>
-            <h4>{data.email}</h4>
+            <h3>{data.uname}</h3>
+            <h5>{data.email}</h5>
             <h6>{data.dob}</h6>
           </div>
         </div>
@@ -65,7 +65,20 @@ const Profile = () => {
               <button>Submit</button>
             </div>
           </div>
-          <div>nb</div>
+          <div>
+            <div className="edit-profile">
+              <h3>Change Password</h3>
+              <div className='profile-input'>
+                <input type="text" placeholder='Current Password'/>
+              </div>
+              <div className='profile-input'>
+                <input type="text" placeholder='New Password'/>
+              </div>
+              <div className="edit-profile-button">
+                <button>Submit</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </profile>

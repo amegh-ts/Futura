@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // Handle your form submission logic here
   };
 

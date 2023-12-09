@@ -7,6 +7,7 @@ const UserSchema=new mongoose.Schema({
     email:{type:String,unique:true,required:true},
     phone:{type:String,unique:true,required:true},
     password:{type:String,required:true},
+    type:{type:String,required:true}
 },{timestamps:true}) //to add the date and time the value is added to DB or edited
 
 module.exports=mongoose.model("users",UserSchema)  //here 'users' is the name of the collection you are creating

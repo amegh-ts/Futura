@@ -26,8 +26,8 @@ const SideBar = () => {
 
     const pageComponents = {
         dashboard: <Dashboard />,
-        profile:<Profile/>
-      };
+        profile: <Profile />
+    };
 
     return (
         <div>
@@ -113,7 +113,7 @@ const SideBar = () => {
                 </nav>
 
                 <section className="home" >
-                    <navbar>
+                    <>
                         <div className='navbar-containe'>
                             <div className='navbar-header'>
                                 <h1>Unknown</h1>
@@ -122,13 +122,13 @@ const SideBar = () => {
                                 <input type="text" />
                                 <IoSearch />
                             </div>
-                            <div className={`navbar-icon ${activePage==='profile'?'active':''}`} onClick={() => { setActivePage('profile'); closeSidebar(); }}>
+                            <div className={`navbar-icon ${activePage === 'profile' ? 'active' : ''}`} onClick={() => { setActivePage('profile'); closeSidebar(); }}>
                                 <span>
                                     <IoPersonSharp />
                                 </span>
                             </div>
                         </div>
-                    </navbar>
+                    </>
                     <div className={'main-body'} onClick={closeSidebar}>
                         {/* <Dashboard /> */}
                         {pageComponents[activePage]}

@@ -8,11 +8,12 @@ console.log(userId);
 // SignUp
 export const signUpData = async (data) => {
     console.log('first check', data);
+    const newData={...data,type:'user'}
+    console.log('new dattaaa',newData);
     try {
-        const res = await publicRequest.post('/signup', data);
+        const res = await publicRequest.post('/signup', newData);
         console.log('Response Status:', res.status);
         console.log('Response Data:', res.data);
-
     } catch (err) {
         console.log(err);
     }

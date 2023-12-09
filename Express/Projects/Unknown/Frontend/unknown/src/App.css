@@ -35,3 +35,29 @@
   font-size: calc(10px + 2vmin);
   }
 
+
+
+/* 860 */
+  @media (max-width: 860px) {
+    .navbar-search input{
+      width: 150px !important;
+      transition: all .50s ease;
+    }
+  }
+
+  /* 620 */
+  @media (max-width: 620px) {
+    .navbar-search input{
+      width: 100px !important;
+      transition: all .50s ease;
+    }
+  }
+
+  /* 540 */
+  @media (max-width: 540px) {
+    .navbar-search {
+      display: none !important;
+      transition: all .50s ease;
+    }
+
+  }

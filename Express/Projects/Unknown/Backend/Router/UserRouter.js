@@ -30,22 +30,28 @@ router.post('/signin', async (req, res) => {
         console.log('Hashed Password is ', hashedPassword);
         const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
         console.log('Original Password is', originalPassword);
-        originalPassword != req.body.password && res.status(401).json({response:"Password and Email doesn't match"})
-        const accessToken=Jwt.sign({id:DB._id},process.env.Jwt_Key,{expiresIn:'5d'})          
-        const {password,...others}=DB._doc   
-        res.status(200).json({...others,accessToken})
+        originalPassword != req.body.password && res.status(401).json({ response: "Password and Email doesn't match" })
+        const accessToken = Jwt.sign({ id: DB._id }, process.env.Jwt_Key, { expiresIn: '5d' })
+        const { password, ...others } = DB._doc
+        res.status(200).json({ ...others, accessToken })
     } catch (err) {
         res.status(400)
     }
 })
 
 //Profile
-router.get('/profile/:id',verifyToken,verifyTokenAndAuthorization, async (req, res) => {
+router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req, res) => {
     console.log(req.params.id);
     try {
         const id = await users.findById(req.params.id)
-        console.log(id);
-        res.status(200).json(id)
+        console.log('sdfghiuytrdsdfghuitrdxcfghui', id);
+        const hashedPassword = Crypto.AES.decrypt(id.password, process.env.Crypto_js)
+        console.log('hashed passsss', hashedPassword);
+        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
+        console.log(originalPassword);
+        const {password,...others}=id._doc
+
+        res.status(200).json({...others,originalPassword})
     } catch (error) {
         res.status(500).json(error)
     }

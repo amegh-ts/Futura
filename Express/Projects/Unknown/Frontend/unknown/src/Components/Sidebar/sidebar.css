@@ -259,6 +259,7 @@ header .image-text .profession{
     color: var(--primary-color);
     height: 100%;
     display: flex;
+    align-items: center;
 }
 
 .navbar-search{
@@ -266,6 +267,7 @@ header .image-text .profession{
     background: var(--body-color);
     padding: 10px;
     border-radius: 10px;
+    align-items: center;
     color: var(--primary-color);
 }
 .navbar-search input{
