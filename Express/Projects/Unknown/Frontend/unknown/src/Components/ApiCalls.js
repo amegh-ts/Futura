@@ -28,7 +28,7 @@ export const signInData = async (loginData, dispatch) => {
         console.log('Response Status:', res.status);
         // console.log('Response Data:', res.data);
         const { _id: id, accessToken, type } = res.data;
-        const userData = { id, accessToken,type };
+        const userData = { id, accessToken, type };
         dispatch(loginUser(userData))
     } catch (error) {
         console.log(error);
@@ -48,14 +48,24 @@ export const getIdData = async () => {
 }
 
 //send notification
-export const sendNotification=async(data)=>{
+export const sendNotification = async (data) => {
     try {
-        console.log('first check',data);
-    const newData = { ...data, user: 'Admin' }
-    console.log('newdaaaaaaaaaaaata',newData);
-        const res= await userRequest.post('/sendNotification',newData)
+        console.log('first check', data);
+        const newData = { ...data, user: 'Admin' }
+        console.log('newdaaaaaaaaaaaata', newData);
+        const res = await userRequest.post('/sendNotification', newData)
         console.log('Response Status:', res.status);
         console.log('Response Data:', res.data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//get notification
+export const getNotification = async () => {
+    try {
+        const res = await userRequest.get('/getNotification')
+        console.log(res.data);
     } catch (error) {
         console.log(error);
     }

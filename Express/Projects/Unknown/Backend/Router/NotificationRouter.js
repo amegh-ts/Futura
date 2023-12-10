@@ -18,7 +18,7 @@ router.post('/sendNotification',verifyToken, async (req, res) => {
 // get notification
 router.get('/getNotification', verifyToken, async (req, res) => {
     try {
-        const datas = await users.find()
+        const datas = await notification.find()
         console.log(datas);
         res.status(200).json(datas)
     } catch (error) {

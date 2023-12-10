@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Notification.css'
 import { CiBellOn } from "react-icons/ci";
+import { getNotification } from '../../ApiCalls';
 
 
 const Notification = () => {
+  const [state, setState] = useState([]);
+
+  useEffect(()=>{
+    async function display() {
+      setState(getNotification)
+    }
+    display()
+  },[])
+console.log(state);
   return (
     <div>
       <div className="notification-main">
