@@ -53,6 +53,9 @@ body{
     min-width: 60px;
     border-radius: 6px;
 }
+.image:hover{
+    cursor: pointer;
+}
 
 .sidebar .icon{
     min-width: 60px;
@@ -280,6 +283,9 @@ header .image-text .profession{
 
 .navbar-icon{
     display: flex;
+}
+.navbar-icon:hover{
+    cursor: pointer;
 }
 
 .navbar-icon span{

@@ -122,10 +122,10 @@ const SideBar = () => {
                             <div className='navbar-header'>
                                 <h1>Unknown</h1>
                             </div>
-                            <div className='navbar-search'>
+                            {/* <div className='navbar-search'>
                                 <input type="text" />
                                 <IoSearch />
-                            </div>
+                            </div> */}
                             <div className={`navbar-icon ${activePage === 'profile' ? 'active' : ''}`} onClick={() => { setActivePage('profile'); closeSidebar(); }}>
                                 <span>
                                     <IoPersonSharp />

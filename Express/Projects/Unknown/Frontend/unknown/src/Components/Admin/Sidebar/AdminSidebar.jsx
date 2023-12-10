@@ -6,11 +6,12 @@ import { useDispatch } from 'react-redux';
 import AdminDashboard from '../Dashboard/AdminDashboard';
 import SendNotification from '../Notification/SendNotification';
 import Profile from '../Profile/Profile';
+import AllUsers from '../Allusers/AllUsers';
 
 
 const AdminSidebar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
-    const [activePage, setActivePage] = useState('dashboard');
+    const [activePage, setActivePage] = useState('allusers');
     const dispatch = useDispatch()
 
     const toggleSidebar = () => {
@@ -29,6 +30,7 @@ const AdminSidebar = () => {
         
         dashboard: <AdminDashboard />,
         notification: <SendNotification />,
+        allusers:<AllUsers/>,
         profile: <Profile />
     };
 
@@ -73,10 +75,10 @@ const AdminSidebar = () => {
                                     </a>
                                 </li>
 
-                                <li className="nav-link" onClick={closeSidebar}>
+                                <li className={`nav-link ${activePage === 'allusers' ? 'active' : ''}`} onClick={() => { setActivePage('allusers'); closeSidebar(); }}>
                                     <a href="#revenue">
-                                        <i className='bx bx-bar-chart-alt-2 icon' ></i>
-                                        <span className="text nav-text">Revenue</span>
+                                        <i className='bx bx-group icon' ></i>
+                                        <span className="text nav-text">Users</span>
                                     </a>
                                 </li>
 
@@ -121,10 +123,10 @@ const AdminSidebar = () => {
                             <div className='navbar-header'>
                                 <h1>Unknown</h1>
                             </div>
-                            <div className='navbar-search'>
+                            {/* <div className='navbar-search'>
                                 <input type="text" />
                                 <IoSearch />
-                            </div>
+                            </div> */}
                             <div className={`navbar-icon ${activePage === 'profile' ? 'active' : ''}`} onClick={() => { setActivePage('profile'); closeSidebar(); }}>
                                 <span>
                                     <IoPersonSharp />
