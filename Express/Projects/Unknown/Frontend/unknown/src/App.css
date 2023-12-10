@@ -44,6 +44,14 @@
 
 
 
+/* 1116 */
+@media (max-width: 1116px) {
+  .admin-dash-bottom {
+    display: none;
+  }
+
+}
+
 /* 860 */
 @media (max-width: 860px) {
   .navbar-search input {

@@ -60,9 +60,11 @@
 
 .admin-dash-bottom {
     margin-top: 30px;
+    overflow: hidden;
 }
 
-/* Color variables */
+
+/* color variables */
 :root {
     --clr-primary: #81d4fa;
     --clr-primary-light: #e1f5fe;
@@ -82,80 +84,67 @@
     --clr-paid: #c8e6c9;
     --clr-paid-font: #388e3c;
     --clr-link: #2962ff;
-}
-
-/* Border radius */
-:root {
-    --radius: 0.2rem;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-table {
+  }
+  
+  
+  table {
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 5px 10px var(--clr-gray300);
     background-color: white;
     text-align: left;
     overflow: hidden;
-    width: 100%;
-}
-
-table thead {
+    margin-bottom: 2rem;
+  }
+  
+  table thead {
     box-shadow: 0 5px 10px var(--clr-gray300);
-}
-
-table th {
+  }
+  
+  table th {
     padding: 1rem 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     font-weight: 900;
-    vertical-align: middle; /* Adjusted for vertical alignment */
-}
-
-table td {
+  }
+  
+  table td {
     padding: 1rem 2rem;
     font-size: 1rem;
-    vertical-align: middle; /* Adjusted for vertical alignment */
-}
-
-table a {
+  }
+  
+  table a {
     text-decoration: none;
     color: var(--clr-link);
-}
-
-table .status {
+  }
+  
+  table .status {
     border-radius: var(--radius);
     background-color: red;
     padding: 0.2rem 1rem;
     text-align: center;
-}
-
-table .status-pending {
+    max-width: 100px;
+  }
+  
+  table .status-pending {
     background-color: var(--clr-pending);
     color: var(--clr-pending-font);
-}
-
-table .status-paid {
+  }
+  
+  table .status-paid {
     background-color: var(--clr-paid);
     color: var(--clr-paid-font);
-}
-
-table .status-unpaid {
+  }
+  
+  table .status-unpaid {
     background-color: var(--clr-unpaid);
     color: var(--clr-unpaid-font);
-}
-
-table .amount {
-    text-align: right;
-}
-
-/* Color alternating rows */
-table tr:nth-child(even) {
+  }
+  
+  /* Color alternating rows */
+  table tr:nth-child(even) {
     background-color: var(--clr-gray150);
-}
+  }
+  
+  
