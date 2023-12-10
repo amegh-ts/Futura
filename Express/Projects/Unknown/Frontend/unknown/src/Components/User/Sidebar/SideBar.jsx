@@ -61,28 +61,28 @@ const SideBar = () => {
 
                             <ul className="menu-links">
                                 <li className={`nav-link ${activePage === 'dashboard' ? 'active' : ''}`} onClick={() => { setActivePage('dashboard'); closeSidebar(); }}>
-                                    <a href="#">
+                                    <a href="#dashboard">
                                         <i className='bx bx-home-alt icon' ></i>
                                         <span className="text nav-text">Dashboard</span>
                                     </a>
                                 </li>
 
                                 <li className={`nav-link ${activePage === 'notification' ? 'active' : ''}`} onClick={() => { setActivePage('notification'); closeSidebar(); }}>
-                                    <a href="#">
+                                    <a href="#notification">
                                         <i className='bx bx-bell icon'></i>
                                         <span className="text nav-text">Notifications</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="#">
+                                    <a href="#revenue">
                                         <i className='bx bx-bar-chart-alt-2 icon' ></i>
                                         <span className="text nav-text">Revenue</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="#">
+                                    <a href="#analytics">
                                         <i className='bx bx-pie-chart-alt icon' ></i>
                                         <span className="text nav-text">Analytics</span>
                                     </a>
