@@ -8,10 +8,11 @@
     
 }
 .send-notification-header h3{
-    font-weight: 500;
+    font-weight: var(--h3-font-weight);
+    font-size: var(--h3-font-size);
     
 }
 .bell-plus-icon{
-    font-size: 40px;
+    font-size: var(--icon-size);
     margin-right: 10px;
 }

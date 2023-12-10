@@ -17,10 +17,17 @@
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
 
-  /* ======== Card gradient ======= */
+  /* ====== Card gradient ====== */
 
   --card-gradient-color1: #5a4fd0;
   --card-gradient-color2: #695CFE;
+
+  /* ===== text ======= */
+
+  --h3-font-size:30px;
+  --h3-font-weight:500;
+
+  --icon-size:34px;
 }
 
 

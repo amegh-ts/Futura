@@ -5,8 +5,8 @@ import Dashboard from '../Dashboard/Dashboard';
 import { IoPersonSharp, IoSearch } from "react-icons/io5";
 import { logoutUser } from '../../../Redux/UserRedux';
 import { useDispatch } from 'react-redux';
-import Profile from '../../Profile/Profile';
 import Notification from '../Notification/Notification';
+import Profile from '../Profile/Profile';
 
 
 const SideBar = () => {

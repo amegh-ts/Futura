@@ -3,7 +3,18 @@ import './AdminDashboard.css'
 
 const AdminDashboard = () => {
   return (
-    <div>AdminDashboard</div>
+    <div>
+      <section className='admin-dash-main'>
+        <div className='admin-dash-header'>
+            <i className='bx bx-home-alt icon' ></i>
+            <h3>Dashboard</h3>
+        </div>
+
+        <div className="admin-dash-body">
+          hhh
+        </div>
+      </section>
+    </div>
   )
 }
 
