@@ -89,14 +89,14 @@ const SideBar = () => {
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="#">
+                                    <a href="#likes">
                                         <i className='bx bx-heart icon' ></i>
                                         <span className="text nav-text">Likes</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="#">
+                                    <a href="#wallet">
                                         <i className='bx bx-wallet icon' ></i>
                                         <span className="text nav-text">Wallets</span>
                                     </a>
@@ -107,7 +107,7 @@ const SideBar = () => {
 
                         <div className="bottom-content">
                             <li className="" onClick={handleLogout}>
-                                <a href="#">
+                                <a href="#logout">
                                     <i className='bx bx-log-out icon' ></i>
                                     <span className="text nav-text">Logout</span>
                                 </a>
