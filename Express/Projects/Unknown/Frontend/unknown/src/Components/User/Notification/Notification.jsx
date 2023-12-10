@@ -9,7 +9,8 @@ const Notification = () => {
 
   useEffect(()=>{
     async function display() {
-      setState(getNotification)
+      const notifications = await getNotification();
+      setState(notifications);
     }
     display()
   },[])
