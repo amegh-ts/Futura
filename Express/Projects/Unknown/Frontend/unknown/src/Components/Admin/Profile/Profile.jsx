@@ -15,7 +15,7 @@ const Profile = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
-        console.log('Data from API:', apiData);
+        // console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);
@@ -31,7 +31,7 @@ const Profile = () => {
     setPhone(data.phone || '');
   }, [data])
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <profile>
@@ -69,10 +69,10 @@ const Profile = () => {
             <div className="edit-profile">
               <h3>Change Password</h3>
               <div className='profile-input'>
-                <input type="text" placeholder='Current Password'/>
+                <input type="text" placeholder='Current Password' />
               </div>
               <div className='profile-input'>
-                <input type="text" placeholder='New Password'/>
+                <input type="text" placeholder='New Password' />
               </div>
               <div className="edit-profile-button">
                 <button>Submit</button>
