@@ -7,14 +7,29 @@ import { getNotification } from '../../ApiCalls';
 const Notification = () => {
   const [state, setState] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     async function display() {
       const notifications = await getNotification();
       setState(notifications);
     }
     display()
-  },[])
-console.log(state);
+
+  }, [])
+  console.log('state data', state);
+
+  const getPriorityColor = (priority) => {
+    switch (priority) {
+      case 'high':
+        return 'high-priority';
+      case 'medium':
+        return 'medium-priority';
+      case 'low':
+        return 'low-priority';
+      default:
+        return '';
+    };
+  };
+
   return (
     <div>
       <div className="notification-main">
@@ -23,15 +38,24 @@ console.log(state);
           <h3>Notification</h3>
         </div>
         <div className='notification-container'>
-        {state.map((notification) => (
-  <div className="notification-box" key={notification._id}>
-    <div className="ntb-content">
-      <h5>{notification.user}</h5>
-      <p>{notification.notification}</p>
-      <h6>{notification.priority} - {new Date(notification.createdAt).toLocaleString()}</h6>
-    </div>
-  </div>
-))}
+          {state &&
+            state.map((notification) => (
+              <div
+                className={`notification-box ${getPriorityColor(
+                  notification.priority
+                )}`}
+                key={notification._id}
+              >
+                <div className="ntb-content">
+                  <h5>{notification.user}</h5>
+                  <p>{notification.notification}</p>
+                  <h6>
+                    {notification.priority} -{' '}
+                    {new Date(notification.createdAt).toLocaleString()}
+                  </h6>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>

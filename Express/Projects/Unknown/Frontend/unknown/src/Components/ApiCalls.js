@@ -65,7 +65,8 @@ export const sendNotification = async (data) => {
 export const getNotification = async () => {
     try {
         const res = await userRequest.get('/getNotification')
-        console.log(res.data);
+        // console.log(res.data);   
+        return res.data
     } catch (error) {
         console.log(error);
     }

@@ -45,3 +45,16 @@
     font-weight: 200;
     font-size: 14px;
 }
+
+
+.high-priority {
+    background-color: red; /* Adjust the color as needed */
+  }
+  
+  .medium-priority {
+    background-color: yellow; /* Adjust the color as needed */
+  }
+  
+  .low-priority {
+    background-color: green; /* Adjust the color as needed */
+  }
