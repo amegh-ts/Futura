@@ -18,10 +18,26 @@ const AllUsers = () => {
                         <IoSearch />
                     </div>
                 </div>
-                <div className="al-users-body">
+                <div className="all-users-body">
                     <div className="user-cards">
-                        
+                        <div className="user-cards-img">
+                            <img src="Images/p1.png" alt="" />
+                        </div>
+                        <div>
+                        <p>Name</p>
+                        </div>
+                        <div>
+                            <p>Email</p>
+                        </div>
+                        <div>
+                            <p>Phone</p>
+                        </div>
+                        <div>
+                            <button>edit</button>
+                        </div>
                     </div>
+
+                    
                 </div>
             </div>
         </div>

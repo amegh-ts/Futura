@@ -1,30 +1,36 @@
-.all-users-main{
+.all-users-main {
     padding: 20px;
 }
-.al-users-header{
+
+.al-users-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.all-users-title{
+
+.all-users-title {
     display: flex;
     align-items: center;
 }
-.al-users-header h3{
+
+.al-users-header h3 {
     font-weight: var(--h3-font-weight);
     font-size: var(--h3-font-size);
 }
-.users-icon{
+
+.users-icon {
     font-size: var(--icon-size);
     margin-right: 10px;
 }
-.all-users-input{
+
+.all-users-input {
     padding: 10px;
     background-color: var(--body-color);
     display: flex;
     border-radius: 10px;
 }
-.all-users-input input{
+
+.all-users-input input {
     background-color: var(--body-color);
     border: none;
     outline: none;
@@ -32,13 +38,47 @@
     width: 250px;
 }
 
-.al-users-body{
+.all-users-body {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    gap: 10px;
 }
-.user-cards{
+
+.user-cards {
     background-color: var(--body-color);
     width: 100%;
-    height: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.user-cards-img {
+    background: white;
+    padding: 1px;
+    border-radius: 50%;
+    display: flex;
+    object-fit: contain;
+}
+
+.user-cards-img img {
+    width: 70px;
+}
+
+.user-cards p {
+    font-size: 16px;
+}
+
+.user-cards button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
 }
