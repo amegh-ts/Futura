@@ -11,7 +11,7 @@ import Profile from '../Profile/Profile';
 
 const SideBar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
-    const [activePage, setActivePage] = useState('notification');
+    const [activePage, setActivePage] = useState('dashboard');
     const dispatch = useDispatch()
 
     const toggleSidebar = () => {
