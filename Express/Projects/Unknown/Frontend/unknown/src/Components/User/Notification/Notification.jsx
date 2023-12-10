@@ -24,14 +24,7 @@ console.log(state);
         <div className='notification-container'>
           <div className="notification-box">
             <div className="ntb-content">
-              <h5>Admin</h5>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, voluptas?</p>
-              <h6>Date</h6>
-            </div>
-          </div>
-          <div className="notification-box">
-            <div className="ntb-content">
-              <h5>Admin</h5>
+              <h5>Admin</h5> 
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, voluptas?</p>
               <h6>Date</h6>
             </div>
