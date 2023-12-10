@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Profile.css'
-import { getIdData } from '../ApiCalls'
+import { getIdData } from '../../ApiCalls'
 
 const Profile = () => {
   const [data, setData] = useState({});

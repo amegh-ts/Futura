@@ -3,7 +3,9 @@ import './Adminsidebar.css'
 import { IoPersonSharp, IoSearch } from "react-icons/io5";
 import { logoutUser } from '../../../Redux/UserRedux';
 import { useDispatch } from 'react-redux';
-import Profile from '../../Profile/Profile';
+import AdminDashboard from '../Dashboard/AdminDashboard';
+import SendNotification from '../Notification/SendNotification';
+import Profile from '../Profile/Profile';
 
 
 const AdminSidebar = () => {
@@ -25,7 +27,8 @@ const AdminSidebar = () => {
 
     const pageComponents = {
         
-        // dashboard: <Dashboard />,
+        dashboard: <AdminDashboard />,
+        notification: <SendNotification />,
         profile: <Profile />
     };
 
@@ -57,42 +60,42 @@ const AdminSidebar = () => {
 
                             <ul className="menu-links">
                                 <li className={`nav-link ${activePage === 'dashboard' ? 'active' : ''}`} onClick={() => { setActivePage('dashboard'); closeSidebar(); }}>
-                                    <a href="dashboard">
+                                    <a href="#dashboard">
                                         <i className='bx bx-home-alt icon' ></i>
                                         <span className="text nav-text">Dashboard</span>
                                     </a>
                                 </li>
 
-                                <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="notification">
+                                <li className={`nav-link ${activePage === 'notification' ? 'active' : ''}`} onClick={() => { setActivePage('notification'); closeSidebar(); }}>
+                                    <a href="#notification">
                                         <i className='bx bx-bell icon'></i>
                                         <span className="text nav-text">Notifications</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="revenue">
+                                    <a href="#revenue">
                                         <i className='bx bx-bar-chart-alt-2 icon' ></i>
                                         <span className="text nav-text">Revenue</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="analytic">
+                                    <a href="#analytic">
                                         <i className='bx bx-pie-chart-alt icon' ></i>
                                         <span className="text nav-text">Analytics</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="likes">
+                                    <a href="#likes">
                                         <i className='bx bx-heart icon' ></i>
                                         <span className="text nav-text">Likes</span>
                                     </a>
                                 </li>
 
                                 <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="wallet">
+                                    <a href="#wallet">
                                         <i className='bx bx-wallet icon' ></i>
                                         <span className="text nav-text">Wallets</span>
                                     </a>
@@ -103,7 +106,7 @@ const AdminSidebar = () => {
 
                         <div className="bottom-content">
                             <li className="" onClick={handleLogout}>
-                                <a href="logout">
+                                <a href="#logout">
                                     <i className='bx bx-log-out icon' ></i>
                                     <span className="text nav-text">Logout</span>
                                 </a>

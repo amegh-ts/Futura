@@ -3,7 +3,6 @@ import './App.css';
 import SideBar from './Components/User/Sidebar/SideBar';
 import Login from './Components/Login/Login';
 import { useSelector } from 'react-redux';
-import Profile from './Components/Profile/Profile';
 import AdminSidebar from './Components/Admin/Sidebar/AdminSidebar';
 import Notification from './Components/User/Notification/Notification';
 
@@ -41,10 +40,6 @@ function App() {
     {
       path: '/',
       element: content,
-    },
-    {
-      path: '/profile',
-      element: <Profile />,
     },{
       path: '/noti',
       element: <Notification />,
