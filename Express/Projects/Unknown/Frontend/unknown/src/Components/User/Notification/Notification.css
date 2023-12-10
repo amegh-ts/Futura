@@ -28,7 +28,7 @@
     gap: 20px;
     flex-wrap: wrap;
     padding-left: 100px;
-    border-left: solid 2px var(--primary-color);
+    border-left: solid 3px var(--primary-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35);
 }
 .ntb-content h5{
@@ -37,24 +37,27 @@
 }
 
 .ntb-content p{
-    color: var(--text-color);
     font-size: 20px;
 }
 .ntb-content h6{
-    color: var(--text-color);
     font-weight: 200;
     font-size: 14px;
 }
 
 
 .high-priority {
-    background-color: red; /* Adjust the color as needed */
+    background-color: rgb(209, 38, 38); 
+    color: white;
+
   }
   
   .medium-priority {
-    background-color: yellow; /* Adjust the color as needed */
+    background-color: rgb(248, 248, 86); 
+    color: rgb(0, 0, 0);
+
   }
   
   .low-priority {
-    background-color: green; /* Adjust the color as needed */
+    background-color: rgb(36, 136, 36); 
+    color: white;
   }

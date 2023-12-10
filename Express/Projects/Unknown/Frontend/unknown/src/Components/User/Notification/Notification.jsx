@@ -35,24 +35,16 @@ const Notification = () => {
       <div className="notification-main">
         <div className='notification-header'>
           <CiBellOn className='bell-icon' />
-          <h3>Notification</h3>
+          <h3>Admin Notification</h3>
         </div>
         <div className='notification-container'>
           {state &&
             state.map((notification) => (
-              <div
-                className={`notification-box ${getPriorityColor(
-                  notification.priority
-                )}`}
-                key={notification._id}
-              >
+              <div className={`notification-box ${getPriorityColor(notification.priority)}`}key={notification._id}>
                 <div className="ntb-content">
-                  <h5>{notification.user}</h5>
+                  {/* <h5>{notification.user}</h5> */}
+                  <h6>  {new Date(notification.createdAt).toLocaleString()}</h6>
                   <p>{notification.notification}</p>
-                  <h6>
-                    {notification.priority} -{' '}
-                    {new Date(notification.createdAt).toLocaleString()}
-                  </h6>
                 </div>
               </div>
             ))}

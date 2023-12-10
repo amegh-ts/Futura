@@ -11,7 +11,7 @@ import AllUsers from '../Allusers/AllUsers';
 
 const AdminSidebar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
-    const [activePage, setActivePage] = useState('allusers');
+    const [activePage, setActivePage] = useState('AdminDashboard');
     const dispatch = useDispatch()
 
     const toggleSidebar = () => {
