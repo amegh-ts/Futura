@@ -22,13 +22,15 @@ console.log(state);
           <h3>Notification</h3>
         </div>
         <div className='notification-container'>
-          <div className="notification-box">
-            <div className="ntb-content">
-              <h5>Admin</h5> 
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, voluptas?</p>
-              <h6>Date</h6>
-            </div>
-          </div>
+        {state.map((notification) => (
+  <div className="notification-box" key={notification._id}>
+    <div className="ntb-content">
+      <h5>{notification.user}</h5>
+      <p>{notification.notification}</p>
+      <h6>{notification.priority} - {new Date(notification.createdAt).toLocaleString()}</h6>
+    </div>
+  </div>
+))}
         </div>
       </div>
     </div>
