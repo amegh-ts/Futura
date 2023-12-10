@@ -56,7 +56,6 @@ const AdminDashboard = () => {
                   <th>Invoice</th>
                   <th>Company</th>
                   <th>Due Date</th>
-                  <th>Status</th>
                   <th>Amount</th>
                 </tr>
               </thead>
@@ -65,45 +64,30 @@ const AdminDashboard = () => {
                   <td><a href="#">INV__1001</a></td>
                   <td>Paragon</td>
                   <td>1/5/2021</td>
-                  <td>
-                    <p class="status status-unpaid">Unpaid</p>
-                  </td>
                   <td class="amount">$520.18</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1002</a></td>
                   <td>Sonic</td>
                   <td>1/4/2021</td>
-                  <td>
-                    <p class="status status-paid">Paid</p>
-                  </td>
                   <td class="amount">$415.25</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1003</a></td>
                   <td>Innercircle</td>
                   <td>1/2/2021</td>
-                  <td>
-                    <p class="status status-pending">Pending</p>
-                  </td>
                   <td class="amount">$1324.84</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1004</a></td>
                   <td>Varsity Plus</td>
                   <td>12/30/2020</td>
-                  <td>
-                    <p class="status status-pending">Pending</p>
-                  </td>
                   <td class="amount">$998.26</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1005</a></td>
                   <td>Highlander</td>
                   <td>12/18/2020</td>
-                  <td>
-                    <p class="status status-paid">Paid</p>
-                  </td>
                   <td class="amount">$1152.35</td>
                 </tr>
               </tbody>

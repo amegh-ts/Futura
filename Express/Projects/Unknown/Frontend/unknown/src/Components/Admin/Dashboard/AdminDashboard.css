@@ -1,9 +1,8 @@
 .admin-dash-main {
     padding: 20px;
-    
-
 }
-.admin-dash-top{
+
+.admin-dash-top {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -26,9 +25,8 @@
 
 .admin-dash-body {
     display: grid;
-   gap: 10px;
-    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
-
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 }
 
 .admin-dash-card {
@@ -37,7 +35,6 @@
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
-    /* width: calc(100% /3 - 15px); */
     max-width: 500px;
     width: 350px;
     padding: 15px 20px;
@@ -61,11 +58,9 @@
     background-color: #d1f3fc;
 }
 
-.admin-dash-bottom{
+.admin-dash-bottom {
     margin-top: 30px;
 }
-
-/************* table **************/
 
 /* Color variables */
 :root {
@@ -87,79 +82,80 @@
     --clr-paid: #c8e6c9;
     --clr-paid-font: #388e3c;
     --clr-link: #2962ff;
-  }
-  
-  /* Border radius */
-  :root {
+}
+
+/* Border radius */
+:root {
     --radius: 0.2rem;
-  }
-  
-  *,
-  *::before,
-  *::after {
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  table {
+}
+table {
     border-collapse: collapse;
     box-shadow: 0 5px 10px var(--clr-gray300);
     background-color: white;
     text-align: left;
     overflow: hidden;
     width: 100%;
-  }
-  
-  table thead {
+}
+
+table thead {
     box-shadow: 0 5px 10px var(--clr-gray300);
-  }
-  
-  table th {
+}
+
+table th {
     padding: 1rem 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 0.7rem;
+    font-size: 1.4rem;
     font-weight: 900;
-  }
-  
-  table td {
+    vertical-align: middle; /* Adjusted for vertical alignment */
+}
+
+table td {
     padding: 1rem 2rem;
-  }
-  
-  table a {
+    font-size: 1rem;
+    vertical-align: middle; /* Adjusted for vertical alignment */
+}
+
+table a {
     text-decoration: none;
     color: var(--clr-link);
-  }
-  
-  table .status {
+}
+
+table .status {
     border-radius: var(--radius);
     background-color: red;
     padding: 0.2rem 1rem;
     text-align: center;
-  }
-  
-  table .status-pending {
+}
+
+table .status-pending {
     background-color: var(--clr-pending);
     color: var(--clr-pending-font);
-  }
-  
-  table .status-paid {
+}
+
+table .status-paid {
     background-color: var(--clr-paid);
     color: var(--clr-paid-font);
-  }
-  
-  table .status-unpaid {
+}
+
+table .status-unpaid {
     background-color: var(--clr-unpaid);
     color: var(--clr-unpaid-font);
-  }
-  
-  table .amount {
+}
+
+table .amount {
     text-align: right;
-  }
-  
-  /* Color alternating rows */
-  table tr:nth-child(even) {
+}
+
+/* Color alternating rows */
+table tr:nth-child(even) {
     background-color: var(--clr-gray150);
-  }
-  
+}
