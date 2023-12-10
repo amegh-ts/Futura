@@ -1,9 +1,9 @@
 const router = require('express').Router()
 const notification = require('../Models/NotificationSchema')
-const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
+const { verifyToken } = require('../VerifyToken');
 
-router.post('/sendNotification',verifyToken,verifyTokenAndAuthorization, async (req, res) => {
-    console.log('Postman data ?', req.body);
+router.post('/sendNotification',verifyToken, async (req, res) => {
+    // console.log('Postman data ?', req.body);
     const newNotification = new notification(req.body)
     try {
         const savedNotification = await newNotification.save()

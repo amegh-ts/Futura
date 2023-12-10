@@ -2,7 +2,7 @@ const mongoose=require('mongoose')
 
 const NotificationSchema=new mongoose.Schema({
     user:{type:String,required:true},
-    type:{type:String,required:true},
+    priority:{type:String,required:true},
     notification:{type:String,required:true}
 },{timestamps:true})
 

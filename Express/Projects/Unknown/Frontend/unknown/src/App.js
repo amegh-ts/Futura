@@ -8,17 +8,17 @@ import Notification from './Components/User/Notification/Notification';
 
 function App() {
   const reduxData = useSelector((state) => state.user.userInfo[0]);
-  console.log('reduxdata', reduxData);
+  // console.log('reduxdata', reduxData);
   
   let content;
 
   if (reduxData) {
     const token = reduxData.accessToken;
-    console.log('The access token is', token);
+    // console.log('The access token is', token);
     const id = reduxData.id;
-    console.log('The id is', id);
+    // console.log('The id is', id);
     const type = reduxData.type;
-    console.log('The type is', type);
+    // console.log('The type is', type);
 
     // Token and User type check
     if (token) {

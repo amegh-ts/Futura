@@ -15,7 +15,7 @@ const Profile = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
-        console.log('Data from API:', apiData);
+        // console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);
@@ -31,7 +31,7 @@ const Profile = () => {
     setPhone(data.phone || '');
   }, [data])
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <profile>
