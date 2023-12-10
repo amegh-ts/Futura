@@ -13,7 +13,7 @@ dotenv.config()
 
 
 const userRouter = require('./Router/UserRouter')
-
+const notificationRouter=require('./Router/NotificationRouter')
 
 
 mongoose.connect(process.env.Mongo_Key).then(() => {
@@ -24,6 +24,7 @@ mongoose.connect(process.env.Mongo_Key).then(() => {
 app.use(express.json())
 
 app.use('/', userRouter)
+app.use('/', notificationRouter)
 
 
 app.listen(5000, () => {

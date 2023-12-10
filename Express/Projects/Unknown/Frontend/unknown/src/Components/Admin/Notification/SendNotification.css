@@ -21,6 +21,9 @@
 
 .send-notification-body {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 textarea {
@@ -46,4 +49,9 @@ textarea {
 
 .send-notification-body button:hover {
     cursor: pointer;
+}
+
+.send-notification-body select{
+    padding: 10px;
+    outline: none;
 }

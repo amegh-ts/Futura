@@ -5,17 +5,17 @@ const storedData = localStorage.getItem('persist:unknown');
 const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
 const userId = user?.userInfo?.[0]?.id;
 
-console.log(userId);
+// console.log(userId);
 
 // SignUp
 export const signUpData = async (data) => {
-    console.log('first check', data);
+    // console.log('first check', data);
     const newData = { ...data, type: 'user' }
-    console.log('new dattaaa', newData);
+    // console.log('new dattaaa', newData);
     try {
         const res = await publicRequest.post('/signup', newData);
         console.log('Response Status:', res.status);
-        console.log('Response Data:', res.data);
+        // console.log('Response Data:', res.data);
     } catch (err) {
         console.log(err);
     }
@@ -38,10 +38,24 @@ export const signInData = async (loginData, dispatch) => {
 //Profile
 export const getIdData = async () => {
     try {
-        console.log('User ID:', userId);
+        // console.log('User ID:', userId);
         const res = await userRequest.get(`/profile/${userId}`)
-        console.log('Sing res', res);
+        console.log('Sing res', res.status);
         return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//send notification
+export const sendNotification=async(data)=>{
+    try {
+        console.log('first check',data);
+    const newData = { ...data, user: 'Admin' }
+    console.log('newdaaaaaaaaaaaata',newData);
+        const res= await userRequest.post('/sendNotification',newData)
+        console.log('Response Status:', res.status);
+        console.log('Response Data:', res.data);
     } catch (error) {
         console.log(error);
     }
