@@ -2,13 +2,13 @@ const jwt = require("jsonwebtoken");
 
 // Code to check the token is correct
 const verifyToken = (req, res, next) => {
-    console.log('>>>>>>>>>>>>>>>', req);
+    // console.log('>>>>>>>>>>>>>>>', req);
     let authHeader = req.headers.token       
-    console.log("req.header.token===", authHeader);
+    // console.log("req.header.token===", authHeader);
 
     if (authHeader) {
         const token = authHeader.split(" ")[1];          
-        console.log('Separated token==', token);
+        // console.log('Separated token==', token);
 
         jwt.verify(token, process.env.Jwt_Key, (err, user) => {
             if (err) {
@@ -16,7 +16,7 @@ const verifyToken = (req, res, next) => {
                 return res.status(403).json("This token is not valid");
             }
             req.user = user;
-            console.log("User?????????", user);
+            // console.log("User?????????", user);
             next();                                           
         });
     } else {
@@ -28,9 +28,9 @@ const verifyToken = (req, res, next) => {
 //code to check if id matches 
 const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, (data) => {
-        console.log('data?????',data);
-        console.log('req.user.id==', req.user.id);
-        console.log('req.params.id==', req.params.id);
+        // console.log('data?????',data);
+        // console.log('req.user.id==', req.user.id);
+        // console.log('req.params.id==', req.params.id);
         if (req.user.id === req.params.id) {
             console.log('successful');
             next()
