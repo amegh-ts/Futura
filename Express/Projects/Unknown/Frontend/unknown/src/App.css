@@ -56,6 +56,8 @@
     transition: all .50s ease;
 
   }
+
+  
 }
 
 /* 620 */
@@ -83,4 +85,11 @@
     transition: all .50s ease;
 
   }
+  .admin-dash-card {
+    max-width: 500px;
+    width: 200px !important;
+    padding: 15px 20px;
+    background-color: var(--box1-color);
+    transition: var(--tran-05);
+}
 }
