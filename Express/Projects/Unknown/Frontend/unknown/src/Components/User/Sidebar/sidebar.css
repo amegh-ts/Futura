@@ -213,9 +213,6 @@ header .image-text .profession{
     opacity: 0;
 }
 
-
-
-
 .home{
     position: absolute;
     top: 0;
@@ -241,7 +238,7 @@ header .image-text .profession{
 
 
 
-.navbar-containe{
+.navbar-container{
     background: var(--sidebar-color);
     min-width: 100px;
     height: 70px;
@@ -305,4 +302,5 @@ header .image-text .profession{
     height: 830px;
     padding: 0 20px;
     overflow: auto;
+    transition: all 0.3s ease;
 }

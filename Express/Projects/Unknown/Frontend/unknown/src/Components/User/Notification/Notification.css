@@ -1,0 +1,47 @@
+.notification-main{
+    padding: 20px;
+}
+.notification-header{
+    display: flex;
+    align-items: center;
+    
+}
+.notification-header h3{
+    font-weight: 500;
+    
+}
+.bell-icon{
+    font-size: 46px;
+}
+.notification-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.notification-box{
+    background: var( --body-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    border-left: solid 2px var(--primary-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+.ntb-content h5{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.ntb-content p{
+    color: var(--text-color);
+    font-size: 20px;
+}
+.ntb-content h6{
+    color: var(--text-color);
+    font-weight: 200;
+    font-size: 14px;
+}

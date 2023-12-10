@@ -8,6 +8,7 @@ const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
 // Signup
 router.post('/signup', async (req, res) => {
     req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+    // req.body.type = Crypto.AES.encrypt(req.body.type, process.env.Crypto_js).toString()
     console.log('Postman data ?', req.body);
     const newUser = new users(req.body)
     try {
@@ -45,13 +46,13 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
     try {
         const id = await users.findById(req.params.id)
         console.log('sdfghiuytrdsdfghuitrdxcfghui', id);
-        const hashedPassword = Crypto.AES.decrypt(id.password, process.env.Crypto_js)
-        console.log('hashed passsss', hashedPassword);
-        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
-        console.log(originalPassword);
-        const {password,...others}=id._doc
-
-        res.status(200).json({...others,originalPassword})
+        // const hashedPassword = Crypto.AES.decrypt(id.type, process.env.Crypto_js)
+        // console.log('hashed passsss', hashedPassword);
+        // const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
+        // console.log(originalPassword);
+        // const {password,...others}=id._doc
+        // res.status(200).json({...others,originalPassword})
+        res.status(200).json(id)
     } catch (error) {
         res.status(500).json(error)
     }

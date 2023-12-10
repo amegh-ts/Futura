@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
-:root{
+:root {
   /* ===== Colors ===== */
   --body-color: #E4E9F7;
   --sidebar-color: #FFF;
@@ -19,8 +19,8 @@
 
   /* ======== Card gradient ======= */
 
-  --card-gradient-color1:#5a4fd0;
---card-gradient-color2:#695CFE;
+  --card-gradient-color1: #5a4fd0;
+  --card-gradient-color2: #695CFE;
 }
 
 
@@ -33,31 +33,47 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  }
+}
 
 
 
 /* 860 */
-  @media (max-width: 860px) {
-    .navbar-search input{
-      width: 150px !important;
-      transition: all .50s ease;
-    }
+@media (max-width: 860px) {
+  .navbar-search input {
+    width: 150px !important;
+    transition: all .50s ease;
   }
 
-  /* 620 */
-  @media (max-width: 620px) {
-    .navbar-search input{
-      width: 100px !important;
-      transition: all .50s ease;
-    }
-  }
-
-  /* 540 */
-  @media (max-width: 540px) {
-    .navbar-search {
-      display: none !important;
-      transition: all .50s ease;
-    }
+  .notification-box {
+    padding-left: 60px !important;
+    transition: all .50s ease;
 
   }
+}
+
+/* 620 */
+@media (max-width: 620px) {
+  .navbar-search input {
+    width: 100px !important;
+    transition: all .50s ease;
+  }
+
+  .notification-box {
+    padding-left: 40px !important;
+    transition: all .50s ease;
+
+  }
+}
+
+/* 540 */
+@media (max-width: 540px) {
+  .navbar-search {
+    display: none !important;
+    transition: all .50s ease;
+  }
+  .notification-box {
+    padding-left: 10px !important;
+    transition: all .50s ease;
+
+  }
+}
