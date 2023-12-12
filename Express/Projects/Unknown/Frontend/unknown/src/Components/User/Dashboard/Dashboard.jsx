@@ -24,10 +24,19 @@ const Dashboard = () => {
           <p>Welcome {data.uname}</p>
         </div>
         <div className='udm-up-body'>
-          <div>
-          <img src="/Images/people.svg" alt="" />
+          <div className='udm-up-image'>
+            <img src="/Images/people.svg" alt="" />
           </div>
-          <div></div>
+          <div className='udm-up-analytic'>
+            <div>
+              <div className='udm-up-card1'></div>
+              <div className='udm-up-card2'></div>
+            </div>
+            <div>
+              <div className='udm-up-card3'>n</div>
+              <div className='udm-up-card4'></div>
+            </div>
+          </div>
 
         </div>
       </section>
