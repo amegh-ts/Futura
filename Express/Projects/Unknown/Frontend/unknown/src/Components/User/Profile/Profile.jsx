@@ -40,6 +40,7 @@ const Profile = () => {
   const onChangePassword = async () => {
     console.log(password);
     await updatePassword({ password })
+    alert('successfully updated')
   }
 
 
