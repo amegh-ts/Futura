@@ -37,9 +37,9 @@ const Profile = () => {
     await updateProfile({ uname, dob, phone, email })
     alert('successfully updated')
   }
-  const onChangePassword = async() => {
+  const onChangePassword = async () => {
     console.log(password);
-await updatePassword({password})
+    await updatePassword({ password })
   }
 
 
