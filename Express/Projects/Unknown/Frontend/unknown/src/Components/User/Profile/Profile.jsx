@@ -23,7 +23,10 @@ const Profile = () => {
     fetchData();
   }, []);
 
-const onChangePass=()=>{
+  const onEditProfile=()=>{
+    console.log(uname);
+  }
+const onChangePassword=()=>{
   console.log(password);
 }
 
@@ -65,7 +68,7 @@ const onChangePass=()=>{
               <input type="text" placeholder={data.phone} value={phone} onChange={(e) => setPhone(e.target.value)} />
             </div>
             <div className="edit-profile-button">
-              <button>Submit</button>
+              <button onClick={onEditProfile}>Submit</button>
             </div>
           </div>
           <div>
@@ -78,7 +81,7 @@ const onChangePass=()=>{
                 <input type="password" placeholder='Confirm Password'value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               <div className="edit-profile-button">
-                <button onClick={onChangePass}>Submit</button>
+                <button onClick={onChangePassword}>Submit</button>
               </div>
             </div>
           </div>

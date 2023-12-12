@@ -9,7 +9,7 @@ const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
 router.post('/signup', async (req, res) => {
     req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
     // req.body.type = Crypto.AES.encrypt(req.body.type, process.env.Crypto_js).toString()
-    console.log('Postman data ?', req.body);
+    // console.log('Postman data ?', req.body);
     const newUser = new users(req.body)
     try {
         const savedUser = await newUser.save()
@@ -18,7 +18,6 @@ router.post('/signup', async (req, res) => {
         res.status(500).json(err)
     }
 })
-
 
 //signin
 router.post('/signin', async (req, res) => {
@@ -45,10 +44,18 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
     console.log(req.params.id);
     try {
         const id = await users.findById(req.params.id)
-        // console.log('sdfghiuytrdsdfghuitrdxcfghui', id);
         res.status(200).json(id)
     } catch (error) {
         res.status(500).json(error)
+    }
+})
+
+router.put('/updateprofile/:id', async (req, res) => {
+    try {
+        const updateData = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true })  // new: true used to add new data if not given it will not update
+        res.status(200).json(updateData)
+    } catch (err) {
+        res.status(500).json(err)
     }
 })
 
