@@ -24,9 +24,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    align-items: stretch; /* Ensure both sections have the same height */
 }
 
-.cards-1, .cards-2 {
+.cards-1,
+.cards-2 {
     display: grid;
     gap: 10px;
 }
@@ -35,11 +37,23 @@
 .udm-up-card2,
 .udm-up-card3,
 .udm-up-card4 {
-    max-height: 170px;
+    max-height: 210px; /* You may want to adjust this */
     background-color: #96B2FB;
     border-radius: 20px;
-    padding: 10px 20px;
-    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+/* Responsive font size */
+.udm-up-card1 h3,
+.udm-up-card2 h3,
+.udm-up-card3 h3,
+.udm-up-card4 h3 {
+    font-size: clamp(16px, 4vw, 32px);
 }
 
 .udm-up-card2 {
@@ -53,3 +67,4 @@
 .udm-up-card4 {
     background-color: #F3797E;
 }
+

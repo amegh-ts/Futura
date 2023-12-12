@@ -29,12 +29,32 @@ const Dashboard = () => {
           </div>
           <div className='udm-up-analytic'>
             <div className='cards-1'>
-              <div className='udm-up-card1'>1</div>
-              <div className='udm-up-card2'>2</div>
+              <div className='udm-up-card1'>
+                <p>Runtime</p>
+                <h3>200hr</h3>
+                <p>2$$$</p>
+                <p>2$$$</p>
+              </div>
+              <div className='udm-up-card2'>
+              <p>Runtime</p>
+                <h3>200hr</h3>
+                <p>2$$$</p>
+                <p>2$$$</p>
+              </div>
             </div>
             <div className='cards-2'>
-              <div className='udm-up-card3'>3</div>
-              <div className='udm-up-card4'>4</div>
+              <div className='udm-up-card3'>
+              <p>Runtime</p>
+                <h3>200hr</h3>
+                <p>2$$$</p>
+                <p>2$$$</p>
+              </div>
+              <div className='udm-up-card4'>
+              <p>Runtime</p>
+                <h3>200hr</h3>
+                <p>2$$$</p>
+                <p>2$$$</p>
+              </div>
             </div>
           </div>
 
