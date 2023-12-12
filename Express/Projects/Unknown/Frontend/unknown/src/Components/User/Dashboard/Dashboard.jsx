@@ -21,6 +21,9 @@ const Dashboard = () => {
     <div>
       <section className="user-dash-main">
         njj
+        <div className='udm-image'>
+          <img src="/Images/people.svg" alt="" />
+        </div>
       </section>
     </div>
   )

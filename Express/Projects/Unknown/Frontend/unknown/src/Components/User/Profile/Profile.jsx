@@ -15,7 +15,6 @@ const Profile = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
-        // console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);
@@ -24,8 +23,12 @@ const Profile = () => {
     fetchData();
   }, []);
 
+const onChangePass=()=>{
+  console.log(password);
+}
+
   useEffect(() => {
-    setUname(data.uname || ''); // Set default value to empty string if undefined
+    setUname(data.uname || '');
     setDob(data.dob || '');
     setEmail(data.email || '');
     setPhone(data.phone || '');
@@ -52,9 +55,9 @@ const Profile = () => {
             <div className='profile-input'>
               <input type="text" placeholder={data.uname} value={uname} onChange={(e) => setUname(e.target.value)} />
             </div>
-            {/* <div className='profile-input'>
+            <div className='profile-input'>
               <input type="date" placeholder={data.dob} value={dob} onChange={(e) => setDob(e.target.value)} />
-            </div> */}
+            </div>
             <div className='profile-input'>
               <input type="text" placeholder={data.email} value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
@@ -69,13 +72,13 @@ const Profile = () => {
             <div className="edit-profile">
               <h3>Change Password</h3>
               <div className='profile-input'>
-                <input type="text" placeholder='Current Password'/>
+                <input type="password" placeholder='New Password'/>
               </div>
               <div className='profile-input'>
-                <input type="text" placeholder='New Password'/>
+                <input type="password" placeholder='Confirm Password'value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               <div className="edit-profile-button">
-                <button>Submit</button>
+                <button onClick={onChangePass}>Submit</button>
               </div>
             </div>
           </div>

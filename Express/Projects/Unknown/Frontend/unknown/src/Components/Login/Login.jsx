@@ -36,9 +36,6 @@ const Login = () => {
   }
 
 
-
-
-
   const toggleForm = () => {
     setRegisterActive(!isRegisterActive);
   };
