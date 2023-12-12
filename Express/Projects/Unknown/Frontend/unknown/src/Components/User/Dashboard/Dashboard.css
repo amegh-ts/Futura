@@ -2,6 +2,7 @@
     padding: 20px;
 
 }
+
 .udm-up-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -13,8 +14,8 @@
     object-fit: cover;
     display: flex;
     background-image: url('https://demo.bootstrapdash.com/skydash-free/template/images/dashboard/people.svg');
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center center;
     border-radius: 20px;
     padding: 20px;
@@ -31,7 +32,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    align-items: stretch; /* Ensure both sections have the same height */
+    align-items: stretch;
+    /* Ensure both sections have the same height */
 }
 
 .cards-1,
@@ -44,7 +46,8 @@
 .udm-up-card2,
 .udm-up-card3,
 .udm-up-card4 {
-    max-height: 210px; /* You may want to adjust this */
+    max-height: 210px;
+    /* You may want to adjust this */
     background-color: #96B2FB;
     border-radius: 20px;
     padding: 20px;
@@ -74,4 +77,3 @@
 .udm-up-card4 {
     background-color: #F3797E;
 }
-
