@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import './Login.css'
-import { signInData, signUpData } from '../ApiCalls';
+import { signInData, signUpData } from '../../ApiCalls';
 import { useDispatch } from 'react-redux';
 
 
