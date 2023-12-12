@@ -10,7 +10,7 @@ const Profile = () => {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [currentPassword,setCurrentPassword]=useState('')
+  const [currentPassword, setCurrentPassword] = useState('')
 
   useEffect(() => {
     async function fetchData() {
@@ -25,21 +25,23 @@ const Profile = () => {
     fetchData();
   }, []);
 
-  const onEditProfile= async()=>{
-    await updateProfile({uname,dob,phone,email})
-    alert('successfully updated')
-  }
-const onChangePassword=()=>{
-  console.log(password);
-}
-
   useEffect(() => {
     setUname(data.uname || '');
     setDob(data.dob || '');
     setEmail(data.email || '');
     setPhone(data.phone || '');
-    setCurrentPassword('current password is '+data.originalPassword|| '')
+    setCurrentPassword('current password is ' + data.originalPassword || '')
   }, [data])
+
+  const onEditProfile = async () => {
+    await updateProfile({ uname, dob, phone, email })
+    alert('successfully updated')
+  }
+  const onChangePassword = () => {
+    console.log(password);
+  }
+
+
 
   return (
     <profile>
@@ -77,10 +79,10 @@ const onChangePassword=()=>{
             <div className="edit-profile">
               <h3>Change Password</h3>
               <div className='profile-input'>
-                <input type="text" placeholder='Current Password' value={currentPassword}/>
+                <input type="text" placeholder='Current Password' value={currentPassword} />
               </div>
               <div className='profile-input'>
-                <input type="password" placeholder='New Password'value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" placeholder='New Password' value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               <div className="edit-profile-button">
                 <button onClick={onChangePassword}>Submit</button>
