@@ -6,16 +6,22 @@ import { getUsers } from '../../ApiCalls';
 
 const AdminDashboard = () => {
   const [state, setState] = useState(0)
+  const [admins, setAdmin] = useState(0)
+  const [clients, setClients] = useState(0)
 
   useEffect(() => {
     async function display() {
-      const users = await getUsers();
-      console.log(users);
-      setState(users.length)
-      console.log(users.length);
+      const allusers = await getUsers();
+      console.log(allusers);
+      setState(allusers.length)
 
-      const admins = users.filter(user => user.type === 'admin');
-      console.log(admins);
+      const admins = allusers.filter(user => user.type === 'admin');
+      console.log('a',admins.length);
+      setAdmin(admins.length);
+
+      const clients = allusers.filter(user => user.type === 'admin');
+      console.log(clients);
+      setClients(clients.length)
     }
     display()
 
@@ -33,22 +39,22 @@ const AdminDashboard = () => {
               <i>
                 <IoPersonOutline />
               </i>
-              <p>Users</p>
-              <span>{state}</span>
+              <p>Admins</p>
+              <span>{admins}</span>
             </div>
             <div className="admin-dash-card b-card2">
               <i>
                 <IoPersonOutline />
               </i>
-              <p>Users</p>
-              <span>200</span>
+              <p>Clients</p>
+              <span>{clients}</span>
             </div>
             <div className="admin-dash-card b-card3">
               <i>
                 <IoPersonOutline />
               </i>
-              <p>Users</p>
-              <span>200</span>
+              <p>Total Users</p>
+              <span>{state}</span>
             </div>
             <div className="admin-dash-card b-card4">
               <i>
