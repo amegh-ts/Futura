@@ -49,10 +49,10 @@ export const getIdData = async () => {
 }
 
 //Update profile
-export const updateProfile = async (datas) => {
+export const updateProfile = async (data) => {
     console.log('Update id ?', userId);
     try {
-        const res = await publicRequest.put(`/updateprofile/${userId}`, datas)
+        const res = await publicRequest.put(`/updateprofile/${userId}`, data)
         console.log('Updated data is', res.data);
     } catch (err) {
         console.log(err);
@@ -61,10 +61,10 @@ export const updateProfile = async (datas) => {
 }
 
 //Update password
-export const updatePassword = async (datas) => {
+export const updatePassword = async (data) => {
     console.log('Update id ?', userId);
     try {
-        const res = await publicRequest.put(`/updateprofile/${userId}`, datas)
+        const res = await publicRequest.put(`/updatepassword/${userId}`, data)
         console.log('Updated data is', res.data);
     } catch (err) {
         console.log(err);
@@ -75,12 +75,10 @@ export const updatePassword = async (datas) => {
 //send notification
 export const sendNotification = async (data) => {
     try {
-        console.log('first check', data);
         const newData = { ...data, user: 'Admin' }
-        console.log('newdaaaaaaaaaaaata', newData);
         const res = await userRequest.post('/sendNotification', newData)
         console.log('Response Status:', res.status);
-        console.log('Response Data:', res.data);
+
     } catch (error) {
         console.log(error);
     }
