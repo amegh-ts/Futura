@@ -5,20 +5,21 @@ import { IoSearch } from "react-icons/io5";
 import { getUsers } from '../../ApiCalls';
 
 const AllUsers = () => {
-    const [state, setState] = useState(0)
+    const [state, setState] = useState([])
 
     useEffect(() => {
         async function display() {
-          try {
-            const allusers = await getUsers();
-          setState(allusers.length)
-          } catch (error) {
-            console.log(error);
-          }
+            try {
+                const allusers = await getUsers();
+                setState(allusers)
+                console.log(state);
+            } catch (error) {
+                console.log(error);
+            }
         }
         display()
-    
-      }, [])
+
+    }, [])
 
     return (
         <div>
@@ -34,25 +35,30 @@ const AllUsers = () => {
                     </div>
                 </div>
                 <div className="all-users-body">
-                    <div className="user-cards">
-                        <div className="user-cards-img">
-                            <img src="Images/p1.png" alt="" />
+                    {state.map((user, index) => (
+                        <div className="user-cards" key={index}>
+                            <div className="user-cards-img">
+                                <img src='/Images/' alt="" />
+                            </div>
+                            <div>
+                                <p>{user.uname}</p>
+                            </div>
+                            <div>
+                                <p>{user.email}</p>
+                            </div>
+                            <div>
+                                <p>{user.phone}</p>
+                            </div>
+                            <div>
+                                <p>{user.type}</p>
+                            </div>
+                            <div>
+                                <button>edit</button>
+                            </div>
                         </div>
-                        <div>
-                        <p>Name</p>
-                        </div>
-                        <div>
-                            <p>Email</p>
-                        </div>
-                        <div>
-                            <p>Phone</p>
-                        </div>
-                        <div>
-                            <button>edit</button>
-                        </div>
-                    </div>
+                    ))}
 
-                    
+
                 </div>
             </div>
         </div>
