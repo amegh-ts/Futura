@@ -38,26 +38,24 @@
     width: 250px;
 }
 
-.all-users-body {
-    display: flex;
-    flex-direction: column;
+.all-users-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 30px;
-    gap: 10px;
 }
 
-.user-cards {
+.all-users-table th, .all-users-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.all-users-table th {
     background-color: var(--body-color);
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    gap: 20px;
 }
 
 .user-cards-img {
-    background: white;
+    /* background: white; */
     padding: 1px;
     border-radius: 50%;
     display: flex;
@@ -65,20 +63,16 @@
 }
 
 .user-cards-img img {
-    width: 70px;
-}
-
-.user-cards p {
-    font-size: 16px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .user-cards button {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 8px;
     background: var(--primary-color);
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: white;
     cursor: pointer;
-
 }
