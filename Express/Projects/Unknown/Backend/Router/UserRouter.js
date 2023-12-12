@@ -63,6 +63,16 @@ router.put('/updateprofile/:id', async (req, res) => {
     }
 })
 
-//
+//update password
+router.post('/updatepassword', async (req, res) => {
+    req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+    const newUser = new users(req.body)
+    try {
+        const savedUser = await newUser.save()
+        res.status(200).json(savedUser)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router
