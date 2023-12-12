@@ -50,10 +50,9 @@ export const getIdData = async () => {
 
 //Update profile
 export const updateProfile = async (data) => {
-    console.log('Update id ?', userId);
     try {
         const res = await publicRequest.put(`/updateprofile/${userId}`, data)
-        console.log('Updated data is', res.data);
+        console.log(res.status);
     } catch (err) {
         console.log(err);
 
@@ -62,9 +61,9 @@ export const updateProfile = async (data) => {
 
 //Update password
 export const updatePassword = async (data) => {
-    console.log('Update id ?', userId);
+    console.log('Update id ?', data);
     try {
-        const res = await publicRequest.put(`/updatepassword/${userId}`, data)
+        const res = await publicRequest.put(`/updatepass/${userId}`, data)
         console.log('Updated data is', res.data);
     } catch (err) {
         console.log(err);

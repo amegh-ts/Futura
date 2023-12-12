@@ -64,11 +64,10 @@ router.put('/updateprofile/:id', async (req, res) => {
 })
 
 //update password
-router.post('/updatepassword:/id', async (req, res) => {
+router.put('/updatepass/:id', async (req, res) => {
     try {
-        console.log(req.body);
-        // const updatePassword = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true }) 
-        // res.status(200).json(updateData)
+        const updateData = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true }) 
+        res.status(200).json(updateData)
     } catch (err) {
         res.status(500).json(err)
     }
