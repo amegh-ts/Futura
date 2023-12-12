@@ -39,7 +39,7 @@ const Dashboard = () => {
                 <p>2$$$</p>
               </div>
               <div className='udm-up-card2'>
-              <p>Runtime</p>
+                <p>Runtime</p>
                 <h3>200hr</h3>
                 <p>2$$$</p>
                 <p>2$$$</p>
@@ -47,13 +47,13 @@ const Dashboard = () => {
             </div>
             <div className='cards-2'>
               <div className='udm-up-card3'>
-              <p>Runtime</p>
+                <p>Runtime</p>
                 <h3>200hr</h3>
                 <p>2$$$</p>
                 <p>2$$$</p>
               </div>
               <div className='udm-up-card4'>
-              <p>Runtime</p>
+                <p>Runtime</p>
                 <h3>200hr</h3>
                 <p>2$$$</p>
                 <p>2$$$</p>
