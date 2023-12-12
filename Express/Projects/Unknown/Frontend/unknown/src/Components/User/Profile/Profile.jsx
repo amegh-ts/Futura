@@ -15,6 +15,7 @@ const Profile = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
+        console.log(apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);
@@ -76,10 +77,10 @@ const onChangePassword=()=>{
             <div className="edit-profile">
               <h3>Change Password</h3>
               <div className='profile-input'>
-                <input type="password" placeholder='New Password'/>
+                <input type="password" placeholder='Current Password'/>
               </div>
               <div className='profile-input'>
-                <input type="password" placeholder='Confirm Password'value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" placeholder='New Password'value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               <div className="edit-profile-button">
                 <button onClick={onChangePassword}>Submit</button>

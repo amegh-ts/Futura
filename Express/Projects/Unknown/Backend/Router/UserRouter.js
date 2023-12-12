@@ -44,6 +44,7 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
     console.log(req.params.id);
     try {
         const id = await users.findById(req.params.id)
+        const hashedPassword = Crypto.AES.decrypt(id.password, process.env.Crypto_js)
         res.status(200).json(id)
     } catch (error) {
         res.status(500).json(error)

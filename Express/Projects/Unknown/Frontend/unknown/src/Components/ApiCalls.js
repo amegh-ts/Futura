@@ -40,6 +40,7 @@ export const getIdData = async () => {
     try {
         // console.log('User ID:', userId);
         const res = await userRequest.get(`/profile/${userId}`)
+        
         console.log('Sing res', res.status);
         return res.data
     } catch (error) {
@@ -51,7 +52,7 @@ export const getIdData = async () => {
 export const updateProfile = async (datas) => {
     console.log('Update id ?', userId);
     try {
-        const res = await publicRequest.put(`/updatedata/${userId}`, datas)
+        const res = await publicRequest.put(`/updateprofile/${userId}`, datas)
         console.log('Updated data is', res.data);
     } catch (err) {
         console.log(err);
