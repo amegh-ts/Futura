@@ -77,9 +77,8 @@ router.put('/updatepass/:id',verifyToken, async (req, res) => {
 //all users
 router.get('/alldata', async (req, res) => {
     try {
-        const datas = await users.find()
-        console.log(datas);
-        res.status(200).json(datas)
+        const data = await users.find()
+        res.status(200).json(data)
     } catch (err) {
         res.status(500).json(err)
     }
