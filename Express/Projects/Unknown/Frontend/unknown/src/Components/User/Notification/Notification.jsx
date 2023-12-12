@@ -15,7 +15,6 @@ const Notification = () => {
     display()
 
   }, [])
-  console.log('state data', state);
 
   const getPriorityColor = (priority) => {
     switch (priority) {

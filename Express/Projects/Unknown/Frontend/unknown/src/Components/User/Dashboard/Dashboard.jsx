@@ -11,7 +11,6 @@ const Dashboard = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
-        console.log('Data from API:', apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);

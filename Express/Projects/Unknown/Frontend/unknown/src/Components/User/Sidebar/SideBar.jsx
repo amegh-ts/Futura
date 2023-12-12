@@ -19,7 +19,7 @@ const SideBar = () => {
     };
 
     const closeSidebar = () => {
-        setSidebarClosed(true); 
+        setSidebarClosed(true);
     };
 
     const handleLogout = () => {
@@ -27,10 +27,10 @@ const SideBar = () => {
     };
 
     const pageComponents = {
-        
+
         dashboard: <Dashboard />,
         profile: <Profile />,
-        notification:<Notification/>
+        notification: <Notification />
     };
 
     return (
