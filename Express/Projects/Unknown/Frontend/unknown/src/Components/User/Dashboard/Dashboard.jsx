@@ -20,9 +20,15 @@ const Dashboard = () => {
   return (
     <div>
       <section className="user-dash-main">
-        njj
-        <div className='udm-image'>
+        <div>
+          <p>Welcome {data.uname}</p>
+        </div>
+        <div className='udm-up-body'>
+          <div>
           <img src="/Images/people.svg" alt="" />
+          </div>
+          <div></div>
+
         </div>
       </section>
     </div>

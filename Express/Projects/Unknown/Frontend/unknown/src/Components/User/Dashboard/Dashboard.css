@@ -2,13 +2,14 @@
     padding: 20px;
 
 }
-
-.udm-image{
-    width: 300px;
+.udm-image {
     object-fit: cover;
     background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
 }
 
-.udm-image img{
-    object-fit: cover;
+.udm-image img {
+    width: 100%;
+    height: 100%;
 }
