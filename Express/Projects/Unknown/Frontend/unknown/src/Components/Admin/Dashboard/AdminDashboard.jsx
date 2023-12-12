@@ -4,6 +4,16 @@ import { IoPersonOutline } from "react-icons/io5";
 
 
 const AdminDashboard = () => {
+
+  useEffect(() => {
+    async function display() {
+      const users = await getUsers();
+      console.log(users);
+      console.log(users.length);
+    }
+    display()
+
+  }, [])
   return (
     <div>
       <section className='admin-dash-main'>
