@@ -64,12 +64,10 @@ router.put('/updateprofile/:id', async (req, res) => {
 })
 
 //update password
-router.post('/updatepassword', async (req, res) => {
-    req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
-    const newUser = new users(req.body)
+router.post('/updatepassword:/id', async (req, res) => {
     try {
-        const savedUser = await newUser.save()
-        res.status(200).json(savedUser)
+        const updatePassword = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true })  // new: true used to add new data if not given it will not update
+        res.status(200).json(updateData)
     } catch (err) {
         res.status(500).json(err)
     }
