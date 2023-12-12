@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Profile.css'
-import { getIdData, updateProfile } from '../../ApiCalls'
+import { getIdData, updatePassword, updateProfile } from '../../ApiCalls'
 
 const Profile = () => {
   const [data, setData] = useState({});
@@ -37,8 +37,9 @@ const Profile = () => {
     await updateProfile({ uname, dob, phone, email })
     alert('successfully updated')
   }
-  const onChangePassword = () => {
+  const onChangePassword = async() => {
     console.log(password);
+await updatePassword({password})
   }
 
 
