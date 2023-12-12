@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Adminsidebar.css'
-import { IoPersonSharp, IoSearch } from "react-icons/io5";
+import { IoPersonSharp } from "react-icons/io5";
 import { logoutUser } from '../../../Redux/UserRedux';
 import { useDispatch } from 'react-redux';
 import AdminDashboard from '../Dashboard/AdminDashboard';
@@ -11,7 +11,7 @@ import AllUsers from '../Allusers/AllUsers';
 
 const AdminSidebar = () => {
     const [isSidebarClosed, setSidebarClosed] = useState(true);
-    const [activePage, setActivePage] = useState('AdminDashboard');
+    const [activePage, setActivePage] = useState('dashboard');
     const dispatch = useDispatch()
 
     const toggleSidebar = () => {
