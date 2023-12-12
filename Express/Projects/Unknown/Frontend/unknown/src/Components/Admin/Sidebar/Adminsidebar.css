@@ -39,9 +39,12 @@ body{
     width: 88px;
 }
 
-.sidebar .menu-links .nav-link.active .icon {
+.sidebar .menu-links .nav-link.active .icon
+{
     color: var(--active-icon-color);
-    color: red;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: white;
     /* Add any other styles for the active icon state */
 }
 
