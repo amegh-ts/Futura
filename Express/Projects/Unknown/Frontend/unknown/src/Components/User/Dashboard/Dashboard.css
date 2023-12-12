@@ -2,70 +2,56 @@
     padding: 20px;
 
 }
-
 .udm-up-body {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
 .udm-up-image {
     object-fit: cover;
-    background-color: antiquewhite;
-    padding: 10px;
+    /* background-color: antiquewhite; */
+    /* padding: 10px; */
     display: flex;
-    width: 700px;
 }
 
 .udm-up-image img {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .udm-up-analytic {
-    display: flex;
-    gap: 10px;
-}
-.cards-1{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.cards-2{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-.udm-up-card1 {
-    height: 140px;
-    width: 300px;
+.cards-1, .cards-2 {
+    display: grid;
+    gap: 10px;
+}
+
+.udm-up-card1,
+.udm-up-card2,
+.udm-up-card3,
+.udm-up-card4 {
+    max-height: 170px;
     background-color: #96B2FB;
     border-radius: 20px;
     padding: 10px 20px;
+    
 }
 
 .udm-up-card2 {
-    height: 140px;
-    width: 300px;
     background-color: #7978E9;
-    border-radius: 20px;
-    padding: 10px 20px;
 }
 
 .udm-up-card3 {
-    height: 140px;
-    width: 300px;
     background-color: #4747A1;
-    border-radius: 20px;
-    padding: 10px 20px;
 }
 
 .udm-up-card4 {
-    height: 140px;
-    width: 300px;
     background-color: #F3797E;
-    border-radius: 20px;
-    padding: 10px 20px;
 }
