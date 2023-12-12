@@ -12,15 +12,12 @@ const AdminDashboard = () => {
   useEffect(() => {
     async function display() {
       const allusers = await getUsers();
-      console.log(allusers);
       setState(allusers.length)
 
       const admins = allusers.filter(user => user.type === 'admin');
-      console.log('a',admins.length);
       setAdmin(admins.length);
 
       const clients = allusers.filter(user => user.type === 'admin');
-      console.log(clients);
       setClients(clients.length)
     }
     display()
