@@ -34,16 +34,27 @@ const Profile = () => {
   }, [data])
 
   const onEditProfile = async () => {
-    await updateProfile({ uname, dob, phone, email })
-    alert('successfully updated')
-    window.location.reload();
-  }
+    try {
+      await updateProfile({ uname, dob, phone, email });
+      alert('Successfully updated');
+      window.location.reload();
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      alert('Error updating profile. Please try again.');
+    }
+  };
+  
   const onChangePassword = async () => {
-    console.log(password);
-    await updatePassword({ password })
-    alert('successfully updated')
-    window.location.reload();
-  }
+    try {
+      await updatePassword({ password });
+      alert('Successfully updated');
+      window.location.reload();
+    } catch (error) {
+      console.error('Error updating password:', error);
+      alert('Error updating password. Please try again.');
+    }
+  };
+  
 
 
 
