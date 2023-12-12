@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import { getIdData } from '../../ApiCalls';
+import { IoMoonOutline } from "react-icons/io5";
+
 
 const Dashboard = () => {
   const [data, setData] = useState({});
@@ -25,7 +27,8 @@ const Dashboard = () => {
         </div>
         <div className='udm-up-body'>
           <div className='udm-up-image'>
-            <img src="/Images/people.svg" alt="" />
+            {/* <img src="/Images/people.svg" alt="" /> */}
+            <h1><IoMoonOutline />  </h1>
           </div>
           <div className='udm-up-analytic'>
             <div className='cards-1'>
