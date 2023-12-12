@@ -35,6 +35,17 @@ export const signInData = async (loginData, dispatch) => {
     }
 }
 
+//all users
+export const getUsers = async () => {
+    try {
+        const res = await userRequest.get('/alldata')
+        console.log('Sing res', res.status);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 //Profile
 export const getIdData = async () => {
     try {

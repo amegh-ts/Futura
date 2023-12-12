@@ -39,6 +39,16 @@ router.post('/signin', async (req, res) => {
     }
 })
 
+//all users
+router.get('/alldata', async (req, res) => {
+    try {
+        const data = await users.find()
+        res.status(200).json(data)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 //Profile
 router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req, res) => {
     console.log(req.params.id);
@@ -74,14 +84,6 @@ router.put('/updatepass/:id',verifyToken, async (req, res) => {
     }
 })
 
-//all users
-router.get('/alldata', async (req, res) => {
-    try {
-        const data = await users.find()
-        res.status(200).json(data)
-    } catch (err) {
-        res.status(500).json(err)
-    }
-})
+
 
 module.exports = router
