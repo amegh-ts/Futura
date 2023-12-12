@@ -5,7 +5,9 @@
 
 .udm-up-body {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .udm-up-image {
@@ -38,7 +40,7 @@
 .udm-up-card1 {
     height: 100px;
     width: 300px;
-    background-color: red;
+    background-color: #5E50F9;
 }
 
 .udm-up-card2 {
