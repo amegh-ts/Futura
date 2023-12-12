@@ -30,7 +30,7 @@ const Profile = () => {
     setDob(data.dob || '');
     setEmail(data.email || '');
     setPhone(data.phone || '');
-    setCurrentPassword('current password is ' + data.originalPassword || '')
+    setCurrentPassword('current pass ' + data.originalPassword || '')
   }, [data])
 
   const onEditProfile = async () => {
