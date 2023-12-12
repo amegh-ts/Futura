@@ -47,6 +47,17 @@ export const getIdData = async () => {
     }
 }
 
+//Update profile
+export const updateData = async (datas) => {
+    console.log('Update id ?', userId);
+    try {
+        const res = await publicRequest.put(`/updatedata/${userId}`, datas)
+        console.log('Updated data is', res.data);
+    } catch (err) {
+        console.log(err);
+
+    }
+}
 
 //send notification
 export const sendNotification = async (data) => {
