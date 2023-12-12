@@ -5,7 +5,7 @@ import { getUsers } from '../../ApiCalls';
 
 
 const AdminDashboard = () => {
-  const [state,setState]=useState(0)
+  const [state, setState] = useState(0)
 
   useEffect(() => {
     async function display() {
@@ -13,6 +13,9 @@ const AdminDashboard = () => {
       console.log(users);
       setState(users.length)
       console.log(users.length);
+
+      const admins = users.filter(user => user.type === 'admin');
+      console.log(admins);
     }
     display()
 
