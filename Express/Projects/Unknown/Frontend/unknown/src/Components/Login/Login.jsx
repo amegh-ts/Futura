@@ -20,6 +20,7 @@ const Login = () => {
     try {
       signUpData({ uname, dob, phone, email, password });
       alert("Successfully registered");
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
@@ -40,6 +41,8 @@ const Login = () => {
   };
 
   const handleSubmit = (event) => {
+    window.location.reload();
+
     // event.preventDefault();
     // Handle your form submission logic here
   };
