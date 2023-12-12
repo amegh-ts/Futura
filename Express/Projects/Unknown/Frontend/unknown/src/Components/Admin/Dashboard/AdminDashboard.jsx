@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './AdminDashboard.css'
 import { IoPersonOutline } from "react-icons/io5";
+import { getUsers } from '../../ApiCalls';
 
 
 const AdminDashboard = () => {
+  const [state,setState]=useState(0)
 
   useEffect(() => {
     async function display() {
       const users = await getUsers();
       console.log(users);
+      setState(users.length)
       console.log(users.length);
     }
     display()
@@ -28,7 +31,7 @@ const AdminDashboard = () => {
                 <IoPersonOutline />
               </i>
               <p>Users</p>
-              <span>200</span>
+              <span>{state}</span>
             </div>
             <div className="admin-dash-card b-card2">
               <i>
