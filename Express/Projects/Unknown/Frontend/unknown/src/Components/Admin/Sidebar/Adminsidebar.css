@@ -39,6 +39,12 @@ body{
     width: 88px;
 }
 
+.sidebar.active {
+    background-color: red;
+    /* Add any other styles for the active state */
+}
+
+
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
