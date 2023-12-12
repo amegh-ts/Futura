@@ -11,7 +11,8 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     async function display() {
-      const allusers = await getUsers();
+      try {
+        const allusers = await getUsers();
       setState(allusers.length)
 
       const admins = allusers.filter(user => user.type === 'admin');
@@ -19,6 +20,9 @@ const AdminDashboard = () => {
 
       const clients = allusers.filter(user => user.type === 'admin');
       setClients(clients.length)
+      } catch (error) {
+        console.log(error);
+      }
     }
     display()
 
@@ -65,7 +69,7 @@ const AdminDashboard = () => {
 
         <div className='admin-dash-bottom'>
           <div className='admin-dash-header'>
-            <i class='bx bx-time' ></i>
+            <i className='bx bx-time' ></i>
             <h3>Recent</h3>
           </div>
           {/************** table *************/}
@@ -86,45 +90,45 @@ const AdminDashboard = () => {
                   <td>Paragon</td>
                   <td>1/5/2021</td>
                   <td>
-                    <p class="status status-unpaid">Unpaid</p>
+                    <p className="status status-unpaid">Unpaid</p>
                   </td>
-                  <td class="amount">$520.18</td>
+                  <td className="amount">$520.18</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1002</a></td>
                   <td>Sonic</td>
                   <td>1/4/2021</td>
                   <td>
-                    <p class="status status-paid">Paid</p>
+                    <p className="status status-paid">Paid</p>
                   </td>
-                  <td class="amount">$415.25</td>
+                  <td className="amount">$415.25</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1003</a></td>
                   <td>Innercircle</td>
                   <td>1/2/2021</td>
                   <td>
-                    <p class="status status-pending">Pending</p>
+                    <p className="status status-pending">Pending</p>
                   </td>
-                  <td class="amount">$1324.84</td>
+                  <td className="amount">$1324.84</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1004</a></td>
                   <td>Varsity Plus</td>
                   <td>12/30/2020</td>
                   <td>
-                    <p class="status status-pending">Pending</p>
+                    <p className="status status-pending">Pending</p>
                   </td>
-                  <td class="amount">$998.26</td>
+                  <td className="amount">$998.26</td>
                 </tr>
                 <tr>
                   <td><a href="#">INV__1005</a></td>
                   <td>Highlander</td>
                   <td>12/18/2020</td>
                   <td>
-                    <p class="status status-paid">Paid</p>
+                    <p className="status status-paid">Paid</p>
                   </td>
-                  <td class="amount">$1152.35</td>
+                  <td className="amount">$1152.35</td>
                 </tr>
               </tbody>
             </table>
