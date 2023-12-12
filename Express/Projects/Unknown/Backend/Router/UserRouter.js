@@ -47,7 +47,7 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
         const hashedPassword = Crypto.AES.decrypt(id.password, process.env.Crypto_js)
         const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
         const { password, ...others } = id._doc
-        res.status(200).json({...others,originalPassword})
+        res.status(200).json({ ...others, originalPassword })
     } catch (error) {
         res.status(500).json(error)
     }
@@ -56,7 +56,7 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
 //update profile
 router.put('/updateprofile/:id', async (req, res) => {
     try {
-        const updateData = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true }) 
+        const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
         res.status(200).json(updateData)
     } catch (err) {
         res.status(500).json(err)
@@ -66,8 +66,8 @@ router.put('/updateprofile/:id', async (req, res) => {
 //update password
 router.put('/updatepass/:id', async (req, res) => {
     try {
-    req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
-        const updateData = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true }) 
+        req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+        const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
         res.status(200).json(updateData)
     } catch (err) {
         res.status(500).json(err)
