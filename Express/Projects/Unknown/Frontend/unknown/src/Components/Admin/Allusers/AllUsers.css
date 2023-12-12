@@ -38,6 +38,10 @@
     width: 250px;
 }
 
+.table-container {
+    overflow-x: auto;
+}
+
 .all-users-table {
     width: 100%;
     border-collapse: collapse;
@@ -46,16 +50,16 @@
 
 .all-users-table th, .all-users-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
 .all-users-table th {
-    background-color: var(--body-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .user-cards-img {
-    /* background: white; */
     padding: 1px;
     border-radius: 50%;
     display: flex;
@@ -64,15 +68,8 @@
 
 .user-cards-img img {
     width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
-.user-cards button {
-    font-size: 14px;
-    padding: 8px;
-    background: var(--primary-color);
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
+
