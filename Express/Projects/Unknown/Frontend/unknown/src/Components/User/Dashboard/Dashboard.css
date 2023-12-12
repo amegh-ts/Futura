@@ -6,7 +6,7 @@
 .udm-up-body {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-top: 20px;
 }
 
@@ -15,7 +15,7 @@
     background-color: antiquewhite;
     padding: 10px;
     display: flex;
-    width: 300px;
+    width: 700px;
 }
 
 .udm-up-image img {
