@@ -48,7 +48,7 @@ export const getIdData = async () => {
 }
 
 //Update profile
-export const updateData = async (datas) => {
+export const updateProfile = async (datas) => {
     console.log('Update id ?', userId);
     try {
         const res = await publicRequest.put(`/updatedata/${userId}`, datas)
