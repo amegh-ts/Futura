@@ -39,11 +39,11 @@ body{
     width: 88px;
 }
 
-.sidebar.active {
-    background-color: red;
-    /* Add any other styles for the active state */
+.sidebar .menu-links .nav-link.active .icon {
+    color: var(--active-icon-color);
+    color: red;
+    /* Add any other styles for the active icon state */
 }
-
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
