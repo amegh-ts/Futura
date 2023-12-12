@@ -28,13 +28,13 @@ const Dashboard = () => {
             <img src="/Images/people.svg" alt="" />
           </div>
           <div className='udm-up-analytic'>
-            <div>
-              <div className='udm-up-card1'></div>
-              <div className='udm-up-card2'></div>
+            <div className='cards-1'>
+              <div className='udm-up-card1'>1</div>
+              <div className='udm-up-card2'>2</div>
             </div>
-            <div>
-              <div className='udm-up-card3'>n</div>
-              <div className='udm-up-card4'></div>
+            <div className='cards-2'>
+              <div className='udm-up-card3'>3</div>
+              <div className='udm-up-card4'>4</div>
             </div>
           </div>
 

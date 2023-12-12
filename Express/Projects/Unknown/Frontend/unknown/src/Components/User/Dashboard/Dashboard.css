@@ -22,8 +22,18 @@
 
 .udm-up-analytic {
     display: flex;
+    gap: 10px;
 }
-
+.cards-1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cards-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .udm-up-card1 {
     height: 100px;
@@ -46,5 +56,5 @@
 .udm-up-card4 {
     height: 100px;
     width: 300px;
-    color: red;
+    background-color: red;
 }
