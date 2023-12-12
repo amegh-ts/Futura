@@ -19,7 +19,7 @@ const AllUsers = () => {
         }
         display()
 
-    }, [])
+    }, [getUsers])
 
     return (
         <div>
@@ -38,7 +38,7 @@ const AllUsers = () => {
                     {state.map((user, index) => (
                         <div className="user-cards" key={index}>
                             <div className="user-cards-img">
-                                <img src='/Images/' alt="" />
+                                <img src='/Images/p1.png' alt="" />
                             </div>
                             <div>
                                 <p>{user.uname}</p>
