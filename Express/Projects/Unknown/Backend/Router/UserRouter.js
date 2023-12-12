@@ -53,6 +53,7 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
     }
 })
 
+//update profile
 router.put('/updateprofile/:id', async (req, res) => {
     try {
         const updateData = await users.findByIdAndUpdate(req.params.id, {$set: req.body }, { new: true })  // new: true used to add new data if not given it will not update
@@ -61,5 +62,7 @@ router.put('/updateprofile/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
+//
 
 module.exports = router
