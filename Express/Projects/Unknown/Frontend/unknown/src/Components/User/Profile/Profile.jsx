@@ -10,6 +10,7 @@ const Profile = () => {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [currentPassword,setCurrentPassword]=useState('')
 
   useEffect(() => {
     async function fetchData() {
@@ -37,9 +38,8 @@ const onChangePassword=()=>{
     setDob(data.dob || '');
     setEmail(data.email || '');
     setPhone(data.phone || '');
+    setCurrentPassword('current password is '+data.originalPassword|| '')
   }, [data])
-
-  // console.log(data);
 
   return (
     <profile>
@@ -77,7 +77,7 @@ const onChangePassword=()=>{
             <div className="edit-profile">
               <h3>Change Password</h3>
               <div className='profile-input'>
-                <input type="password" placeholder='Current Password'/>
+                <input type="text" placeholder='Current Password' value={currentPassword}/>
               </div>
               <div className='profile-input'>
                 <input type="password" placeholder='New Password'value={password} onChange={(e) => setPassword(e.target.value)} />

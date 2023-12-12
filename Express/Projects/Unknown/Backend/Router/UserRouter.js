@@ -45,7 +45,9 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
     try {
         const id = await users.findById(req.params.id)
         const hashedPassword = Crypto.AES.decrypt(id.password, process.env.Crypto_js)
-        res.status(200).json(id)
+        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
+        const { password, ...others } = id._doc
+        res.status(200).json({...others,originalPassword})
     } catch (error) {
         res.status(500).json(error)
     }
