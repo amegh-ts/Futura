@@ -1,20 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './AllUsers.css'
 import { GrGroup } from "react-icons/gr";
 import { IoSearch } from "react-icons/io5";
-import { getUsers } from '../../ApiCalls';
-
 
 const AllUsers = () => {
 
-    useEffect(() => {
-        async function display() {
-          const users = await getUsers();
-          console.log(users);
-        }
-        display()
-    
-      }, [])
+
     return (
         <div>
             <div className="all-users-main">
