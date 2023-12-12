@@ -39,6 +39,12 @@ body{
     width: 88px;
 }
 
+.sidebar .menu-links .nav-link.active .icon{
+    color: var(--active-icon-color);
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: white;
+}
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;

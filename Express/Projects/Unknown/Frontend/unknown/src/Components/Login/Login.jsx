@@ -19,7 +19,6 @@ const Login = () => {
   const onSignUpClick = async () => {
     try {
       signUpData({ uname, dob, phone, email, password });
-      console.log(signUpData);
       alert("Successfully registered");
     } catch (error) {
       console.error(error);
@@ -66,7 +65,7 @@ const Login = () => {
 
             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <a href="#">Forgot Your Password?</a>
+            <a href="#f">Forgot Your Password?</a>
             <button onClick={onSignInClick}>Sign In</button>
           </form>
         </div>

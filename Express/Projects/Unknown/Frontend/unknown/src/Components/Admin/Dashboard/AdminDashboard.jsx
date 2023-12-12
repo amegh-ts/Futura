@@ -86,7 +86,7 @@ const AdminDashboard = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="#">INV__1001</a></td>
+                  <td><a href="#1">INV__1001</a></td>
                   <td>Paragon</td>
                   <td>1/5/2021</td>
                   <td>
@@ -95,7 +95,7 @@ const AdminDashboard = () => {
                   <td className="amount">$520.18</td>
                 </tr>
                 <tr>
-                  <td><a href="#">INV__1002</a></td>
+                  <td><a href="#2">INV__1002</a></td>
                   <td>Sonic</td>
                   <td>1/4/2021</td>
                   <td>
@@ -104,8 +104,8 @@ const AdminDashboard = () => {
                   <td className="amount">$415.25</td>
                 </tr>
                 <tr>
-                  <td><a href="#">INV__1003</a></td>
-                  <td>Innercircle</td>
+                  <td><a href="#3">INV__1003</a></td>
+                  <td>Inner circle</td>
                   <td>1/2/2021</td>
                   <td>
                     <p className="status status-pending">Pending</p>
@@ -113,7 +113,7 @@ const AdminDashboard = () => {
                   <td className="amount">$1324.84</td>
                 </tr>
                 <tr>
-                  <td><a href="#">INV__1004</a></td>
+                  <td><a href="#4">INV__1004</a></td>
                   <td>Varsity Plus</td>
                   <td>12/30/2020</td>
                   <td>
@@ -122,7 +122,7 @@ const AdminDashboard = () => {
                   <td className="amount">$998.26</td>
                 </tr>
                 <tr>
-                  <td><a href="#">INV__1005</a></td>
+                  <td><a href="#5">INV__1005</a></td>
                   <td>Highlander</td>
                   <td>12/18/2020</td>
                   <td>

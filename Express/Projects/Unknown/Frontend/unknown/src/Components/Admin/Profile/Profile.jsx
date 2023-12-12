@@ -16,7 +16,6 @@ const Profile = () => {
     async function fetchData() {
       try {
         const apiData = await getIdData();
-        console.log(apiData);
         setData(apiData);
       } catch (error) {
         console.log(error);

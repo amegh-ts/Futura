@@ -12,14 +12,13 @@ const AllUsers = () => {
             try {
                 const allusers = await getUsers();
                 setState(allusers)
-                console.log(state);
             } catch (error) {
                 console.log(error);
             }
         }
         display()
 
-    }, [getUsers])
+    }, [])
 
 // Inside the AllUsers component's return statement
 return (

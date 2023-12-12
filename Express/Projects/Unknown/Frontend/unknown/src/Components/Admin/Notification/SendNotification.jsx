@@ -16,7 +16,6 @@ const SendNotification = () => {
   };
 
   const handleSendClick = async () => {
-    console.log('Notification data:', notification);
     try {
       await sendNotification({ notification, priority })
     } catch (error) {
