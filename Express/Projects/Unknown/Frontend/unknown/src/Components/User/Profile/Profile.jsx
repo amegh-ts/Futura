@@ -36,11 +36,13 @@ const Profile = () => {
   const onEditProfile = async () => {
     await updateProfile({ uname, dob, phone, email })
     alert('successfully updated')
+    window.location.reload();
   }
   const onChangePassword = async () => {
     console.log(password);
     await updatePassword({ password })
     alert('successfully updated')
+    window.location.reload();
   }
 
 

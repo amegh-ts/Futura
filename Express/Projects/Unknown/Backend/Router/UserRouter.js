@@ -54,7 +54,7 @@ router.get('/profile/:id', verifyToken, verifyTokenAndAuthorization, async (req,
 })
 
 //update profile
-router.put('/updateprofile/:id', async (req, res) => {
+router.put('/updateprofile/:id',verifyToken, async (req, res) => {
     try {
         const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
         res.status(200).json(updateData)
@@ -64,7 +64,7 @@ router.put('/updateprofile/:id', async (req, res) => {
 })
 
 //update password
-router.put('/updatepass/:id', async (req, res) => {
+router.put('/updatepass/:id',verifyToken, async (req, res) => {
     try {
         req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
         const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
