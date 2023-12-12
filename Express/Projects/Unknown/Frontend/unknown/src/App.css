@@ -24,10 +24,10 @@
 
   /* ===== text ======= */
 
-  --h3-font-size:30px;
-  --h3-font-weight:500;
+  --h3-font-size: 30px;
+  --h3-font-weight: 500;
 
-  --icon-size:34px;
+  --icon-size: 34px;
 }
 
 
@@ -41,7 +41,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+.App-invisible{
+  display: none;
 
+}
 
 
 /* 1116 */
@@ -62,10 +65,7 @@
   .notification-box {
     padding-left: 60px !important;
     transition: all .50s ease;
-
   }
-
-  
 }
 
 /* 620 */
@@ -88,16 +88,36 @@
     display: none !important;
     transition: all .50s ease;
   }
+
   .notification-box {
     padding-left: 10px !important;
     transition: all .50s ease;
 
   }
+
   .admin-dash-card {
     max-width: 500px;
     width: 200px !important;
     padding: 15px 20px;
     background-color: var(--box1-color);
     transition: var(--tran-05);
+  }
 }
+
+/* 340 */
+@media (max-width: 340px) {
+  .App-header{
+    display: none;
+  }
+
+  .App-invisible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  .App-invisible span{
+    color: red;
+  }
 }

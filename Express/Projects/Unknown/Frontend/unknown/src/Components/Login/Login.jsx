@@ -19,7 +19,7 @@ const Login = () => {
   const onSignUpClick = async () => {
     try {
       signUpData({ uname, dob, phone, email, password });
-      // console.log(signUpData);
+      console.log(signUpData);
       alert("Successfully registered");
     } catch (error) {
       console.error(error);

@@ -31,9 +31,8 @@
     border-left: solid 3px var(--primary-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35);
 }
-.ntb-content h5{
-    font-weight: 400;
-    font-size: 22px;
+.ntb-content h6{
+    color: var(--text-color);
 }
 
 .ntb-content p{

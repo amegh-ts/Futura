@@ -51,6 +51,11 @@ function App() {
       <header className="App-header">
         <RouterProvider router={router}></RouterProvider>
       </header>
+      <section className='App-invisible'>
+        <div>
+          Please Use a larger display <span>340px</span> or more
+        </div>
+      </section>
     </div>
   );
 }
