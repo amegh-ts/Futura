@@ -15,6 +15,7 @@
     background-color: antiquewhite;
     padding: 10px;
     display: flex;
+    width: 300px;
 }
 
 .udm-up-image img {
@@ -38,25 +39,33 @@
 }
 
 .udm-up-card1 {
-    height: 100px;
+    height: 140px;
     width: 300px;
-    background-color: #766bf0;
+    background-color: #96B2FB;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .udm-up-card2 {
-    height: 100px;
+    height: 140px;
     width: 300px;
-    background-color: #5E50F9;
+    background-color: #7978E9;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .udm-up-card3 {
-    height: 100px;
+    height: 140px;
     width: 300px;
-    background-color: red;
+    background-color: #4747A1;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .udm-up-card4 {
-    height: 100px;
+    height: 140px;
     width: 300px;
-    background-color: red;
+    background-color: #F3797E;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
