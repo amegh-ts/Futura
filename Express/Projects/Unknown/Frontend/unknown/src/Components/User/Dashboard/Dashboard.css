@@ -11,8 +11,6 @@
 
 .udm-up-image {
     object-fit: cover;
-    /* background-color: antiquewhite; */
-    /* padding: 10px; */
     display: flex;
 }
 
