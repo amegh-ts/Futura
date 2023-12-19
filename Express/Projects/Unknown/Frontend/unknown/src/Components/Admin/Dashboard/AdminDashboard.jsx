@@ -61,7 +61,7 @@ const AdminDashboard = () => {
               <i>
                 <IoPersonOutline />
               </i>
-              <p>Users</p>
+              <p>Maximum Users</p>
               <span>200</span>
             </div>
           </div>
