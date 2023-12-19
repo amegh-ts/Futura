@@ -5,7 +5,15 @@ const dotenv = require('dotenv');
 
 
 // Update password
-const pdatePassword
+const updatePassword=async(req,res)=>{
+    try {
+        req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+        const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+        res.status(200).json(updateData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+}
 
 // Account recovery
 console.log('check math.random ====', Math.random());
@@ -32,4 +40,4 @@ const accountRecovery = async (req, res) => {
     }
 };
 
-module.exports = { accountRecovery };
+module.exports = { accountRecovery,updatePassword };
