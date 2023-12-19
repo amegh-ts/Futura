@@ -18,7 +18,7 @@ const AdminDashboard = () => {
       const admins = allusers.filter(user => user.type === 'admin');
       setAdmin(admins.length);
 
-      const clients = allusers.filter(user => user.type === 'admin');
+      const clients = allusers.filter(user => user.type === 'user');
       setClients(clients.length)
       } catch (error) {
         console.log(error);
