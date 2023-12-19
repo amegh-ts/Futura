@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 // Account recovery
 console.log('check math.random ====', Math.random());
 function generateOtp() {
-    return Math.floor(1000 + Math.random() * 9000).toString();
+    return Math.floor(1000 + Math.random() * 9000).toString();                // math.floor used to convert the decimal no to integer
 }
 
 const accountRecovery = async (req, res) => {

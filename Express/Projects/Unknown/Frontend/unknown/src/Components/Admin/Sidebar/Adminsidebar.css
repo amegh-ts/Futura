@@ -41,7 +41,7 @@ body {
     width: 88px;
 }
 
-.sidebar .menu-links .nav-link.active .icon {
+.sidebar .menu-links .nav-link.active .icon     {
     color: var(--active-icon-color);
     background-color: var(--primary-color);
     border-radius: 6px;
