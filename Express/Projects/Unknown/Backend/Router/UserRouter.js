@@ -70,7 +70,7 @@ router.put('/updateprofile/:id',verifyToken, async (req, res) => {
 //update password
 router.put('/updatepass/:id',updatePassword,verifyToken)
 
-
+// Account recovery
 router.post('/recovery',accountRecovery)
 
 
