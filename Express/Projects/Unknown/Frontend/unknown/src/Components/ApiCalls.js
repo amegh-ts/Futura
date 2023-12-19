@@ -103,7 +103,6 @@ export const accountRecoverys=async(data)=>{
     try {
         const res=await publicRequest.post('/recovery',data)
         console.log('Response Status:',res.status);
-        
     } catch (error) {
         console.log(error);
     }
