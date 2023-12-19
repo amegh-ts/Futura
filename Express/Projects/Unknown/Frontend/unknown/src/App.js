@@ -5,6 +5,7 @@ import Login from './Components/Login/Login';
 import { useSelector } from 'react-redux';
 import AdminSidebar from './Components/Admin/Sidebar/AdminSidebar';
 import Notification from './Components/User/Notification/Notification';
+import Recovery from './Components/Login/Recovery';
 
 function App() {
   const reduxData = useSelector((state) => state.user.userInfo[0]);
@@ -43,6 +44,9 @@ function App() {
     },{
       path: '/noti',
       element: <Notification />,
+    },{
+      path: '/rec',
+      element: <Recovery />,
     },
   ]);
 

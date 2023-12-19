@@ -95,3 +95,16 @@ export const getNotification = async () => {
         console.log(error);
     }
 }
+
+
+// account recovery
+export const accountRecoverys=async(data)=>{
+    console.log(data);
+    try {
+        const res=await publicRequest.post('/recovery',data)
+        console.log('Response Status:',res.status);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}

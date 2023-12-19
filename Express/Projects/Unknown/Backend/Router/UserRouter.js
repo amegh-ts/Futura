@@ -3,6 +3,7 @@ const users = require('../Models/UserSchema')
 const Crypto = require('crypto-js')
 const Jwt = require('jsonwebtoken');
 const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
+const { accountRecovery } = require('../Controller/appController');
 
 
 // Signup
@@ -77,6 +78,8 @@ router.put('/updatepass/:id',verifyToken, async (req, res) => {
     }
 })
 
+
+router.post('/recovery',accountRecovery)
 
 
 module.exports = router
