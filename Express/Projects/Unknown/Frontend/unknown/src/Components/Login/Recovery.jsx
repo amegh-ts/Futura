@@ -19,6 +19,9 @@ const Recovery = () => {
         <div>
             <div className='recovery-main'>
                 <div>
+                    <h4>Forgotten Passwords</h4>
+                </div>
+                <div>
                     <input type="email" placeholder='enter your email' value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div>
