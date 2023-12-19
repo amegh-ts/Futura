@@ -78,8 +78,7 @@ router.put('/updatepass/:id',verifyToken, async (req, res) => {
     }
 })
 
-
-
+// account recovery
 router.post('/recovery',accountRecovery)
 
 
