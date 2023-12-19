@@ -3,7 +3,7 @@ const users = require('../Models/UserSchema')
 const Crypto = require('crypto-js')
 const Jwt = require('jsonwebtoken');
 const { verifyToken, verifyTokenAndAuthorization } = require('../VerifyToken');
-const { accountRecovery, updatePassword } = require('../Controller/appController');
+const { accountRecovery } = require('../Controller/appController');
 
 
 // Signup
@@ -68,9 +68,18 @@ router.put('/updateprofile/:id',verifyToken, async (req, res) => {
 })
 
 //update password
-router.put('/updatepass/:id',updatePassword,verifyToken)
+router.put('/updatepass/:id',verifyToken, async (req, res) => {
+    try {
+        req.body.password = Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
+        const updateData = await users.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+        res.status(200).json(updateData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
-// Account recovery
+
+
 router.post('/recovery',accountRecovery)
 
 
