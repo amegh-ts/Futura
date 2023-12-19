@@ -2,8 +2,13 @@ const nodemailer = require('nodemailer');
 const mailer = require('../Models/RecoverySchema');
 const dotenv = require('dotenv');
 
-console.log('check math.random ====', Math.random());
 
+
+// Update password
+const pdatePassword
+
+// Account recovery
+console.log('check math.random ====', Math.random());
 function generateOtp() {
     return Math.floor(1000 + Math.random() * 9000).toString();
 }
