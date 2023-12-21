@@ -74,7 +74,7 @@ const accountRecovery = async (req, res) => {
             `,
         };
 
-        console.log("mail option", mailOption);
+        // console.log("mail option", mailOption);
         const info = await transporter.sendMail(mailOption);
         console.log('Email sent:', info);
         return res.status(200).json({ message: "OTP sent successfully", otp })
