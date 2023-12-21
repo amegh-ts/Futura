@@ -18,10 +18,10 @@ function generateOtp() {
 
 const accountRecovery = async (req, res) => {
     const { email } = req.body;
-    console.log('email===', email);
+    // console.log('email===', email);
     const otp = generateOtp();
     const otpExpiration = new Date(Date.now() + 5 * 60 * 1000);
-    console.log('-------', otp, otpExpiration, email);
+    // console.log('-------', otp, otpExpiration, email);
     const verification = new mailer({
         email,
         otp,
@@ -35,7 +35,7 @@ const accountRecovery = async (req, res) => {
             from: process.env.EMAIL,
             to: email,
             subject: 'Your OTP Code',
-            html: `<div style="display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; padding: 20px;">
+            html: `
             <div
                 style="text-align: center; background-color: #ffffff; max-width: 500px; margin: 0; padding: 0; border-radius: 15px;">
                 <div style="width: 100%;">
@@ -70,7 +70,7 @@ const accountRecovery = async (req, res) => {
                     </div>
                 </div>
             </div>
-        </div>
+        
             `,
         };
 
