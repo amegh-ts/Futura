@@ -35,17 +35,42 @@ const accountRecovery = async (req, res) => {
             from: process.env.EMAIL,
             to: email,
             subject: 'Your OTP Code',
-            html: `<div>
-                    <div style="text-align: center; background-color: #f0f0f0; padding: 20px;">
-                        <h1 style="color: #333;">Account Recovery OTP</h1>
-                        <p>Hello ${email},</p>
-                        <p>Your OTP code is:</p>
-                        <h2 style="color: #007bff;">${otp}</h2>
-                        <p>This code will expire in 5 minutes.</p>
-                        <img src="https://example.com/your-logo.png" alt="Your Logo" style="max-width: 200px; margin-top: 20px;">
-                        <p style="margin-top: 20px;">Thank you for using our service!</p>
+            html: `<div style="display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; padding: 20px;">
+            <div
+                style="text-align: center; background-color: #ffffff; max-width: 500px; margin: 0; padding: 0; border-radius: 15px;">
+                <div style="width: 100%;">
+                    <img style="width: 100%; height: 150px; object-fit: cover; border-top-right-radius: 15px; border-top-left-radius: 15px;"
+                        src="https://mvix.com/wp-content/uploads/2022/11/googleslideschristmas.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VvSRtdPpnYcJ4cncksQB4tsyVBzn0NEGeg&usqp=CAU"
+                        width="150px" alt="">
+                </div>
+                <h1 style="color: #e42626; font-family: 'Trebuchet MS', sans-serif; margin-top: 10px;">Merry Christmas,
+                    ${email}!</h1>
+                <p style="color: #333; font-family: 'Arial', sans-serif; font-size: 18px;">Spread the joy of the season!</p>
+                <p style="color: #333; font-family: 'Arial', sans-serif; font-size: 18px;"><i>Your OTP is</i></p>
+                <button
+                    style="background-color: #e42626; color: white; font-size: 20px; border-radius: 10px; padding: 10px 20px; border: none; cursor: pointer;">${otp}</button>
+                <p style="color: #333; font-family: 'Arial', sans-serif; font-size: 16px;">This code will expire in 5
+                    minutes.</p>
+                <div style="border-top: 1px solid rgb(209, 209, 209);">
+                    <p style="color: #333; font-family: 'Arial', sans-serif; font-size: 16px;">You received this email
+                        because you requested an OTP to recover your account. If you didn't request for an OTP, you can
+                        safely ignore this email.</p>
+                </div>
+                <div
+                    style="background-color: #e42626; color: white; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 100px; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px;">
+                    <div style="text-align: left; ">
+                        <h6 style="font-family: 'Arial', sans-serif;">Terms of Service</h6>
+                        <h6 style="font-family: 'Arial', sans-serif;">Privacy Policy</h6>
+                    </div>
+                    <div>
+                        <img src="https://your-christmas-logo-url.png" width="80px" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
             `,
         };
 
