@@ -5,7 +5,10 @@ const Chat = () => {
   return (
     <div>
         <div className="chat-main">
-            dfghj
+            <div>
+                hfjdksl
+            </div>
+            <div>gfhjdksl</div>
         </div>
     </div>
   )
