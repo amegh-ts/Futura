@@ -39,7 +39,7 @@ body {
   }
   
   .active-user {
-    background-color: #4caf50;
+    background-color: var(--primary-color);
     color: white;
   }
   
