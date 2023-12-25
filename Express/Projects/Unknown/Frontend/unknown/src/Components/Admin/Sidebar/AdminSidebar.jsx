@@ -7,6 +7,7 @@ import AdminDashboard from '../Dashboard/AdminDashboard';
 import SendNotification from '../Notification/SendNotification';
 import Profile from '../Profile/Profile';
 import AllUsers from '../Allusers/AllUsers';
+import Chat from '../../Chat/Chat';
 
 
 const AdminSidebar = () => {
@@ -31,7 +32,8 @@ const AdminSidebar = () => {
         dashboard: <AdminDashboard />,
         notification: <SendNotification />,
         allusers: <AllUsers />,
-        profile: <Profile />
+        profile: <Profile />,
+        chats:<Chat/>
     };
 
     return (
@@ -82,10 +84,10 @@ const AdminSidebar = () => {
                                     </a>
                                 </li>
 
-                                <li className="nav-link" onClick={closeSidebar}>
-                                    <a href="#analytic">
-                                        <i className='bx bx-pie-chart-alt icon' ></i>
-                                        <span className="text nav-text">Analytics</span>
+                                <li className={`nav-link ${activePage === 'chats' ? 'active' : ''}`} onClick={() => { setActivePage('chats'); closeSidebar(); }}>
+                                    <a href="#chats">
+                                        <i className='bx bx-chat icon' ></i>
+                                        <span className="text nav-text">Chats</span>
                                     </a>
                                 </li>
 

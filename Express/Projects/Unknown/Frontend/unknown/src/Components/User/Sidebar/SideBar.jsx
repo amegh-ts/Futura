@@ -7,6 +7,7 @@ import { logoutUser } from '../../../Redux/UserRedux';
 import { useDispatch } from 'react-redux';
 import Notification from '../Notification/Notification';
 import Profile from '../Profile/Profile';
+import Chat from '../../Chat/Chat';
 
 
 const SideBar = () => {
@@ -30,7 +31,9 @@ const SideBar = () => {
 
         dashboard: <Dashboard />,
         profile: <Profile />,
-        notification: <Notification />
+        notification: <Notification />,
+        chats:<Chat/>
+
     };
 
     return (
@@ -71,6 +74,13 @@ const SideBar = () => {
                                     <a href="#notification">
                                         <i className='bx bx-bell icon'></i>
                                         <span className="text nav-text">Notifications</span>
+                                    </a>
+                                </li>
+
+                                <li className={`nav-link ${activePage === 'chats' ? 'active' : ''}`} onClick={() => { setActivePage('chats'); closeSidebar(); }}>
+                                    <a href="#chats">
+                                        <i className='bx bx-chat icon' ></i>
+                                        <span className="text nav-text">Chats</span>
                                     </a>
                                 </li>
 
