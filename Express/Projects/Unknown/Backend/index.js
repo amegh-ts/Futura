@@ -16,10 +16,37 @@ dotenv.config()
 //     next()
 // })
 
+const Message = require('./Models/ChatSchema');
+
+// Socket.IO connection
+io.on('connection', (socket) => {
+  console.log('User connected');
+
+  // Load previous messages from the database
+  Message.find().then((messages) => {
+    socket.emit('loadMessages', messages);
+  });
+
+  // Handle incoming messages
+  socket.on('sendMessage', async (data) => {
+    const { user, message } = data;
+
+    // Save the message to the database
+    const newMessage = new Message({ user, message });
+    await newMessage.save();
+
+    // Broadcast the message to all connected clients
+    io.emit('newMessage', newMessage);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
 
 const userRouter = require('./Router/UserRouter')
 const notificationRouter = require('./Router/NotificationRouter')
-const { configureSocketIO } = require('./Router/ChatRouter')
+const chatRouter = require('./Router/');
 
 
 configureSocketIO(io);
@@ -49,6 +76,8 @@ app.use(express.json())
 app.use('/', userRouter)
 app.use('/', notificationRouter)
 app.use('/', router);
+app.use('/', chatRouter);
+
 
 
 
