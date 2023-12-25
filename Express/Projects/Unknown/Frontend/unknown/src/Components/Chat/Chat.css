@@ -1,12 +1,6 @@
 /* Chat.css */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-  }
+
   
   .chat-container {
     display: flex;
@@ -34,9 +28,9 @@ body {
     border-radius: 5px;
   }
   
-  .user-item:hover {
+  /* .user-item:hover {
     background-color: #e0e0e0;
-  }
+  } */
   
   .active-user {
     background-color: var(--primary-color);
