@@ -8,7 +8,6 @@ const socketIO = require('socket.io');
 const server = http.createServer(app);
 const io = socketIO(server);
 
-
 app.use(cors())
 dotenv.config()
 
