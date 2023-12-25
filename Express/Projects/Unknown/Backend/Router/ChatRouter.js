@@ -1,22 +1,14 @@
-const socketIO = require('socket.io');
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
+const Message = require('../Models/ChatSchema');
 
-const configureSocketIO = (io) => {
-    io.on('connection', (socket) => {
-      console.log('User connected');
-  
-      // Handle sending notifications to connected clients
-      socket.on('sendNotification', (data) => {
-        io.emit('notification', data); // Broadcast the notification to all connected clients
-      });
-  
-      socket.on('disconnect', () => {
-        console.log('User disconnected');
-      });
-    });
-  };
-  
-  module.exports = { router, configureSocketIO };
-  
+router.get('/messages', async (req, res) => {
+  try {
+    const messages = await Message.find();
+    res.json(messages);
+  } catch (error) {
+    res.status(500).json({ error: 'Error retrieving messages' });
+  }
+});
 
-module.exports = router
+module.exports = router;

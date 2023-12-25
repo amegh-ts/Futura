@@ -49,6 +49,8 @@ app.use(express.json())
 
 app.use('/', userRouter)
 app.use('/', notificationRouter)
+app.use('/', router);
+
 
 
 app.listen(5000, () => {
