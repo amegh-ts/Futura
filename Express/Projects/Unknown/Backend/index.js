@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
 
 const userRouter = require('./Router/UserRouter')
 const notificationRouter = require('./Router/NotificationRouter')
-const chatRouter = require('./Router/');
+const chatRouter = require('./Router/ChatRouter');
 
 
 configureSocketIO(io);
