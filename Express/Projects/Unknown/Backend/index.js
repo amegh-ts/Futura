@@ -8,6 +8,7 @@ const socketIO = require('socket.io');
 const server = http.createServer(app);
 const io = socketIO(server);
 
+
 app.use(cors())
 dotenv.config()
 
@@ -19,6 +20,10 @@ dotenv.config()
 
 const userRouter = require('./Router/UserRouter')
 const notificationRouter = require('./Router/NotificationRouter')
+const { configureSocketIO } = require('./Router/ChatRouter')
+
+
+configureSocketIO(io);
 
 // Use the MONGO_DB_NAME variable from your .env file
 // const mongoDbName = process.env.MONGO_DB_NAME || 'default_database_name';
