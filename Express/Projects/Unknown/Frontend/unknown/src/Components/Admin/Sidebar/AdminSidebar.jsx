@@ -19,7 +19,7 @@ const AdminSidebar = () => {
     };
 
     const closeSidebar = () => {
-        setSidebarClosed(true); 
+        setSidebarClosed(true);
     };
 
     const handleLogout = () => {
@@ -27,10 +27,10 @@ const AdminSidebar = () => {
     };
 
     const pageComponents = {
-        
+
         dashboard: <AdminDashboard />,
         notification: <SendNotification />,
-        allusers:<AllUsers/>,
+        allusers: <AllUsers />,
         profile: <Profile />
     };
 
@@ -79,6 +79,13 @@ const AdminSidebar = () => {
                                     <a href="#revenue">
                                         <i className='bx bx-group icon' ></i>
                                         <span className="text nav-text">Users</span>
+                                    </a>
+                                </li>
+
+                                <li className="nav-link" onClick={closeSidebar}>
+                                    <a href="#analytic">
+                                        <i className='bx bx-pie-chart-alt icon' ></i>
+                                        <span className="text nav-text">Analytics</span>
                                     </a>
                                 </li>
 
