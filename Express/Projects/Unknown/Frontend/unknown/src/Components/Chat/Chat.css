@@ -1,8 +1,6 @@
 /* Chat.css */
 
-
-  
-  .chat-container {
+.chat-container {
     display: flex;
     width: 100%;
     height: 100%;
@@ -18,6 +16,8 @@
   .chat-main {
     flex: 3;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .user-item {
@@ -28,12 +28,29 @@
     border-radius: 5px;
   }
   
-  /* .user-item:hover {
-    background-color: #e0e0e0;
-  } */
-  
   .active-user {
     background-color: var(--primary-color);
     color: white;
+  }
+  
+  .chat-history {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .chat-message {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .user1 {
+    background-color: #bee3db;
+  }
+  
+  .user2 {
+    background-color: #ffd1a3;
   }
   
