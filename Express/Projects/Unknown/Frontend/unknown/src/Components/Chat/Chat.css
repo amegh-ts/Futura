@@ -1,7 +1,5 @@
 /* Chat.css */
 
-
-  
   .chat-container {
     display: grid;
     grid-template-columns: 25% 75%;    
