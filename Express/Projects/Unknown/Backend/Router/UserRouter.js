@@ -30,7 +30,8 @@ router.post('/signin', async (req, res) => {
         const { password, ...others } = DB._doc
         res.status(200).json({ ...others, accessToken })
     } catch (err) {
-        res.status(400).json(err)
+        console.log(err);
+        res.status(500).json({ response: 'Internal Server Error' });
     }
 })
 
