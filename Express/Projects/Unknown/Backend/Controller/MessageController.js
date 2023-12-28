@@ -1,14 +1,14 @@
 const messageSchema = require('../Models/MessageSchema')
 
 // create message
-const createMessage= async(req,res)=>{
-    const {chatId,senderId,text}=req.body
-    const message=new messageSchema({
-        chatId,senderId,text
+const createMessage = async (req, res) => {
+    const { chatId, senderId, text } = req.body
+    const message = new messageSchema({
+        chatId, senderId, text
     })
 
     try {
-        const response=await message.save()
+        const response = await message.save()
         res.status(200).json(response)
     } catch (error) {
         console.log(error);
@@ -17,10 +17,10 @@ const createMessage= async(req,res)=>{
 }
 
 // get message
-const getMessages=async(req,res)=>{
-    const {chatId}=req.params;
+const getMessages = async (req, res) => {
+    const { chatId } = req.params;
     try {
-        const messages=await messageSchema.find({chatId})
+        const messages = await messageSchema.find({ chatId })
         res.status(200).json(messages)
     } catch (error) {
         console.log(error);
@@ -29,4 +29,4 @@ const getMessages=async(req,res)=>{
 }
 
 
-module.exports = { createMessage,getMessages};
+module.exports = { createMessage, getMessages };
