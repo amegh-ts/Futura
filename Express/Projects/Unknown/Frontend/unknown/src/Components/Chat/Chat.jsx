@@ -26,7 +26,7 @@ const Chat = () => {
         async function fetchData() {
           try {
             const apiData = await userChats();
-            setData(apiData);
+            setState(apiData);
           } catch (error) {
             console.log(error);
           }
@@ -48,7 +48,7 @@ const Chat = () => {
                 <h2>Users</h2>
                 {state.map((user) => (
                     <div key={user._id} className={`user-item ${selectedUser && selectedUser._id === user._id ? 'active-user' : ''}`} onClick={() => handleUserClick(user)}>
-                        <p>{user.uname}</p>
+                        <p>{user._id}</p>
                     </div>
                 ))}
             </div>
