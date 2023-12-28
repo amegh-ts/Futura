@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import './Chat.css';
-import { getUsers } from '../ApiCalls';
+import { getUsers, userChats } from '../ApiCalls';
 
 const Chat = () => {
     const [state, setState] = useState([]);
+    const [data, setData] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
 
     useEffect(() => {
@@ -19,6 +20,22 @@ const Chat = () => {
         }
         display();
     }, []);
+
+
+    useEffect(() => {
+        async function fetchData() {
+          try {
+            const apiData = await userChats();
+            setData(apiData);
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        fetchData();
+      }, []);
+
+      console.log('hdfhdjhbjhjdh',data);
+
 
     const handleUserClick = (user) => {
         setSelectedUser(user);

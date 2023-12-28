@@ -126,7 +126,7 @@ export const createChat = async (data) => {
 // user chats
 export const userChats = async () => {
     try {
-        const res = await userRequest.get(`/profile/${userId}`)
+        const res = await userRequest.get(`/chats/${userId}`)
         console.log('Response Status:', res.status);
         return res.data
     } catch (error) {
