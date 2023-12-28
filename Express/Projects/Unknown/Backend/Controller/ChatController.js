@@ -12,6 +12,10 @@ const createChat = async (req, res) => {
         const newChat = new chatSchema({
             members: [firstId, secondId]
         })
+
+        const response = await newChat.save()
+        res.status(200).json(response)
+
     } catch (error) {
         console.log(error);
         res.status(500).json(error)
