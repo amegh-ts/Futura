@@ -122,3 +122,14 @@ export const createChat = async (data) => {
         console.log(error);
     }
 }
+
+// user chats
+export const userChats = async () => {
+    try {
+        const res = await userRequest.get(`/profile/${userId}`)
+        console.log('Response Status:', res.status);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
