@@ -15,6 +15,7 @@ dotenv.config()
 const userRouter = require('./Router/UserRouter')
 const notificationRouter = require('./Router/NotificationRouter')
 const chatRouter = require('./Router/ChatRouter')
+const messageRouter = require('./Router/MessageRouter')
 
 
 mongoose.connect(process.env.Mongo_Key).then(() => {
@@ -27,6 +28,7 @@ app.use(express.json())
 app.use('/', userRouter)
 app.use('/', notificationRouter)
 app.use('/api/chats', chatRouter)
+app.use('/api/messages', messageRouter)
 
 
 
