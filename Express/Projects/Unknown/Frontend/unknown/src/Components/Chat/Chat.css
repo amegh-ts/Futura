@@ -25,6 +25,10 @@
     background-color: #f0f0f0;
     border-radius: 5px;
   }
+
+  .user-item p{
+    font-size: 16px;
+  }
   
   /* .user-item:hover {
     background-color: #e0e0e0;
