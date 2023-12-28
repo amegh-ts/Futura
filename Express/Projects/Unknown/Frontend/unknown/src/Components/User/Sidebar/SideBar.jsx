@@ -37,7 +37,7 @@ const SideBar = () => {
     };
 
     return (
-        <div>
+        
             <body>
                 <nav className={`sidebar ${isSidebarClosed ? 'close' : ''}`}>
                     <header>
@@ -149,7 +149,6 @@ const SideBar = () => {
                     </div>
                 </section>
             </body>
-        </div>
     );
 };
 
