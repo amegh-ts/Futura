@@ -28,13 +28,17 @@ const SideBar = () => {
         dispatch(logoutUser())
     };
 
-    const pageComponents = {
 
+    const setActivePageToChats = () => {
+        setActivePage('chats');
+    };
+
+    const pageComponents = {
         dashboard: <Dashboard />,
         profile: <Profile />,
         notification: <Notification />,
-        users:<Users/>,
-        chats:<Chat/>
+        users: <Users setActivePageToChats={setActivePageToChats} />,
+        chats: <Chat />
 
     };
 

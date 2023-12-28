@@ -34,7 +34,8 @@ const AdminSidebar = () => {
     const pageComponents = {
         dashboard: <AdminDashboard />,
         notification: <SendNotification />,
-        allusers: <AllUsers setActivePageToChats={setActivePageToChats} />, profile: <Profile />,
+        allusers: <AllUsers setActivePageToChats={setActivePageToChats} />, 
+        profile: <Profile />,
         chats: <Chat />
     };
 
