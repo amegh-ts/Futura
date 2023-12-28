@@ -28,8 +28,7 @@ const Chat = () => {
     const secondMembers = state.map(item => item.members[1]);
     console.log('-------------------', secondMembers);
 
-    const handleUserClick = (user) => {
-        setSelectedUser(user);
+    const handleUserClick = () => {
         setShowChatBody(true);
     };
 
@@ -50,7 +49,7 @@ const Chat = () => {
             </div>
             <div className="chat-main">
                 {showChatBody ? (
-                    <ChatBody user={selectedUser} />
+                    <ChatBody />
                 ) : (
                     <img src="/Images/robot.gif" alt="" />
                 )}
