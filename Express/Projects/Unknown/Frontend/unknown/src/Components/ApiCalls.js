@@ -116,7 +116,8 @@ export const accountRecoverys = async (data) => {
 export const createChat = async (data) => {
     console.log(data);
     try {
-        const res = await userRequest.get('/createchat', data)
+        const res = await userRequest.post('/createchat', data)
+        console.log(res);
     } catch (error) {
         console.log(error);
     }
