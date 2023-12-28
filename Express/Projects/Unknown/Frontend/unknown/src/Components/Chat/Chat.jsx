@@ -9,32 +9,30 @@ const Chat = () => {
     const [data, setData] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
 
-    useEffect(() => {
-        async function display() {
-            try {
-                const allusers = await getUsers();
-                setState(allusers);
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        display();
-    }, []);
+
+    console.log(data);
+    console.log(state);
 
 
     useEffect(() => {
         async function fetchData() {
-          try {
-            const apiData = await userChats();
-            setState(apiData);
-          } catch (error) {
-            console.log(error);
-          }
+            try {
+                const allusers = await getUsers();
+                setData(allusers);
+                const apiData = await userChats();
+                setState(apiData);
+            } catch (error) {
+                console.log(error);
+            }
         }
         fetchData();
-      }, []);
+    }, []);
 
-      console.log('hdfhdjhbjhjdh',data);
+    const secondMembers = state.map(item => item.members[1]);
+    console.log('-------------------',secondMembers);
+
+
+
 
 
     const handleUserClick = (user) => {
@@ -55,11 +53,11 @@ const Chat = () => {
             <div className="chat-main">
                 <h2>{selectedUser ? `Chatting with ${selectedUser.uname}` : 'Select a user to start chatting'}</h2>
                 {/* Add your chat components here */}
-                
-                
 
 
-                
+
+
+
             </div>
         </div>
     );
