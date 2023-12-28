@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Users.css'
 import { GrGroup } from "react-icons/gr";
 import { IoSearch } from "react-icons/io5";
-import { getUsers } from '../../ApiCalls';
+import { createChat, getUsers } from '../../ApiCalls';
 
 const Users = () => {
     const [state, setState] = useState([])
@@ -27,6 +27,14 @@ const Users = () => {
 
     }, [])
 
+    const handleChatButtonClick = async (firstId, secondId) => {
+        try {
+            await createChat({ firstId, secondId });
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    
     // Inside the AllUsers component's return statement
     return (
         <div className="all-users-main">
@@ -65,7 +73,7 @@ const Users = () => {
                                 <td>{user.phone}</td>
                                 <td>{user.type}</td>
                                 <td>
-                                    <button>Start Chatting</button>
+                                    <button onClick={() => handleChatButtonClick(userId, user._id)}>Start Chatting</button>
                                 </td>
                             </tr>
                         ))}

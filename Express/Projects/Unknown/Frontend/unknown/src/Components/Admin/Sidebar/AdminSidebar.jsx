@@ -27,14 +27,18 @@ const AdminSidebar = () => {
         dispatch(logoutUser())
     };
 
-    const pageComponents = {
+    const setActivePageToChats = () => {
+        setActivePage('chats');
+    };
 
+    const pageComponents = {
         dashboard: <AdminDashboard />,
         notification: <SendNotification />,
-        allusers: <AllUsers />,
-        profile: <Profile />,
-        chats:<Chat/>
+        allusers: <AllUsers setActivePageToChats={setActivePageToChats} />, profile: <Profile />,
+        chats: <Chat />
     };
+
+
 
     return (
         <div>

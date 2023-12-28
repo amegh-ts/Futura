@@ -4,7 +4,7 @@ import { GrGroup } from "react-icons/gr";
 import { IoSearch } from "react-icons/io5";
 import { createChat, getUsers } from '../../ApiCalls';
 
-const AllUsers = () => {
+const AllUsers = ({setActivePageToChats}) => {
     const [state, setState] = useState([])
     const storedData = localStorage.getItem('persist:unknown');
     const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
@@ -27,14 +27,12 @@ const AllUsers = () => {
 
     const handleChatButtonClick = async (firstId, secondId) => {
         try {
-            // Call the function to create a chat with the given user IDs
-            await createChat({ firstId, secondId });
-            // Optionally, you can perform additional actions after creating the chat
+          await createChat({ firstId, secondId });
+          setActivePageToChats();
         } catch (error) {
-            console.log(error);
-            // Handle the error as needed
+          console.log(error);
         }
-    };
+      };
 
     // Inside the AllUsers component's return statement
     return (
