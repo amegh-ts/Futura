@@ -38,7 +38,7 @@ const SideBar = () => {
 
     return (
         <div>
-            <body>
+            <section>
                 <nav className={`sidebar ${isSidebarClosed ? 'close' : ''}`}>
                     <header>
                         <div className="image-text">
@@ -148,7 +148,7 @@ const SideBar = () => {
                         {pageComponents[activePage]}
                     </div>
                 </section>
-            </body>
+            </section>
         </div>
     );
 };
