@@ -31,9 +31,7 @@ const Chat = () => {
                 <h2>Users</h2>
                 {state.map((user) => (
                     <div key={user._id} className={`user-item ${selectedUser && selectedUser._id === user._id ? 'active-user' : ''}`} onClick={() => handleUserClick(user)}>
-                        <p>
-                        {user.uname}
-                        </p>
+                        <p>{user.uname}</p>
                     </div>
                 ))}
             </div>
