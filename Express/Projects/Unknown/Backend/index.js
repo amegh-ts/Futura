@@ -15,20 +15,6 @@ dotenv.config()
 const userRouter = require('./Router/UserRouter')
 const notificationRouter = require('./Router/NotificationRouter')
 
-// Use the MONGO_DB_NAME variable from your .env file
-// const mongoDbName = process.env.MONGO_DB_NAME || 'default_database_name';
-
-// mongoose.connect(`${process.env.Mongo_Key}/${mongoDbName}`, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// })
-//     .then(() => {
-//         console.log(`Connected to the database: ${mongoDbName}`);
-//     })
-//     .catch((error) => {
-//         console.error('Error connecting to the database:', error.message);
-//     });
-
 
 mongoose.connect(process.env.Mongo_Key).then(() => {
     console.log('Database Connected');
