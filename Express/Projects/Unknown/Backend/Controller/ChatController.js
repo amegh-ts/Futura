@@ -41,7 +41,7 @@ const findUserChats = async (req, res) => {
 
 
 // find chat
-const findChats = async (req, res) => {
+const findChat = async (req, res) => {
     const { firstId, secondId } = req.params;
     try {
         const chat = await chatSchema.find({
@@ -55,3 +55,5 @@ const findChats = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+module.exports = { createChat,findUserChats,findChat };
