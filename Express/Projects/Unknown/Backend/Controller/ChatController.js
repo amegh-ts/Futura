@@ -23,7 +23,22 @@ const createChat = async (req, res) => {
 }
 
 
-// get chats
+// find chats
+const findUserChats = async (req, res) => {
+    const userId = req.params.userId
+    try {
+        const chats = await chatSchema.find({
+            members: { $in: [userId] }
+        });
+        res.status(200).json(chats)
+
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error)
+    }
+}
+
 
 // find chat
 
