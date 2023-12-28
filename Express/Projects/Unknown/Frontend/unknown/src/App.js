@@ -52,9 +52,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <RouterProvider router={router}></RouterProvider>
-      </header>
+      </div>
       <section className='App-invisible'>
         <div>
           Please Use a larger display <span>340px</span> or more
