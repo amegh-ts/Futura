@@ -6,9 +6,11 @@ import { getUsers } from '../../ApiCalls';
 
 const Users = () => {
     const [state, setState] = useState([])
-    const localStorageUser = localStorage.getItem('user');
-    const user = localStorageUser ? JSON.parse(localStorageUser) : null;
-    const authenticatedUserId = user ? user.userInfo[0].id : null;
+    const storedData = localStorage.getItem('persist:unknown');
+    const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
+    const userId = user?.userInfo?.[0]?.id;
+
+    console.log(userId);
 
     useEffect(() => {
         async function display() {
