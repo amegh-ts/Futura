@@ -3,8 +3,8 @@ const { createChat, findUserChats, findChat } = require('../Controller/ChatContr
 const router = require('express').Router()
 
 
-router.post('/',createChat)
-router.get('/:userId',findUserChats)
-router.get('/find/:firstId/:secondId',findChat)
+router.post('/createchat',createChat)
+router.get('/chats/:userId',findUserChats)
+router.get('/chat/find/:firstId/:secondId',findChat)
 
 module.exports=router

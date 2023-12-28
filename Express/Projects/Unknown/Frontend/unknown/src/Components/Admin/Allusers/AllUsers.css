@@ -73,3 +73,15 @@
 }
 
 
+.all-users-table button{
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+.all-users-table button:hover{
+    box-shadow: 0px 0px 10px var(--primary-color);
+}

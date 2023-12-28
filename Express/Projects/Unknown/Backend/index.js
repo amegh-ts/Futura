@@ -27,7 +27,7 @@ app.use(express.json())
 
 app.use('/', userRouter)
 app.use('/', notificationRouter)
-app.use('/api/chats', chatRouter)
+app.use('/', chatRouter)
 app.use('/api/messages', messageRouter)
 
 

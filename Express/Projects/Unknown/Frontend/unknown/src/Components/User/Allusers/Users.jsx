@@ -16,7 +16,7 @@ const Users = () => {
         async function display() {
             try {
                 const allUsers = await getUsers();
-                const filteredUsers = allUsers.filter(user => user.type !== 'admin');
+                const filteredUsers = allUsers.filter(user => user.type !== 'admin' && user._id!==userId);
 
                 setState(filteredUsers)
             } catch (error) {

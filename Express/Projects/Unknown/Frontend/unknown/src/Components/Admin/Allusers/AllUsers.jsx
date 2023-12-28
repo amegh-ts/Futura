@@ -58,7 +58,9 @@ return (
                             <td>{user.phone}</td>
                             <td>{user.type}</td>
                             <td>
-                                <button>edit</button>
+                                <button>Edit</button>
+                                <span> </span>
+                                <button>Chat</button>
                             </td>
                         </tr>
                     ))}

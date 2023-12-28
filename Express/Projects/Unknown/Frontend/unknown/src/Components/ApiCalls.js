@@ -55,7 +55,7 @@ export const getIdData = async () => {
 export const updateProfile = async (data) => {
     try {
         const res = await publicRequest.put(`/updateprofile/${userId}`, data)
-        console.log('Response Status:',res.status);
+        console.log('Response Status:', res.status);
     } catch (err) {
         console.log(err);
 
@@ -66,7 +66,7 @@ export const updateProfile = async (data) => {
 export const updatePassword = async (data) => {
     try {
         const res = await publicRequest.put(`/updatepass/${userId}`, data)
-        console.log('Response Status:',res.status);
+        console.log('Response Status:', res.status);
     } catch (err) {
         console.log(err);
 
@@ -78,7 +78,7 @@ export const sendNotification = async (data) => {
     try {
         const newData = { ...data, user: 'Admin' }
         const res = await userRequest.post('/sendNotification', newData)
-        console.log('Response Status:',res.status);
+        console.log('Response Status:', res.status);
 
     } catch (error) {
         console.log(error);
@@ -89,7 +89,7 @@ export const sendNotification = async (data) => {
 export const getNotification = async () => {
     try {
         const res = await userRequest.get('/getNotification')
-        console.log('Response Status:',res.status);
+        console.log('Response Status:', res.status);
         return res.data
     } catch (error) {
         console.log(error);
@@ -98,11 +98,25 @@ export const getNotification = async () => {
 
 
 // account recovery
-export const accountRecoverys=async(data)=>{
+export const accountRecoverys = async (data) => {
     console.log(data);
     try {
-        const res=await publicRequest.post('/recovery',data)
-        console.log('Response Status:',res.status);
+        const res = await publicRequest.post('/recovery', data)
+        console.log('Response Status:', res.status);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+// chats
+
+// create chat
+export const createChat = async (data) => {
+    console.log(data);
+    try {
+        const res = await userRequest.get('/createchat', data)
     } catch (error) {
         console.log(error);
     }
