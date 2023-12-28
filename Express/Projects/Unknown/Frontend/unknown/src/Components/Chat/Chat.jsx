@@ -3,16 +3,13 @@
 import React, { useEffect, useState } from 'react';
 import './Chat.css';
 import { getUsers, userChats } from '../ApiCalls';
+import ChatBody from './ChatBody';
 
 const Chat = () => {
     const [state, setState] = useState([]);
     const [data, setData] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
-
-
-    console.log(data);
-    console.log(state);
-
+    const [showChatBody, setShowChatBody] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -29,35 +26,34 @@ const Chat = () => {
     }, []);
 
     const secondMembers = state.map(item => item.members[1]);
-    console.log('-------------------',secondMembers);
-
-
-
-
+    console.log('-------------------', secondMembers);
 
     const handleUserClick = (user) => {
         setSelectedUser(user);
-        // You may want to load chat history or perform other actions here
+        setShowChatBody(true);
     };
 
     return (
         <div className="chat-container">
             <div className="users-list">
                 <h2>Users</h2>
-                {state.map((user) => (
-                    <div key={user._id} className={`user-item ${selectedUser && selectedUser._id === user._id ? 'active-user' : ''}`} onClick={() => handleUserClick(user)}>
-                        <p>{user._id}</p>
-                    </div>
-                ))}
+                {state.map((user) => {
+                    const secondMemberId = user.members[1];
+                    const secondMember = data.find((userData) => userData._id === secondMemberId);
+
+                    return (
+                        <div key={user._id} className={`user-item ${selectedUser && selectedUser._id === user._id ? 'active-user' : ''}`} onClick={() => handleUserClick(user)}>
+                            <p>{secondMember ? secondMember.uname : 'Unknown User'}</p>
+                        </div>
+                    );
+                })}
             </div>
             <div className="chat-main">
-                <h2>{selectedUser ? `Chatting with ${selectedUser.uname}` : 'Select a user to start chatting'}</h2>
-                {/* Add your chat components here */}
-
-
-
-
-
+                {showChatBody ? (
+                    <ChatBody user={selectedUser} />
+                ) : (
+                    <img src="/Images/robot.gif" alt="" />
+                )}
             </div>
         </div>
     );

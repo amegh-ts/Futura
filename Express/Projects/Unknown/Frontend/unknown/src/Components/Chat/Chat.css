@@ -13,10 +13,7 @@
     overflow-y: auto;
   }
   
-  .chat-main {
-    flex: 3;
-    padding: 20px;
-  }
+ 
   
   .user-item {
     margin-bottom: 10px;
@@ -38,4 +35,14 @@
     background-color: var(--primary-color);
     color: white;
   }
-  
+   .chat-main {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chat-main img{
+    width: auto;
+    height: auto;
+  }
