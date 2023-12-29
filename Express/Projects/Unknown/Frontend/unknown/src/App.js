@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import AdminSidebar from './Components/Admin/Sidebar/AdminSidebar';
 import Notification from './Components/User/Notification/Notification';
 import Recovery from './Components/Login/Recovery';
+import Chat from './Components/Chat/Chat';
 
 function App() {
   const reduxData = useSelector((state) => state.user.userInfo[0]);
@@ -47,6 +48,9 @@ function App() {
     },{
       path: '/rec',
       element: <Recovery />,
+    },{
+      path: '/chat',
+      element: <Chat />,
     },
   ]);
 

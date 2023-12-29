@@ -3,7 +3,8 @@ import React from 'react'
 const ChatBody = ({ selectedChatId }) => {
   console.log(selectedChatId);
   return (
-    <div className='chat-body-main'>ChatBody
+    <div className='chat-body-main'>
+      <p>chat with {selectedChatId}</p>
       <div className="chat-body-container">
         <ul class="message-list">
           <li class="message sender-message">
@@ -14,10 +15,11 @@ const ChatBody = ({ selectedChatId }) => {
           </li>
         </ul>
 
-        <div class="input-container">
-          <input type="text" placeholder="Type your message..." />
-          <button>Send</button>
-        </div>
+
+      </div>
+      <div class="input-container">
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
       </div>
     </div>
   )
