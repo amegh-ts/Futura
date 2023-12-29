@@ -136,7 +136,8 @@ export const userChats = async () => {
 // chat b/w users
 export const chatPage=async()=>{
     try {
-        const res = await userRequest.get(`/chats/find/`)
+        const firstId=userId
+        const res = await userRequest.get(`/chats/find/${firstId}`)
     } catch (error) {
         console.log(error);
     }
