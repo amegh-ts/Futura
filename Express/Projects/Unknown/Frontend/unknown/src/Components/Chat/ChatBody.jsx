@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ChatBody = ({selectedUserId}) => {
-  console.log(selectedUserId);
+const ChatBody = ({selectedChatId}) => {
+  console.log(selectedChatId);
   return (
     <div>ChatBody
-      <h2>{selectedUserId}</h2>
+      <h2>{selectedChatId}</h2>
     </div>
   )
 }
