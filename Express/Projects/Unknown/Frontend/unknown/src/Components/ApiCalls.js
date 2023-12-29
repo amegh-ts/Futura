@@ -111,7 +111,6 @@ export const accountRecoverys = async (data) => {
 
 
 // chats
-
 // create chat
 export const createChat = async (data) => {
     console.log(data);
@@ -132,4 +131,9 @@ export const userChats = async () => {
     } catch (error) {
         console.log(error);
     }
+}
+
+// chat b/w users
+export const chatPage=async()=>{
+    
 }
