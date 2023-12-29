@@ -133,8 +133,18 @@ export const userChats = async () => {
     }
 }
 
-// chat b/w users
-export const chatPage=async(chatId)=>{
+// send message
+export const sendMessage=async(chatId)=>{
+    try {
+        const res = await userRequest.get(`/api/messages/${chatId}`)
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// fetch chat b/w users
+export const viewMessages=async(chatId)=>{
     try {
         const res = await userRequest.get(`/api/messages/${chatId}`)
         return res.data

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { chatPage } from '../ApiCalls';
+import { viewMessages } from '../ApiCalls';
 
 const ChatBody = ({ selectedChatId }) => {
   const [messages, setMessages] = useState([]);
@@ -11,7 +11,7 @@ const ChatBody = ({ selectedChatId }) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const getChat = await chatPage(selectedChatId);
+        const getChat = await viewMessages(selectedChatId);
         setMessages(getChat || []); 
       } catch (error) {
         console.log(error);
