@@ -28,7 +28,8 @@ const Chat = () => {
     const secondMembers = state.map(item => item.members[1]);
     console.log('-------------------', secondMembers);
 
-    const handleUserClick = () => {
+    const handleUserClick = (user) => {
+        setSelectedUser(user);
         setShowChatBody(true);
     };
 
