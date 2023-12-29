@@ -135,5 +135,9 @@ export const userChats = async () => {
 
 // chat b/w users
 export const chatPage=async()=>{
-    
+    try {
+        const res = await userRequest.get(`/chats/find/`)
+    } catch (error) {
+        console.log(error);
+    }
 }
