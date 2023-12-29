@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { chatPage } from '../ApiCalls';
 
 const ChatBody = ({ selectedChatId }) => {
   const [message, setMessage] = useState('');
 
+
+  useEffect(() => {
+    async function fetchData() {
+        try {
+            chatPage(selectedChatId);
+            console.log(chatPage);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    fetchData();
+}, []);
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
   };
@@ -13,6 +26,8 @@ const ChatBody = ({ selectedChatId }) => {
     // Reset the input field after sending the message
     setMessage('');
   };
+
+
 
   return (
     <div className='chat-body-main'>
