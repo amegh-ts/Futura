@@ -1,8 +1,9 @@
-   
+
 import React, { useState } from 'react'
 import './Login.css'
 import { useDispatch } from 'react-redux';
 import { signInData, signUpData } from '../ApiCalls';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -14,7 +15,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   const onSignUpClick = async () => {
     try {
@@ -25,11 +26,11 @@ const Login = () => {
       console.error(error);
     }
   };
-  
 
-  const onSignInClick = async() => {
+
+  const onSignInClick = async () => {
     try {
-    signInData({email,password},dispatch)
+      signInData({ email, password }, dispatch)
     } catch (error) {
       console.log(error);
     }
@@ -66,9 +67,11 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <h1>Sign In</h1>
 
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <a href="#f">Forgot Your Password?</a>
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <Link to="/rec">
+              <a href="#f">Forgot Your Password?</a>
+            </Link>
             <button onClick={onSignInClick}>Sign In</button>
           </form>
         </div>

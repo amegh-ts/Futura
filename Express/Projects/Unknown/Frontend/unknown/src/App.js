@@ -11,7 +11,7 @@ import Chat from './Components/Chat/Chat';
 function App() {
   const reduxData = useSelector((state) => state.user.userInfo[0]);
   // console.log('reduxdata', reduxData);
-  
+
   let content;
 
   if (reduxData) {
@@ -27,7 +27,7 @@ function App() {
       if (type === 'user') {
         content = <SideBar />;
       } else if (type === 'admin') {
-        content = <AdminSidebar/>
+        content = <AdminSidebar />
       }
     } else {
       // If there's no token, redirect to login
@@ -42,13 +42,13 @@ function App() {
     {
       path: '/',
       element: content,
-    },{
+    }, {
       path: '/noti',
       element: <Notification />,
-    },{
+    }, {
       path: '/rec',
       element: <Recovery />,
-    },{
+    }, {
       path: '/chat',
       element: <Chat />,
     },

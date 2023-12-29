@@ -14,7 +14,7 @@ const ChatBody = ({ selectedChatId }) => {
     async function fetchData() {
       try {
         const getChat = await viewMessages(selectedChatId);
-        setMessages(getChat || []); 
+        setMessages(getChat || []);
       } catch (error) {
         console.log(error);
       }
@@ -71,7 +71,7 @@ const ChatBody = ({ selectedChatId }) => {
         )}
       </div>
       <div className="input-container">
-      <input
+        <input
           type="text"
           placeholder="Type your message..."
           value={inputMessage}
