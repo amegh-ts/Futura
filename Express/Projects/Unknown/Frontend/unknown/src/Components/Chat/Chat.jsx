@@ -11,6 +11,10 @@ const Chat = () => {
     const [selectedUser, setSelectedUser] = useState(null);
     const [showChatBody, setShowChatBody] = useState(false);
 
+    const storedData = localStorage.getItem('persist:unknown');
+    const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
+    const senderId = user?.userInfo?.[0]?.id;
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -25,8 +29,8 @@ const Chat = () => {
         fetchData();
     }, []);
 
-    const secondMembers = state.map(item => item.members[1]);
-    console.log('-------------------', secondMembers);
+    // const secondMembers = state.map(item => item.members[1]);
+    // console.log('-------------------', secondMembers);
 
     const handleUserClick = (user) => {
         setSelectedUser(user);
@@ -41,9 +45,14 @@ const Chat = () => {
                     const secondMemberId = user.members[1];
                     const secondMember = data.find((userData) => userData._id === secondMemberId);
 
+                    const firstMemberId = user.members[0];
+                    const firstMember = data.find((userData) => userData._id === firstMemberId);
+
+                    const displayMember = secondMemberId === senderId ? firstMember : secondMember;
+
                     return (
                         <div key={user._id} className={`user-item ${selectedUser && selectedUser._id === user._id ? 'active-user' : ''}`} onClick={() => handleUserClick(user)}>
-                            <p>{secondMember ? secondMember.uname : 'Unknown User'}</p>
+                            <p>{displayMember ? displayMember.uname : 'Unknown User'}</p>
                         </div>
                     );
                 })}
