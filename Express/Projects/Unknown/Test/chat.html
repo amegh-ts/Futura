@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .message-list {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .sender-message {
+            text-align: right;
+        }
+
+        .sender-message .message-bubble {
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 10px 10px 0 10px;
+            float: right;
+        }
+
+        .receiver-message {
+            text-align: left;
+        }
+
+        .receiver-message .message-bubble {
+            background-color: #ddd;
+            color: #333;
+            border-radius: 10px 10px 10px 0;
+            float: left;
+        }
+
+        .message-bubble {
+            padding: 10px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        .input-container input {
+            flex: 1;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .input-container button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <ul class="message-list">
+        <li class="message sender-message">
+            <div class="message-bubble">Hello! This is a sender message.</div>
+        </li>
+        <li class="message receiver-message">
+            <div class="message-bubble">Hi! This is a received message.</div>
+        </li>
+        <!-- Add more messages as needed -->
+    </ul>
+
+    <div class="input-container">
+        <input type="text" placeholder="Type your message...">
+        <button>Send</button>
+    </div>
+</div>
+
+</body>
+</html>
