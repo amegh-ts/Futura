@@ -137,6 +137,7 @@ export const userChats = async () => {
 export const chatPage=async(chatId)=>{
     try {
         const res = await userRequest.get(`/api/messages/${chatId}`)
+        return res.data
     } catch (error) {
         console.log(error);
     }

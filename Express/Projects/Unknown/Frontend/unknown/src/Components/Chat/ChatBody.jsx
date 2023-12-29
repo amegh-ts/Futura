@@ -4,18 +4,20 @@ import { chatPage } from '../ApiCalls';
 const ChatBody = ({ selectedChatId }) => {
   const [message, setMessage] = useState('');
 
+  
 
   useEffect(() => {
     async function fetchData() {
         try {
-            chatPage(selectedChatId);
-            console.log(chatPage);
+            const getChat = await chatPage(selectedChatId);
+            console.log(getChat);
         } catch (error) {
             console.log(error);
         }
     }
     fetchData();
-}, []);
+}, [selectedChatId]);
+
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
   };
