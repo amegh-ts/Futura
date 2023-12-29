@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { viewMessages } from '../ApiCalls';
+import { sendMessage, viewMessages } from '../ApiCalls';
 
 const ChatBody = ({ selectedChatId }) => {
   const [messages, setMessages] = useState([]);
+  const [inputMessage, setInputMessage] = useState('');
+
 
   const storedData = localStorage.getItem('persist:unknown');
   const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
@@ -21,11 +23,32 @@ const ChatBody = ({ selectedChatId }) => {
   }, [selectedChatId]);
 
   const handleMessageChange = (e) => {
+    setInputMessage(e.target.value);
   };
 
-  const handleSendMessage = () => {
-    // Handle sending the message (you can implement this logic)
-    // Reset the input field after sending the message
+  const handleSendMessage = async () => {
+    if (inputMessage.trim() === '') {
+      // Don't send empty messages
+      return;
+    }
+
+    try {
+      // Call sendMessage function with chatId, senderId, and text
+      await sendMessage(selectedChatId, senderId, inputMessage);
+
+      // Clear the input field
+      setInputMessage('');
+    } catch (error) {
+      // Handle the error (e.g., show an error message)
+      console.error('Error sending message:', error);
+    }
+  };
+
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
   };
 
   return (
@@ -48,10 +71,12 @@ const ChatBody = ({ selectedChatId }) => {
         )}
       </div>
       <div className="input-container">
-        <input
+      <input
           type="text"
           placeholder="Type your message..."
+          value={inputMessage}
           onChange={handleMessageChange}
+          onKeyPress={handleKeyPress}
         />
         <button onClick={handleSendMessage}>Send</button>
       </div>

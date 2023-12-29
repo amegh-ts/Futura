@@ -134,14 +134,18 @@ export const userChats = async () => {
 }
 
 // send message
-export const sendMessage=async(chatId)=>{
+export const sendMessage = async (chatId, senderId, text) => {
     try {
-        const res = await userRequest.get(`/api/messages/${chatId}`)
-        return res.data
+      const res = await userRequest.post(`/api/messages/`, {
+        chatId: chatId,
+        senderId: senderId,
+        text: text,
+      });
+      return res.data;
     } catch (error) {
-        console.log(error);
+      console.log( error);
     }
-}
+  };
 
 // fetch chat b/w users
 export const viewMessages=async(chatId)=>{
