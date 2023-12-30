@@ -11,7 +11,20 @@ const Login = () => {
                 </div>
                 <div className="login-top-right">
                     <div className="login-container">
-                        <input type="text" />
+                        <div className="login-container-top">
+                            <div>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <button>Log in</button>
+                            </div>
+                        </div>
+                        <div className="login-container-bottom">
+                            <button>Create new account</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,3 +19,13 @@
 .login-top-left img{
     height: 106px;
 }
+
+.login-container{
+    background-color: white;
+    padding: 15px;
+}
+
+.login-bottom ul{
+    display: flex;
+    gap: 10px;
+}
