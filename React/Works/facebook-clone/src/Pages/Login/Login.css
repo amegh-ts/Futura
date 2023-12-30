@@ -30,6 +30,13 @@
     font-size: 24px;
 }
 
+.login-top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .login-container {
     background-color: white;
     padding: 15px;
@@ -77,8 +84,9 @@
     width: 332px;
 }
 
-.login-container-bottom button{
-    background-color: #42b72a;    ;
+.login-container-bottom button {
+    background-color: #42b72a;
+    ;
     font-weight: 600;
     color: white;
     border: none;
@@ -88,6 +96,7 @@
     padding: 0 16px;
     width: 332px;
 }
+
 .forgotten-pass {
     color: #1877f2;
     font-size: 14px;
@@ -106,4 +115,3 @@
     font-size: 14px;
     color: #65676b;
 }
-
