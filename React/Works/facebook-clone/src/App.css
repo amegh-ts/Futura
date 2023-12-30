@@ -1,8 +1,11 @@
-
+:root{
+  --primary-color:#1877f2;
+}
 .App-header {
   background-color: #ffffff;
   min-height: 100vh;
   margin: 0px;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
   padding: 0px;
 }
 
