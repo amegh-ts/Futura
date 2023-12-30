@@ -82,11 +82,11 @@
     line-height: 48px;
     padding: 0 16px;
     width: 332px;
+    cursor: pointer;
 }
 
 .login-container-bottom button {
     background-color: #42b72a;
-    ;
     font-weight: 600;
     color: white;
     border: none;
@@ -95,6 +95,7 @@
     line-height: 48px;
     padding: 0 16px;
     width: 332px;
+    cursor: pointer;
 }
 
 .forgotten-pass {
@@ -103,8 +104,14 @@
     font-weight: 500;
 }
 
-
-.login-bottom ul {
+.login-bottom{
+    display: flex;
+    justify-content: center;
+}
+.login-bottom-top{
+    border-bottom: 1px solid #dadded;
+}
+.login-bottom-top ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;

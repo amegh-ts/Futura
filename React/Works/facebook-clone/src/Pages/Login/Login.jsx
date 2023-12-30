@@ -1,5 +1,6 @@
 import React from "react";
 import './Login.css'
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
@@ -17,20 +18,25 @@ const Login = () => {
                             <div>
                                 <button>Log in</button>
                             </div>
-                            <span className="forgotten-pass">Forgotten password?</span>
+                            <Link to={'/forgot'}>
+                                <span className="forgotten-pass">Forgotten password?</span>
+                            </Link>
 
                         </div>
                         <div className="login-container-bottom">
-                            <button>Create new account</button>
+                            <Link to={'/signup'}>
+                                <button>Create new account</button>
+
+                            </Link>
                         </div>
                     </div>
                     <span>Create a Page for a celebrity, brand or business.</span>
                 </div>
             </div>
             <div className="login-bottom">
-                <div>
+                <div className="login-bottom-top">
                     <ul>
-                        <li>English (UK)</li>
+                        <li>English</li>
                         <li>മലയാളം</li>
                         <li>தமிழ்</li>
                         <li>ಕನ್ನಡ</li>
