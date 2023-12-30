@@ -6,9 +6,11 @@
     background-color: #f0f2f5;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 720px;
+    gap: 20px;
 }
 .login-top-left{
     display: flex;
@@ -23,6 +25,7 @@
 .login-container{
     background-color: white;
     padding: 15px;
+    min-height: 350px;
 }
 
 .login-bottom ul{

@@ -6,7 +6,9 @@ const Login = () => {
         <div className="login-main">
             <div className="login-top">
                 <div className="login-top-left">
-                    <img src="/Images/fblogo.svg" alt="fb logo" />
+                    <div>
+                        <img src="/Images/fblogo.svg" alt="fb logo" />
+                    </div>
                     <h2>Facebook helps you connect and share with the people in your life.</h2>
                 </div>
                 <div className="login-top-right">
