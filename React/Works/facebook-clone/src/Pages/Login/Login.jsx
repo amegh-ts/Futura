@@ -7,20 +7,18 @@ const Login = () => {
             <div className="login-top">
                 <div className="login-top-left">
                     <span className="fb-logo">facebook</span>
-                    <span>Facebook helps you connect and share with the people in your life.</span>
+                    <span className="fb-p">Facebook helps you connect and share with the people in your life.</span>
                 </div>
                 <div className="login-top-right">
                     <div className="login-container">
                         <div className="login-container-top">
-                            <div>
-                                <input type="text" />
-                            </div>
-                            <div>
-                                <input type="text" />
-                            </div>
+                                <input type="text" placeholder="Email address or phone number"/>
+                                <input type="password" placeholder="Password"/>
                             <div>
                                 <button>Log in</button>
                             </div>
+                        <span className="forgotten-pass">Forgotten password?</span>
+
                         </div>
                         <div className="login-container-bottom">
                             <button>Create new account</button>
