@@ -1,9 +1,9 @@
 .login-main{
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 .login-top{
     background-color: #f0f2f5;
+    width: 100%;
 }
 

@@ -18,40 +18,18 @@ const Login = () => {
                 </div>
             </div>
             <div className="login-bottom">
-
-
                 <ul>
                     <li>English (UK)</li>
-                    <li>
-                        മലയാളം
-                    </li>
-                    <li>
-                        தமிழ்
-                    </li>
-                    <li>
-                        ಕನ್ನಡ
-                    </li>
-                    <li>
-                        हिन्दी
-                    </li>
-                    <li>
-                        اردو
-                    </li>
-                    <li>
-                        বাংলা
-                    </li>
-                    <li>
-                        తెలుగు
-                    </li>
-                    <li>
-                        Español
-                    </li>
-                    <li>
-                        Português (Brasil)
-                    </li>
-                    <li>
-                        Français (France)
-                    </li>
+                    <li>മലയാളം</li>
+                    <li>தமிழ்</li>
+                    <li>ಕನ್ನಡ</li>
+                    <li>हिन्दी</li>
+                    <li>اردو</li>
+                    <li>বাংলা</li>
+                    <li>తెలుగు</li>
+                    <li>Español</li>
+                    <li>Português (Brasil)</li>
+                    <li>Français (France)</li>
                 </ul>
             </div>
         </div>
