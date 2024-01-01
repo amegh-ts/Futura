@@ -5,7 +5,7 @@ const router = express.Router();
 const ytdl = require('ytdl-core');
 const cors = require('cors')
 app.use(cors({
-    exposedHeaders: ['Content-Disposition','x-thumbnail-url'],
+    exposedHeaders: ['Content-Disposition', 'x-thumbnail-url'],
 }))
 
 
@@ -21,14 +21,14 @@ router.post('/api/download', async (req, res) => {
         const videoInfo = video.videoDetails;
 
         const thumbnailUrl = video.videoDetails.thumbnails && video.videoDetails.thumbnails.length > 0
-        ? video.videoDetails.thumbnails[0].url
-        : 'default-thumbnail-url.jpg';
+            ? video.videoDetails.thumbnails[0].url
+            : 'default-thumbnail-url.jpg';
 
         // console.log('Video title and info:', videoInfo);
         console.log('thumpnaillll:', thumbnailUrl);
 
         const downloadOptions = {
-            format:'videoonly',
+            format: 'videoonly',
             quality: 'lowestvideo',
             filter: 'videoonly',
             highWaterMark: 1 << 25,
