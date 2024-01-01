@@ -1,11 +1,12 @@
 .navbar-main{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     position: fixed;
-    border-bottom: 1.5px solid var(--primary-color);
+    border-bottom: 1.5px solid rgba(245, 245, 245, 0.861);
     backdrop-filter: blur(5px);
+    z-index: 1000;
 
     .nav-logo{
         display: flex;

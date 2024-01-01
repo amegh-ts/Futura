@@ -5,6 +5,7 @@
   /* ===== Colors ===== */
   --primary-color: hsl(14, 90%, 53%);
   --primary-color-light: hsl(14, 96%, 91%);
+  --white-color:  hsl(0, 0%, 100%);
 
   /* ===== Font ===== */
   --biggest-font: 2.5rem;
@@ -37,5 +38,5 @@ video {
 
 .App-header {
   min-height: 100vh;
-
+  
 }
