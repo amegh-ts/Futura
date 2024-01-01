@@ -1,4 +1,4 @@
-.navbar-main{
+.navbar-main {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -9,20 +9,20 @@
     z-index: 1000;
     background: rgba(255, 255, 255, 0.737);
 
-    .nav-logo{
+    .nav-logo {
         display: flex;
         align-items: center;
-        justify-content: center ;
-        
+        justify-content: center;
+
     }
-    .nav-menu-icon{
+
+    .nav-menu-icon {
         display: none;
     }
 
     /* media */
-    @media screen and (max-width: 767px)
-    {
-        .nav-menu{
+    @media screen and (max-width: 767px) {
+        .nav-menu {
             position: absolute;
             width: 70%;
             top: -100rem;
@@ -36,30 +36,33 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 2px 3px 4px rgba(236, 213, 213, 0.516);
 
-            li{
+            li {
                 font-size: var(--h3-font);
                 font-weight: 500;
                 padding: 1rem 0;
                 /* text-align: center; */
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color);
                     border-bottom: 1.5px solid var(--primary-color);
                 }
             }
-            
+
         }
     }
 
-    .nav-menu-icon, .nav-close-icon{
-        
+    .nav-menu-icon,
+    .nav-close-icon {
+
         font-size: var(--h1-font);
-        &:hover{
+
+        &:hover {
             color: var(--primary-color);
         }
     }
 
-    .nav-close-icon{
+    .nav-close-icon {
         position: absolute;
         bottom: -15px;
         right: 50%;
@@ -67,29 +70,29 @@
         transform: translate(-50%);
     }
 
-    .show-navbar{
+    .show-navbar {
         top: 8rem;
     }
 }
 
 
 
-.icon{
+.icon {
     font-size: var(--h2-font);
     cursor: pointer;
 }
 
 
-.btn{
+.btn {
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius:var(--border-radius);
-    padding: 0.8rem  1rem;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1rem;
     color: white;
     background: var(--primary-color);
 
-    &:hover{
+    &:hover {
         transition: .3s ease;
     }
 }
@@ -97,14 +100,15 @@
 
 // media querry
 @media screen and (min-width: 768px) {
-    .navbar-main{
-        .nav-logo{
-            h1{
+    .navbar-main {
+        .nav-logo {
+            h1 {
                 font-size: var(--h2-font);
             }
         }
 
-        .nav-close-icon, .nav-menu-icon{
+        .nav-close-icon,
+        .nav-menu-icon {
             display: none;
         }
     }
