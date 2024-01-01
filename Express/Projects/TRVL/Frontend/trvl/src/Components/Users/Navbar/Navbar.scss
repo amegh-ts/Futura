@@ -1,5 +1,7 @@
 .navbar-main {
     display: flex;
+    padding: 20px 0px;
+
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -110,6 +112,26 @@
         .nav-close-icon,
         .nav-menu-icon {
             display: none;
+        }
+
+        .nav-menu {
+            ul {
+                display: flex;
+                gap: 1rem;
+
+                li {
+                    font-size: var(--h3-font);
+                    font-weight: 500;
+                    padding: 1rem 0;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--primary-color);
+                        border-bottom: 1.5px solid var(--primary-color);
+                    }
+                }
+            }
         }
     }
 }
