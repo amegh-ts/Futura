@@ -45,18 +45,18 @@ const Main = () => {
   };
 
 
-// const handleDetails = async () => {
-//     try {
-//       const details = await showDetails({ videoUrl });
-//       console.log('Video Details:', details.videoInfo);
+  // const handleDetails = async () => {
+  //     try {
+  //       const details = await showDetails({ videoUrl });
+  //       console.log('Video Details:', details.videoInfo);
 
-//       // Set the videoDetails state to display in the right div
-//       setVideoDetails(details.videoInfo);
-//     } catch (error) {
-//       console.error('Error fetching video details:', error);
-//       // Handle the error as needed
-//     }
-//   };
+  //       // Set the videoDetails state to display in the right div
+  //       setVideoDetails(details.videoInfo);
+  //     } catch (error) {
+  //       console.error('Error fetching video details:', error);
+  //       // Handle the error as needed
+  //     }
+  //   };
 
 
   return (
