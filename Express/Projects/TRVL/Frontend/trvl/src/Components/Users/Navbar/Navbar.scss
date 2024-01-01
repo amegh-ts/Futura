@@ -14,7 +14,9 @@
         justify-content: center ;
         
     }
-
+    .nav-menu-icon{
+        display: none;
+    }
 
     /* media */
     @media screen and (max-width: 767px)
@@ -55,7 +57,9 @@
             color: var(--primary-color);
         }
     }
+.nav-menu-icon{
 
+}
     .nav-close-icon{
         position: absolute;
         bottom: -15px;
