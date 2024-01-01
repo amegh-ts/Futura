@@ -42,7 +42,7 @@ const Profile = () => {
       alert('Error updating profile. Please try again.');
     }
   };
-  
+
   const onChangePassword = async () => {
     try {
       await updatePassword({ password });
@@ -53,7 +53,7 @@ const Profile = () => {
       alert('Error updating password. Please try again.');
     }
   };
-  
+
 
 
 
