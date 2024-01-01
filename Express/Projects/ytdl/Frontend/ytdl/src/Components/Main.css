@@ -1,75 +1,82 @@
 /* Main.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url(../Components/Assets/bg1.png) center/cover no-repeat;
-  }
-  
-  .container {
-    height: auto;
-    background-color: #ffffff1a;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px; /* Add border-radius for curves */
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); /* Add box shadow for a subtle effect */
-    gap: 20px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .left{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    color: #ffffff;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(../Components/Assets/bg1.png) center/cover no-repeat;
+}
+
+.container {
+  height: auto;
+  background-color: #ffffff1a;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  /* Add border-radius for curves */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  /* Add box shadow for a subtle effect */
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.container input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  /* Add border for better visibility */
+  border-radius: 5px;
+  /* Add border-radius for curves */
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #9b9393;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  /* Add border-radius for curves */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add box shadow for a subtle effect */
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+p {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
   .container input {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc; /* Add border for better visibility */
-    border-radius: 5px; /* Add border-radius for curves */
-    outline: none;
+    width: calc(100% - 20px);
   }
-  
-  button {
-    padding: 10px;
-    background-color: #9b9393;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px; /* Add border-radius for curves */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
-  }
-  
-  button:hover {
-    background-color: #ffffff;
-    color: black;
-  }
-  
-  p {
-    color: red;
-    margin-top: 10px;
-  }
-  
-  /* Media Query for smaller screens */
-  @media (max-width: 600px) {
-    .container input {
-      width: calc(100% - 20px);
-    }
-  }
-  
+}
