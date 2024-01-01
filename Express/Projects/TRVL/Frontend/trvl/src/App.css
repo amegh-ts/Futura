@@ -3,27 +3,34 @@
 
 :root {
   /* ===== Colors ===== */
-  --primary-color: hsl(14,90%,53%);
-  --primary-color-light: hsl(14,96%,91%);
+  --primary-color: hsl(14, 90%, 53%);
+  --primary-color-light: hsl(14, 96%, 91%);
 
   /* ===== Font ===== */
-  --biggest-font:2.5rem;
-  --h1-font:2rem;
-  --h2-font:1.25rem;
-  --h3-font:1rem;
-  --normal-font:0.938rem;
-  --small-font:0.813rem;
-  --smallest-font:0.75rem;
+  --biggest-font: 2.5rem;
+  --h1-font: 2rem;
+  --h2-font: 1.25rem;
+  --h3-font: 1rem;
+  --normal-font: 0.938rem;
+  --small-font: 0.813rem;
+  --smallest-font: 0.75rem;
 
 
   /* ===== border ===== */
-  --border-radius:3rem;
+  --border-radius: 3rem;
 }
 
-*{
-  margin: 0;
-  padding: 0;
+
+li {
+  list-style: none;
 }
+
+img,
+video {
+  height: auto;
+  width: 100%;
+}
+
 .App-header {
   min-height: 100vh;
 
