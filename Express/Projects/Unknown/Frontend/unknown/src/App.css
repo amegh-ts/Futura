@@ -41,7 +41,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
-.App-invisible{
+
+.App-invisible {
   display: none;
 
 }
@@ -106,18 +107,19 @@
 
 /* 340 */
 @media (max-width: 340px) {
-  .App-header{
+  .App-header {
     display: none;
   }
 
-  .App-invisible{
+  .App-invisible {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
   }
-  .App-invisible span{
+
+  .App-invisible span {
     color: red;
   }
 }
