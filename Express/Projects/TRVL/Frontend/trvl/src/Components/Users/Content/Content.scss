@@ -1,20 +1,32 @@
-.felx{
+.felx {
     display: flex;
     align-items: center;
 }
-.grid{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+
+
+.content {
+    margin-top: 100px;
+
+    .content-main {
+        width: 100%;
+
+        .content-container {
+            .grid {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+            }
+        }
+    }
+
+
 }
 
-.content{
-    margin-top: 80px;
 
 
 
-    @media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .content {
+        margin-top: 240px;
+    }
 }
-
-
-
