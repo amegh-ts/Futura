@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Navbar.css'
+import './Navbar.scss'
 import { GiFlamer } from "react-icons/gi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { CgMenuGridO } from "react-icons/cg";
