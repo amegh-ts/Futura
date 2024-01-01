@@ -5,16 +5,41 @@
 
 
 .content {
+    width: 100%;
     margin-top: 100px;
 
     .content-main {
         width: 100%;
+        
 
         .content-container {
             .grid {
+                padding: 3rem;
+                border-radius: var(--border-radius);
+                background: var(--primary-color-light);
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                gap: 1.5rem;
+                margin: auto;
+                gap: 2rem;
+
+                span{
+                    justify-content: center;
+                    gap: .5rem;
+
+                    h1{
+                        font-size: var(--h1-font);
+                        font-weight: 700;
+                        color: var(--text-color);
+                    }
+
+                    p{
+                        opacity: .8;
+                        max-width: 80px;
+                        
+                    }
+                }
+
             }
         }
     }
