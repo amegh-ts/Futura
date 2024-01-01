@@ -1,6 +1,7 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,22 +10,22 @@
 
 
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
-  overflow: hidden;
+    overflow: hidden;
 
 }
 
-::selection{
+::selection {
     background-color: var(--primary-color);
     color: #fff;
 }
 
 
 /* ===== Sidebar ===== */
- .sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,20 +34,22 @@ body{
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
-    z-index: 100;  
+    z-index: 100;
 }
-.sidebar.close{
+
+.sidebar.close {
     width: 88px;
 }
 
-.sidebar .menu-links .nav-link.active .icon{
+.sidebar .menu-links .nav-link.active .icon {
     color: var(--active-icon-color);
     background-color: var(--primary-color);
     border-radius: 6px;
     color: white;
 }
+
 /* ===== Reusable code - Here ===== */
-.sidebar li{
+.sidebar li {
     height: 50px;
     list-style: none;
     display: flex;
@@ -55,12 +58,12 @@ body{
 }
 
 .sidebar header .image,
-.sidebar .icon{
+.sidebar .icon {
     min-width: 60px;
     border-radius: 6px;
 }
 
-.sidebar .icon{
+.sidebar .icon {
     min-width: 60px;
     border-radius: 6px;
     height: 100%;
@@ -71,58 +74,62 @@ body{
 }
 
 .sidebar .text,
-.sidebar .icon{
+.sidebar .icon {
     color: var(--text-color);
     transition: var(--tran-03);
 }
 
-.sidebar .text{
+.sidebar .text {
     font-size: 17px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
 }
-.sidebar.close .text{
+
+.sidebar.close .text {
     opacity: 0;
 }
+
 /* =========================== */
 
-.sidebar header{
+.sidebar header {
     position: relative;
 }
 
-.sidebar header .image-text{
+.sidebar header .image-text {
     display: flex;
     align-items: center;
 }
-.sidebar header .logo-text{
+
+.sidebar header .logo-text {
     display: flex;
     flex-direction: column;
 }
+
 header .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .image-text .profession{
+header .image-text .profession {
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar header .image{
+.sidebar header .image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .image img{
+.sidebar header .image img {
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.sidebar header .toggle {
     position: absolute;
     top: 50%;
     right: -25px;
@@ -141,22 +148,22 @@ header .image-text .profession{
 }
 
 
-.sidebar.close .toggle{
+.sidebar.close .toggle {
     transform: translateY(-50%) rotate(0deg);
 }
 
-.sidebar .menu{
+.sidebar .menu {
     margin-top: 40px;
 }
 
-.sidebar li.search-box{
+.sidebar li.search-box {
     border-radius: 6px;
     background-color: var(--primary-color-light);
     cursor: pointer;
     transition: var(--tran-05);
 }
 
-.sidebar li.search-box input{
+.sidebar li.search-box input {
     height: 100%;
     width: 100%;
     outline: none;
@@ -168,7 +175,8 @@ header .image-text .profession{
     font-weight: 500;
     transition: var(--tran-05);
 }
-.sidebar li a{
+
+.sidebar li a {
     list-style: none;
     height: 100%;
     background-color: transparent;
@@ -181,45 +189,49 @@ header .image-text .profession{
     transition: var(--tran-03);
 }
 
-.sidebar li a:hover{
+.sidebar li a:hover {
     background-color: var(--primary-color);
 }
+
 .sidebar li a:hover .icon,
-.sidebar li a:hover .text{
+.sidebar li a:hover .text {
     color: var(--sidebar-color);
 }
 
 
-.sidebar .menu-bar{
+.sidebar .menu-bar {
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
 }
-.menu-bar::-webkit-scrollbar{
+
+.menu-bar::-webkit-scrollbar {
     display: none;
 }
-.sidebar .menu-bar .mode{
+
+.sidebar .menu-bar .mode {
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
     transition: var(--tran-05);
 }
 
-.menu-bar .mode .sun-moon{
+.menu-bar .mode .sun-moon {
     height: 50px;
     width: 60px;
 }
 
-.mode .sun-moon i{
+.mode .sun-moon i {
     position: absolute;
 }
-.mode .sun-moon i.sun{
+
+.mode .sun-moon i.sun {
     opacity: 0;
 }
 
-.home{
+.home {
     position: absolute;
     top: 0;
     top: 0;
@@ -229,14 +241,15 @@ header .image-text .profession{
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
-.home .text{
+
+.home .text {
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
+.sidebar.close~.home {
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
@@ -244,7 +257,7 @@ header .image-text .profession{
 
 
 
-.navbar-container{
+.navbar-container {
     background: var(--sidebar-color);
     min-width: 100px;
     height: 70px;
@@ -258,14 +271,14 @@ header .image-text .profession{
     overflow: hidden;
 }
 
-.navbar-header{
+.navbar-header {
     color: var(--primary-color);
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.navbar-search{
+.navbar-search {
     display: flex;
     background: var(--body-color);
     padding: 10px;
@@ -273,7 +286,8 @@ header .image-text .profession{
     align-items: center;
     color: var(--primary-color);
 }
-.navbar-search input{
+
+.navbar-search input {
     outline: none;
     font-size: 18px;
     border: none;
@@ -281,11 +295,11 @@ header .image-text .profession{
     width: 300px;
 }
 
-.navbar-icon{
+.navbar-icon {
     display: flex;
 }
 
-.navbar-icon span{
+.navbar-icon span {
     color: var(--primary-color);
     margin-right: 10px;
     display: flex;
@@ -293,14 +307,15 @@ header .image-text .profession{
     padding: 10px 14px;
     border-radius: 6px;
 }
-.navbar-icon span:hover{
+
+.navbar-icon span:hover {
     color: var(--sidebar-color);
-    background:var(--primary-color);
-        transition: all .5s ease;
-    
+    background: var(--primary-color);
+    transition: all .5s ease;
+
 }
 
-.main-body{
+.main-body {
     background: var(--sidebar-color);
     margin: 10px 30px;
     border-radius: 10px;
