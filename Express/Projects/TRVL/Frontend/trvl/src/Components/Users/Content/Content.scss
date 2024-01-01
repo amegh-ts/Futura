@@ -5,8 +5,8 @@
 
 
 .content {
-    width: 100%;
     margin-top: 100px;
+    padding: 20px;
 
     .content-main {
         width: 100%;
@@ -18,7 +18,7 @@
                 border-radius: var(--border-radius);
                 background: var(--primary-color-light);
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 margin: auto;
                 gap: 2rem;

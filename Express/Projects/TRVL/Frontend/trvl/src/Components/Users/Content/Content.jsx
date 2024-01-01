@@ -22,6 +22,7 @@ const Content = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

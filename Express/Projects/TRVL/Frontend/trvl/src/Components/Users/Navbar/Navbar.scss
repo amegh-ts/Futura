@@ -1,8 +1,7 @@
 .navbar-main {
     display: flex;
-    padding: 20px 0px;
-
     align-items: center;
+    padding: 10px;
     justify-content: space-around;
     width: 100%;
     position: fixed;
@@ -103,6 +102,7 @@
 // media querry
 @media screen and (min-width: 768px) {
     .navbar-main {
+        padding: 10px 0;
         .nav-logo {
             h1 {
                 font-size: var(--h2-font);
@@ -135,3 +135,21 @@
         }
     }
 }
+
+@media screen and (min-width: 1240px) {
+    .navbar-main{
+        padding: 20px 0;
+
+        .nav-menu{
+            ul{
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 1440px) {
+//     .navbar-main{
+
+//     }
+// }

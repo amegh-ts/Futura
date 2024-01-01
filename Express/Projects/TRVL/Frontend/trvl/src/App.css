@@ -5,10 +5,10 @@
   /* ===== Colors ===== */
   --primary-color: hsl(14, 90%, 53%);
   --primary-color-light: hsl(14, 96%, 91%);
-  --white-color:  hsl(0, 0%, 100%);
+  --white-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 0%);
-  --text-color-light:  hsla(0, 0%, 42%, 0.849);
-  --input-color:  hsla(0, 0%, 93%, 0.849);
+  --text-color-light: hsla(0, 0%, 42%, 0.849);
+  --input-color: hsla(0, 0%, 93%, 0.849);
 
   /* ===== Font ===== */
   --biggest-font: 2.5rem;
@@ -24,7 +24,7 @@
   --border-radius: 3rem;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -41,5 +41,22 @@ video {
 
 .App-header {
   min-height: 100vh;
-  
+
+}
+
+.scroll-to-top {
+  z-index: 1000;
+  position: fixed;
+  bottom: 2.2rem;
+  border-top: 2rem;
+  right: 3.2rem;
+}
+
+.scroll-to-top .scroll-icon {
+  font-size: 50px;
+  color: var(--primary-color); 
+}
+
+.scroll-to-top .scroll-icon:hover {
+  cursor: pointer;
 }
