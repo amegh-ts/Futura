@@ -44,7 +44,7 @@ const Home = () => {
                         <label htmlFor="price">ABC</label>
                         <input type="text" placeholder='dream location' />
                     </div>
-                    <button>Search</button>
+                    <button className=' btn card-btn'>Search</button>
                 </div>
             </div>
 

@@ -15,6 +15,7 @@
         
     }
 
+
     /* media */
     @media screen and (max-width: 767px)
     {
@@ -48,6 +49,7 @@
     }
 
     .nav-menu-icon, .nav-close-icon{
+        
         font-size: var(--h1-font);
         &:hover{
             color: var(--primary-color);
