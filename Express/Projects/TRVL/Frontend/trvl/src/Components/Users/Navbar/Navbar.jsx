@@ -6,18 +6,17 @@ import { CgMenuGridO } from "react-icons/cg";
 
 
 const Navbar = () => {
-    //  state to track navbar
     const [navbar, setNavbar] = useState("nav-menu");
 
     const showNavbar = () => {
         setNavbar("nav-menu show-navbar")
+        console.log('hiiii');
     }
 
     const closeNavbar = () => {
         setNavbar("nav-menu")
     }
     return (
-        <div className='navbar'>
             <div className='navbar-main'>
                 <div className="nav-logo">
                     <GiFlamer className='icon' />
@@ -34,7 +33,6 @@ const Navbar = () => {
                 </div>
                 <button className='nav-menu-login btn'>Login</button>
                 <CgMenuGridO className='icon nav-menu-icon' onClick={showNavbar}/>
-            </div>
         </div>
     )
 }
