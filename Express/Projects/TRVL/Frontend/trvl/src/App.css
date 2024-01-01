@@ -3,8 +3,21 @@
 
 :root {
   /* ===== Colors ===== */
-  --primary-color: #695CFE;
+  --primary-color: hsl(14,90%,53%);
+  --primary-color-light: hsl(14,96%,91%);
 
+  /* ===== Font ===== */
+  --biggest-font:2.5rem;
+  --h1-font:2rem;
+  --h2-font:1.25rem;
+  --h3-font:1rem;
+  --normal-font:0.938rem;
+  --small-font:0.813rem;
+  --smallest-font:0.75rem;
+
+
+  /* ===== border ===== */
+  --border-radius:3rem;
 }
 
 *{
