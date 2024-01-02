@@ -36,11 +36,10 @@ app.use('/api/messages', messageRouter)
 
 
 
-app.listen(5000, () => {
-    console.log('Connected to Server');
-})
+// app.listen(5000, () => {
+//     console.log('Connected to Server');
+// })
 
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+server.listen(5000, () => {
+    console.log(`Server is running on port `);
 });

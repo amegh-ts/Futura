@@ -2,21 +2,26 @@ const MessageSchema = require('../Models/MessageSchema')
 
 // create message
 const createMessage = async (req, res) => {
-    const { chatId, senderId, text } = req.body
-    console.log(req.body);
-    const message = new MessageSchema({
-        chatId, senderId, text
-    })
-
     try {
-        const response = await message.save()
-        res.status(200).json(response)
-        console.log(response);
+        const { chatId, senderId, text } = req.body;
+
+        if (!chatId || !senderId || !text) {
+            return res.status(400).json({ error: 'Missing required fields.' });
+        }
+
+        const message = new Message({ chatId, senderId, text });
+        const savedMessage = await message.save();
+
+        // Emit the new message to all connected clients in the chat room
+        io.to(chatId).emit('newMessage', savedMessage);
+
+        res.status(201).json({ message: 'Message created successfully.', data: savedMessage });
     } catch (error) {
-        console.log(error);
-        res.status(500).json(error)
+        console.error('Error creating message:', error);
+        res.status(500).json({ error: 'Internal Server Error.' });
     }
-}
+};
+
 
 // get message
 const getMessages = async (req, res) => {
