@@ -1,8 +1,12 @@
 const express = require('express')
+const http = require('http');
+const socketIO = require('socket.io');
 const app = express()
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const server = http.createServer(app);
+const io = socketIO(server);
 app.use(cors())
 dotenv.config()
 
@@ -35,3 +39,8 @@ app.use('/api/messages', messageRouter)
 app.listen(5000, () => {
     console.log('Connected to Server');
 })
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
