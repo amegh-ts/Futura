@@ -5,7 +5,6 @@ const ChatBody = ({ selectedChatId }) => {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
 
-
   const storedData = localStorage.getItem('persist:unknown');
   const user = storedData ? JSON.parse(JSON.parse(storedData).user) : null;
   const senderId = user?.userInfo?.[0]?.id;
@@ -33,6 +32,12 @@ const ChatBody = ({ selectedChatId }) => {
     }
 
     try {
+      // Update the local message list with the new message
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { _id: Date.now(), senderId, text: inputMessage },
+      ]);
+
       // Call sendMessage function with chatId, senderId, and text
       await sendMessage(selectedChatId, senderId, inputMessage);
 
@@ -43,7 +48,6 @@ const ChatBody = ({ selectedChatId }) => {
       console.error('Error sending message:', error);
     }
   };
-
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
