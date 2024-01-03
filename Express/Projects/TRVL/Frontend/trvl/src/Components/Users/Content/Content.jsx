@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Content.scss'
 import { IoLocationOutline, IoCalendarNumberOutline, IoSearchOutline } from "react-icons/io5";
 import { FaCreditCard } from "react-icons/fa6";
@@ -6,6 +6,7 @@ import Accordion from './Accordion';
 
 
 const Content = () => {
+    const [active, setActive] = useState('');
     return (
         <div className='content'>
             <div className='content-main'>
