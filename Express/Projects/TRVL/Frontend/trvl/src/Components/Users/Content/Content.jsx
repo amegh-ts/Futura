@@ -19,6 +19,10 @@ const Content = () => {
                             <h1>10</h1>
                             <p>world of experience</p>
                         </span>
+                        <span className="flex">
+                            <h1>10</h1>
+                            <p>world of experience</p>
+                        </span>
                     </div>
                 </div>
             </div>
