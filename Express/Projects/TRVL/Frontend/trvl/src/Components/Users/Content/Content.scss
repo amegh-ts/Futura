@@ -19,7 +19,6 @@
     .content-main {
         width: 100%;
         
-
         .content-container {
             .grid {
                 padding: 3rem;
@@ -45,7 +44,6 @@
                     p{
                         opacity: .8;
                         max-width: 80px;
-                        
                     }
                 }
 
@@ -54,6 +52,21 @@
     }
 
 
+    .destination-main{
+        .destination-container{
+            .destination-title{
+
+                .dst-red-text{
+                    color: var(--primary-color);
+                    font-size: var(--small-font);
+                    font-weight: 500;
+                }
+                h3{
+                    
+                }
+            }
+        }
+    }
 }
 
 
