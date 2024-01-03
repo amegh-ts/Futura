@@ -56,7 +56,7 @@ const Content = () => {
             </div>
 
             <div>
-                <Accordion />
+                <Accordion title=' How do I chose the right place for travel?' desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eius autem minima voluptas itaque iure, culpa quia odio veritatis? Repudiandae et neque dolor sapiente reiciendis accusantium minima asperiores obcaecati dolorem!" active={active} setActive={setActive}/>
                 <Accordion />
             </div>
             <footer>
