@@ -14,11 +14,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
-.logo-icon{
-    font-size: var(--biggest-font);
 
-}
+        .logo-icon {
+            font-size: var(--biggest-font);
+            color: var(--primary-color);
+        }
     }
 
     .nav-menu-icon {
@@ -107,10 +107,11 @@
 @media screen and (min-width: 768px) {
     .navbar-main {
         padding: 10px 0;
+
         .nav-logo {
             h1 {
-    font-size: var(--biggest-font);
-    font-size: var();
+                font-size: var(--biggest-font);
+                font-size: var();
             }
         }
 
@@ -142,11 +143,11 @@
 }
 
 @media screen and (min-width: 1240px) {
-    .navbar-main{
+    .navbar-main {
         padding: 20px 0;
 
-        .nav-menu{
-            ul{
+        .nav-menu {
+            ul {
                 gap: 4rem;
             }
         }
