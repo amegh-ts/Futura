@@ -21,6 +21,11 @@
         font-size: var(--small-font);
         display: flex;
         align-items: center;
-        
+        line-height: 20px;
+        white-space: pre-line;
+        height: 140px;
+        transition: all .3s ease-in-out;
+        opacity: 1;
+        padding: 0 1rem;
     }
 }

@@ -12,7 +12,7 @@ const Accordion = () => {
                 </span>
             </span>
             <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloribus rerum consequatur corrupti est soluta modi sed aliquam consequuntur dicta.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eius autem minima voluptas itaque iure, culpa quia odio veritatis? Repudiandae et neque dolor sapiente reiciendis accusantium minima asperiores obcaecati dolorem!
             </p>
         </div>
     )

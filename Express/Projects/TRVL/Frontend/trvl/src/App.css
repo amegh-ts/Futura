@@ -9,6 +9,8 @@
   --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsla(0, 0%, 42%, 0.849);
   --input-color: hsla(0, 0%, 93%, 0.849);
+  --card-color: hsl(15, 51%, 84%);
+
 
   /* ===== Font ===== */
   --biggest-font: 2.5rem;
@@ -54,7 +56,7 @@ video {
 
 .scroll-to-top .scroll-icon {
   font-size: 50px;
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .scroll-to-top .scroll-icon:hover {
