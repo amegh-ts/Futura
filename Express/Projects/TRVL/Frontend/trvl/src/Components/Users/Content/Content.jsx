@@ -55,7 +55,9 @@ const Content = () => {
                             <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
                     </div>
 
-                    
+                    <footer>
+                        
+                    </footer>
                 </div>
             </div>
         </div>
