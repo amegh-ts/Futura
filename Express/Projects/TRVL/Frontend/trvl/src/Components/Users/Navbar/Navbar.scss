@@ -14,7 +14,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
+.logo-icon{
+    font-size: var(--biggest-font);
 
+}
     }
 
     .nav-menu-icon {
@@ -105,7 +109,8 @@
         padding: 10px 0;
         .nav-logo {
             h1 {
-                font-size: var(--h2-font);
+    font-size: var(--biggest-font);
+    font-size: var();
             }
         }
 

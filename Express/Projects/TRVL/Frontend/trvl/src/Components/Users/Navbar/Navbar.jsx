@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
             <div className='navbar-main'>
                 <div className="nav-logo">
-                    <GiFlamer className='icon' />
+                    <GiFlamer className='icon logo-icon' />
                     <h1>TRVL</h1>
                 </div>
                 <div className={navbar}>
