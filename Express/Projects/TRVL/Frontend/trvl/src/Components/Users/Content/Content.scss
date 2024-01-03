@@ -4,7 +4,7 @@
 
 }
 
-.grid{
+.grid {
     display: flex;
     align-items: center;
 }
@@ -18,7 +18,7 @@
 
     .content-main {
         width: 100%;
-        
+
         .content-container {
             .grid {
                 padding: 3rem;
@@ -31,17 +31,17 @@
                 gap: 2rem;
                 flex-wrap: wrap;
 
-                span{
+                span {
                     justify-content: center;
                     gap: .5rem;
 
-                    h1{
+                    h1 {
                         font-size: var(--h1-font);
                         font-weight: 700;
                         color: var(--text-color);
                     }
 
-                    p{
+                    p {
                         opacity: .8;
                         max-width: 80px;
                     }
@@ -52,18 +52,21 @@
     }
 
 
-    .destination-main{
-        .destination-container{
-            .destination-title{
+    .destination-main {
+        .destination-container {
+            .destination-title {
 
-                .dst-red-text{
+                .dst-red-text {
                     color: var(--primary-color);
                     font-size: var(--small-font);
                     font-weight: 500;
                 }
-                h3{
-                    
+
+                h3 {
+                    font-size: var(--h1-font);
                 }
+
+                .search-field {}
             }
         }
     }
