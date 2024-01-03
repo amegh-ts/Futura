@@ -69,12 +69,34 @@
             }
 
             .search-field {
-                margin-top: 2rem;
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                margin-top: 2rem;
                 gap: 1rem;
+                flex-wrap: wrap;
                 
+                .input-field{
+                    background: var(--primary-color-light);
+                    padding: 1rem;
+                    border-radius: var(--border-radius);
+                    gap: .5rem;
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    
+                    input{
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        
+                    }
+                }
+
+                .search-btn{
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
