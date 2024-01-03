@@ -31,6 +31,13 @@ const Content = () => {
                     <div className="destination-title">
                         <span className='dst-red-text'>EXPLORE NOW</span>
                         <h3>Find your dream destination</h3>
+                        <p>Fill in the field to find the best spot for your next trip</p>
+                    </div>
+                    
+                    <div className="search-field">
+                        <div className="input-field">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
