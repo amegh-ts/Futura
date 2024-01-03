@@ -7,6 +7,9 @@
 .content {
     margin-top: 100px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
     .content-main {
         width: 100%;
