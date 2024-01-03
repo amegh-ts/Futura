@@ -28,5 +28,10 @@
         opacity: 1;
         padding: 0 1rem;
         background: var(--card-color);
+        border-radius: 0 0 10px 10px;
+    }
+    .show{
+        height: 140px;
+        opacity: 1;
     }
 }
