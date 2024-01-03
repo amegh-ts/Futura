@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Content.scss'
 import { IoLocationOutline, IoCalendarNumberOutline, IoSearchOutline } from "react-icons/io5";
 import { FaCreditCard } from "react-icons/fa6";
@@ -6,7 +6,6 @@ import Accordion from './Accordion';
 
 
 const Content = () => {
-    const [active, setActive] = useState('How do I chose the right place for travel?');
     return (
         <div className='content'>
             <div className='content-main'>
@@ -56,7 +55,6 @@ const Content = () => {
             </div>
 
             <div>
-                <Accordion title=' How do I chose the right place for travel?' desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eius autem minima voluptas itaque iure, culpa quia odio veritatis? Repudiandae et neque dolor sapiente reiciendis accusantium minima asperiores obcaecati dolorem!" active={active} setActive={setActive}/>
                 <Accordion />
             </div>
             <footer>
