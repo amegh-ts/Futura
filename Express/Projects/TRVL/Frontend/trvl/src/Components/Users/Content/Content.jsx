@@ -6,7 +6,7 @@ import Accordion from './Accordion';
 
 
 const Content = () => {
-    const [active, setActive] = useState('');
+    const [active, setActive] = useState('How do I chose the right place for travel?');
     return (
         <div className='content'>
             <div className='content-main'>
