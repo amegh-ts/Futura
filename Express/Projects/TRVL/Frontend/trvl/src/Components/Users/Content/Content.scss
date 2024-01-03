@@ -30,6 +30,7 @@
                 margin: auto;
                 gap: 2rem;
                 flex-wrap: wrap;
+                max-width: 800px;
 
                 span {
                     justify-content: center;
@@ -55,7 +56,8 @@
     .destination-main {
         .destination-container {
             .destination-title {
-
+                text-align: center;
+                
                 .dst-red-text {
                     color: var(--primary-color);
                     font-size: var(--small-font);
@@ -83,7 +85,8 @@
                     gap: .5rem;
                     display: flex;
                     align-self: center;
-                    width: 200px;
+                    max-width: 300px;
+                    width: 300px;
 
                     
                     input {
@@ -102,7 +105,7 @@
                     justify-content: center;
                     gap: .5rem;
                     font-size: 16px;
-                    width: 200px;
+                    width: 300px;
                 }
             }
         }
