@@ -1,6 +1,6 @@
 import React from 'react'
 import './Content.scss'
-import { IoLocationOutline,IoCalendarNumberOutline ,IoSearchOutline} from "react-icons/io5";
+import { IoLocationOutline, IoCalendarNumberOutline, IoSearchOutline } from "react-icons/io5";
 import { FaCreditCard } from "react-icons/fa6";
 
 
@@ -39,22 +39,22 @@ const Content = () => {
 
                     <div className="search-field">
                         <div className="input-field">
-                            <IoLocationOutline className='icon'/>
+                            <IoLocationOutline className='icon' />
                             <input type="text" placeholder='Location' />
                         </div>
 
                         <div className="input-field">
-                            <FaCreditCard className='icon'/>
+                            <FaCreditCard className='icon' />
                             <input type="text" placeholder='Location' />
                         </div>
 
                         <div className="input-field">
-                            <IoCalendarNumberOutline className='icon'/>
+                            <IoCalendarNumberOutline className='icon' />
                             <input type="text" placeholder='Location' />
                         </div>
-                        
+
                         <div>
-                            <button className='btn search-btn'><IoSearchOutline className='icon'/>Search</button>
+                            <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
                         </div>
                     </div>
                 </div>
