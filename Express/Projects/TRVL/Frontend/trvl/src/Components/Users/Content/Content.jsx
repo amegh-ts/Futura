@@ -45,12 +45,11 @@ const Content = () => {
 
                         <div className="input-field">
                             <FaCreditCard className='icon' />
-                            <input type="text" placeholder='Location' />
+                            <input type="text" placeholder='Price' />
                         </div>
 
                         <div className="input-field">
-                            <IoCalendarNumberOutline className='icon' />
-                            <input type="text" placeholder='Location' />
+                            <input type="date" placeholder='Date' />
                         </div>
 
                             <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
