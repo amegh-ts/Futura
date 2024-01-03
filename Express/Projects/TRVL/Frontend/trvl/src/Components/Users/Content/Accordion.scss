@@ -34,4 +34,8 @@
         height: 140px;
         opacity: 1;
     }
+    .activeTitle{
+        background: var(--primary-color-light);
+        border-radius: 10px 10px 0 0;
+    }
 }
