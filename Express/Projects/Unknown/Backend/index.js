@@ -6,10 +6,10 @@ const cors = require('cors')
 app.use(cors())
 dotenv.config()
 
-// app.use(function (req,res,next) {
-//     console.log('All time first check');
-//     next()
-// })
+app.use(function (req,res,next) {
+    console.log('All time first check');
+    next()
+})
 
 
 const userRouter = require('./Router/UserRouter')
