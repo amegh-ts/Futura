@@ -11,7 +11,7 @@ const Accordion = () => {
                     <IoArrowDownCircleOutline className='icon'/>
                 </span>
             </span>
-            <p>
+            <p className='description'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloribus rerum consequatur corrupti est soluta modi sed aliquam consequuntur dicta.
             </p>
         </div>
