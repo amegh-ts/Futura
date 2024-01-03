@@ -1,5 +1,6 @@
 import React from 'react'
 import './Content.scss'
+import { IoLocationOutline } from "react-icons/io5";
 
 const Content = () => {
     return (
@@ -33,10 +34,11 @@ const Content = () => {
                         <h3>Find your dream destination</h3>
                         <p>Fill in the field to find the best spot for your next trip</p>
                     </div>
-                    
+
                     <div className="search-field">
                         <div className="input-field">
-                            
+                            <IoLocationOutline />
+                            <input type="text" placeholder='Location' />
                         </div>
                     </div>
                 </div>
