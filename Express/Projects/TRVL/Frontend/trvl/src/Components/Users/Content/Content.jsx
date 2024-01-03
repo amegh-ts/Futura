@@ -56,6 +56,7 @@ const Content = () => {
 
             <div>
                 <Accordion />
+                <Accordion />
             </div>
             <footer>
 
