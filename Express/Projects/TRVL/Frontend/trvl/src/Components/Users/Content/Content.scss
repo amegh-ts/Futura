@@ -74,8 +74,8 @@
                 margin-top: 2rem;
                 gap: 1rem;
                 flex-wrap: wrap;
-                
-                .input-field{
+
+                .input-field {
                     background: var(--primary-color-light);
                     padding: 1rem;
                     border-radius: var(--border-radius);
@@ -83,17 +83,17 @@
                     display: flex;
                     align-self: center;
                     justify-content: center;
-                    
-                    input{
+
+                    input {
                         background: transparent;
                         border: none;
                         outline: none;
                         width: 100%;
-                        
+
                     }
                 }
 
-                .search-btn{
+                .search-btn {
                     display: flex;
                     align-items: center;
                 }

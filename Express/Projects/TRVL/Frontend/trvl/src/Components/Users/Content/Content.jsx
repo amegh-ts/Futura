@@ -53,9 +53,7 @@ const Content = () => {
                             <input type="text" placeholder='Location' />
                         </div>
 
-                        <div>
                             <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
-                        </div>
                     </div>
                 </div>
             </div>
