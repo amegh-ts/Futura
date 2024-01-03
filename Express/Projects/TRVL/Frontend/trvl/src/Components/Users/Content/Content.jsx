@@ -2,6 +2,7 @@ import React from 'react'
 import './Content.scss'
 import { IoLocationOutline, IoCalendarNumberOutline, IoSearchOutline } from "react-icons/io5";
 import { FaCreditCard } from "react-icons/fa6";
+import Accordion from './Accordion';
 
 
 const Content = () => {
@@ -52,14 +53,20 @@ const Content = () => {
                             <input type="date" placeholder='Date' />
                         </div>
 
-                            <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
+                        <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
                     </div>
 
-                    <footer>
-                        
-                    </footer>
+
+
                 </div>
             </div>
+
+            <div>
+                <Accordion />
+            </div>
+            <footer>
+
+            </footer>
         </div>
 
 

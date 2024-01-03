@@ -54,10 +54,12 @@
 
 
     .destination-main {
+        margin-bottom: 20px;
+
         .destination-container {
             .destination-title {
                 text-align: center;
-                
+
                 .dst-red-text {
                     color: var(--primary-color);
                     font-size: var(--small-font);
@@ -78,6 +80,7 @@
                 justify-content: center;
                 flex-wrap: wrap;
 
+
                 .input-field {
                     background: var(--primary-color-light);
                     padding: 1rem;
@@ -88,7 +91,7 @@
                     max-width: 300px;
                     width: 300px;
 
-                    
+
                     input {
                         background: transparent;
                         border: none;
