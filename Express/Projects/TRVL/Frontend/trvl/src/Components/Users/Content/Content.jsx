@@ -3,8 +3,7 @@ import './Content.scss'
 
 const Content = () => {
     return (
-        <div>
-            <div className='content'>
+        <div className='content'>
             <div className='content-main'>
                 <div className="content-container">
                     <div className="grid">
@@ -27,9 +26,17 @@ const Content = () => {
                     </div>
                 </div>
             </div>
-            
+            <div className="destination-main">
+                <div className="destination-container">
+                    <div className="destination-title">
+                        <span className='dst-red-text'>EXPLORE NOW</span>
+                        <h3>Find your dream destination</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
+
+
     )
 }
 
