@@ -1,0 +1,11 @@
+.accordion-container{
+    .title{
+        font-size: var(--normal-font);
+        align-items: center;
+        display: flex;
+        padding: 1rem;
+        border-radius: 10px;
+        justify-content: space-between;
+        background: var(--primary-color-light);
+    }
+}

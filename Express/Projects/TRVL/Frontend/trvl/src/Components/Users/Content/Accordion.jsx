@@ -1,13 +1,14 @@
 import React from 'react'
+import './Accordion.scss'
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 
 const Accordion = () => {
     return (
-        <div className='acordion-container'>
+        <div className='accordion-container'>
             <span className='title flex'>
                 How do I chose the right place for travel?
                 <span>
-                    <IoArrowDownCircleOutline />
+                    <IoArrowDownCircleOutline className='icon'/>
                 </span>
             </span>
             <p>

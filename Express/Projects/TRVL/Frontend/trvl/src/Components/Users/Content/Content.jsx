@@ -37,27 +37,20 @@ const Content = () => {
                         <h3>Find Your Dream Destination</h3>
                         <p>Fill in the field to find the best spot for your next trip</p>
                     </div>
-
                     <div className="search-field">
                         <div className="input-field">
                             <IoLocationOutline className='icon' />
                             <input type="text" placeholder='Location' />
                         </div>
-
                         <div className="input-field">
                             <FaCreditCard className='icon' />
                             <input type="text" placeholder='Price' />
                         </div>
-
                         <div className="input-field">
                             <input type="date" placeholder='Date' />
                         </div>
-
                         <button className='btn search-btn'><IoSearchOutline className='icon' />Search</button>
                     </div>
-
-
-
                 </div>
             </div>
 
