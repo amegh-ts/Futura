@@ -7,5 +7,13 @@
         border-radius: 10px;
         justify-content: space-between;
         background: var(--primary-color-light);
+
+        span{
+            cursor: pointer;
+            .icon{
+                font-size: 1.2rem;
+                color: var(--text-color);
+            }
+        }
     }
 }
