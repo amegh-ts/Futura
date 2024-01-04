@@ -1,0 +1,82 @@
+.test-main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .test-container {
+    width: 300px;
+    height: auto; /* Adjusted to accommodate varying content height */
+    background: var(--primary-color);
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px rgb(67, 66, 66);
+  }
+  
+  .test-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .test-form input,
+  .test-form label {
+    margin-bottom: 10px;
+  }
+  
+  .test-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .test-form div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .test-form label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .test-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .test-form input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+
+.test-form input[type="date"]{
+    padding: 8px;
+    font-family: "Roboto Mono",monospace;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
