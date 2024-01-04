@@ -7,6 +7,7 @@ import AdminSidebar from './Components/Admin/Sidebar/AdminSidebar';
 import Notification from './Components/User/Notification/Notification';
 import Recovery from './Components/Login/Recovery';
 import Chat from './Components/Chat/Chat';
+import Test from './Components/Test/Test';
 
 function App() {
   const reduxData = useSelector((state) => state.user.userInfo[0]);
@@ -51,6 +52,9 @@ function App() {
     }, {
       path: '/chat',
       element: <Chat />,
+    }, {
+      path: '/test',
+      element: <Test />,
     },
   ]);
 
