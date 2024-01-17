@@ -34,6 +34,9 @@ const AllUsers = ({setActivePageToChats}) => {
         }
       };
 
+
+
+
     // Inside the AllUsers component's return statement
     return (
         <div className="all-users-main">

@@ -1,5 +1,3 @@
-// Chat.js
-
 import React, { useEffect, useState } from 'react';
 import './Chat.css';
 import { getUsers, userChats } from '../ApiCalls';
