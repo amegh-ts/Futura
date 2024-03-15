@@ -40,7 +40,6 @@ const Body = ({ setActiveNav, setProductDetails }) => {
     const handleCardClick = (item) => {
         setProductDetails(item);
         setActiveNav(2);
-        console.log("ahwfjgawfkhjabjfuakefbh", item);
     }
 
 
